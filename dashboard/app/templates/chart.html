@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="settings-page">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="purple">
+                    <h4 class="title">Renko Chart</h4>
+                    <p class="category">Renko Chart</p>
+                </div>
+                <div class="card-content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+
+{% endblock scripts %}

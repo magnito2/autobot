@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="index-page">
+    <h1>Internal Server Error</h1>
+    <p><a href="{{ url_for('index') }}">Back</a></p>
+</div>
+{% endblock content %}
+{% block scripts %}
+{{ super()}}
+<script src="../../static/dist/dashboard.js"></script>
+{% endblock scripts %}

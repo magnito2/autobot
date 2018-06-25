@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="user-page">
+    <div class="row">
+        <div class="col-md-9">
+            <h2 class="tim-typo">YOU CANNOT ACCESS ANY FEATURES BEFORE YOU CONFIRM YOUR EMAIL</h2>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+
+{% endblock scripts %}

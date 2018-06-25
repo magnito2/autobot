@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid" id="index-page">
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% for bot in bots %}
+    <div><p>{{ bot.owner.username }} : <b>{{ bot.name }}</b></p></div>
+    {% endfor %}
+</div>
+{% endblock content %}
+{% block scripts %}
+{{ super()}}
+<script src="{{url_for('static', filename='dist/dashboard.js')}}"></script>
+{% endblock scripts %}

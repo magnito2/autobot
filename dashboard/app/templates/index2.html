@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket demo</title>
+    </head>
+    <body>
+    <div id="log"></div>
+    <button onclick="send_hist()">Send Hist</button>
+        <script>
+            var ws = new WebSocket("ws://127.0.0.1:5678/");
+
+            ws.onopen = (event)=>{
+                ws.send(JSON.stringify({action : 'send_info'}));
+            }
+            ws.onmessage = function (event) {
+                var log = document.getElementById('log');
+                var data = document.createTextNode(event.data);
+                //log.appendChild(document.createElement("LI").appendChild(data));
+                log.innerHTML = event.data;
+            };
+
+            function send_hist(event) {
+                ws.send(JSON.stringify({action : 'send_historical_klines'}));
+            }
+        </script>
+    </body>
+</html>

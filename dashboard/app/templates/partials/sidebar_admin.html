@@ -1,0 +1,68 @@
+<div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+    <!--
+Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+Tip 2: you can also add an image using data-image tag
+-->
+    <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text">
+            Auto Bot Cloud
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav" id="side-bar">
+            <li>
+                <a href="/">
+                    <i class="material-icons">dashboard</i>
+                    <p>DASHBOARD</p>
+                </a>
+            </li>
+            <li>
+                <a href="/users">
+                    <i class="material-icons text-gray">people</i>
+                    <p>USERS</p>
+                </a>
+            </li>
+            <li>
+                <a href="/settings">
+                    <i class="material-icons text-gray">build</i>
+                    <p>SETTINGS</p>
+                </a>
+            </li>
+            <li>
+                <a href="/bot">
+                    <i class="material-icons">B</i>
+                    <p>BOTS</p>
+                </a>
+            </li>
+            <li>
+                <a href="/account">
+                    <i class="material-icons text-gray">person</i>
+                    <p>ACCOUNT</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script type="application/javascript">
+    const pathname = window.location.pathname;
+    p_arr = pathname.split("/");
+    const my_location = p_arr[p_arr.length -1];
+    console.log(my_location);
+    const navbar = document.getElementById("side-bar");
+    const navs = navbar.getElementsByTagName("li");
+    //console.log(navs);
+    for(let i=0; i < navs.length; i++)
+    {
+        let nav = navs[i];
+        a_tag = nav.children[0];
+        h_arr = a_tag.href.split('/');
+        nav_path = h_arr[h_arr.length -1];
+        if(nav_path === my_location)
+        {
+            nav.classList.add("active");
+        }
+
+    }
+</script>
