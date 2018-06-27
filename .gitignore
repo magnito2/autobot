@@ -18,3 +18,4 @@ dashboard/.idea
 dashboard/__pycache__
 dashboard/app.db
 dashboard/app/__pycache__
+tests

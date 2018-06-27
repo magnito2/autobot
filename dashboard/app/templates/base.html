@@ -47,7 +47,7 @@
                     {% if messages %}
                     {% for category, message in messages %}
                     <div class="alert alert-{{ category }} alert-dismissable" role="alert">
-                        <p class="text-center" style="font-size: larger; padding-right: 5%">{{ message }}
+                        <p class="text-center" style="font-size: larger; padding-right: 5%"> {{ message|safe }}
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button></p>

@@ -96,6 +96,8 @@ def account(bot_id = None):
         db.session.commit()
         print("attempting to emit create bot event")
         new_bot_created.send('account', bot_id = bot.id)
+        flash("Congratulations, you API KEY and SECRET have been added", "success")
+        flash("Trading will begin on your account now, until trial period expires")
 
     if bot:
         form.api_key.data = bot.api_key
@@ -208,7 +210,7 @@ def confirm_email(token):
         flash('The confirmation link is invalid or has expired.', 'danger')
     user = User.query.filter_by(email=email).first_or_404()
     if user.active:
-        flash('Account already confirmed. Please login.', 'success')
+        flash('Account already confirmed. Welcome.', 'success')
     else:
         user.active = True
         user.email_confirmed_at = datetime.utcnow()
@@ -222,5 +224,20 @@ def confirm_email(token):
 def unconfirmed():
     if current_user.active:
         return redirect(url_for('index'))
-    flash('Please confirm your account!', 'warning')
+    resend_url = url_for("resend_confirmation")
+    flash(f'Please confirm your account! <a href="{resend_url}" class="alert-link">click here to resend confirmation</a>', 'warning')
     return render_template('unconfirmed.html')
+
+@app.route("/resend_confirmation")
+@login_required
+def resend_confirmation():
+    if current_user.active:
+        return redirect(url_for('index'))
+    token = generate_confirmation_token(current_user.email)
+
+    confirm_url = url_for('confirm_email', token=token, _external=True)
+    html = render_template('activate.html', confirm_url=confirm_url)
+    subject = "Please confirm your email"
+    send_email(current_user.email, subject, html)
+    flash(f"confirmation for {current_user.username} has been sent to {current_user.email}","success")
+    return redirect(url_for("unconfirmed"))

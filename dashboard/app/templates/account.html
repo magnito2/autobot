@@ -46,7 +46,7 @@
                                     <h6 class="category text-gray">{{ current_user.role }}</h6>
                                     <h4 class="card-title">{{ current_user.username }}</h4>
                                     <p class="card-content">
-                                        {{ current_user.about_me }}
+                                        {{ current_user.about_me or "you've said nothing about yourself yet." }}
                                     </p>
                                     <a href="{{ url_for('edit_profile') }}" class="btn btn-primary btn-round">Edit your profile</a>
                                 </div>
