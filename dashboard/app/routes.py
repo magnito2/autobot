@@ -18,12 +18,16 @@ def before_request():
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
 
-@app.route('/')
-@app.route('/index')
+@app.route("/")
+@app.route("/index")
+def index():
+    return render_template("index.html")
+
+@app.route('/dashboard')
 @login_required
 @check_confirmed
-def index():
-    return render_template("index.html", title = 'RENKO BOT')
+def dashboard():
+    return render_template("dashboard.html", title = 'AUTOBOTCLOUD')
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -170,8 +174,9 @@ def settings():
         symbol = form.symbol.data
         time_frame = form.time_frame.data
         brick_size = form.brick_size.data
+        sma = form.sma.data
         config.read("config.ini")
-        config['default'] = {'symbol' : symbol, 'time_frame' : time_frame, 'brick_size' : brick_size}
+        config['default'] = {'symbol' : symbol, 'time_frame' : time_frame, 'brick_size' : brick_size, 'sma' : sma}
         with open('config.ini', 'w') as configfile:
             config.write(configfile)
         print("emitting event config changed")
@@ -181,6 +186,7 @@ def settings():
     form.brick_size.data = config['default']['brick_size']
     form.time_frame.data = config['default']['time_frame']
     form.symbol.data = config['default']['symbol']
+    form.sma.data = config['default']['sma']
     return render_template('settings.html', form=form)
 
 @app.route("/roles", methods=['GET','POST'])
@@ -189,6 +195,21 @@ def roles():
     users = User.query.all()
     admin_role = Role.query.filter_by(name='Admin').first()
     return render_template('roles.html', users = users, admin_role = admin_role)
+
+@app.route("/roles/admin/<user_id>", methods=['GET','POST'])
+@role_required('Admin')
+def make_admin(user_id):
+    user = User.query.get_or_404(user_id)
+    admin_role = Role.query.filter_by(name='Admin').first()
+    if admin_role in user.roles:
+        user.roles.remove(admin_role)
+        flash(f"{user.username} is no longer admin","success")
+    else:
+        user.roles.append(admin_role)
+        flash(f"{user.username} is now admin","warning")
+    db.session.add(user)
+    db.session.commit()
+    return redirect(url_for("roles"))
 
 @app.route("/bot", methods=['GET'])
 @role_required('Admin')

@@ -1,14 +1,499 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Auto Bot Cloud</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-{% block content %}
-<div class="container-fluid" id="index-page">
-    <h1>Hi, {{ current_user.username }}!</h1>
-    {% for bot in bots %}
-    <div><p>{{ bot.owner.username }} : <b>{{ bot.name }}</b></p></div>
-    {% endfor %}
-</div>
-{% endblock content %}
-{% block scripts %}
-{{ super()}}
-<script src="{{url_for('static', filename='dist/dashboard.js')}}"></script>
-{% endblock scripts %}
+  <!-- Favicons -->
+  <link href="landing/img/cloud-icon.png" rel="icon">
+  <!--link href="img/apple-touch-icon.png" rel="apple-touch-icon"-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="landing/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="landing/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="landing/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="landing/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="landing/lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="landing/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Avilon
+    Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- h1><a href="#intro" class="scrollto">AutoBot</a></h1>
+        <Uncomment below if you prefer to use an image logo -->
+        <a href="#intro"><img src="landing/img/cloud.png" alt="" style="margin-top: -15px; width: 3cm; height: 1.5cm;" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#works">How It Works</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#returns">Returns</a></li>
+          <li><a href="#pricing">Subscription</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="/login" class="btn-login">login</a></li>
+          <li><a href="register" class="btn-login">register</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+
+    <div class="intro-text">
+      <h2>Auto Bot Cloud</h2>
+      <p>Make money while you sleep </p>
+      <a href="#introduction" class="btn-get-started scrollto">Get Started</a>
+    </div>
+    <div class="btn-login-group">
+        <a href="login" class="btn-get-started btn-login">Login</a>
+        <a href="register" class="btn-get-started btn-login">Register</a>
+      </div>
+  </section>
+  <!-- #intro -->
+
+  <main id="main">
+
+    <section id="introduction">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">Intro</h3>
+          <span class="section-divider"></span>
+          <ul class="list-unstyled">
+            <li class="p-desc">
+              <strong>Make money while you sleep</strong> is a sweet deal and with Auto Bot Cloud , the sun never sets on a trading day.
+            So, what if there was a way to test drive an Auto -Bot for 30 days with no strings attached?
+          </li>
+          <li class="p-desc">
+            <strong>We take trading seriously</strong> and having the ability to allow the BOT to trade effectively and efficiently is our strength.
+            With Auto Bot Cloud, you don’t need to have the knowledge of the markets but still can increase productivity to your trading hours.
+          </li>
+          <li class="p-desc">
+            <strong>Auto Bot Cloud (ABC)</strong> is a fully automated trading bot with Binance Exchange that will analyze market actions, such as volume, orders, price,
+            and time, programmed together with some leading indicators to give the winning edge.
+          </li>
+          <li class="p-desc">
+            All you need is to allow access to your Binance account using <strong>API key and Secret</strong> and the bot will immediately start placing trades on this pair when the
+            situation arises according to the conditions set based on BTC/USDT pairing.
+          </li>
+          <li class="p-desc ">
+            This Auto Bot Cloud can <strong>attain 1-3% profit per day</strong> by methodically  trading to save your profit on unwanted trading fees due to many micro trades
+            thus ensuring a positive return on your investment.
+          </li>
+          <li class="p-desc">
+            It is designed to suit even those without any trading experience so you can earn <strong>expertly with us today!</strong>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">About Us</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">
+            <strong>Auto Bot Cloud is an automated bot that assists with trading on cryptocurrencies.</strong>
+            It is a contingency investment allowance for anyone keen on passive or alternative
+            income source. The Auto Bot Cloud is <strong>compatible
+            with Binance Exchange which enables trading of Bitcoin through a web-based platform.</strong>
+          </p>
+        </div>
+
+        <div id="works" class="row">
+          <div class="col-lg-5 about-img wow fadeInLeft">
+            <img src="stock_images/btc.jpg" alt="" style="padding: 20%;">
+          </div>
+
+          <div class="col-lg-7 content wow fadeInRight">
+            <h3 class="section-title"  style="text-align: center;  font-size: 0.7cm; color: orangered">How ABC Works</h3>
+            <p>Auto Bot Cloud is <strong>100% automated software</strong> that defines the best trend to make trade orders in the place of a human trader. Once the Auto Bot Cloud software is installed on your VPS and it will run automatically
+              <strong>The Auto Bot Cloud automatically open and exit trades by effectively scanning the market, look for opportunities with high levels of accuracy and finds profitable trades even in unstable markets when the actual trending direction is unclear.</strong>
+            </p>
+            <p>The Auto Bot Cloud operates via a Cloud Based Virtual Server. The trading algorithms allows the trader to make good profit without the hassle of technical and fundamental
+              analysis You don’t even have to look at the charts to learn the movement of the market. </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+    Pricing Section
+  ============================-->
+    <section id="pricing" class="section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">Subscription</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">
+            We believe that customers should be earned, and, how else, but to
+            let you experience the Auto Bot Cloud for absolutely <b> free for 30 days.</b>
+            On top of that, we’re opening the full function protocol just for you.
+            After your 30 days free trial you may subscribe this bot on a very reasonable fee : <b>0.01 Btc per month</b>
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6">
+            <div class="box wow fadeInLeft">
+              <h3>Trial</h3>
+              <h4><sup>$</sup>0<span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> To show how much we believe in our strategy,
+                  we have allowed a fully functional testing account for 1 month. All betteries included</li>
+              </ul>
+              <a href="/register" class="get-started-btn">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="box featured wow fadeInUp">
+              <h3>Monthly Subscription</h3>
+              <h4><sup>BTC</sup>0.01 <span> month</span></h4>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Our monthly subscription is only 0.01 BTC/month. </li>
+              </ul>
+              <a href="/register" class="get-started-btn">Get Started</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #pricing -->
+      <!--==========================
+      Product Featuress Section
+    ============================-->
+    <section id="benefits">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8 offset-lg-4">
+            <div class="section-header wow fadeIn" data-wow-duration="1s">
+              <h3 class="section-title">BENEFITS OF ABC</h3>
+              <span class="section-divider"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 features-img">
+            <img src="/stock_images/volatile.jpg" alt="" class="wow fadeInLeft">
+          </div>
+
+          <div class="col-lg-8 col-md-7 ">
+
+            <div class="row">
+              <i> The <strong>Auto Bot Cloud checks all crucial concerns of traders.</strong> But, worry not, as ABC is easy to use as follows:</i>
+              <ol>
+                <li><strong>Low start up investment</strong></li>
+                <li><strong>100% Cryptocurrency auto trading</strong> bot application</li>
+                <li><strong>Trades</strong> most popular symbol: <strong>BTC/USDT</strong></li>
+                <li><strong>Stable profit yield</strong> even during volatile market trends</li>
+                <li>Has a <strong>stop-loss and take-profit</strong> to ensure  safety on deposit</li>
+                <li><strong>Follow-the-sun trading</strong> to  enable users to profit around the clock (24/7, 365 days a year)</li>
+                <li>Contains <strong>news filter with up-to-date information</strong> on global trading activities</li>
+                <li><strong>Real Time Analysis of Cryptocurrencies</strong> most profitable opportunities</li>
+                <li>Applicable from <strong>Beginner to Expert traders</strong> as prior Cryptocurrency market knowledge not required</li>
+                <li>The <strong>Auto Bot Cloud</strong> applies various technical indicators for market predictions to <strong>generate automatic buy/sell signal.</strong></li>
+
+              </ol>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- #features -->
+
+    <!--==========================
+      Product Advanced Featuress Section
+    ============================-->
+    <section id="returns">
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-12">
+              <h2 style="font-weight: 400; text-align: center; ">WHAT IS MY POTENTIAL RETURN ON INVESTMENT  (ROI) FROM USING ABC?</h2>
+              <img class="advanced-feature-img-right wow fadeInRight" src="stock_images/stockmarket-data-scraping.jpg" alt="">
+              <div class="wow fadeInLeft">
+
+                <h3>The ROI on trading with Cryptocurrencies depends on states of high market volatility, your initial deposit and the amount of time you have Auto Bot Cloud running. </h3>
+               <p>However, our trends show a steady data of increment in investment value and ROI to up to 15% to 100% month to month. The Bot works round-the clock, therefore potential income is heightened. </p>
+
+                <i class="ion-ios-briefcase"></i>
+                <p>ABC provides an excellent investment opportunity for anyone who wants to make a consistent profit with the digital currency</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #advanced-features -->
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title" style="text-align: center">WHAT YOU NEED IN ORDER TO START</h3>
+            <p class="cta-text"  style="text-align: center"> Before you start to use our Bot, you should have a Binance account with some bitcoins in your account. Once your account is activated, you can start using our bot by keying in your API key. This will enable our bot to function and start enjoying the flow of profits. </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#pricing">Try</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+    <!--==========================
+      More Features Section
+    ============================-->
+    <section id="more-features" class="section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">IS AUTO BOT CLOUD RELIABLE?</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">Auto Bot Cloud is an advanced technology built to solve the insecurities of losing money from trades when
+            the market is in unstable condition. The Auto Bot Cloud is designed to trade at the right time. Hence, the Auto Bot Cloud offers calculated
+            predictions to secure profits. This eliminates human error and increases trading know-how as analytics powers bot’s forecasting abilities. </p>
+        </div>
+
+        <div class="section-header">
+          <h3 class="section-title">ENJOY 30 DAYS FREE ON US!</h3>
+          <span class="section-divider"></span>
+          <ul class="list-unstyled">
+            <li class="p-2">
+              The Auto Bot Cloud is the better way to trade Cryptocurrencies. We want you to trust that we are the champion
+              trading partner for you.</li>
+            <li class="p-2">
+              WE believe that customers should be earned, and, how else, but to let you <strong>experience the Auto Bot Cloud for absolutely free for 30 days.</strong>
+              On top of that, <strong>we’re opening the full function protocol just for you.</strong>
+            </li>
+            <li class="p-2">
+              We are <strong>passionate about cryptocurrency investments.</strong>
+            </li>
+            <li class="p-2">
+              <strong>The Auto Bot Cloud will propel our efforts into creating a secure and reliable source for Cryptocurrency trading. </strong>
+            </li>
+            <li class="p-2">
+              <strong>After your 30 days free trial you may subscribe this bot on a very reasonable fee : 0.01 Btc per month</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- #more-features -->
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">Frequently Asked Questions</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">Here is a response to some of the Frequently Asked Questions</p>
+        </div>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">WHAT IS MY POTENTIAL RETURN ON INVESTMENT (ROI) FROM USING ABC? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                The <strong>ROI</strong> on trading with Cryptocurrencies depends on states of high <strong>market volatility, your initial deposit and the amount of time you have Auto Bot Cloud running.</strong>
+                However, our trends show a steady data of increment in investment value and ROI to up to 15% to 100% month to month. The Bot works round-the clock, therefore potential income is heightened.
+                <strong>Auto Bot Cloud provides an excellent investment opportunity for anyone who wants to make a consistent profit with the digital currency</strong>
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">WHAT YOU NEED IN ORDER TO USE AUTO BOT CLOUD <i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Before you start to use our Bot, <strong>you should have a Binance account with some bitcoins in your account.</strong> Once your <strong>account is activated, you can start using our bot by keying in your API key.</strong> This will enable our bot to function and start enjoying the flow of profits.
+              </p>
+            </div>
+          </li>
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">IS AUTO BOT CLOUD RELIABLE? <i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                Auto Bot Cloud is an <strong>advanced technology built to solve the insecurities of losing money from trades</strong> when the market is in unstable condition.
+                <strong>The Auto Bot Cloud is designed to trade at the right time.</strong> Hence, the Auto Bot Cloud offers calculated predictions to secure profits.
+                <strong>This eliminates human error and increases trading know-how as analytics powers bot’s forecasting abilities.</strong>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section><!-- #faq -->
+
+
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row wow fadeInUp">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Auto Bot Cloud</h3>
+              <p>The Auto Bot Cloud is the better way to trade Cryptocurrencies. We want you to trust that we are the champion trading partner for you. </p>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="ion-ios-location-outline"></i>
+                <p>Office location <br>  535022</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-email-outline"></i>
+                <p>info@autobotcloud.com</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Auto Bot Cloud</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#works">How it works</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#returns">Returns</a>
+            <a href="#pricing">Subscription</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="landing/lib/jquery/jquery.min.js"></script>
+  <script src="landing/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="landing/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="landing/lib/easing/easing.min.js"></script>
+  <script src="landing/lib/wow/wow.min.js"></script>
+  <script src="landing/lib/superfish/hoverIntent.js"></script>
+  <script src="landing/lib/superfish/superfish.min.js"></script>
+  <script src="landing/lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="landing/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="landing/js/main.js"></script>
+
+</body>
+</html>

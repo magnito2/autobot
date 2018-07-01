@@ -52,7 +52,8 @@ def send_config():
              "params": {
                  "symbol": config['default']['symbol'],
                  "brick_size": config['default']['brick_size'],
-                 "time_frame": config['default']['time_frame']
+                 "time_frame": config['default']['time_frame'],
+                 "sma": config['default']['sma']
              }
          })
 
@@ -65,7 +66,8 @@ def resend_config(app, **kwargs):
              "params": {
                  "symbol": config['default']['symbol'],
                  "brick_size": config['default']['brick_size'],
-                 "time_frame": config['default']['time_frame']
+                 "time_frame": config['default']['time_frame'],
+                 "sma": config['default']['sma']
              }
          })
 

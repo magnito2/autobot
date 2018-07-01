@@ -35,11 +35,11 @@
                             <td>
                                 <div class="btn-group btn-group-xs">
                                     {% if admin_role in user.roles %}
-                                    <a href="/roles/{{ user.id }}" class="btn btn-success">
+                                    <a href="/roles/admin/{{ user.id }}" class="btn btn-success">
                                         REMOVE ADMIN
                                     </a>
                                     {% else %}
-                                    <a href="/roles/{{ user.id }}" class="btn btn-warning">
+                                    <a href="/roles/admin/{{ user.id }}" class="btn btn-warning">
                                         MAKE ADMIN
                                     </a>
                                     {% endif %}

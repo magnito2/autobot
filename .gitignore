@@ -13,7 +13,7 @@ test_api.py
 test.log
 ssh.txt
 renko_start.bat
-dashboard/static
+dashboard/static/node_modules
 dashboard/.idea
 dashboard/__pycache__
 dashboard/app.db

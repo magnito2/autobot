@@ -103,6 +103,7 @@ class SettingsForm(FlaskForm):
         ('3d', '3 day'),
         ('1w', '1 week'), ('1M', '1 month')]
     time_frame = SelectField('Time Frame', validators=[DataRequired()], choices=time_frames)
+    sma = IntegerField('SMA', validators=[DataRequired()])
     submit = SubmitField('Change Settings')
 
     def validate_symbol(self, symbol):
