@@ -20,3 +20,5 @@ class Config(object):
 
     ADMINS = ['autobotcloudabc@gmail.com']
     DEBUG = True
+
+    HMAC_KEY = "Gmc8gWKlZGaxipc4lww12g"

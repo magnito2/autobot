@@ -1,16 +1,19 @@
-from flask import render_template, flash, redirect, url_for, request, abort
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from dashboard.app import app, db
-from dashboard.app.forms import LoginForm, RegistrationForm, EditProfileForm, CreateBotForm, SettingsForm
+from dashboard.app.forms import LoginForm, RegistrationForm, EditProfileForm, CreateBotForm, SettingsForm, PaymentForm, FeedbackForm, EmailForm, PasswordForm
 from flask_login import current_user, login_user, logout_user, login_required
-from dashboard.app.models import User, Bot, Role
+from dashboard.app.models import User, Bot, Role, Payment, Feedback
 from werkzeug.urls import url_parse
-from datetime import datetime
+from datetime import datetime, timedelta
 import configparser
 from .token import generate_confirmation_token, confirm_token
 
-from dashboard.app import config_changed, new_bot_created, get_bot_status, destroy_bot
-from .authorizer import role_required, check_confirmed
-from .email import send_email
+from dashboard.app import config_changed, new_bot_created, get_bot_status, destroy_bot, new_user_registered, new_payment_made
+from .authorizer import role_required, check_confirmed, check_hmac
+from .email import send_email, send_password_reset_email
+from itsdangerous import URLSafeTimedSerializer
+
+from dashboard import pyCoinPayments
 
 @app.before_request
 def before_request():
@@ -27,7 +30,8 @@ def index():
 @login_required
 @check_confirmed
 def dashboard():
-    return render_template("dashboard.html", title = 'AUTOBOTCLOUD')
+    bot = current_user.bots.first()
+    return render_template("dashboard.html", title = 'AUTOBOTCLOUD', bot=bot)
 
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -66,9 +70,9 @@ def register():
         token = generate_confirmation_token(user.email)
 
         confirm_url = url_for('confirm_email', token=token, _external=True)
-        html = render_template('activate.html', confirm_url=confirm_url)
+        html = render_template('email/activate.html', confirm_url=confirm_url)
         subject = "Please confirm your email"
-        send_email(user.email, subject, html)
+        send_email([user.email], subject, html)
 
         login_user(user)
         flash('Congratulations, you are now a registered user! Please go to your email and confirm the email address to proceed','success')
@@ -238,6 +242,8 @@ def confirm_email(token):
         db.session.add(user)
         db.session.commit()
         flash('You have confirmed your account. Thanks!', 'success')
+        new_user_registered.send('account', user_id=user.id)
+
     return redirect(url_for('index'))
 
 @app.route('/unconfirmed')
@@ -262,3 +268,163 @@ def resend_confirmation():
     send_email(current_user.email, subject, html)
     flash(f"confirmation for {current_user.username} has been sent to {current_user.email}","success")
     return redirect(url_for("unconfirmed"))
+
+@app.route("/payment", methods=['GET','POST'])
+@login_required
+def payment():
+    form = PaymentForm()
+    config = configparser.ConfigParser()
+    bot = current_user.bots.first()
+    if form.validate_on_submit():
+        currency_2 = form.currency.data
+        config.read("config.ini")
+        PUBLIC_KEY = config['default']['CoinsPaymentsPublicKey']
+        SECRET_KEY = config['default']['CoinsPaymentsPrivateKey']
+        IPN_URL = config['default']['CoinsPaymentsIPNURL']
+        payapi = pyCoinPayments.CryptoPayments(PUBLIC_KEY, SECRET_KEY, IPN_URL)
+
+        params = {
+            'amount' : '0.0001',
+            'currency1' : 'BTC',
+            'currency2' : currency_2,
+            'buyer_email' : current_user.email,
+            'buyer_name' : current_user.username,
+            'item_name' : "trading-bot-subscription",
+            'item_number' : current_user
+        }
+
+        if bot:
+            params['item_number'] = bot.id
+        trans_resp = payapi.createTransaction(params)
+        if not trans_resp['error'] == 'ok':
+            flash(trans_resp['error'], 'warning')
+        else:
+            flash(f'Thank you, please use provided address to make payment, currency is {currency_2}', 'info')
+            return render_template("/payments/pay.html", transaction_details = trans_resp['result'], currency_2 = currency_2)
+
+    return render_template("/payments/index.html", form=form)
+
+
+@app.route("/confirm_payment", methods=['POST'])
+@check_hmac
+def confirm_payment():
+    form = request.form
+    data = {
+        'ipn_id' : form.get('ipn_id'),
+        'txn_id' : form.get('txn_id'),
+        'status' : form.get('status'),
+        'status_text' : form.get('status_text'),
+        'currency1' : form.get('currency1'),
+        'currency2' : form.get('currency2'),
+        'amount1' : form.get('amount1'),
+        'amount2' : form.get('amount2'),
+        'fee' : form.get('fee'),
+        'buyer_name' : form.get('buyer_name'),
+        'email' : form.get('email'),
+        'item_name' : form.get('item_name'),
+        'item_number' : form.get('item_number'),
+        'send_tx' : form.get('send_tx'),
+        'recieved_amount' : form.get('recieved_amount'),
+        'recieved_confirms' : form.get('recieved_confirms')
+    }
+
+
+    payment = Payment.query.filter_by(txn_id=data['txn_id']).first()
+    user = User.query.filter_by(email=data['email']).first()
+    params = {}
+    for key in data:
+        if data[key]:
+            params[key] = data[key]
+    if not payment:
+        payment = Payment(**params)
+        print("[+] No existing payments, creating a new payment")
+    else:
+        for key in params:
+            setattr(payment, key, params[key])
+        print("[+] Updating the current payment")
+
+    if int(payment.status) > 99 and user:
+        bot = user.bots.first()
+        if bot and not payment.is_complete:
+            bot.expires_at += timedelta(days=30)
+            db.session.add(bot)
+            payment.is_complete = True
+
+    if user:
+        user.payments.append(payment)
+        db.session.add(user)
+    db.session.add(payment)
+    db.session.commit()
+
+    print(f"{payment.status}:{payment.status_text}, {payment.ipn_id} {payment.txn_id}")
+    print(payment)
+
+    print("Yeeey, we made it")
+    return ('', 204)
+
+
+@app.route("/feedback", methods=['POST'])
+def feedback():
+    form = FeedbackForm()
+    if form.validate_on_submit():
+        feedback_info = Feedback(
+            name= form.name.data,
+            email=form.email.data,
+            subject=form.subject.data,
+            message=form.message.data
+        )
+        db.session.add(feedback_info)
+        db.session.commit()
+        flash("your message has been sent to us, we'll reply", 'success')
+        return redirect(url_for("index"))
+    else:
+        return render_template("contact-form.html", form=form)
+
+@app.route("/reset", methods=['GET', 'POST'])
+def reset():
+    form = EmailForm()
+    if form.validate_on_submit():
+        try:
+            user = User.query.filter_by(email=form.email.data).first_or_404()
+        except:
+            flash('Invalid email address!', 'error')
+            return render_template('account/password_reset_email.html', form=form)
+
+        if user.active:
+            send_password_reset_email(user.email)
+            flash('Please check your email for a password reset link.', 'success')
+        else:
+            flash('Your email address must be confirmed before attempting a password reset.', 'error')
+        return redirect(url_for('login'))
+
+    return render_template('account/password_reset_email.html', form=form)
+
+
+@app.route('/reset/<token>', methods=["GET", "POST"])
+def reset_with_token(token):
+    try:
+        password_reset_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
+        email = password_reset_serializer.loads(token, salt='password-reset-salt', max_age=3600)
+        user = User.query.filter_by(email=email).first_or_404()
+    except:
+        flash('The password reset link is invalid or has expired.', 'error')
+        return redirect(url_for('login'))
+
+
+    form = PasswordForm()
+
+    if form.validate_on_submit():
+        try:
+            user = User.query.filter_by(email=email).first_or_404()
+        except:
+            flash('Invalid email address!', 'error')
+            return redirect(url_for('login'))
+
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Your password has been updated!', 'success')
+        return redirect(url_for('login'))
+
+    form.username.data = user.username
+    return render_template('account/reset_password_with_token.html', form=form, token=token)

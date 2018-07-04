@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="payments-page">
+    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Create a Payment</h4>
+                                    <p class="category">Pay ABC</p>
+                                </div>
+                                <div class="card-content">
+                                    <form action="" method="post">
+                                        {{ form.hidden_tag() }}
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">{{ form.currency.label }}</label>
+                                                    {{ form.currency(class_="form-control") }}
+                                                    {% for error in form.currency.errors %}
+                                                    <span style="color: red;">[{{ error }}]</span>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        {{ form.submit(class_="btn btn-primary pull-right") }}
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+
+{% endblock scripts %}

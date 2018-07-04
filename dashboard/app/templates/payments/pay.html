@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="payments-page">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="purple">
+                    <h4 class="title">Create a Payment</h4>
+                    <p class="category">Pay ABC</p>
+                </div>
+                <div class="card-content">
+                    <div class="col-md-8">
+                        <p>Please pay <span class="payinfo" >{{ transaction_details['amount'] }} {{ currency_2 }}</span> to below address:</p>
+                        <div class="form-group row">
+                            <input class="payinfo form-control" id="pay-address" value="{{ transaction_details['address'] }}"/>
+                            <button onclick="copyaddr()" onmouseout="outFunc()" class="btn btn-round">
+                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{ transaction_details['qrcode_url'] }}" class="img img-responsive">
+                        <p>Or scan the QR code to complete payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+    <script>
+        function copyaddr() {
+            var copyText = document.getElementById("pay-address");
+            copyText.select();
+            document.execCommand("copy");
+
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copied: " + copyText.value;
+        }
+        function outFunc() {
+            var tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copy to clipboard";
+        }
+    </script>
+{% endblock scripts %}

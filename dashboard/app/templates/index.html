@@ -50,15 +50,23 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
+          {% if current_user.is_authenticated %}
+          <li><a href="/dashboard" class="btn btn-sm btn-login btn-round">Dashboard</a></li>
+          {% else %}
           <li class="menu-active"><a href="#intro">Home</a></li>
+          {% endif %}
           <li><a href="#about">About Us</a></li>
           <li><a href="#works">How It Works</a></li>
           <li><a href="#benefits">Benefits</a></li>
           <li><a href="#returns">Returns</a></li>
           <li><a href="#pricing">Subscription</a></li>
           <li><a href="#contact">Contact Us</a></li>
+          {% if current_user.is_authenticated %}
+          <li><a href="/logout" class="btn-login">Logout</a></li>
+          {% else %}
           <li><a href="/login" class="btn-login">login</a></li>
           <li><a href="register" class="btn-login">register</a></li>
+          {% endif %}
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -75,8 +83,13 @@
       <a href="#introduction" class="btn-get-started scrollto">Get Started</a>
     </div>
     <div class="btn-login-group">
-        <a href="login" class="btn-get-started btn-login">Login</a>
-        <a href="register" class="btn-get-started btn-login">Register</a>
+      {% if current_user.is_authenticated %}
+          <a href="/dashboard" class="btn-get-started btn-login">Dashboard</a>
+      {% else %}
+          <a href="login" class="btn-get-started btn-login">Login</a>
+          <a href="register" class="btn-get-started btn-login">Register</a>
+      {% endif %}
+
       </div>
   </section>
   <!-- #intro -->
@@ -102,7 +115,7 @@
             and time, programmed together with some leading indicators to give the winning edge.
           </li>
           <li class="p-desc">
-            All you need is to allow access to your Binance account using <strong>API key and Secret</strong> and the bot will immediately start placing trades on this pair when the
+            All you need is to allow access to your Binance account using <strong>API key and Secret Key</strong> and the bot will immediately start placing trades on this pair when the
             situation arises according to the conditions set based on BTC/USDT pairing.
           </li>
           <li class="p-desc ">
@@ -126,10 +139,19 @@
           <h3 class="section-title">About Us</h3>
           <span class="section-divider"></span>
           <p class="section-description">
-            <strong>Auto Bot Cloud is an automated bot that assists with trading on cryptocurrencies.</strong>
-            It is a contingency investment allowance for anyone keen on passive or alternative
-            income source. The Auto Bot Cloud is <strong>compatible
-            with Binance Exchange which enables trading of Bitcoin through a web-based platform.</strong>
+            We are <strong>dedicated to our traders.</strong>
+            With a team of <strong>experienced developers,</strong> specializing in <strong>multi-dimensional applications design,</strong>
+            gives us an advantage in the <strong>e-trading platform.</strong>
+            Having <strong>recently completed a large- scale build-out for an e-commerce platform,</strong> our team has grown
+            tremendously housing the <strong>best -in-class IT professionals whose core competencies are building and
+            managing merchant based platform dealing with cryptocurrency transactions.</strong>
+            At Binance Exchange, <strong>we blend simplicity with sophistication</strong> that caters ease of use <strong>cryptocurrency
+            transactions</strong> choosing to <strong>empower the trader with known risks and ample opportunities to master the markets
+            and trends.</strong> We take pride in our <strong>strong data encryption protocols for digital currencies.</strong>
+            The Auto Bot Cloud is <strong>built on superior technology that deliver significantly better trading experiences.</strong>
+            That’s why we’re offering a <strong>30 days trial, with full functionality, absolutely free.</strong> Our foremost aim is to
+            <strong>provide effortless trading experience.</strong>
+            <strong>We aspire to be your first choice in Cryptocurrency trading.</strong>
           </p>
         </div>
 
@@ -171,12 +193,11 @@
         <div class="row">
 
           <div class="col-lg-6 col-md-6">
-            <div class="box wow fadeInLeft">
+            <div class="box featured wow fadeInLeft">
               <h3>Trial</h3>
               <h4><sup>$</sup>0<span> month</span></h4>
               <ul>
-                <li><i class="ion-android-checkmark-circle"></i> To show how much we believe in our strategy,
-                  we have allowed a fully functional testing account for 1 month. All betteries included</li>
+                <li><i class="ion-android-checkmark-circle"></i> Test our strategy for one month, free of charge</li>
               </ul>
               <a href="/register" class="get-started-btn">Get Started</a>
             </div>
@@ -395,10 +416,6 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="info">
-              <div>
-                <i class="ion-ios-location-outline"></i>
-                <p>Office location <br>  535022</p>
-              </div>
 
               <div>
                 <i class="ion-ios-email-outline"></i>
@@ -407,7 +424,7 @@
 
               <div>
                 <i class="ion-ios-telephone-outline"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>info@autobotcloud.com</p>
               </div>
 
             </div>
@@ -417,7 +434,8 @@
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
+              <form action="/feedback" method="post" role="form" class="contactForm">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                 <div class="form-row">
                   <div class="form-group col-lg-6">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -490,7 +508,7 @@
   <script src="landing/lib/magnific-popup/magnific-popup.min.js"></script>
 
   <!-- Contact Form JavaScript File -->
-  <script src="landing/contactform/contactform.js"></script>
+  <!-script src="landing/contactform/contactform.js"><!--/script -->
 
   <!-- Template Main Javascript File -->
   <script src="landing/js/main.js"></script>

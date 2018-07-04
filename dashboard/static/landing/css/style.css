@@ -193,6 +193,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+#intro .btn-get-login {
+  background: transparent;
+}
+
 #intro .btn-get-started:hover {
   color: orangered;
   background: #fff;

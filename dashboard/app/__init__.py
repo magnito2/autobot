@@ -7,11 +7,11 @@ import logging
 from logging.handlers import SMTPHandler
 from flask_socketio import SocketIO
 from flask_mail import Mail
+from flask_wtf.csrf import CSRFProtect
 
 from blinker import Namespace
 
 from dashboard.app.momentjs import momentjs
-
 
 app = Flask(__name__, static_folder="\\projects\\new_renko\\dashboard\\static", static_url_path="")
 #app.debug = True
@@ -22,6 +22,7 @@ login = LoginManager(app)
 login.login_view = 'login'
 socketio = SocketIO(app)
 mail = Mail(app)
+CSRFProtect(app)
 
 app_signals = Namespace()
 config_changed = app_signals.signal('config-changed')
@@ -29,13 +30,16 @@ new_bot_created = app_signals.signal('new-bot-created')
 get_bot_status = app_signals.signal('get-bot-status')
 destroy_bot = app_signals.signal('stop-bot')
 
+new_user_registered = app_signals.signal('new-user-created')
+new_payment_made = app_signals.signal('new-payment-made')
+
 app.jinja_env.globals['momentjs'] = momentjs
 
 from dashboard.app.authorizer import authorize, activation_type
 app.jinja_env.globals['authorize'] = authorize
 app.jinja_env.globals['activation_type'] = activation_type
 
-from dashboard.app import routes, models, errors, websocket_server
+from dashboard.app import routes, models, errors, websocket_server, signal_recievers
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
