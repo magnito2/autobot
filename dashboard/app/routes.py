@@ -24,7 +24,7 @@ def before_request():
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    return render_template("home/index.html")
 
 @app.route('/dashboard')
 @login_required
@@ -48,7 +48,7 @@ def login():
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('index')
         return redirect(next_page)
-    return render_template('login.html', title='Sign In', form=form)
+    return render_template('account/login.html', title='Sign In', form=form)
 
 @app.route('/logout')
 def logout():
@@ -77,7 +77,7 @@ def register():
         login_user(user)
         flash('Congratulations, you are now a registered user! Please go to your email and confirm the email address to proceed','success')
         return redirect(url_for('unconfirmed'))
-    return render_template('register.html', title='Register', form=form)
+    return render_template('account/register.html', title='Register', form=form)
 
 @app.route('/account', methods=['GET', 'POST'])
 @login_required
@@ -278,9 +278,9 @@ def payment():
     if form.validate_on_submit():
         currency_2 = form.currency.data
         config.read("config.ini")
-        PUBLIC_KEY = config['default']['CoinsPaymentsPublicKey']
-        SECRET_KEY = config['default']['CoinsPaymentsPrivateKey']
-        IPN_URL = config['default']['CoinsPaymentsIPNURL']
+        PUBLIC_KEY = app.config['COINSPAYMENT_PUBLIC_KEY']
+        SECRET_KEY = app.config['COINSPAYMENT_PRIVATE_KEY']
+        IPN_URL = app.config['COINSPAYMENT_IPN_URL']
         payapi = pyCoinPayments.CryptoPayments(PUBLIC_KEY, SECRET_KEY, IPN_URL)
 
         params = {
@@ -428,3 +428,12 @@ def reset_with_token(token):
 
     form.username.data = user.username
     return render_template('account/reset_password_with_token.html', form=form, token=token)
+
+@app.route("/activate")
+def activate():
+    flash("make payment for account to be activated")
+    return redirect(url_for('payment'))
+
+@app.route("/faq")
+def faq():
+    return render_template("home/faq.html")

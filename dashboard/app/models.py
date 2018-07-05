@@ -61,7 +61,7 @@ class Bot(db.Model):
             response = requests.get(full_url, headers=headers, params=payload)
 
             if not response.status_code == 200:
-                return False
+                return []
 
             data = response.json()['balances']
             return [x for x in data if float(x['free']) > 0 and x['asset'] in ['BTC', 'USDT']]

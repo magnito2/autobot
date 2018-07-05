@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Auto Bot Cloud</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="landing/img/cloud-icon.png" rel="icon">
+  <!--link href="img/apple-touch-icon.png" rel="apple-touch-icon"-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="landing/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="landing/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="landing/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="landing/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="landing/lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="landing/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Avilon
+    Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- h1><a href="#intro" class="scrollto">AutoBot</a></h1>
+        <Uncomment below if you prefer to use an image logo -->
+        <a href="/#intro"><img src="landing/img/cloud.png" alt="" style="margin-top: -15px; width: 3cm; height: 1.5cm;" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          {% if current_user.is_authenticated %}
+          <li><a href="/dashboard" class="btn btn-sm btn-login btn-round">Dashboard</a></li>
+          {% else %}
+          <li class="menu-active"><a href="/#intro">Home</a></li>
+          {% endif %}
+          <li><a href="/#about">About Us</a></li>
+          <li><a href="/#pricing">Subscription</a></li>
+          <li><a href="/#contact">Contact Us</a></li>
+          <li><a href="/faq">Faq</a></li>
+          {% if current_user.is_authenticated %}
+          <li><a href="/logout" class="btn-login">Logout</a></li>
+          {% else %}
+          <li><a href="/login" class="btn-login">login</a></li>
+          <li><a href="/register" class="btn-login">register</a></li>
+          {% endif %}
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  {% block content %}
+  {% endblock content %}
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Auto Bot Cloud</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+
+
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="/#intro" class="scrollto">Home</a>
+            <a href="/#about" class="scrollto">About</a>
+            <a href="/#works">How it works</a>
+            <a href="/#benefits">Benefits</a>
+            <a href="/#returns">Returns</a>
+            <a href="/#pricing">Subscription</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="landing/lib/jquery/jquery.min.js"></script>
+  <script src="landing/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="landing/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="landing/lib/easing/easing.min.js"></script>
+  <script src="landing/lib/wow/wow.min.js"></script>
+  <script src="landing/lib/superfish/hoverIntent.js"></script>
+  <script src="landing/lib/superfish/superfish.min.js"></script>
+  <script src="landing/lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <!-script src="landing/contactform/contactform.js"><!--/script -->
+
+  <!-- Template Main Javascript File -->
+  <script src="landing/js/main.js"></script>
+
+</body>
+</html>

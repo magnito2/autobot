@@ -30,11 +30,11 @@
                                 <div class="card-footer">
                                     {% if activation_type(bot.id) == "expired" %}
                                         <div class="stats">
-                                            <a href="/activate" class="btn btn-sm btn-danger">Activate</a>
+                                            <a href="/payment" class="btn btn-sm btn-danger">Activate</a>
                                         </div>
                                     {% elif activation_type(bot.id) == "trial" %}
                                         <div class="stats">
-                                            <a href="/activate" class="btn btn-sm btn-success">Activate</a>
+                                            <a href="/payment" class="btn btn-sm btn-success">Activate</a>
                                         </div>
                                     {% else %}
                                         <div class="stats">
