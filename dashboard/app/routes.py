@@ -5,7 +5,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 from dashboard.app.models import User, Bot, Role, Payment, Feedback
 from werkzeug.urls import url_parse
 from datetime import datetime, timedelta
-import configparser
+import configparser, os
 from .token import generate_confirmation_token, confirm_token
 
 from dashboard.app import config_changed, new_bot_created, get_bot_status, destroy_bot, new_user_registered, new_payment_made
@@ -112,7 +112,7 @@ def account(bot_id = None):
         form.api_secret.data = bot.api_secret
         get_bot_status.send('account', bot_id=bot.id)
 
-    return render_template('account.html', form=form, bots = bots, bot = bot)
+    return render_template('account.html', form=form, user=user, bot = bot)
 
 @app.route('/account/stop/<bot_id>', methods=['GET'])
 @login_required
@@ -179,6 +179,7 @@ def settings():
         time_frame = form.time_frame.data
         brick_size = form.brick_size.data
         sma = form.sma.data
+        dir_path = os.path.dirname(os.path.realpath(''))
         config.read("config.ini")
         config['default'] = {'symbol' : symbol, 'time_frame' : time_frame, 'brick_size' : brick_size, 'sma' : sma}
         with open('config.ini', 'w') as configfile:
@@ -224,7 +225,31 @@ def get_bots():
 @app.route('/bot/<bot_id>', methods=['GET', 'POST'])
 @role_required('Admin')
 def get_bot(bot_id):
-    return account(bot_id)
+    bot = Bot.query.get_or_404(bot_id)
+    owner = bot.owner
+    form = CreateBotForm(owner)
+    if form.validate_on_submit():
+        api_key = form.api_key.data
+        api_secret = form.api_secret.data
+        name = f"{owner.username}_bot"
+        if not bot:
+            bot = Bot(name=name, api_key=api_key, api_secret=api_secret, owner=owner)
+            db.session.add(bot)
+        else:
+            bot.api_key = api_key
+            bot.api_secret = api_secret
+
+        db.session.commit()
+        print("attempting to emit edit bot event")
+        new_bot_created.send('edit bot', bot_id=bot.id)
+        flash(f"You change API KEY and SECRET for {owner.username}", "success")
+        flash("Bot will reset")
+
+    if bot:
+        form.api_key.data = bot.api_key
+        form.api_secret.data = bot.api_secret
+        get_bot_status.send('account', bot_id=bot.id)
+    return render_template('bots/bot.html', bot=bot, form=form)
 
 @app.route('/confirm/<token>')
 @login_required

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="account-page">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">{{bot.name}}</h4>
+                    <p class="category">{{ bot.name }} | ACCOUNT :: {{ activation_type(bot.id).upper() }}</p>
+                </div>
+                <div class="card-content">
+                    <form action="" method="post">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group label-floating">
+                            {{ form.api_key.label }}
+                            {{ form.api_key(size=32, class_="form-control", disabled=True) }}
+                            {% for error in form.api_key.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                            {% endfor %}
+                        </div>
+                        <div class="form-group label-floating">
+                            {{ form.api_secret.label }}
+                            {{ form.api_secret(size=32, class_="form-control", disabled=True) }}
+                            {% for error in form.api_secret.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                            {% endfor %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="/user/{{ bot.owner.username }}">
+                        <img class="img" src="{{ bot.owner.avatar(128) }}" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h6 class="category text-gray">{{ bot.owner.role }}</h6>
+                    <h4 class="card-title">{{ bot.owner.username }}</h4>
+                    <p class="category">Binance</p>
+                    {% for coin in bot.get_account_balance() %}
+                    <h3 class="title">{{coin['free']|float|round(4)}}<small>{{coin['asset']}}</small></h3>
+                    {% endfor %}
+                    <p class="card-content">
+                        {{ bot.owner.about_me or bot.owner.username + " has said nothing yet" }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+
+{% endblock scripts %}

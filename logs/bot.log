@@ -112,3 +112,381 @@
 2018-07-04 22:34:05,812 - DEBUG - [+] Final Brick Price: 6676.08
 2018-07-04 22:35:01,503 - DEBUG - [+] Final Brick Price: 6673.14
 2018-07-04 22:36:00,667 - DEBUG - [+] Final Brick Price: 6672.77
+2018-07-05 15:40:41,473 - INFO - emitted ready
+2018-07-05 15:40:41,506 - INFO - emitted get bots
+2018-07-05 15:40:41,509 - INFO - [*] Changing the master configurations
+2018-07-05 15:40:41,510 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '24'}
+2018-07-05 15:40:41,522 - DEBUG - Waiting for renko calculator to be ready
+2018-07-05 15:40:44,642 - DEBUG - [+] fetching upto 1529825400000
+2018-07-05 15:40:46,618 - DEBUG - [+] fetching upto 1528926300000
+2018-07-05 15:40:48,830 - DEBUG - [+] fetching upto 1528027200000
+2018-07-05 15:40:48,839 - DEBUG - Establishing initial conditions
+2018-07-05 15:40:48,840 - INFO - [+] Current trend is [Up] and I've just fetched 477 bricks ;)
+2018-07-05 15:40:48,840 - DEBUG - length of last items 24
+2018-07-05 15:40:48,841 - DEBUG - SMA 6619.791666666667 Last brick 6650.0 bricks length 477
+2018-07-05 15:40:48,842 - INFO - [+] Signalling a buy
+2018-07-05 15:43:20,131 - INFO - [*] Changing the master configurations
+2018-07-05 15:43:20,131 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-05 15:43:20,135 - DEBUG - Waiting for renko calculator to be ready
+2018-07-05 15:43:21,785 - DEBUG - [+] fetching upto 1529825400000
+2018-07-05 15:43:23,282 - DEBUG - [+] fetching upto 1528926300000
+2018-07-05 15:43:24,514 - DEBUG - [+] fetching upto 1528027200000
+2018-07-05 15:43:24,523 - DEBUG - Establishing initial conditions
+2018-07-05 15:43:24,523 - INFO - [+] Current trend is [Up] and I've just fetched 477 bricks ;)
+2018-07-05 15:43:24,524 - DEBUG - length of last items 12
+2018-07-05 15:43:24,524 - DEBUG - SMA 6643.75 Last brick 6650.0 bricks length 477
+2018-07-05 15:43:24,525 - INFO - [+] Signalling a buy
+2018-07-05 15:45:00,106 - DEBUG - [+] Final Brick Price: 6644.81
+2018-07-05 15:45:00,106 - DEBUG - [+] Final Brick Price: 6644.81
+2018-07-05 16:00:01,559 - DEBUG - [+] Final Brick Price: 6641.06
+2018-07-05 16:00:01,561 - DEBUG - [+] Final Brick Price: 6641.06
+2018-07-05 16:15:01,916 - DEBUG - [+] Final Brick Price: 6650.0
+2018-07-05 16:15:01,942 - DEBUG - [+] Final Brick Price: 6650.0
+2018-07-05 16:30:00,351 - DEBUG - [+] Final Brick Price: 6637.72
+2018-07-05 16:30:00,353 - DEBUG - [+] Final Brick Price: 6637.72
+2018-07-05 16:45:00,617 - DEBUG - [+] Final Brick Price: 6625.0
+2018-07-05 16:45:00,619 - DEBUG - [+] Final Brick Price: 6625.0
+2018-07-05 16:53:36,613 - ERROR - socket was closed, reconnecting in 30 seconds
+2018-07-05 16:53:36,614 - ERROR - socket was closed, reconnecting in 30 seconds
+2018-07-05 16:54:06,634 - ERROR - socket was closed, reconnecting in 60 seconds
+2018-07-05 16:54:06,635 - ERROR - socket was closed, reconnecting in 60 seconds
+2018-07-05 16:55:06,643 - ERROR - socket was closed, reconnecting in 90 seconds
+2018-07-05 16:55:06,660 - ERROR - socket was closed, reconnecting in 90 seconds
+2018-07-05 16:56:36,658 - ERROR - socket was closed, reconnecting in 120 seconds
+2018-07-05 16:56:36,675 - ERROR - socket was closed, reconnecting in 120 seconds
+2018-07-05 20:58:19,427 - ERROR - socket was closed, reconnecting in 150 seconds
+2018-07-05 20:58:19,442 - ERROR - socket was closed, reconnecting in 150 seconds
+2018-07-05 21:00:49,451 - ERROR - socket was closed, reconnecting in 180 seconds
+2018-07-05 21:00:49,463 - ERROR - socket was closed, reconnecting in 180 seconds
+2018-07-05 21:03:49,463 - ERROR - socket was closed, reconnecting in 210 seconds
+2018-07-05 21:03:49,474 - ERROR - socket was closed, reconnecting in 210 seconds
+2018-07-05 21:07:19,490 - ERROR - socket was closed, reconnecting in 240 seconds
+2018-07-05 21:07:19,490 - ERROR - socket was closed, reconnecting in 240 seconds
+2018-07-05 21:11:19,513 - ERROR - socket was closed, reconnecting in 270 seconds
+2018-07-05 21:11:19,515 - ERROR - socket was closed, reconnecting in 270 seconds
+2018-07-05 21:15:49,523 - ERROR - socket was closed, reconnecting in 300 seconds
+2018-07-05 21:15:49,524 - ERROR - socket was closed, reconnecting in 300 seconds
+2018-07-05 21:20:49,563 - ERROR - socket was closed, reconnecting in 330 seconds
+2018-07-05 21:20:49,563 - ERROR - socket was closed, reconnecting in 330 seconds
+2018-07-05 21:26:19,576 - ERROR - socket was closed, reconnecting in 360 seconds
+2018-07-05 21:26:19,576 - ERROR - socket was closed, reconnecting in 360 seconds
+2018-07-05 21:32:19,591 - ERROR - socket was closed, reconnecting in 390 seconds
+2018-07-05 21:32:19,592 - ERROR - socket was closed, reconnecting in 390 seconds
+2018-07-05 21:38:49,606 - ERROR - socket was closed, reconnecting in 420 seconds
+2018-07-05 21:38:49,606 - ERROR - socket was closed, reconnecting in 420 seconds
+2018-07-06 03:37:28,546 - ERROR - socket was closed, reconnecting in 450 seconds
+2018-07-06 03:37:28,546 - ERROR - socket was closed, reconnecting in 450 seconds
+2018-07-06 03:45:00,996 - DEBUG - [+] Final Brick Price: 6534.79
+2018-07-06 03:45:00,997 - INFO - [Down] Price down. new brick at: <Brick477 1530837899999: 6600.0>
+2018-07-06 03:45:00,998 - INFO - [Down] Price down. new brick at: <Brick478 1530837899999: 6575.0>
+2018-07-06 03:45:00,998 - INFO - [+] new brick 6575.0
+2018-07-06 03:45:01,001 - DEBUG - [+] Final Brick Price: 6534.79
+2018-07-06 03:45:01,002 - INFO - Price continuing to drop down
+2018-07-06 03:45:01,003 - DEBUG - length of last items 24
+2018-07-06 03:45:01,003 - INFO - [Down] Price down. new brick at: <Brick477 1530837899999: 6600.0>
+2018-07-06 03:45:01,003 - INFO - [Down] Price down. new brick at: <Brick479 1530837899999: 6550.0>
+2018-07-06 03:45:01,004 - INFO - [+] Sell time
+2018-07-06 03:45:01,004 - INFO - [Down] Price down. new brick at: <Brick478 1530837899999: 6575.0>
+2018-07-06 03:45:01,004 - INFO - [+] new brick 6575.0
+2018-07-06 03:45:01,005 - INFO - Price continuing to drop down
+2018-07-06 03:45:01,005 - INFO - Price continuing to drop down
+2018-07-06 03:45:01,006 - DEBUG - length of last items 12
+2018-07-06 03:45:01,007 - INFO - [+] new brick 6550.0
+2018-07-06 03:45:01,008 - INFO - [Down] Price down. new brick at: <Brick479 1530837899999: 6550.0>
+2018-07-06 03:45:01,010 - INFO - [+] Sell time
+2018-07-06 03:45:01,010 - DEBUG - length of last items 24
+2018-07-06 03:45:01,010 - INFO - Price continuing to drop down
+2018-07-06 03:45:01,012 - INFO - [+] Sell time
+2018-07-06 03:45:01,012 - INFO - [+] new brick 6550.0
+2018-07-06 03:45:01,013 - DEBUG - length of last items 12
+2018-07-06 03:45:01,013 - INFO - [+] Sell time
+2018-07-06 15:33:23,867 - INFO - emitted ready
+2018-07-06 15:33:23,903 - INFO - emitted get bots
+2018-07-06 15:33:23,905 - INFO - [*] Changing the master configurations
+2018-07-06 15:33:23,906 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 15:33:23,912 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 15:33:23,914 - INFO - [*] creating a new bot
+2018-07-06 15:33:23,916 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 15:33:23,916 - INFO - [+] Creating a new bot.
+2018-07-06 15:33:23,917 - DEBUG - sleeping for 0
+2018-07-06 15:33:58,245 - DEBUG - [+] fetching upto 1529911800000
+2018-07-06 15:34:29,208 - DEBUG - [+] fetching upto 1529012700000
+2018-07-06 15:42:59,929 - INFO - emitted ready
+2018-07-06 15:42:59,929 - INFO - emitted get bots
+2018-07-06 15:42:59,929 - INFO - [*] Changing the master configurations
+2018-07-06 15:42:59,929 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 15:42:59,929 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 15:42:59,945 - INFO - [*] creating a new bot
+2018-07-06 15:42:59,945 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 15:42:59,945 - INFO - [+] Creating a new bot.
+2018-07-06 15:42:59,945 - DEBUG - sleeping for 0
+2018-07-06 15:43:11,473 - ERROR - socket was closed, reconnecting in 30 seconds
+2018-07-06 15:43:18,862 - DEBUG - [+] fetching upto 1529911800000
+2018-07-06 15:43:23,235 - DEBUG - [+] fetching upto 1529012700000
+2018-07-06 15:43:24,641 - DEBUG - [+] fetching upto 1528113600000
+2018-07-06 15:43:24,657 - DEBUG - Establishing initial conditions
+2018-07-06 15:43:24,657 - INFO - [+] Current trend is [Up] and I've just fetched 479 bricks ;)
+2018-07-06 15:43:24,657 - DEBUG - length of last items 12
+2018-07-06 15:43:24,657 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 479
+2018-07-06 15:43:24,657 - INFO - [+] Signalling a buy
+2018-07-06 15:43:27,734 - DEBUG - [+] Minimum allowable buy quantity is 0.006575
+2018-07-06 15:43:27,734 - DEBUG - Account balance for USDT is 647.46497481
+2018-07-06 15:43:27,734 - DEBUG - [+] Buying 0.09827681290652167
+2018-07-06 15:43:27,734 - INFO - [*] Buying 0.09827681290652167
+2018-07-06 15:43:28,890 - INFO - [+] Order successful, ID: 128619946
+2018-07-06 15:43:28,890 - DEBUG - sleeping for 0
+2018-07-06 15:43:34,092 - DEBUG - [+] Minimum allowable buy quantity is 0.006575
+2018-07-06 15:43:34,092 - DEBUG - Account balance for USDT is 1.41763908
+2018-07-06 15:43:34,108 - DEBUG - [+] Buying 0.00021517928545095058
+2018-07-06 15:43:34,108 - INFO - [*] Buying 0.00021517928545095058
+2018-07-06 15:43:36,045 - INFO - [+] Order successful, ID: 128619973
+2018-07-06 15:43:36,060 - DEBUG - sleeping for 0
+2018-07-06 15:43:39,481 - DEBUG - [+] Minimum allowable buy quantity is 0.006575
+2018-07-06 15:43:39,481 - DEBUG - Account balance for USDT is 0.00428498
+2018-07-06 15:43:39,481 - INFO - trade has completed successfully
+2018-07-06 15:43:39,481 - DEBUG - sleeping for 0
+2018-07-06 15:45:00,460 - DEBUG - [+] Final Brick Price: 6566.89
+2018-07-06 15:48:59,756 - INFO - emitted ready
+2018-07-06 15:48:59,756 - INFO - emitted get bots
+2018-07-06 15:48:59,772 - INFO - [*] Changing the master configurations
+2018-07-06 15:48:59,772 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 15:48:59,788 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 15:48:59,788 - INFO - [*] creating a new bot
+2018-07-06 15:48:59,788 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 15:48:59,788 - INFO - [+] Creating a new bot.
+2018-07-06 15:48:59,788 - DEBUG - sleeping for 0
+2018-07-06 15:49:01,709 - DEBUG - [+] fetching upto 1529912700000
+2018-07-06 15:49:03,162 - DEBUG - [+] fetching upto 1529013600000
+2018-07-06 15:49:04,443 - DEBUG - [+] fetching upto 1528114500000
+2018-07-06 15:49:04,443 - DEBUG - Establishing initial conditions
+2018-07-06 15:49:04,443 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 15:49:04,443 - DEBUG - length of last items 12
+2018-07-06 15:49:04,443 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 15:49:04,443 - INFO - [+] Signalling a buy
+2018-07-06 15:49:07,879 - DEBUG - [+] Minimum allowable buy quantity is 0.006576739999999999
+2018-07-06 15:49:07,879 - DEBUG - Account balance for USDT is 0.00428498
+2018-07-06 15:49:07,879 - INFO - trade has completed successfully
+2018-07-06 15:49:07,879 - DEBUG - sleeping for 0
+2018-07-06 15:58:19,419 - INFO - emitted ready
+2018-07-06 15:58:19,419 - INFO - emitted get bots
+2018-07-06 15:58:19,465 - INFO - [*] Changing the master configurations
+2018-07-06 15:58:19,465 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 15:58:19,465 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 15:58:19,481 - INFO - [*] creating a new bot
+2018-07-06 15:58:19,481 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 15:58:19,481 - INFO - [+] Creating a new bot.
+2018-07-06 15:58:19,481 - DEBUG - sleeping for 0
+2018-07-06 15:58:21,465 - DEBUG - [+] fetching upto 1529912700000
+2018-07-06 15:58:22,574 - DEBUG - [+] fetching upto 1529013600000
+2018-07-06 15:58:23,620 - DEBUG - [+] fetching upto 1528114500000
+2018-07-06 15:58:23,636 - DEBUG - Establishing initial conditions
+2018-07-06 15:58:23,636 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 15:58:23,636 - DEBUG - length of last items 12
+2018-07-06 15:58:23,636 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 15:58:23,636 - INFO - [+] Signalling a buy
+2018-07-06 15:58:26,463 - DEBUG - [+] Minimum allowable buy quantity is 0.00658701
+2018-07-06 16:00:00,706 - DEBUG - [+] Final Brick Price: 6587.0
+2018-07-06 16:08:52,194 - INFO - emitted ready
+2018-07-06 16:08:52,194 - INFO - emitted get bots
+2018-07-06 16:08:52,209 - INFO - [*] Changing the master configurations
+2018-07-06 16:08:52,209 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 16:08:52,225 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 16:08:52,225 - INFO - [*] creating a new bot
+2018-07-06 16:08:52,225 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 16:08:52,225 - INFO - [+] Creating a new bot.
+2018-07-06 16:08:52,241 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:08:53,756 - DEBUG - [+] fetching upto 1529913600000
+2018-07-06 16:08:54,896 - DEBUG - [+] fetching upto 1529014500000
+2018-07-06 16:08:56,005 - DEBUG - [+] fetching upto 1528115400000
+2018-07-06 16:08:56,005 - DEBUG - Establishing initial conditions
+2018-07-06 16:08:56,005 - INFO - [+] Current trend is [Up] and I've just fetched 479 bricks ;)
+2018-07-06 16:08:56,005 - DEBUG - length of last items 12
+2018-07-06 16:08:56,021 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 479
+2018-07-06 16:08:56,021 - INFO - [+] Signalling a buy
+2018-07-06 16:08:58,427 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.00656609
+2018-07-06 16:08:58,427 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 16:08:58,427 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 16:08:58,427 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:09:18,690 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 16:15:00,584 - DEBUG - [+] Final Brick Price: 6558.93
+2018-07-06 16:24:27,599 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 16:52:18,929 - INFO - emitted ready
+2018-07-06 16:52:18,929 - INFO - emitted get bots
+2018-07-06 16:52:18,945 - INFO - [*] Changing the master configurations
+2018-07-06 16:52:18,945 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 16:52:18,960 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 16:52:18,960 - INFO - [*] creating a new bot
+2018-07-06 16:52:18,960 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 16:52:18,960 - INFO - [+] Creating a new bot.
+2018-07-06 16:52:18,976 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:52:20,132 - DEBUG - [+] fetching upto 1529916300000
+2018-07-06 16:52:21,397 - DEBUG - [+] fetching upto 1529017200000
+2018-07-06 16:52:22,428 - DEBUG - [+] fetching upto 1528118100000
+2018-07-06 16:52:22,428 - DEBUG - Establishing initial conditions
+2018-07-06 16:52:22,428 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 16:52:22,428 - DEBUG - length of last items 12
+2018-07-06 16:52:22,428 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 16:52:22,428 - INFO - [+] Signalling a buy
+2018-07-06 16:52:24,990 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.00656201
+2018-07-06 16:52:24,990 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 16:52:24,990 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 16:52:24,990 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:55:30,428 - INFO - emitted ready
+2018-07-06 16:55:30,428 - INFO - emitted get bots
+2018-07-06 16:55:30,443 - INFO - [*] Changing the master configurations
+2018-07-06 16:55:30,443 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 16:55:30,458 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 16:55:30,458 - INFO - [*] creating a new bot
+2018-07-06 16:55:30,458 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 16:55:30,474 - INFO - [+] Creating a new bot.
+2018-07-06 16:55:30,474 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:55:31,864 - DEBUG - [+] fetching upto 1529916300000
+2018-07-06 16:55:32,755 - DEBUG - [+] fetching upto 1529017200000
+2018-07-06 16:55:33,723 - DEBUG - [+] fetching upto 1528118100000
+2018-07-06 16:55:33,739 - DEBUG - Establishing initial conditions
+2018-07-06 16:55:33,739 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 16:55:33,739 - DEBUG - length of last items 12
+2018-07-06 16:55:33,739 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 16:55:33,739 - INFO - [+] Signalling a buy
+2018-07-06 16:55:36,113 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.00655971
+2018-07-06 16:55:36,113 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 16:55:36,113 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 16:55:36,113 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:57:45,974 - INFO - emitted ready
+2018-07-06 16:57:45,974 - INFO - emitted get bots
+2018-07-06 16:57:45,989 - INFO - [*] Changing the master configurations
+2018-07-06 16:57:45,989 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 16:57:46,005 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 16:57:46,005 - INFO - [*] creating a new bot
+2018-07-06 16:57:46,005 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 16:57:46,005 - INFO - [+] Creating a new bot.
+2018-07-06 16:57:46,005 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:57:47,739 - DEBUG - [+] fetching upto 1529916300000
+2018-07-06 16:57:48,754 - DEBUG - [+] fetching upto 1529017200000
+2018-07-06 16:57:49,769 - DEBUG - [+] fetching upto 1528118100000
+2018-07-06 16:57:49,785 - DEBUG - Establishing initial conditions
+2018-07-06 16:57:49,785 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 16:57:49,785 - DEBUG - length of last items 12
+2018-07-06 16:57:49,785 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 16:57:49,785 - INFO - [+] Signalling a buy
+2018-07-06 16:57:52,253 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.006575
+2018-07-06 16:57:52,253 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 16:57:52,253 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 16:57:52,253 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:59:33,651 - INFO - emitted ready
+2018-07-06 16:59:33,651 - INFO - emitted get bots
+2018-07-06 16:59:33,667 - INFO - [*] Changing the master configurations
+2018-07-06 16:59:33,667 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 16:59:33,667 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 16:59:33,682 - INFO - [*] creating a new bot
+2018-07-06 16:59:33,682 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 16:59:33,682 - INFO - [+] Creating a new bot.
+2018-07-06 16:59:33,682 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:59:35,369 - DEBUG - [+] fetching upto 1529916300000
+2018-07-06 16:59:36,744 - DEBUG - [+] fetching upto 1529017200000
+2018-07-06 16:59:38,322 - DEBUG - [+] fetching upto 1528118100000
+2018-07-06 16:59:38,369 - DEBUG - Establishing initial conditions
+2018-07-06 16:59:38,369 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 16:59:38,369 - DEBUG - length of last items 12
+2018-07-06 16:59:38,369 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 16:59:38,369 - INFO - [+] Signalling a buy
+2018-07-06 16:59:41,368 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.00655854
+2018-07-06 16:59:41,368 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 16:59:41,368 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 16:59:41,384 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 16:59:51,163 - INFO - [+] Informing on stopping bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:00:00,926 - DEBUG - [+] Final Brick Price: 6560.74
+2018-07-06 17:04:26,239 - INFO - emitted ready
+2018-07-06 17:04:26,239 - INFO - emitted get bots
+2018-07-06 17:04:26,254 - INFO - [*] Changing the master configurations
+2018-07-06 17:04:26,254 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 17:04:26,270 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 17:04:26,270 - INFO - [*] creating a new bot
+2018-07-06 17:04:26,270 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 17:04:26,270 - INFO - [+] Creating a new bot.
+2018-07-06 17:04:26,270 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 17:04:27,394 - DEBUG - [+] fetching upto 1529917200000
+2018-07-06 17:04:28,613 - DEBUG - [+] fetching upto 1529018100000
+2018-07-06 17:04:29,691 - DEBUG - [+] fetching upto 1528119000000
+2018-07-06 17:04:29,706 - DEBUG - Establishing initial conditions
+2018-07-06 17:04:29,706 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 17:04:29,722 - DEBUG - length of last items 12
+2018-07-06 17:04:29,722 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 17:04:29,722 - INFO - [+] Signalling a buy
+2018-07-06 17:04:31,112 - INFO - [+] Informing on stopping bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:04:32,850 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.006560569999999999
+2018-07-06 17:04:32,851 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 17:04:32,853 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 17:09:13,598 - INFO - emitted ready
+2018-07-06 17:09:13,598 - INFO - emitted get bots
+2018-07-06 17:09:13,691 - INFO - [*] Changing the master configurations
+2018-07-06 17:09:13,707 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 17:09:13,707 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 17:09:13,707 - INFO - [*] creating a new bot
+2018-07-06 17:09:13,707 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 17:09:13,707 - INFO - [+] Creating a new bot.
+2018-07-06 17:09:13,707 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 17:09:15,191 - DEBUG - [+] fetching upto 1529917200000
+2018-07-06 17:09:16,363 - DEBUG - [+] fetching upto 1529018100000
+2018-07-06 17:09:17,394 - DEBUG - [+] fetching upto 1528119000000
+2018-07-06 17:09:17,409 - DEBUG - Establishing initial conditions
+2018-07-06 17:09:17,409 - INFO - [+] Current trend is [Up] and I've just fetched 480 bricks ;)
+2018-07-06 17:09:17,409 - DEBUG - length of last items 12
+2018-07-06 17:09:17,409 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 480
+2018-07-06 17:09:17,409 - INFO - [+] Signalling a buy
+2018-07-06 17:09:19,596 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.00656189
+2018-07-06 17:09:19,596 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 17:09:19,596 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 17:09:19,596 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 17:09:25,735 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:09:30,656 - INFO - [+] Informing on stopping bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:09:30,750 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:12:00,808 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:12:26,028 - INFO - [+] Informing on stopping bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:12:26,106 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:15:19,768 - INFO - emitted ready
+2018-07-06 17:15:19,768 - INFO - emitted get bots
+2018-07-06 17:15:19,783 - INFO - [*] Changing the master configurations
+2018-07-06 17:15:19,783 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '15m', 'sma': '12'}
+2018-07-06 17:15:19,799 - DEBUG - Waiting for renko calculator to be ready
+2018-07-06 17:15:19,799 - INFO - [*] creating a new bot
+2018-07-06 17:15:19,799 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-06 17:15:19,799 - INFO - [+] Creating a new bot.
+2018-07-06 17:15:19,815 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 17:15:25,657 - DEBUG - [+] fetching upto 1529918100000
+2018-07-06 17:15:26,579 - DEBUG - [+] fetching upto 1529019000000
+2018-07-06 17:15:27,610 - DEBUG - [+] fetching upto 1528119900000
+2018-07-06 17:15:27,625 - DEBUG - Establishing initial conditions
+2018-07-06 17:15:27,625 - INFO - [+] Current trend is [Up] and I've just fetched 478 bricks ;)
+2018-07-06 17:15:27,625 - DEBUG - length of last items 12
+2018-07-06 17:15:27,625 - DEBUG - SMA 6527.083333333333 Last brick 6575.0 bricks length 478
+2018-07-06 17:15:27,625 - INFO - [+] Signalling a buy
+2018-07-06 17:15:29,875 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.006567
+2018-07-06 17:15:29,875 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 17:15:29,890 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 17:15:29,890 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-06 17:15:34,233 - INFO - [+] Informing on stopping bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:15:34,327 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:15:38,998 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.006567
+2018-07-06 17:15:38,998 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00428498
+2018-07-06 17:15:38,998 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-06 17:16:16,504 - INFO - [+] Informing on stopping bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:16:16,629 - INFO - [+] Informing on bot fc286ccc-d5fe-4325-983d-9e8020c26cd4
+2018-07-06 17:21:41,869 - ERROR - socket was closed, reconnecting in 30 seconds
+2018-07-06 17:23:09,836 - ERROR - socket was closed, reconnecting in 60 seconds
+2018-07-06 18:33:48,056 - ERROR - socket was closed, reconnecting in 90 seconds
+2018-07-06 18:35:18,113 - ERROR - socket was closed, reconnecting in 120 seconds
+2018-07-06 18:37:18,124 - ERROR - socket was closed, reconnecting in 150 seconds
+2018-07-06 18:39:48,191 - ERROR - socket was closed, reconnecting in 180 seconds
+2018-07-06 18:42:48,209 - ERROR - socket was closed, reconnecting in 210 seconds
+2018-07-06 18:46:26,550 - ERROR - socket was closed, reconnecting in 240 seconds
+2018-07-06 18:50:26,564 - ERROR - socket was closed, reconnecting in 270 seconds
+2018-07-06 21:29:25,192 - ERROR - socket was closed, reconnecting in 300 seconds
+2018-07-06 21:34:25,202 - ERROR - socket was closed, reconnecting in 330 seconds
+2018-07-06 21:39:55,206 - ERROR - socket was closed, reconnecting in 360 seconds
+2018-07-06 21:45:55,214 - ERROR - socket was closed, reconnecting in 390 seconds
+2018-07-06 21:52:25,219 - ERROR - socket was closed, reconnecting in 420 seconds
+2018-07-06 21:59:25,224 - ERROR - socket was closed, reconnecting in 450 seconds
+2018-07-06 22:06:55,235 - ERROR - socket was closed, reconnecting in 480 seconds
+2018-07-06 22:14:55,243 - ERROR - socket was closed, reconnecting in 510 seconds
+2018-07-06 22:30:02,311 - DEBUG - [+] Final Brick Price: 6575.84

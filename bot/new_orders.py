@@ -19,12 +19,17 @@ class Orders(Thread):
         self.keep_running = True
         self.new_side = None
 
+        self.uuid = params['uuid']
+        print(f"[+] Bot UUID is {self.uuid}")
+        self.name = params['name']
+        print(f"[+] Bot name is {self.name}")
+
     def run(self):
 
         sleep_time = 0
         trade_count = 0
         while self.keep_running:
-            logger.debug(f"sleeping for {sleep_time}")
+            logger.debug(f"{self.name} sleeping for {sleep_time}")
             time.sleep(sleep_time) #sleep time is determined by the different events.
             sleep_time = 0 #to avoid unnecessary sleep next time.
 
@@ -33,11 +38,11 @@ class Orders(Thread):
             orders_resp = self._get_open_orders() #if there are any open orders, don't proceed to place new ones
             if not orders_resp['status']:
                 #report back to master the error encountered
-                logger.error(f"[!] Error getting orders : {orders_resp['exception']}")
+                logger.error(f"[!]{self.name} Error getting orders : {orders_resp['exception']}")
                 sleep_time = 10
                 continue
             for open_order in orders_resp['open_orders']:
-                logger.debug(f"[+] Order status is: {open_order['status']}")
+                logger.debug(f"[+]{self.name} Order status is: {open_order['status']}")
                 if open_order['status'] == "ACTIVE":
                     sleep_time = 60
                     continue
@@ -51,32 +56,32 @@ class Orders(Thread):
                 #report back to master the error encountered
                 if account_resp['exception'].error_code == -1021:
                     #we got ourselves a juicy little Timestamp for this request is outside of the recvWindow.
-                    logger.error(f"timestamp error getting balance {account_resp['exception'].error_code}, {account_resp['exception'].error_message}")
+                    logger.error(f"{self.name} timestamp error getting balance {account_resp['exception'].error_code}, {account_resp['exception'].error_message}")
                 else:
-                    logger.error(f"error getting balance {account_resp['exception'].error_code}: {account_resp['exception'].error_code}")
+                    logger.error(f"{self.name} error getting balance {account_resp['exception'].error_code}: {account_resp['exception'].error_code}")
                 sleep_time = 5
                 continue
             asset_balance = float(account_resp['balance'])
             min_qnty = self.get_min_qnty()
             if self.new_side == "BUY":
                 min_qnty = min_qnty * self.trade_signal.latest_price
-            logger.debug(f"[+] Minimum allowable {self.new_side.lower()} quantity is {min_qnty}")
-            logger.debug(f"Account balance for {asset} is {asset_balance}")
+            logger.debug(f"[+]{self.name} Minimum allowable {self.new_side.lower()} quantity is {min_qnty}")
+            logger.debug(f"{self.name} Account balance for {asset} is {asset_balance}")
             if asset_balance * 0.999 < min_qnty:
                 #this is naturally where we end our trade, report that trade is complete.
                 self.trade_event.clear()
-                logger.info("trade has completed successfully")
+                logger.info(f"{self.name} trade has completed successfully")
                 trade_count = 0
                 continue
 
             self.latest_price = float(self.trade_signal.latest_price)
             if self.new_side == "BUY":
                 amount = (asset_balance / self.latest_price) * 0.998 ** (trade_count + 1)
-                logger.debug(f"[+] Buying {amount}")
+                logger.debug(f"[+]{self.name} Buying {amount}")
                 order_resp = self.do_buy(amount)
             elif self.new_side == "SELL":
                 amount = asset_balance * (0.998 ** (trade_count + 1))
-                logger.debug(f"[+] Selling {amount}")
+                logger.debug(f"[+]{self.name} Selling {amount}")
                 order_resp = self.do_sell(amount)
             else:
                 continue
@@ -84,17 +89,17 @@ class Orders(Thread):
             if not order_resp['status']:
                 if order_resp['exception'].error_code == -1021:
                     # we got ourselves a juicy little Timestamp for this request is outside of the recvWindow.
-                    logger.error(f"timestamp error, {order__resp['exception'].error_code}, {order_resp['exception'].error_message}")
+                    logger.error(f"{self.name} timestamp error, {order__resp['exception'].error_code}, {order_resp['exception'].error_message}")
                     sleep_time = 60
                 elif order_resp['exception'].error_code in [-2010, -1010, -2011]:
                     # we got some processing error
-                    logger.error(f"{order_resp['exception'].error_code}, {order_resp['exception'].error_message}")
+                    logger.error(f"{self.name} {order_resp['exception'].error_code}, {order_resp['exception'].error_message}")
                     trade_count += 1
-                    print(f"[*] Current trade counts {trade_count}")
+                    print(f"[*]{self.name} Current trade counts {trade_count}")
 
                 elif order_resp['exception'].error_code == -1013:
                     #occurs when quantity is below allowed, end trade here.
-                    logger.debug(f"[*] Ending trade with {amount} , {self.latest_price}")
+                    logger.debug(f"[*]{self.name} Ending trade with {amount} , {self.latest_price}")
                     self.trade_event.clear()
                     trade_count = 0
                     continue
@@ -102,14 +107,14 @@ class Orders(Thread):
             if trade_count > 20:
                 self.trade_event.clear()
                 trade_count = 0
-                logger.info("trade failed to complete, aborting")
+                logger.info(f"{self.name} trade failed to complete, aborting")
 
     def do_buy(self, amount):
         try:
-            logger.info(f"[*] Buying {amount}")
+            logger.info(f"[*]{self.name} Buying {amount}")
             order = self.rest_api.new_order(symbol=self.SYMBOL, side="BUY", type="MARKET",
                                             quantity="{0:8f}".format(amount), recv_window="10000")
-            logger.info("[+] Order successful, ID: {}".format(order.id))
+            logger.info("[+]{} Order successful, ID: {}".format(self.name, order.id))
             return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order.id}
         except Exception as e:
             logger.error("[!] " + str(e))
@@ -117,10 +122,10 @@ class Orders(Thread):
 
     def do_sell(self, amount):
         try:
-            logger.info(f"[*] Selling {amount}")
+            logger.info(f"[*]{self.name} Selling {amount}")
             order = self.rest_api.new_order(symbol=self.SYMBOL, side="SELL", type="MARKET",
                                             quantity="{0:8f}".format(amount), recv_window="10000")
-            logger.info("[+] Order successful, ID: {}".format(order.id))
+            logger.info("[+]{} Order successful, ID: {}".format(self.name, order.id))
             return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order.id}
         except Exception as e:
             logger.error("[!] " + str(e))
@@ -132,6 +137,8 @@ class Orders(Thread):
         except Exception as e:
             return {'status' : False, 'exception' : e}
         balance = [x for x in account_info.balances if x.asset == asset][0]
+        if not balance:
+            return {'status' : False, 'exception' : ValueError('not able to fetch balance from binance')}
         return {'status' : True, 'balance' : balance.free }
 
     def _get_open_orders(self):

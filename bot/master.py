@@ -60,10 +60,12 @@ class Master(Thread):
         logger.info("[+] Creating a new bot.")
         params = parameters
         params['symbol'] = self.SYMBOL
+        print("[*] Inherited parameters")
         new_bot = Orders(self.signaller, params)
-        self.BOTS_LIST.append(new_bot)
         self.signaller.trade_event_subscribers.append(new_bot)
         new_bot.start()
+        self.BOTS_LIST.append(new_bot)
+        print (f"All current bots are {self.BOTS_LIST}")
 
     def run(self):
         '''
