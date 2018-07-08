@@ -8,14 +8,16 @@ from logging.handlers import SMTPHandler
 from flask_socketio import SocketIO
 from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect
+import os
 
 from blinker import Namespace
 
 from dashboard.app.momentjs import momentjs
 
-app = Flask(__name__, static_folder="\\projects\\new_renko\\dashboard\\static", static_url_path="")
+app = Flask(__name__, static_url_path="")
 #app.debug = True
 app.config.from_object(Config)
+app.static_folder = app.config['STATIC_FOLDER']
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
@@ -40,6 +42,13 @@ app.jinja_env.globals['authorize'] = authorize
 app.jinja_env.globals['activation_type'] = activation_type
 
 from dashboard.app import routes, models, errors, websocket_server, signal_recievers
+
+
+print("*"*100)
+print(app.static_folder)
+print(app.config['CONFIG_INI_FILE'])
+print("*"*100)
+
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

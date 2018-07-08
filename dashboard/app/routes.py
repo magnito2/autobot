@@ -7,7 +7,6 @@ from werkzeug.urls import url_parse
 from datetime import datetime, timedelta
 import configparser, os
 from .token import generate_confirmation_token, confirm_token
-
 from dashboard.app import config_changed, new_bot_created, get_bot_status, destroy_bot, new_user_registered, new_payment_made
 from .authorizer import role_required, check_confirmed, check_hmac
 from .email import send_email, send_password_reset_email
@@ -180,14 +179,14 @@ def settings():
         brick_size = form.brick_size.data
         sma = form.sma.data
         dir_path = os.path.dirname(os.path.realpath(''))
-        config.read("config.ini")
+        config.read(app.config['CONFIG_INI_FILE'])
         config['default'] = {'symbol' : symbol, 'time_frame' : time_frame, 'brick_size' : brick_size, 'sma' : sma}
-        with open('config.ini', 'w') as configfile:
+        with open(app.config['CONFIG_INI_FILE'], 'w') as configfile:
             config.write(configfile)
         print("emitting event config changed")
         config_changed.send('settings')
 
-    config.read('config.ini')
+    config.read(app.config['CONFIG_INI_FILE'])
     form.brick_size.data = config['default']['brick_size']
     form.time_frame.data = config['default']['time_frame']
     form.symbol.data = config['default']['symbol']

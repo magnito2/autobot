@@ -48,7 +48,7 @@ def get_bots():
 @socketio.on('getconfig')
 def send_config():
     config = configparser.ConfigParser()
-    config.read("config.ini")
+    config.read(app.config['CONFIG_INI_FILE'])
     emit("global_config",
          {
              "params": {
@@ -60,9 +60,9 @@ def send_config():
          })
 
 @config_changed.connect
-def resend_config(app, **kwargs):
+def resend_config(app2, **kwargs):
     config = configparser.ConfigParser()
-    config.read("config.ini")
+    config.read(app.config['CONFIG_INI_FILE'])
     socketio.emit("global_config",
          {
              "params": {

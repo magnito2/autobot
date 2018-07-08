@@ -26,3 +26,6 @@ class Config(object):
     COINSPAYMENT_PUBLIC_KEY = "8e1f09d7c218d8a8c47ffc90fbca64765f2c1c7fe539e21a9d66009e76387df2"
     COINSPAYMENT_PRIVATE_KEY = "d5Db3c99b69a2f916DBF0782D9331356b8d067848b787734f7BA51A4Ce32Bc6a"
     COINSPAYMENT_IPN_URL = ""
+
+    STATIC_FOLDER = basedir + "/static"
+    CONFIG_INI_FILE = basedir + "/configs/config.ini"
