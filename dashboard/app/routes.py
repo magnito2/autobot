@@ -308,7 +308,7 @@ def payment():
         payapi = pyCoinPayments.CryptoPayments(PUBLIC_KEY, SECRET_KEY, IPN_URL)
 
         params = {
-            'amount' : '0.0001',
+            'amount' : app.config['COINS_PAYMENT_AMOUNT'],
             'currency1' : 'BTC',
             'currency2' : currency_2,
             'buyer_email' : current_user.email,

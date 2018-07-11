@@ -1,5 +1,6 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
+from flask import url_for
 
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
@@ -13,6 +14,7 @@ class Config(object):
     MAIL_USERNAME = "autobotcloudabc@gmail.com"
     MAIL_PASSWORD = "kesh2828"
 
+
     SECURITY_PASSWORD_SALT = "$2b$12$UoI9MPk8Z5C54aliCZxTyu"
 
     RECAPTCHA_PUBLIC_KEY = "6LdQemAUAAAAAMHl64OR_uzU8Cde9l_iIO8mzjFi"
@@ -25,7 +27,8 @@ class Config(object):
 
     COINSPAYMENT_PUBLIC_KEY = "8e1f09d7c218d8a8c47ffc90fbca64765f2c1c7fe539e21a9d66009e76387df2"
     COINSPAYMENT_PRIVATE_KEY = "d5Db3c99b69a2f916DBF0782D9331356b8d067848b787734f7BA51A4Ce32Bc6a"
-    COINSPAYMENT_IPN_URL = ""
+    COINSPAYMENT_IPN_URL = url_for("/confirm_payment", _external=True)
+    COINS_PAYMENT_AMOUNT = 0.01
 
     STATIC_FOLDER = basedir + "/static"
     CONFIG_INI_FILE = basedir + "/configs/config.ini"
