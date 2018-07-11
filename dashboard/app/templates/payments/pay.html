@@ -15,7 +15,7 @@
                 </div>
                 <div class="card-content">
                     <div class="col-md-8">
-                        <p>Please pay <span class="payinfo" >{{ transaction_details['amount'] }} {{ currency_2 }}</span> to below address:</p>
+                        <p>Please pay <span class="payinfo" >{{ transaction_details['amount'] | float |round(2) }} {{ currency_2 }}</span> to below address:</p>
                         <div class="form-group row">
                             <input class="payinfo form-control" id="pay-address" value="{{ transaction_details['address'] }}"/>
                             <button onclick="copyaddr()" onmouseout="outFunc()" class="btn btn-round">

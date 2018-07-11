@@ -112,7 +112,7 @@ class SettingsForm(FlaskForm):
             raise ValidationError(f'The provided symbol is not in binance {symbol.data} {symbols}')
 
 class PaymentForm(FlaskForm):
-    currency = SelectField('Currency', validators=[DataRequired()], choices=[('BTC','BTC'), ('USDT','USDT'), ('LTC','LTC')])
+    currency = SelectField('Currency', validators=[DataRequired()], choices=[('BTC','BTC')])
     submit = SubmitField('Generate Payment Address')
 
 class CoinsPaymentForm(FlaskForm):
