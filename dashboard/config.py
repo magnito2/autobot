@@ -1,9 +1,8 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
-from flask import url_for
 
 class Config(object):
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SECRET_KEY = 'krb2wSPWmW8c1R-82DkF7A'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -27,7 +26,6 @@ class Config(object):
 
     COINSPAYMENT_PUBLIC_KEY = "8e1f09d7c218d8a8c47ffc90fbca64765f2c1c7fe539e21a9d66009e76387df2"
     COINSPAYMENT_PRIVATE_KEY = "d5Db3c99b69a2f916DBF0782D9331356b8d067848b787734f7BA51A4Ce32Bc6a"
-    COINSPAYMENT_IPN_URL = url_for("/confirm_payment", _external=True)
     COINS_PAYMENT_AMOUNT = 0.01
 
     STATIC_FOLDER = basedir + "/static"
