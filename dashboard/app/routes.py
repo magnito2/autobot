@@ -304,7 +304,7 @@ def payment():
         config.read("config.ini")
         PUBLIC_KEY = app.config['COINSPAYMENT_PUBLIC_KEY']
         SECRET_KEY = app.config['COINSPAYMENT_PRIVATE_KEY']
-        IPN_URL = url_for("/confirm_payment", _external=True)
+        IPN_URL = url_for("confirm_payment", _external=True)
         payapi = pyCoinPayments.CryptoPayments(PUBLIC_KEY, SECRET_KEY, IPN_URL)
 
         params = {
