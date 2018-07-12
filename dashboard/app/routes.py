@@ -11,6 +11,7 @@ from dashboard.app import config_changed, new_bot_created, get_bot_status, destr
 from .authorizer import role_required, check_confirmed, check_hmac
 from .email import send_email, send_password_reset_email
 from itsdangerous import URLSafeTimedSerializer
+from sqlalchemy import desc
 
 from dashboard import pyCoinPayments
 
@@ -141,7 +142,8 @@ def delete_bot(bot_id):
 @app.route('/users')
 @role_required('Admin')
 def users():
-    users = User.query.all()
+    page = request.args.get('page', 1, type=int)
+    users = User.query.order_by(desc(User.created_at)).paginate(page, app.config['ITEMS_PER_PAGE'], False)
     return render_template('users.html', users=users)
 
 @app.route('/user/<username>')
@@ -196,7 +198,8 @@ def settings():
 @app.route("/roles", methods=['GET','POST'])
 @role_required('Admin')
 def roles():
-    users = User.query.all()
+    page = request.args.get('page', 1, type=int)
+    users = User.query.order_by(desc(User.created_at)).paginate(page, app.config['ITEMS_PER_PAGE'], False)
     admin_role = Role.query.filter_by(name='Admin').first()
     return render_template('roles.html', users = users, admin_role = admin_role)
 
@@ -218,7 +221,8 @@ def make_admin(user_id):
 @app.route("/bot", methods=['GET'])
 @role_required('Admin')
 def get_bots():
-    bots = Bot.query.all()
+    page = request.args.get('page', 1, type=int)
+    bots = Bot.query.order_by(desc(Bot.created_at)).paginate(page, app.config['ITEMS_PER_PAGE'], False)
     return render_template('bots.html', bots=bots)
 
 @app.route('/bot/<bot_id>', methods=['GET', 'POST'])
@@ -461,3 +465,10 @@ def activate():
 @app.route("/faq")
 def faq():
     return render_template("home/faq.html")
+
+@app.route("/view_payments", methods=['GET'])
+@role_required('Admin')
+def view_payments():
+    page = request.args.get('page', 1, type=int)
+    payments = Payment.query.order_by(desc(Payment.created_at)).paginate(page, app.config['ITEMS_PER_PAGE'], False)
+    return render_template("payments/view.html", payments=payments)

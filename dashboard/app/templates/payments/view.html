@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+{% from "macros/render_pagination.html" import render_pagination%}
+<div class="container-fluid" id="users-page">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">Payments</h4>
+                </div>
+                <div class="card-content">
+                    <table class="table">
+                        <thead class="text-primary">
+                        <tr>
+                            <th>ID</th>
+                            <th>status</th>
+                            <th>Currency</th>
+                            <th>Amount</th>
+                            <th>Buyer Name</th>
+                            <th>Created at</th>
+                            <th>Confirms</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for payment in payments.items %}
+                        <tr>
+                            <td>{{ payment.id }}</td>
+                            <td>{{ payment.status_text }}</td>
+                            <td>{{ payment.currency2 }}</td>
+                            <td>{{ payment.amount2 }}</td>
+                            <td>{{ payment.buyer_name }}</td>
+                            <td>{{ momentjs(payment.created_at).fromNow() }}</td>
+                            <td>{{ payment.recieved_confirms }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    {{ render_pagination(payments, "view_payments") }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+{{super()}}
+
+{% endblock scripts %}

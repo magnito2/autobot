@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% from "macros/render_pagination.html" import render_pagination%}
 {% block content %}
 <div class="container-fluid" id="users-page">
     <div class="row">
@@ -22,7 +22,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {% for user in users %}
+                        {% for user in users.items %}
                         <tr>
                             <td>{{ user.id }}</td>
                             <td><img class="img" src="{{ user.avatar(32) }}" /> </td>
@@ -44,6 +44,9 @@
                         {% endfor %}
                         </tbody>
                     </table>
+                </div>
+                <div class="card-footer">
+                    {{ render_pagination(users, "users") }}
                 </div>
             </div>
         </div>

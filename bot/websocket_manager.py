@@ -97,5 +97,3 @@ def manage():
     socketIO.emit('getbots')
     logger.info("emitted get bots")
     socketIO.wait()
-
-

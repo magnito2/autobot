@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
+{% from "macros/render_pagination.html" import render_pagination%}
 <div class="container-fluid" id="users-page">
     <div class="row">
         <div class="col-md-9">
@@ -20,7 +20,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {% for bot in bots %}
+                        {% for bot in bots.items %}
                         <tr>
                             <td>{{ bot.id }}</td>
                             <td><a href="/bot/{{ bot.id }}">{{ bot.name }}</a></td>
@@ -40,6 +40,9 @@
                         {% endfor %}
                         </tbody>
                     </table>
+                </div>
+                <div class="card-footer">
+                    {{ render_pagination(bots, "bot") }}
                 </div>
             </div>
         </div>

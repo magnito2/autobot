@@ -30,3 +30,5 @@ class Config(object):
 
     STATIC_FOLDER = basedir + "/static"
     CONFIG_INI_FILE = basedir + "/configs/config.ini"
+
+    ITEMS_PER_PAGE = 10 #used by pagination
