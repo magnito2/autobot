@@ -2,11 +2,11 @@ from flask import flash, render_template, redirect, url_for, request
 from flask_login import current_user, login_required
 from dashboard.app import app, db
 from dashboard.app.forms import PaymentForm
-from dashboard.app.models import Payment, User
+from dashboard.app.models import Payment, User, Bot
 import configparser
 from dashboard import pyCoinPayments
-from dashboard.app.authorizer import role_required, check_hmac
-from datetime import timedelta
+from dashboard.app.authorizer import role_required, check_hmac, activation_type
+from datetime import timedelta, datetime
 from sqlalchemy import desc
 from . import payment_bp
 
@@ -113,3 +113,13 @@ def view_payments():
     page = request.args.get('page', 1, type=int)
     payments = Payment.query.order_by(desc(Payment.created_at)).paginate(page, app.config['ITEMS_PER_PAGE'], False)
     return render_template("payments/view.html", payments=payments)
+
+@payment_bp.route("/manual_activation/<bot_id>", methods=['GET'])
+@role_required('Admin')
+def manual_activate(bot_id):
+    bot = Bot.query.get_or_404(bot_id)
+    bot.expires_at = datetime.utcnow() + timedelta(days=30)
+    db.session.add(bot)
+    db.session.commit()
+    flash(f"{bot.name} has been activated")
+    return redirect(url_for('bots.get_bots'))
