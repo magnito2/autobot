@@ -13,7 +13,7 @@ def send_admin_notification(*args, **kwargs):
     print(f"{user} and {admins_emails}")
     if user and admins_emails:
         print(f"[+] User is {user.username}, admins are {admins_emails}")
-        user_url = url_for('user', username=user.username, _external=True)
+        user_url = url_for('users.user', username=user.username, _external=True)
         html = render_template('email/new_user_registered.html', user_url=user_url, user=user)
         subject = "NEW REGISTRATION"
         send_email(admins_emails, subject, html)

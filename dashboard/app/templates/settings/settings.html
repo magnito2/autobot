@@ -1,0 +1,71 @@
+{% extends "layouts/base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="settings-page">
+    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header" data-background-color="orange">
+                                    <h4 class="title">Edit Settings</h4>
+                                    <p class="category">Change your settings</p>
+                                </div>
+                                <div class="card-content">
+                                    <form action="" method="post">
+                                        {{ form.hidden_tag() }}
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">{{ form.symbol.label }}</label>
+                                                    {{ form.symbol(class_="form-control") }}
+                                                    {% for error in form.symbol.errors %}
+                                                    <span style="color: red;">[{{ error }}]</span>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">{{ form.time_frame.label }}</label>
+                                                    {{ form.time_frame(class="form-control") }}
+                                                    {% for error in form.time_frame.errors %}
+                                                    <span style="color: red;">[{{ error }}]</span>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">{{ form.brick_size.label }}</label>
+                                                    {{ form.brick_size(class_="form-control") }}
+                                                    {% for error in form.brick_size.errors %}
+                                                    <span style="color: red;">[{{ error }}]</span>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">{{ form.sma.label }}</label>
+                                                    {{ form.sma(class_="form-control") }}
+                                                    {% for error in form.sma.errors %}
+                                                    <span style="color: red;">[{{ error }}]</span>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{ form.submit(class_="btn btn-primary pull-right") }}
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+
+{% endblock scripts %}

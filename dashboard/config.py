@@ -20,7 +20,7 @@ class Config(object):
     RECAPTCHA_PRIVATE_KEY = "6LdQemAUAAAAAPhsgYHuqYC5mvR0CzqfN502RuFF"
 
     ADMINS = ['autobotcloudabc@gmail.com']
-    DEBUG = True
+    #DEBUG = True
 
     HMAC_KEY = "Gmc8gWKlZGaxipc4lww12g"
 

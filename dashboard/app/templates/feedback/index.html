@@ -1,0 +1,50 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+{% from "macros/render_pagination.html" import render_pagination%}
+<div class="container-fluid" id="feedback-page">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">Feedback</h4>
+                </div>
+                <div class="card-content">
+                    <table class="table">
+                        <thead class="text-primary">
+                        <tr>
+                            <th>name</th>
+                            <th>email</th>
+                            <th>subject</th>
+                            <th>Message</th>
+                            <th>Created at</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for feedback in feedbacks.items %}
+                        <tr>
+                            <td>{{ feedback.name }}</td>
+                            <td>{{ feedback.email }}</td>
+                            <td>{{ feedback.subject }}</td>
+                            <td>{{ feedback.message | truncate(100, True) }}</td>
+                            <td>{{ momentjs(feedback.created_at).fromNow() }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    {% if search_value %}
+                    {{ render_pagination(feedbacks, "feedbacks.search", search_value) }}
+                    {%  else %}
+                    {{ render_pagination(feedbacks, "feedbacks.index") }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+{{super()}}
+
+{% endblock scripts %}

@@ -85,7 +85,8 @@
 
         <div id="works" class="row">
           <div class="col-lg-5 about-img wow fadeInLeft">
-            <img src="stock_images/btc.jpg" alt="" style="padding: 20%;">
+            <iframe class="col-md-10" height="50%" src="https://www.youtube.com/embed/5-zneAP1F-E" frameborder="0" allowfullscreen>
+            </iframe>
           </div>
 
           <div class="col-lg-7 content wow fadeInRight">
@@ -160,11 +161,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-5 features-img">
-            <img src="/stock_images/volatile.jpg" alt="" class="wow fadeInLeft">
+          <div class="col-lg-5 col-md-5 features-img">
+            <iframe class="col-md-10" height="70%" src="https://www.youtube.com/embed/R2_NCmxEtuE" frameborder="0" allowfullscreen>
+            </iframe>
           </div>
 
-          <div class="col-lg-8 col-md-7 ">
+          <div class="col-lg-7 col-md-7 ">
 
             <div class="row">
               <i> The <strong>Auto Bot Cloud checks all crucial concerns of traders.</strong> But, worry not, as ABC is easy to use as follows:</i>
@@ -302,9 +304,10 @@
               <h3>Auto Bot Cloud</h3>
               <p>The Auto Bot Cloud is the better way to trade Cryptocurrencies. We want you to trust that we are the champion trading partner for you. </p>
               <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://twitter.com/autobotcloud" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/autobotcloud/" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href=" https://www.instagram.com/autobotbcloud/" class="instagram"><i class="fa fa-instagram"></i></a>
+                  <a href=" https://t.me/joinchat/AAAAAE8f5zuMx8nrZSTq6g" class="telegram"><i class="fa fa-telegram"></i></a>
               </div>
             </div>
           </div>
@@ -324,7 +327,7 @@
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
-              <form action="/feedback" method="post" role="form" class="contactForm">
+              <form action="/feedback" method="post" role="form" class="contactForm" id="feedback-form">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                 <div class="form-row">
                   <div class="form-group col-lg-6">
@@ -356,3 +359,18 @@
 
   </main>
 {%endblock content %}
+
+{% block scripts %}
+{{ super()}}
+<script src="landing/lib/bootstrap/js/bootstrap-notify.min.js"></script>
+    <script>
+    $("#feedback-form").on('submit', function (e) {
+        e.preventDefault();
+        $("#feedback-form").submit(function(d){
+            $.notify(d);
+            console.log(d);
+            $("#feedback-form").trigger("reset");
+        });
+    })
+    </script>
+{%  endblock scripts %}

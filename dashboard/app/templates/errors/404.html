@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="index-page">
+    <h1>Ooops, Page Not Found!</h1>
+    <p><a href="{{ url_for('home.index') }}">Back</a></p>
+</div>
+{% endblock content %}
+{% block scripts %}
+{{ super()}}
+
+{% endblock scripts %}

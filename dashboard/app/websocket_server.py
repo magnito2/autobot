@@ -6,10 +6,12 @@ from dashboard.app import app, db, activation_type
 from dashboard.app import socketio
 from flask_socketio import emit
 import configparser
-from dashboard.app.models import Bot
+from dashboard.app.models import Bot, Log
 from dashboard.app.authorizer import activation_type
 
 from dashboard.app import config_changed, new_bot_created, get_bot_status,  destroy_bot
+
+import json, datetime
 
 @socketio.on('connect')
 def test_connect():
@@ -58,6 +60,19 @@ def send_config():
                  "sma": config['default']['sma']
              }
          })
+
+@socketio.on('log')
+def log_this(log):
+    log_dict = json.loads(log)
+    log = Log(
+        name = log_dict['name'],
+        msg = log_dict['msg'],
+        levelname= log_dict['levelname'],
+        threadName= log_dict['threadName'],
+        created= datetime.datetime.fromtimestamp(log_dict['created'])
+    )
+    db.session.add(log)
+    db.session.commit()
 
 @config_changed.connect
 def resend_config(app2, **kwargs):

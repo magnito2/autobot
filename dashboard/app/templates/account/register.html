@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 
 {% block navbar %}
     {% include "partials/navbar.html" %}
@@ -56,7 +56,7 @@
                             </div>
                         </div>
                     </form>
-                    <p>Already have an account? <a href="{{ url_for('login') }}">Login!</a></p>
+                    <p>Already have an account? <a href="{{ url_for('account.login') }}">Login!</a></p>
                 </div>
             </div>
         </div>

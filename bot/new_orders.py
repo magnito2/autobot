@@ -1,5 +1,5 @@
 from threading import Thread, Event
-from custom_client import CustomClient
+from bot.custom_client import CustomClient
 import time
 import logging
 from binance.client import BinanceRESTAPI
@@ -28,6 +28,11 @@ class Orders(Thread):
 
         sleep_time = 0
         trade_count = 0
+
+        if not self._check_permissions()['status']: #bots that have permission issues get terminated here
+            logger.debug(f"{self.name} API KEY has permission errors, check key can trade and get account balance")
+            return
+
         while self.keep_running:
             logger.debug(f"{self.name} sleeping for {sleep_time}")
             time.sleep(sleep_time) #sleep time is determined by the different events.
@@ -136,9 +141,10 @@ class Orders(Thread):
             account_info = self.rest_api.account(recv_window="10000")
         except Exception as e:
             return {'status' : False, 'exception' : e}
-        balance = [x for x in account_info.balances if x.asset == asset][0]
-        if not balance:
+        balance_list = [x for x in account_info.balances if x.asset == asset]
+        if not balance_list:
             return {'status' : False, 'exception' : ValueError('not able to fetch balance from binance')}
+        balance = balance_list[0]
         return {'status' : True, 'balance' : balance.free }
 
     def _get_open_orders(self):
@@ -168,3 +174,12 @@ class Orders(Thread):
                 return 0
         else:
             pass
+
+    def _check_permissions(self):
+        try:
+            account_info = self.rest_api.account(recv_window="10000")
+        except Exception as e:
+            return {'status' : False, 'exception' : e}
+        if not account_info.can_trade:
+            return {'status' : False, 'exception' : ValueError('Permission needed to trade')}
+        return {'status' : True}

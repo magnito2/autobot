@@ -21,7 +21,7 @@ app.static_folder = app.config['STATIC_FOLDER']
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
-login.login_view = 'login'
+login.login_view = 'users.login'
 socketio = SocketIO(app)
 mail = Mail(app)
 CSRFProtect(app)
@@ -37,18 +37,24 @@ new_payment_made = app_signals.signal('new-payment-made')
 
 app.jinja_env.globals['momentjs'] = momentjs
 
-from dashboard.app.authorizer import authorize, activation_type
+from dashboard.app.authorizer import authorize, activation_type, trial_days_remaining
 app.jinja_env.globals['authorize'] = authorize
 app.jinja_env.globals['activation_type'] = activation_type
+app.jinja_env.globals['trial_days_remaining'] = trial_days_remaining
 
-from dashboard.app import routes, models, errors, websocket_server, signal_recievers
+from dashboard.app.routes import admin_bp, bots_bp, home_bp, payment_bp, settings_bp, user_bp, account_bp, log_bp
+
+app.register_blueprint(admin_bp)
+app.register_blueprint(bots_bp)
+app.register_blueprint(home_bp)
+app.register_blueprint(payment_bp)
+app.register_blueprint(settings_bp)
+app.register_blueprint(user_bp)
+app.register_blueprint(account_bp)
+app.register_blueprint(log_bp)
 
 
-print("*"*100)
-print(app.static_folder)
-print(app.config['CONFIG_INI_FILE'])
-print("*"*100)
-
+from dashboard.app import models, errors, websocket_server, signal_recievers
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

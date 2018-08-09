@@ -16,9 +16,9 @@ def role_required(role):
             check_role = Role.query.filter_by(name=role).first()
             if check_role and current_user.is_authenticated:
                 if not check_role in current_user.roles:
-                    return redirect(url_for('index'))
+                    return redirect(url_for('home.index'))
                 return f(*args, **kwargs)
-            return redirect(url_for('login', next=request.url))
+            return redirect(url_for('account.login', next=request.url))
         return decorated_function
     return decorator
 
@@ -47,12 +47,28 @@ def activation_type(bot_id = None):
         return "unknown"
     return account_type
 
+def trial_days_remaining(bot_id):
+    current_time = datetime.datetime.utcnow().timestamp()
+    trial_duration = 30 * 24 * 60 * 60
+    if not bot_id:
+        return 0
+    bot = Bot.query.get(bot_id)
+    if not bot:
+        return 0
+    elif bot.expires_at and bot.created_at:
+        if current_time < bot.created_at.timestamp() + trial_duration:
+            return int((bot.created_at.timestamp() + trial_duration - current_time)/86400)
+        else:
+            return 0
+    else:
+        return 0
+
 def check_confirmed(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):
         if current_user.active is False:
             #flash('Please confirm your account!', 'warning')
-            return redirect(url_for('unconfirmed'))
+            return redirect(url_for('users.unconfirmed'))
         return func(*args, **kwargs)
 
     return decorated_function

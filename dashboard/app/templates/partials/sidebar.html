@@ -13,13 +13,13 @@ Tip 2: you can also add an image using data-image tag
     <div class="sidebar-wrapper">
         <ul class="nav" id="side-bar">
             <li>
-                <a href="/dashboard">
+                <a href="{{ url_for('admin.dashboard') }}">
                     <i class="material-icons">dashboard</i>
                     <p>DASHBOARD</p>
                 </a>
             </li>
             <li>
-                <a href="/account">
+                <a href="{{ url_for('bots.account') }}">
                     <i class="material-icons text-gray">person</i>
                     <p>ACCOUNT</p>
                 </a>

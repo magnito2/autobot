@@ -1,0 +1,61 @@
+{% extends "layouts/base.html" %}
+{% from "macros/render_pagination.html" import render_pagination%}
+{% block content %}
+<div class="container-fluid" id="users-page">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">Users</h4>
+                </div>
+                <div class="card-content">
+                    <table class="table">
+                        <thead class="text-primary">
+                        <tr>
+                            <th>ID</th>
+                            <th>IMG</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Bot</th>
+                            <th>Joined</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for user in users.items %}
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td><img class="img" src="{{ user.avatar(32) }}" /> </td>
+                            <td><a href="{{ url_for('users.user', username = user.username) }}">{{ user.username }}</a></td>
+                            <td>{{ user.email }}</td>
+                            <td>{{activation_type(user.bots.first().id) }}</td>
+                            <td>{{ momentjs(user.created_at).fromNow() }}</td>
+                            <td>
+                                <div class="btn-group btn-group-xs">
+                                    <a href="/user/delete/{{ user.id }}" class="btn btn-danger">
+                                        <i class="material-icons text-primary">delete</i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    {% if searchable %}
+                    {{ render_pagination(users, "users.search", search_value) }}
+                    {% else %}
+                    {{ render_pagination(users, "users") }}
+                    {%  endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+{{super()}}
+
+{% endblock scripts %}

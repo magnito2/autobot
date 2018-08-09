@@ -10,7 +10,7 @@ def index():
 @app.route('/dashboard')
 def dashboard():
 
-    return render_template('dashboard.html')
+    return render_template('admin/dashboard.html')
 
 @app.route("/chart")
 def chart():
@@ -22,7 +22,7 @@ def binance():
 
 @app.route("/settings")
 def settings():
-    return render_template('settings.html')
+    return render_template('settings/settings.html')
 
 @app.route("/logs")
 def logs():
@@ -30,7 +30,7 @@ def logs():
 
 @app.route("/account")
 def account():
-    return render_template('account.html')
+    return render_template('account/account.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,0 +1,219 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="container-fluid" id="index-page">
+    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="orange">
+                                    <i class="material-icons">people</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Users</p>
+                                    <h3 class="title">{{ users_count }}
+                                    </h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons text-success">done</i>
+                                        <a href="{{ url_for('users.users') }}">Check their accounts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="green">
+                                    <i class="material-icons">B</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Bots</p>
+                                    <h3 class="title">{{ bots_count }}</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">done</i>
+                                        <a href="{{ url_for('bots.get_bots') }}">View active bots</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="green">
+                                    <i class="material-icons">show_chart</i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Currect Trend</p>
+                                    <i class="material-icons">trending_up</i>
+                                    <h3 class="title">Up</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">local_offer</i> Tracked from Github
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header" data-background-color="blue">
+                                    <i class="fa fa-twitter"></i>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category">Followers</p>
+                                    <h3 class="title">+245</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">update</i> Just Updated
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="card card-nav-tabs">
+                                <div class="card-header" data-background-color="orange">
+                                    <div class="nav-tabs-navigation">
+                                        <div class="nav-tabs-wrapper">
+                                            <span class="nav-tabs-title">Logs:</span>
+                                            <ul class="nav nav-tabs" data-tabs="tabs">
+                                                <li class="active">
+                                                    <a href="#error-log" data-toggle="tab">
+                                                        <i class="material-icons">bug_report</i> Errors
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#debug-log" data-toggle="tab">
+                                                        <i class="material-icons">code</i> Debug
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#info-log" data-toggle="tab">
+                                                        <i class="material-icons">cloud</i> Info
+                                                        <div class="ripple-container"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="error-log">
+                                            <table class="table">
+                                                <tbody>
+                                                {% for log in error_logs %}
+                                                    <tr>
+                                                        <td>{{ log.threadName }}</td>
+                                                        <td>{{ log.levelname }}</td>
+                                                        <td>{{ log.msg | truncate(50, True) }}</td>
+                                                        <td class="td-actions text-right">
+                                                            <button type="button"  class="btn btn-danger btn-simple btn-xs">
+                                                                <i class="material-icons">close</i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                            <div class="card-footer">
+                                                <div class="stats">
+                                                    <a href="{{ url_for('logs.index') }}">view all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="debug-log">
+                                            <table class="table">
+                                                <tbody>
+                                                {% for log in debug_logs %}
+                                                    <tr>
+                                                        <td>{{ log.threadName }}</td>
+                                                        <td>{{ log.levelname }}</td>
+                                                        <td>{{ log.msg | truncate(50, True) }}</td>
+                                                        <td class="td-actions text-right">
+                                                            <button type="button"  class="btn btn-danger btn-simple btn-xs">
+                                                                <i class="material-icons">close</i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                            <div class="card-footer">
+                                                <div class="stats">
+                                                    <a href="{{ url_for('logs.index') }}">view all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="info-log">
+                                            <table class="table">
+                                                <tbody>
+                                                {% for log in info_logs %}
+                                                    <tr>
+                                                        <td>{{ log.threadName }}</td>
+                                                        <td>{{ log.levelname }}</td>
+                                                        <td>{{ log.msg | truncate(50, True) }}</td>
+                                                        <td class="td-actions text-right">
+                                                            <button type="button"  class="btn btn-danger btn-simple btn-xs">
+                                                                <i class="material-icons">close</i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                            <div class="card-footer">
+                                                <div class="stats">
+                                                    <a href="{{ url_for('logs.index') }}">view all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="orange">
+                                    <h4 class="title">Users Stats</h4>
+                                    <p class="category">New Users</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="text-warning">
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Account</th>
+                                            <th>Joined</th>
+                                        </thead>
+                                        <tbody>
+                                        {% for user in users %}
+                                            <tr>
+                                                <td>{{ user.id }}</td>
+                                                <td>{{ user.username }}</td>
+                                                <td>{{ activation_type(user.bots.first().id) }}</td>
+                                                <td>{{ momentjs(user.created_at).fromNow() }}</td>
+                                            </tr>
+                                        {%  endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <a href="{{ url_for('users.users') }}">View all</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+{{ super()}}
+<!--script src="{{url_for('static', filename='dist/dashboard.js')}}"></script-->
+{% endblock scripts %}

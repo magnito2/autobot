@@ -1,1398 +1,366 @@
-2018-07-08 06:03:01,026 - DEBUG - [+] Final Brick Price: 6736.02
-2018-07-08 06:03:01,028 - DEBUG - [+] Final Brick Price: 6736.02
-2018-07-08 06:04:00,700 - DEBUG - [+] Final Brick Price: 6739.27
-2018-07-08 06:04:00,702 - DEBUG - [+] Final Brick Price: 6739.27
-2018-07-08 06:04:00,706 - DEBUG - [+] Final Brick Price: 6739.27
-2018-07-08 06:05:00,268 - DEBUG - [+] Final Brick Price: 6737.25
-2018-07-08 06:05:00,269 - DEBUG - [+] Final Brick Price: 6737.25
-2018-07-08 06:05:00,273 - DEBUG - [+] Final Brick Price: 6737.25
-2018-07-08 06:06:00,759 - DEBUG - [+] Final Brick Price: 6736.02
-2018-07-08 06:06:00,762 - DEBUG - [+] Final Brick Price: 6736.02
-2018-07-08 06:06:00,766 - DEBUG - [+] Final Brick Price: 6736.02
-2018-07-08 06:07:01,062 - DEBUG - [+] Final Brick Price: 6733.06
-2018-07-08 06:07:01,062 - DEBUG - [+] Final Brick Price: 6733.06
-2018-07-08 06:07:01,064 - DEBUG - [+] Final Brick Price: 6733.06
-2018-07-08 06:08:02,575 - DEBUG - [+] Final Brick Price: 6733.05
-2018-07-08 06:08:02,577 - DEBUG - [+] Final Brick Price: 6733.05
-2018-07-08 06:08:02,579 - DEBUG - [+] Final Brick Price: 6733.05
-2018-07-08 06:09:01,030 - DEBUG - [+] Final Brick Price: 6733.97
-2018-07-08 06:09:01,034 - DEBUG - [+] Final Brick Price: 6733.97
-2018-07-08 06:09:01,039 - DEBUG - [+] Final Brick Price: 6733.97
-2018-07-08 06:10:00,540 - DEBUG - [+] Final Brick Price: 6732.95
-2018-07-08 06:10:00,542 - DEBUG - [+] Final Brick Price: 6732.95
-2018-07-08 06:10:00,544 - DEBUG - [+] Final Brick Price: 6732.95
-2018-07-08 06:11:00,370 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 06:11:00,372 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 06:11:00,375 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 06:12:00,478 - DEBUG - [+] Final Brick Price: 6732.89
-2018-07-08 06:12:00,480 - DEBUG - [+] Final Brick Price: 6732.89
-2018-07-08 06:12:00,484 - DEBUG - [+] Final Brick Price: 6732.89
-2018-07-08 06:13:02,525 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 06:13:02,531 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 06:13:02,532 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 06:14:01,562 - DEBUG - [+] Final Brick Price: 6731.69
-2018-07-08 06:14:01,563 - DEBUG - [+] Final Brick Price: 6731.69
-2018-07-08 06:14:01,564 - DEBUG - [+] Final Brick Price: 6731.69
-2018-07-08 06:15:00,935 - DEBUG - [+] Final Brick Price: 6730.97
-2018-07-08 06:15:00,939 - DEBUG - [+] Final Brick Price: 6730.97
-2018-07-08 06:15:00,943 - DEBUG - [+] Final Brick Price: 6730.97
-2018-07-08 06:16:00,503 - DEBUG - [+] Final Brick Price: 6730.9
-2018-07-08 06:16:00,506 - DEBUG - [+] Final Brick Price: 6730.9
-2018-07-08 06:16:00,508 - DEBUG - [+] Final Brick Price: 6730.9
-2018-07-08 06:17:02,794 - DEBUG - [+] Final Brick Price: 6732.9
-2018-07-08 06:17:02,798 - DEBUG - [+] Final Brick Price: 6732.9
-2018-07-08 06:17:02,803 - DEBUG - [+] Final Brick Price: 6732.9
-2018-07-08 06:18:01,972 - DEBUG - [+] Final Brick Price: 6731.8
-2018-07-08 06:18:01,973 - DEBUG - [+] Final Brick Price: 6731.8
-2018-07-08 06:18:01,978 - DEBUG - [+] Final Brick Price: 6731.8
-2018-07-08 06:19:03,459 - DEBUG - [+] Final Brick Price: 6732.06
-2018-07-08 06:19:03,463 - DEBUG - [+] Final Brick Price: 6732.06
-2018-07-08 06:19:03,465 - DEBUG - [+] Final Brick Price: 6732.06
-2018-07-08 06:20:03,539 - DEBUG - [+] Final Brick Price: 6733.22
-2018-07-08 06:20:03,540 - DEBUG - [+] Final Brick Price: 6733.22
-2018-07-08 06:20:03,544 - DEBUG - [+] Final Brick Price: 6733.22
-2018-07-08 06:21:00,684 - DEBUG - [+] Final Brick Price: 6730.02
-2018-07-08 06:21:00,689 - DEBUG - [+] Final Brick Price: 6730.02
-2018-07-08 06:21:00,690 - DEBUG - [+] Final Brick Price: 6730.02
-2018-07-08 06:22:00,516 - DEBUG - [+] Final Brick Price: 6729.48
-2018-07-08 06:22:00,518 - DEBUG - [+] Final Brick Price: 6729.48
-2018-07-08 06:22:00,522 - DEBUG - [+] Final Brick Price: 6729.48
-2018-07-08 06:23:00,386 - DEBUG - [+] Final Brick Price: 6730.06
-2018-07-08 06:23:00,387 - DEBUG - [+] Final Brick Price: 6730.06
-2018-07-08 06:23:00,391 - DEBUG - [+] Final Brick Price: 6730.06
-2018-07-08 06:24:00,519 - DEBUG - [+] Final Brick Price: 6730.06
-2018-07-08 06:24:00,519 - DEBUG - [+] Final Brick Price: 6730.06
-2018-07-08 06:24:00,524 - DEBUG - [+] Final Brick Price: 6730.06
-2018-07-08 06:25:00,828 - DEBUG - [+] Final Brick Price: 6729.99
-2018-07-08 06:25:00,829 - DEBUG - [+] Final Brick Price: 6729.99
-2018-07-08 06:25:00,833 - DEBUG - [+] Final Brick Price: 6729.99
-2018-07-08 06:26:00,460 - DEBUG - [+] Final Brick Price: 6729.84
-2018-07-08 06:26:00,461 - DEBUG - [+] Final Brick Price: 6729.84
-2018-07-08 06:26:00,465 - DEBUG - [+] Final Brick Price: 6729.84
-2018-07-08 06:27:00,249 - DEBUG - [+] Final Brick Price: 6728.95
-2018-07-08 06:27:00,251 - DEBUG - [+] Final Brick Price: 6728.95
-2018-07-08 06:27:00,257 - DEBUG - [+] Final Brick Price: 6728.95
-2018-07-08 06:28:00,308 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 06:28:00,310 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 06:28:00,314 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 06:29:01,747 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 06:29:01,749 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 06:29:01,756 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 06:30:02,225 - DEBUG - [+] Final Brick Price: 6729.85
-2018-07-08 06:30:02,228 - DEBUG - [+] Final Brick Price: 6729.85
-2018-07-08 06:30:02,233 - DEBUG - [+] Final Brick Price: 6729.85
-2018-07-08 06:31:00,278 - DEBUG - [+] Final Brick Price: 6726.6
-2018-07-08 06:31:00,280 - DEBUG - [+] Final Brick Price: 6726.6
-2018-07-08 06:31:00,284 - DEBUG - [+] Final Brick Price: 6726.6
-2018-07-08 06:32:00,827 - DEBUG - [+] Final Brick Price: 6724.94
-2018-07-08 06:32:00,829 - DEBUG - [+] Final Brick Price: 6724.94
-2018-07-08 06:32:00,834 - DEBUG - [+] Final Brick Price: 6724.94
-2018-07-08 06:33:01,565 - DEBUG - [+] Final Brick Price: 6726.6
-2018-07-08 06:33:01,567 - DEBUG - [+] Final Brick Price: 6726.6
-2018-07-08 06:33:01,572 - DEBUG - [+] Final Brick Price: 6726.6
-2018-07-08 06:34:00,329 - DEBUG - [+] Final Brick Price: 6723.4
-2018-07-08 06:34:00,329 - DEBUG - [+] Final Brick Price: 6723.4
-2018-07-08 06:34:00,333 - DEBUG - [+] Final Brick Price: 6723.4
-2018-07-08 06:35:01,533 - DEBUG - [+] Final Brick Price: 6727.0
-2018-07-08 06:35:01,534 - DEBUG - [+] Final Brick Price: 6727.0
-2018-07-08 06:35:01,539 - DEBUG - [+] Final Brick Price: 6727.0
-2018-07-08 06:36:04,371 - DEBUG - [+] Final Brick Price: 6722.18
-2018-07-08 06:36:04,372 - DEBUG - [+] Final Brick Price: 6722.18
-2018-07-08 06:36:04,376 - DEBUG - [+] Final Brick Price: 6722.18
-2018-07-08 06:37:00,307 - DEBUG - [+] Final Brick Price: 6725.5
-2018-07-08 06:37:00,308 - DEBUG - [+] Final Brick Price: 6725.5
-2018-07-08 06:37:00,312 - DEBUG - [+] Final Brick Price: 6725.5
-2018-07-08 06:38:00,743 - DEBUG - [+] Final Brick Price: 6725.67
-2018-07-08 06:38:00,748 - DEBUG - [+] Final Brick Price: 6725.67
-2018-07-08 06:38:00,750 - DEBUG - [+] Final Brick Price: 6725.67
-2018-07-08 06:39:05,507 - DEBUG - [+] Final Brick Price: 6724.01
-2018-07-08 06:39:05,513 - DEBUG - [+] Final Brick Price: 6724.01
-2018-07-08 06:39:05,519 - DEBUG - [+] Final Brick Price: 6724.01
-2018-07-08 06:40:07,631 - DEBUG - [+] Final Brick Price: 6722.23
-2018-07-08 06:40:07,631 - DEBUG - [+] Final Brick Price: 6722.23
-2018-07-08 06:40:07,635 - DEBUG - [+] Final Brick Price: 6722.23
-2018-07-08 06:41:02,323 - DEBUG - [+] Final Brick Price: 6722.2
-2018-07-08 06:41:02,324 - DEBUG - [+] Final Brick Price: 6722.2
-2018-07-08 06:41:02,330 - DEBUG - [+] Final Brick Price: 6722.2
-2018-07-08 06:42:01,297 - DEBUG - [+] Final Brick Price: 6725.93
-2018-07-08 06:42:01,298 - DEBUG - [+] Final Brick Price: 6725.93
-2018-07-08 06:42:01,304 - DEBUG - [+] Final Brick Price: 6725.93
-2018-07-08 06:43:02,669 - DEBUG - [+] Final Brick Price: 6725.89
-2018-07-08 06:43:02,671 - DEBUG - [+] Final Brick Price: 6725.89
-2018-07-08 06:43:02,675 - DEBUG - [+] Final Brick Price: 6725.89
-2018-07-08 06:44:02,324 - DEBUG - [+] Final Brick Price: 6725.0
-2018-07-08 06:44:02,325 - DEBUG - [+] Final Brick Price: 6725.0
-2018-07-08 06:44:02,330 - DEBUG - [+] Final Brick Price: 6725.0
-2018-07-08 06:45:00,332 - DEBUG - [+] Final Brick Price: 6722.0
-2018-07-08 06:45:00,334 - DEBUG - [+] Final Brick Price: 6722.0
-2018-07-08 06:45:00,341 - DEBUG - [+] Final Brick Price: 6722.0
-2018-07-08 06:46:01,023 - DEBUG - [+] Final Brick Price: 6720.62
-2018-07-08 06:46:01,023 - DEBUG - [+] Final Brick Price: 6720.62
-2018-07-08 06:46:01,028 - DEBUG - [+] Final Brick Price: 6720.62
-2018-07-08 06:47:00,333 - DEBUG - [+] Final Brick Price: 6720.62
-2018-07-08 06:47:00,336 - DEBUG - [+] Final Brick Price: 6720.62
-2018-07-08 06:47:00,339 - DEBUG - [+] Final Brick Price: 6720.62
-2018-07-08 06:48:02,739 - DEBUG - [+] Final Brick Price: 6720.14
-2018-07-08 06:48:02,741 - DEBUG - [+] Final Brick Price: 6720.14
-2018-07-08 06:48:02,745 - DEBUG - [+] Final Brick Price: 6720.14
-2018-07-08 06:49:01,600 - DEBUG - [+] Final Brick Price: 6723.52
-2018-07-08 06:49:01,602 - DEBUG - [+] Final Brick Price: 6723.52
-2018-07-08 06:49:01,612 - DEBUG - [+] Final Brick Price: 6723.52
-2018-07-08 06:50:01,903 - DEBUG - [+] Final Brick Price: 6723.51
-2018-07-08 06:50:01,908 - DEBUG - [+] Final Brick Price: 6723.51
-2018-07-08 06:50:01,911 - DEBUG - [+] Final Brick Price: 6723.51
-2018-07-08 06:51:01,399 - DEBUG - [+] Final Brick Price: 6721.49
-2018-07-08 06:51:01,401 - DEBUG - [+] Final Brick Price: 6721.49
-2018-07-08 06:51:01,406 - DEBUG - [+] Final Brick Price: 6721.49
-2018-07-08 06:52:01,995 - DEBUG - [+] Final Brick Price: 6721.31
-2018-07-08 06:52:01,999 - DEBUG - [+] Final Brick Price: 6721.31
-2018-07-08 06:52:02,001 - DEBUG - [+] Final Brick Price: 6721.31
-2018-07-08 06:53:04,089 - DEBUG - [+] Final Brick Price: 6724.0
-2018-07-08 06:53:04,094 - DEBUG - [+] Final Brick Price: 6724.0
-2018-07-08 06:53:04,095 - DEBUG - [+] Final Brick Price: 6724.0
-2018-07-08 06:54:03,462 - DEBUG - [+] Final Brick Price: 6720.59
-2018-07-08 06:54:03,464 - DEBUG - [+] Final Brick Price: 6720.59
-2018-07-08 06:54:03,467 - DEBUG - [+] Final Brick Price: 6720.59
-2018-07-08 06:55:00,718 - DEBUG - [+] Final Brick Price: 6723.06
-2018-07-08 06:55:00,720 - DEBUG - [+] Final Brick Price: 6723.06
-2018-07-08 06:55:00,724 - DEBUG - [+] Final Brick Price: 6723.06
-2018-07-08 06:56:01,281 - DEBUG - [+] Final Brick Price: 6722.98
-2018-07-08 06:56:01,282 - DEBUG - [+] Final Brick Price: 6722.98
-2018-07-08 06:56:01,287 - DEBUG - [+] Final Brick Price: 6722.98
-2018-07-08 06:57:00,215 - DEBUG - [+] Final Brick Price: 6721.84
-2018-07-08 06:57:00,216 - DEBUG - [+] Final Brick Price: 6721.84
-2018-07-08 06:57:00,219 - DEBUG - [+] Final Brick Price: 6721.84
-2018-07-08 06:58:04,871 - DEBUG - [+] Final Brick Price: 6718.42
-2018-07-08 06:58:04,872 - DEBUG - [+] Final Brick Price: 6718.42
-2018-07-08 06:58:04,875 - DEBUG - [+] Final Brick Price: 6718.42
-2018-07-08 06:58:04,875 - INFO - [Down] Price down. new brick at: <Brick303 1531047479999: 6720.0>
-2018-07-08 06:58:04,875 - INFO - [+] new brick 6720.0
-2018-07-08 06:58:04,875 - DEBUG - length of last items 24
-2018-07-08 06:58:04,875 - INFO - [+] Sell time
-2018-07-08 06:58:06,303 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 06:58:06,303 - DEBUG - Account balance for BTC is 0.0
-2018-07-08 06:58:06,303 - INFO - trade has completed successfully
-2018-07-08 06:58:06,303 - DEBUG - sleeping for 0
-2018-07-08 06:58:06,352 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 06:58:06,352 - DEBUG - Account balance for BTC is 9.4e-07
-2018-07-08 06:58:06,352 - INFO - trade has completed successfully
-2018-07-08 06:58:06,353 - DEBUG - sleeping for 0
-2018-07-08 06:58:06,702 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 06:58:06,702 - DEBUG - Account balance for BTC is 9.2e-07
-2018-07-08 06:58:06,702 - INFO - trade has completed successfully
-2018-07-08 06:58:06,702 - DEBUG - sleeping for 0
-2018-07-08 06:59:01,065 - DEBUG - [+] Final Brick Price: 6718.99
-2018-07-08 06:59:01,067 - DEBUG - [+] Final Brick Price: 6718.99
-2018-07-08 06:59:01,072 - DEBUG - [+] Final Brick Price: 6718.99
-2018-07-08 07:00:01,288 - DEBUG - [+] Final Brick Price: 6718.4
-2018-07-08 07:00:01,289 - DEBUG - [+] Final Brick Price: 6718.4
-2018-07-08 07:00:01,292 - DEBUG - [+] Final Brick Price: 6718.4
-2018-07-08 07:01:00,153 - DEBUG - [+] Final Brick Price: 6724.99
-2018-07-08 07:01:00,154 - DEBUG - [+] Final Brick Price: 6724.99
-2018-07-08 07:01:00,158 - DEBUG - [+] Final Brick Price: 6724.99
-2018-07-08 07:02:02,215 - DEBUG - [+] Final Brick Price: 6725.13
-2018-07-08 07:02:02,217 - DEBUG - [+] Final Brick Price: 6725.13
-2018-07-08 07:02:02,221 - DEBUG - [+] Final Brick Price: 6725.13
-2018-07-08 07:03:00,704 - DEBUG - [+] Final Brick Price: 6725.77
-2018-07-08 07:03:00,708 - DEBUG - [+] Final Brick Price: 6725.77
-2018-07-08 07:03:00,712 - DEBUG - [+] Final Brick Price: 6725.77
-2018-07-08 07:04:01,994 - DEBUG - [+] Final Brick Price: 6725.81
-2018-07-08 07:04:01,996 - DEBUG - [+] Final Brick Price: 6725.81
-2018-07-08 07:04:01,999 - DEBUG - [+] Final Brick Price: 6725.81
-2018-07-08 07:05:00,414 - DEBUG - [+] Final Brick Price: 6728.32
-2018-07-08 07:05:00,415 - DEBUG - [+] Final Brick Price: 6728.32
-2018-07-08 07:05:00,419 - DEBUG - [+] Final Brick Price: 6728.32
-2018-07-08 07:06:00,281 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 07:06:00,283 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 07:06:00,287 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 07:07:00,318 - DEBUG - [+] Final Brick Price: 6725.28
-2018-07-08 07:07:00,319 - DEBUG - [+] Final Brick Price: 6725.28
-2018-07-08 07:07:00,323 - DEBUG - [+] Final Brick Price: 6725.28
-2018-07-08 07:08:00,423 - DEBUG - [+] Final Brick Price: 6725.6
-2018-07-08 07:08:00,425 - DEBUG - [+] Final Brick Price: 6725.6
-2018-07-08 07:08:00,429 - DEBUG - [+] Final Brick Price: 6725.6
-2018-07-08 07:09:00,889 - DEBUG - [+] Final Brick Price: 6725.01
-2018-07-08 07:09:00,891 - DEBUG - [+] Final Brick Price: 6725.01
-2018-07-08 07:09:00,895 - DEBUG - [+] Final Brick Price: 6725.01
-2018-07-08 07:10:01,030 - DEBUG - [+] Final Brick Price: 6721.21
-2018-07-08 07:10:01,032 - DEBUG - [+] Final Brick Price: 6721.21
-2018-07-08 07:10:01,038 - DEBUG - [+] Final Brick Price: 6721.21
-2018-07-08 07:11:00,639 - DEBUG - [+] Final Brick Price: 6720.81
-2018-07-08 07:11:00,640 - DEBUG - [+] Final Brick Price: 6720.81
-2018-07-08 07:11:00,645 - DEBUG - [+] Final Brick Price: 6720.81
-2018-07-08 07:12:02,676 - DEBUG - [+] Final Brick Price: 6720.01
-2018-07-08 07:12:02,677 - DEBUG - [+] Final Brick Price: 6720.01
-2018-07-08 07:12:02,680 - DEBUG - [+] Final Brick Price: 6720.01
-2018-07-08 07:13:01,398 - DEBUG - [+] Final Brick Price: 6720.31
-2018-07-08 07:13:01,401 - DEBUG - [+] Final Brick Price: 6720.31
-2018-07-08 07:13:01,408 - DEBUG - [+] Final Brick Price: 6720.31
-2018-07-08 07:14:01,356 - DEBUG - [+] Final Brick Price: 6725.67
-2018-07-08 07:14:01,361 - DEBUG - [+] Final Brick Price: 6725.67
-2018-07-08 07:14:01,361 - DEBUG - [+] Final Brick Price: 6725.67
-2018-07-08 07:15:00,551 - DEBUG - [+] Final Brick Price: 6727.45
-2018-07-08 07:15:00,553 - DEBUG - [+] Final Brick Price: 6727.45
-2018-07-08 07:15:00,557 - DEBUG - [+] Final Brick Price: 6727.45
-2018-07-08 07:16:00,566 - DEBUG - [+] Final Brick Price: 6727.6
-2018-07-08 07:16:00,567 - DEBUG - [+] Final Brick Price: 6727.6
-2018-07-08 07:16:00,572 - DEBUG - [+] Final Brick Price: 6727.6
-2018-07-08 07:17:00,318 - DEBUG - [+] Final Brick Price: 6727.9
-2018-07-08 07:17:00,320 - DEBUG - [+] Final Brick Price: 6727.9
-2018-07-08 07:17:00,324 - DEBUG - [+] Final Brick Price: 6727.9
-2018-07-08 07:18:00,840 - DEBUG - [+] Final Brick Price: 6725.42
-2018-07-08 07:18:00,843 - DEBUG - [+] Final Brick Price: 6725.42
-2018-07-08 07:18:00,848 - DEBUG - [+] Final Brick Price: 6725.42
-2018-07-08 07:19:01,698 - DEBUG - [+] Final Brick Price: 6725.57
-2018-07-08 07:19:01,700 - DEBUG - [+] Final Brick Price: 6725.57
-2018-07-08 07:19:01,703 - DEBUG - [+] Final Brick Price: 6725.57
-2018-07-08 07:20:00,862 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:20:00,866 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:20:00,870 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:21:00,802 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:21:00,803 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:21:00,806 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:22:00,728 - DEBUG - [+] Final Brick Price: 6727.5
-2018-07-08 07:22:00,729 - DEBUG - [+] Final Brick Price: 6727.5
-2018-07-08 07:22:00,734 - DEBUG - [+] Final Brick Price: 6727.5
-2018-07-08 07:23:02,217 - DEBUG - [+] Final Brick Price: 6725.51
-2018-07-08 07:23:02,219 - DEBUG - [+] Final Brick Price: 6725.51
-2018-07-08 07:23:02,223 - DEBUG - [+] Final Brick Price: 6725.51
-2018-07-08 07:24:02,677 - DEBUG - [+] Final Brick Price: 6728.46
-2018-07-08 07:24:02,678 - DEBUG - [+] Final Brick Price: 6728.46
-2018-07-08 07:24:02,685 - DEBUG - [+] Final Brick Price: 6728.46
-2018-07-08 07:25:07,631 - DEBUG - [+] Final Brick Price: 6725.05
-2018-07-08 07:25:07,633 - DEBUG - [+] Final Brick Price: 6725.05
-2018-07-08 07:25:07,638 - DEBUG - [+] Final Brick Price: 6725.05
-2018-07-08 07:26:01,706 - DEBUG - [+] Final Brick Price: 6729.99
-2018-07-08 07:26:01,708 - DEBUG - [+] Final Brick Price: 6729.99
-2018-07-08 07:26:01,710 - DEBUG - [+] Final Brick Price: 6729.99
-2018-07-08 07:27:00,317 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:27:00,319 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:27:00,323 - DEBUG - [+] Final Brick Price: 6725.03
-2018-07-08 07:28:03,142 - DEBUG - [+] Final Brick Price: 6725.05
-2018-07-08 07:28:03,145 - DEBUG - [+] Final Brick Price: 6725.05
-2018-07-08 07:28:03,149 - DEBUG - [+] Final Brick Price: 6725.05
-2018-07-08 07:29:02,590 - DEBUG - [+] Final Brick Price: 6726.85
-2018-07-08 07:29:02,592 - DEBUG - [+] Final Brick Price: 6726.85
-2018-07-08 07:29:02,597 - DEBUG - [+] Final Brick Price: 6726.85
-2018-07-08 07:30:04,397 - DEBUG - [+] Final Brick Price: 6726.84
-2018-07-08 07:30:04,403 - DEBUG - [+] Final Brick Price: 6726.84
-2018-07-08 07:30:04,409 - DEBUG - [+] Final Brick Price: 6726.84
-2018-07-08 07:31:02,472 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:31:02,473 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:31:02,477 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:32:00,537 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:32:00,539 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:32:00,544 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:33:01,800 - DEBUG - [+] Final Brick Price: 6727.97
-2018-07-08 07:33:01,801 - DEBUG - [+] Final Brick Price: 6727.97
-2018-07-08 07:33:01,803 - DEBUG - [+] Final Brick Price: 6727.97
-2018-07-08 07:34:00,626 - DEBUG - [+] Final Brick Price: 6727.98
-2018-07-08 07:34:00,627 - DEBUG - [+] Final Brick Price: 6727.98
-2018-07-08 07:34:00,633 - DEBUG - [+] Final Brick Price: 6727.98
-2018-07-08 07:35:01,371 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 07:35:01,374 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 07:35:01,378 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 07:36:01,058 - DEBUG - [+] Final Brick Price: 6724.99
-2018-07-08 07:36:01,063 - DEBUG - [+] Final Brick Price: 6724.99
-2018-07-08 07:36:01,070 - DEBUG - [+] Final Brick Price: 6724.99
-2018-07-08 07:37:02,630 - DEBUG - [+] Final Brick Price: 6725.0
-2018-07-08 07:37:02,632 - DEBUG - [+] Final Brick Price: 6725.0
-2018-07-08 07:37:02,637 - DEBUG - [+] Final Brick Price: 6725.0
-2018-07-08 07:38:02,076 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:38:02,079 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:38:02,082 - DEBUG - [+] Final Brick Price: 6727.99
-2018-07-08 07:39:00,144 - DEBUG - [+] Final Brick Price: 6726.49
-2018-07-08 07:39:00,165 - DEBUG - [+] Final Brick Price: 6726.49
-2018-07-08 07:39:00,371 - DEBUG - [+] Final Brick Price: 6726.49
-2018-07-08 07:40:01,554 - DEBUG - [+] Final Brick Price: 6730.91
-2018-07-08 07:40:01,555 - DEBUG - [+] Final Brick Price: 6730.91
-2018-07-08 07:40:01,558 - DEBUG - [+] Final Brick Price: 6730.91
-2018-07-08 07:41:03,762 - DEBUG - [+] Final Brick Price: 6733.99
-2018-07-08 07:41:03,763 - DEBUG - [+] Final Brick Price: 6733.99
-2018-07-08 07:41:03,768 - DEBUG - [+] Final Brick Price: 6733.99
-2018-07-08 07:42:01,397 - DEBUG - [+] Final Brick Price: 6732.01
-2018-07-08 07:42:01,399 - DEBUG - [+] Final Brick Price: 6732.01
-2018-07-08 07:42:01,402 - DEBUG - [+] Final Brick Price: 6732.01
-2018-07-08 07:43:02,679 - DEBUG - [+] Final Brick Price: 6731.39
-2018-07-08 07:43:02,681 - DEBUG - [+] Final Brick Price: 6731.39
-2018-07-08 07:43:02,688 - DEBUG - [+] Final Brick Price: 6731.39
-2018-07-08 07:44:00,597 - DEBUG - [+] Final Brick Price: 6733.7
-2018-07-08 07:44:00,600 - DEBUG - [+] Final Brick Price: 6733.7
-2018-07-08 07:44:00,602 - DEBUG - [+] Final Brick Price: 6733.7
-2018-07-08 07:45:00,478 - DEBUG - [+] Final Brick Price: 6733.7
-2018-07-08 07:45:00,483 - DEBUG - [+] Final Brick Price: 6733.7
-2018-07-08 07:45:00,489 - DEBUG - [+] Final Brick Price: 6733.7
-2018-07-08 07:46:02,445 - DEBUG - [+] Final Brick Price: 6733.0
-2018-07-08 07:46:02,448 - DEBUG - [+] Final Brick Price: 6733.0
-2018-07-08 07:46:02,449 - DEBUG - [+] Final Brick Price: 6733.0
-2018-07-08 07:47:04,126 - DEBUG - [+] Final Brick Price: 6733.17
-2018-07-08 07:47:04,131 - DEBUG - [+] Final Brick Price: 6733.17
-2018-07-08 07:47:04,135 - DEBUG - [+] Final Brick Price: 6733.17
-2018-07-08 07:48:02,740 - DEBUG - [+] Final Brick Price: 6733.02
-2018-07-08 07:48:02,743 - DEBUG - [+] Final Brick Price: 6733.02
-2018-07-08 07:48:02,747 - DEBUG - [+] Final Brick Price: 6733.02
-2018-07-08 07:49:00,934 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 07:49:00,935 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 07:49:00,940 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 07:50:00,538 - DEBUG - [+] Final Brick Price: 6731.99
-2018-07-08 07:50:00,541 - DEBUG - [+] Final Brick Price: 6731.99
-2018-07-08 07:50:00,543 - DEBUG - [+] Final Brick Price: 6731.99
-2018-07-08 07:51:03,936 - DEBUG - [+] Final Brick Price: 6732.62
-2018-07-08 07:51:03,938 - DEBUG - [+] Final Brick Price: 6732.62
-2018-07-08 07:51:03,942 - DEBUG - [+] Final Brick Price: 6732.62
-2018-07-08 07:52:00,717 - DEBUG - [+] Final Brick Price: 6734.02
-2018-07-08 07:52:00,717 - DEBUG - [+] Final Brick Price: 6734.02
-2018-07-08 07:52:00,723 - DEBUG - [+] Final Brick Price: 6734.02
-2018-07-08 07:53:01,087 - DEBUG - [+] Final Brick Price: 6737.57
-2018-07-08 07:53:01,094 - DEBUG - [+] Final Brick Price: 6737.57
-2018-07-08 07:53:01,097 - DEBUG - [+] Final Brick Price: 6737.57
-2018-07-08 07:54:00,157 - DEBUG - [+] Final Brick Price: 6735.42
-2018-07-08 07:54:00,164 - DEBUG - [+] Final Brick Price: 6735.42
-2018-07-08 07:54:00,167 - DEBUG - [+] Final Brick Price: 6735.42
-2018-07-08 07:55:00,534 - DEBUG - [+] Final Brick Price: 6735.44
-2018-07-08 07:55:00,535 - DEBUG - [+] Final Brick Price: 6735.44
-2018-07-08 07:55:00,540 - DEBUG - [+] Final Brick Price: 6735.44
-2018-07-08 07:56:00,320 - DEBUG - [+] Final Brick Price: 6735.42
-2018-07-08 07:56:00,320 - DEBUG - [+] Final Brick Price: 6735.42
-2018-07-08 07:56:00,324 - DEBUG - [+] Final Brick Price: 6735.42
-2018-07-08 07:57:00,536 - DEBUG - [+] Final Brick Price: 6735.47
-2018-07-08 07:57:00,536 - DEBUG - [+] Final Brick Price: 6735.47
-2018-07-08 07:57:00,541 - DEBUG - [+] Final Brick Price: 6735.47
-2018-07-08 07:58:00,350 - DEBUG - [+] Final Brick Price: 6735.46
-2018-07-08 07:58:00,352 - DEBUG - [+] Final Brick Price: 6735.46
-2018-07-08 07:58:00,353 - DEBUG - [+] Final Brick Price: 6735.46
-2018-07-08 07:59:01,798 - DEBUG - [+] Final Brick Price: 6739.02
-2018-07-08 07:59:01,805 - DEBUG - [+] Final Brick Price: 6739.02
-2018-07-08 07:59:01,805 - DEBUG - [+] Final Brick Price: 6739.02
-2018-07-08 08:00:00,932 - DEBUG - [+] Final Brick Price: 6735.43
-2018-07-08 08:00:00,933 - DEBUG - [+] Final Brick Price: 6735.43
-2018-07-08 08:00:00,938 - DEBUG - [+] Final Brick Price: 6735.43
-2018-07-08 08:01:02,364 - DEBUG - [+] Final Brick Price: 6738.69
-2018-07-08 08:01:02,366 - DEBUG - [+] Final Brick Price: 6738.69
-2018-07-08 08:01:02,370 - DEBUG - [+] Final Brick Price: 6738.69
-2018-07-08 08:02:02,235 - DEBUG - [+] Final Brick Price: 6736.28
-2018-07-08 08:02:02,237 - DEBUG - [+] Final Brick Price: 6736.28
-2018-07-08 08:02:02,241 - DEBUG - [+] Final Brick Price: 6736.28
-2018-07-08 08:03:00,143 - DEBUG - [+] Final Brick Price: 6741.57
-2018-07-08 08:03:00,150 - DEBUG - [+] Final Brick Price: 6741.57
-2018-07-08 08:03:00,154 - DEBUG - [+] Final Brick Price: 6741.57
-2018-07-08 08:03:00,154 - INFO - [Up] price up. new brick at: <Brick304 1531051379999: 6740.0>
-2018-07-08 08:03:00,154 - INFO - [+] new brick 6740.0
-2018-07-08 08:03:00,154 - DEBUG - length of last items 24
-2018-07-08 08:04:00,840 - DEBUG - [+] Final Brick Price: 6741.61
-2018-07-08 08:04:00,841 - DEBUG - [+] Final Brick Price: 6741.61
-2018-07-08 08:04:00,842 - DEBUG - [+] Final Brick Price: 6741.61
-2018-07-08 08:05:00,438 - DEBUG - [+] Final Brick Price: 6742.59
-2018-07-08 08:05:00,440 - DEBUG - [+] Final Brick Price: 6742.59
-2018-07-08 08:05:00,441 - DEBUG - [+] Final Brick Price: 6742.59
-2018-07-08 08:06:00,332 - DEBUG - [+] Final Brick Price: 6740.75
-2018-07-08 08:06:00,332 - DEBUG - [+] Final Brick Price: 6740.75
-2018-07-08 08:06:00,333 - DEBUG - [+] Final Brick Price: 6740.75
-2018-07-08 08:07:01,061 - DEBUG - [+] Final Brick Price: 6736.64
-2018-07-08 08:07:01,062 - DEBUG - [+] Final Brick Price: 6736.64
-2018-07-08 08:07:01,064 - DEBUG - [+] Final Brick Price: 6736.64
-2018-07-08 08:08:00,474 - DEBUG - [+] Final Brick Price: 6743.35
-2018-07-08 08:08:00,477 - DEBUG - [+] Final Brick Price: 6743.35
-2018-07-08 08:08:00,478 - DEBUG - [+] Final Brick Price: 6743.35
-2018-07-08 08:09:00,841 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:09:00,844 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:09:00,844 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:10:01,946 - DEBUG - [+] Final Brick Price: 6740.27
-2018-07-08 08:10:01,949 - DEBUG - [+] Final Brick Price: 6740.27
-2018-07-08 08:10:01,949 - DEBUG - [+] Final Brick Price: 6740.27
-2018-07-08 08:11:00,447 - DEBUG - [+] Final Brick Price: 6738.28
-2018-07-08 08:11:00,449 - DEBUG - [+] Final Brick Price: 6738.28
-2018-07-08 08:11:00,450 - DEBUG - [+] Final Brick Price: 6738.28
-2018-07-08 08:12:00,959 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:12:00,962 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:12:00,963 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:13:00,678 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:13:00,681 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:13:00,682 - DEBUG - [+] Final Brick Price: 6740.01
-2018-07-08 08:14:00,257 - DEBUG - [+] Final Brick Price: 6741.46
-2018-07-08 08:14:00,260 - DEBUG - [+] Final Brick Price: 6741.46
-2018-07-08 08:14:00,262 - DEBUG - [+] Final Brick Price: 6741.46
-2018-07-08 08:15:00,171 - DEBUG - [+] Final Brick Price: 6761.01
-2018-07-08 08:15:00,176 - DEBUG - [+] Final Brick Price: 6761.01
-2018-07-08 08:15:00,180 - DEBUG - [+] Final Brick Price: 6761.01
-2018-07-08 08:15:00,180 - INFO - [Up] price up. new brick at: <Brick305 1531052099999: 6750.0>
-2018-07-08 08:15:00,180 - INFO - Price continuing to rise up
-2018-07-08 08:15:00,180 - INFO - [Up] price up. new brick at: <Brick306 1531052099999: 6760.0>
-2018-07-08 08:15:00,180 - INFO - Price continuing to rise up
-2018-07-08 08:15:00,180 - INFO - [+] new brick 6760.0
-2018-07-08 08:15:00,181 - DEBUG - length of last items 24
-2018-07-08 08:15:00,181 - INFO - [+] Buy time
-2018-07-08 08:15:01,367 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:01,370 - DEBUG - Account balance for USDT is 580.98011644
-2018-07-08 08:15:01,370 - DEBUG - [+] Buying 0.08575910347819629
-2018-07-08 08:15:01,371 - INFO - [*] Buying 0.08575910347819629
-2018-07-08 08:15:01,380 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:01,383 - DEBUG - Account balance for USDT is 64.48762004
-2018-07-08 08:15:01,383 - DEBUG - [+] Buying 0.009519087355279756
-2018-07-08 08:15:01,383 - INFO - [*] Buying 0.009519087355279756
-2018-07-08 08:15:01,754 - INFO - [+] Order successful, ID: 129365422
-2018-07-08 08:15:01,754 - DEBUG - sleeping for 0
-2018-07-08 08:15:01,774 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:01,774 - DEBUG - Account balance for USDT is 202.95315941
-2018-07-08 08:15:01,774 - DEBUG - [+] Buying 0.02995813541041649
-2018-07-08 08:15:01,774 - INFO - [*] Buying 0.02995813541041649
-2018-07-08 08:15:01,787 - INFO - [+] Order successful, ID: 129365423
-2018-07-08 08:15:01,806 - DEBUG - sleeping for 0
-2018-07-08 08:15:02,172 - INFO - [+] Order successful, ID: 129365428
-2018-07-08 08:15:02,173 - DEBUG - sleeping for 0
-2018-07-08 08:15:03,341 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:03,341 - DEBUG - Account balance for USDT is 0.46344245
-2018-07-08 08:15:03,341 - DEBUG - [+] Buying 6.840924138553263e-05
-2018-07-08 08:15:03,342 - INFO - [*] Buying 6.840924138553263e-05
-2018-07-08 08:15:03,692 - INFO - [+] Order successful, ID: 129365446
-2018-07-08 08:15:03,692 - DEBUG - sleeping for 0
-2018-07-08 08:15:03,856 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:03,857 - DEBUG - Account balance for USDT is 1.32388677
-2018-07-08 08:15:03,857 - DEBUG - [+] Buying 0.00019542035826895687
-2018-07-08 08:15:03,857 - INFO - [*] Buying 0.00019542035826895687
-2018-07-08 08:15:04,010 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:04,011 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:04,011 - DEBUG - [+] Buying 2.176696186812325e-05
-2018-07-08 08:15:04,011 - INFO - [*] Buying 2.176696186812325e-05
-2018-07-08 08:15:04,169 - INFO - [+] Order successful, ID: 129365454
-2018-07-08 08:15:04,169 - DEBUG - sleeping for 0
-2018-07-08 08:15:04,338 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:15:04,338 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:15:04,339 - DEBUG - sleeping for 0
-2018-07-08 08:15:04,691 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:04,691 - DEBUG - Account balance for USDT is 0.00382161
-2018-07-08 08:15:04,691 - INFO - trade has completed successfully
-2018-07-08 08:15:04,691 - DEBUG - sleeping for 0
-2018-07-08 08:15:05,182 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:05,182 - DEBUG - Account balance for USDT is 0.00585642
-2018-07-08 08:15:05,183 - INFO - trade has completed successfully
-2018-07-08 08:15:05,183 - DEBUG - sleeping for 0
-2018-07-08 08:15:05,351 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:05,352 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:05,352 - DEBUG - [+] Buying 2.1723427944387004e-05
-2018-07-08 08:15:05,352 - INFO - [*] Buying 2.1723427944387004e-05
-2018-07-08 08:15:05,691 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:15:05,691 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:15:05,691 - DEBUG - sleeping for 0
-2018-07-08 08:15:06,671 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:06,671 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:06,671 - DEBUG - [+] Buying 2.167998108849823e-05
-2018-07-08 08:15:06,671 - INFO - [*] Buying 2.167998108849823e-05
-2018-07-08 08:15:07,013 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:15:07,014 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:15:07,014 - DEBUG - sleeping for 0
-2018-07-08 08:15:08,054 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:08,054 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:08,054 - DEBUG - [+] Buying 2.1636621126321235e-05
-2018-07-08 08:15:08,055 - INFO - [*] Buying 2.1636621126321235e-05
-2018-07-08 08:15:08,871 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:15:08,871 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:15:08,871 - DEBUG - sleeping for 0
-2018-07-08 08:15:09,895 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:09,895 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:09,895 - DEBUG - [+] Buying 2.1593347884068593e-05
-2018-07-08 08:15:09,896 - INFO - [*] Buying 2.1593347884068593e-05
-2018-07-08 08:15:10,237 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:15:10,238 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:15:10,238 - DEBUG - sleeping for 0
-2018-07-08 08:15:11,240 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:11,240 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:11,240 - DEBUG - [+] Buying 2.1550161188300455e-05
-2018-07-08 08:15:11,240 - INFO - [*] Buying 2.1550161188300455e-05
-2018-07-08 08:15:11,570 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:15:11,570 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:15:11,570 - DEBUG - sleeping for 0
-2018-07-08 08:15:12,587 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:12,587 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:12,587 - DEBUG - [+] Buying 2.1507060865923856e-05
-2018-07-08 08:15:12,587 - INFO - [*] Buying 2.1507060865923856e-05
-2018-07-08 08:15:12,921 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:15:12,921 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:15:12,921 - DEBUG - sleeping for 0
-2018-07-08 08:15:13,930 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:13,931 - DEBUG - Account balance for USDT is 0.14746157
-2018-07-08 08:15:13,931 - DEBUG - [+] Buying 2.1464046744192006e-05
-2018-07-08 08:15:13,931 - INFO - [*] Buying 2.1464046744192006e-05
-2018-07-08 08:15:14,273 - INFO - [+] Order successful, ID: 129365600
-2018-07-08 08:15:14,273 - DEBUG - sleeping for 0
-2018-07-08 08:15:15,253 - DEBUG - [+] Minimum allowable buy quantity is 0.00676101
-2018-07-08 08:15:15,253 - DEBUG - Account balance for USDT is 0.00552551
-2018-07-08 08:15:15,254 - INFO - trade has completed successfully
-2018-07-08 08:15:15,255 - DEBUG - sleeping for 0
-2018-07-08 08:16:01,195 - DEBUG - [+] Final Brick Price: 6742.0
-2018-07-08 08:16:01,196 - DEBUG - [+] Final Brick Price: 6742.0
-2018-07-08 08:16:01,200 - DEBUG - [+] Final Brick Price: 6742.0
-2018-07-08 08:17:00,253 - DEBUG - [+] Final Brick Price: 6745.34
-2018-07-08 08:17:00,254 - DEBUG - [+] Final Brick Price: 6745.34
-2018-07-08 08:17:00,258 - DEBUG - [+] Final Brick Price: 6745.34
-2018-07-08 08:18:00,628 - DEBUG - [+] Final Brick Price: 6746.15
-2018-07-08 08:18:00,633 - DEBUG - [+] Final Brick Price: 6746.15
-2018-07-08 08:18:00,634 - DEBUG - [+] Final Brick Price: 6746.15
-2018-07-08 08:19:02,071 - DEBUG - [+] Final Brick Price: 6743.77
-2018-07-08 08:19:02,073 - DEBUG - [+] Final Brick Price: 6743.77
-2018-07-08 08:19:02,077 - DEBUG - [+] Final Brick Price: 6743.77
-2018-07-08 08:20:05,599 - DEBUG - [+] Final Brick Price: 6742.49
-2018-07-08 08:20:05,600 - DEBUG - [+] Final Brick Price: 6742.49
-2018-07-08 08:20:05,604 - DEBUG - [+] Final Brick Price: 6742.49
-2018-07-08 08:21:00,196 - DEBUG - [+] Final Brick Price: 6744.34
-2018-07-08 08:21:00,200 - DEBUG - [+] Final Brick Price: 6744.34
-2018-07-08 08:21:00,202 - DEBUG - [+] Final Brick Price: 6744.34
-2018-07-08 08:22:00,348 - DEBUG - [+] Final Brick Price: 6745.29
-2018-07-08 08:22:00,349 - DEBUG - [+] Final Brick Price: 6745.29
-2018-07-08 08:22:00,353 - DEBUG - [+] Final Brick Price: 6745.29
-2018-07-08 08:23:00,527 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 08:23:00,529 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 08:23:00,533 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 08:24:00,931 - DEBUG - [+] Final Brick Price: 6742.69
-2018-07-08 08:24:00,932 - DEBUG - [+] Final Brick Price: 6742.69
-2018-07-08 08:24:00,934 - DEBUG - [+] Final Brick Price: 6742.69
-2018-07-08 08:25:00,309 - DEBUG - [+] Final Brick Price: 6744.81
-2018-07-08 08:25:00,310 - DEBUG - [+] Final Brick Price: 6744.81
-2018-07-08 08:25:00,310 - DEBUG - [+] Final Brick Price: 6744.81
-2018-07-08 08:26:00,307 - DEBUG - [+] Final Brick Price: 6742.68
-2018-07-08 08:26:00,310 - DEBUG - [+] Final Brick Price: 6742.68
-2018-07-08 08:26:00,311 - DEBUG - [+] Final Brick Price: 6742.68
-2018-07-08 08:27:01,403 - DEBUG - [+] Final Brick Price: 6743.02
-2018-07-08 08:27:01,404 - DEBUG - [+] Final Brick Price: 6743.02
-2018-07-08 08:27:01,406 - DEBUG - [+] Final Brick Price: 6743.02
-2018-07-08 08:28:00,612 - DEBUG - [+] Final Brick Price: 6738.15
-2018-07-08 08:28:00,615 - DEBUG - [+] Final Brick Price: 6738.15
-2018-07-08 08:28:00,615 - INFO - [Down] Price down. new brick at: <Brick307 1531052879999: 6740.0>
-2018-07-08 08:28:00,615 - INFO - [+] new brick 6740.0
-2018-07-08 08:28:00,615 - DEBUG - length of last items 24
-2018-07-08 08:28:00,615 - INFO - [+] Sell time
-2018-07-08 08:28:00,619 - DEBUG - [+] Final Brick Price: 6738.15
-2018-07-08 08:28:01,862 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:01,867 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:01,873 - DEBUG - Account balance for BTC is 0.0095314
-2018-07-08 08:28:01,873 - DEBUG - Account balance for BTC is 0.02999597
-2018-07-08 08:28:01,873 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:01,873 - DEBUG - Account balance for BTC is 0.08595492
-2018-07-08 08:28:01,873 - DEBUG - [+] Selling 0.02993597806
-2018-07-08 08:28:01,873 - DEBUG - [+] Selling 0.0095123372
-2018-07-08 08:28:01,874 - INFO - [*] Selling 0.0095123372
-2018-07-08 08:28:01,874 - INFO - [*] Selling 0.02993597806
-2018-07-08 08:28:01,874 - DEBUG - [+] Selling 0.08578301016
-2018-07-08 08:28:01,876 - INFO - [*] Selling 0.08578301016
-2018-07-08 08:28:02,224 - INFO - [+] Order successful, ID: 129369452
-2018-07-08 08:28:02,224 - DEBUG - sleeping for 0
-2018-07-08 08:28:02,252 - INFO - [+] Order successful, ID: 129369454
-2018-07-08 08:28:02,252 - DEBUG - sleeping for 0
-2018-07-08 08:28:02,259 - INFO - [+] Order successful, ID: 129369455
-2018-07-08 08:28:02,259 - DEBUG - sleeping for 0
-2018-07-08 08:28:03,248 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:03,248 - DEBUG - Account balance for BTC is 1.94e-05
-2018-07-08 08:28:03,248 - DEBUG - [+] Selling 1.93612e-05
-2018-07-08 08:28:03,248 - INFO - [*] Selling 1.93612e-05
-2018-07-08 08:28:03,277 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:03,277 - DEBUG - Account balance for BTC is 5.997e-05
-2018-07-08 08:28:03,277 - DEBUG - [+] Selling 5.9850059999999995e-05
-2018-07-08 08:28:03,277 - INFO - [*] Selling 5.9850059999999995e-05
-2018-07-08 08:28:03,296 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:03,296 - DEBUG - Account balance for BTC is 0.00017192
-2018-07-08 08:28:03,296 - DEBUG - [+] Selling 0.00017157615999999998
-2018-07-08 08:28:03,296 - INFO - [*] Selling 0.00017157615999999998
-2018-07-08 08:28:03,575 - INFO - [+] Order successful, ID: 129369464
-2018-07-08 08:28:03,575 - DEBUG - sleeping for 0
-2018-07-08 08:28:03,617 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:28:03,617 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:28:03,620 - DEBUG - sleeping for 0
-2018-07-08 08:28:03,652 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:28:03,653 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:28:03,653 - DEBUG - sleeping for 0
-2018-07-08 08:28:04,597 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:04,597 - DEBUG - Account balance for BTC is 4e-07
-2018-07-08 08:28:04,597 - INFO - trade has completed successfully
-2018-07-08 08:28:04,597 - DEBUG - sleeping for 0
-2018-07-08 08:28:04,637 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:04,637 - DEBUG - Account balance for BTC is 5.997e-05
-2018-07-08 08:28:04,637 - DEBUG - [+] Selling 5.973035988e-05
-2018-07-08 08:28:04,637 - INFO - [*] Selling 5.973035988e-05
-2018-07-08 08:28:04,967 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:28:04,967 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:28:04,967 - DEBUG - sleeping for 0
-2018-07-08 08:28:05,060 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:05,060 - DEBUG - Account balance for BTC is 0.00017192
-2018-07-08 08:28:05,060 - DEBUG - [+] Selling 0.00017123300768
-2018-07-08 08:28:05,060 - INFO - [*] Selling 0.00017123300768
-2018-07-08 08:28:05,388 - INFO - [+] Order successful, ID: 129369471
-2018-07-08 08:28:05,389 - DEBUG - sleeping for 0
-2018-07-08 08:28:05,971 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:05,972 - DEBUG - Account balance for BTC is 5.997e-05
-2018-07-08 08:28:05,972 - DEBUG - [+] Selling 5.961089916024e-05
-2018-07-08 08:28:05,972 - INFO - [*] Selling 5.961089916024e-05
-2018-07-08 08:28:06,322 - ERROR - [!] (400) -2010: Account has insufficient balance for requested action.
-2018-07-08 08:28:06,323 - ERROR - -2010, Account has insufficient balance for requested action.
-2018-07-08 08:28:06,323 - DEBUG - sleeping for 0
-2018-07-08 08:28:06,419 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:06,419 - DEBUG - Account balance for BTC is 9.2e-07
-2018-07-08 08:28:06,419 - INFO - trade has completed successfully
-2018-07-08 08:28:06,419 - DEBUG - sleeping for 0
-2018-07-08 08:28:07,344 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:07,345 - DEBUG - Account balance for BTC is 5.997e-05
-2018-07-08 08:28:07,345 - DEBUG - [+] Selling 5.9491677361919515e-05
-2018-07-08 08:28:07,345 - INFO - [*] Selling 5.9491677361919515e-05
-2018-07-08 08:28:07,670 - INFO - [+] Order successful, ID: 129369480
-2018-07-08 08:28:07,670 - DEBUG - sleeping for 0
-2018-07-08 08:28:08,691 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:28:08,692 - DEBUG - Account balance for BTC is 9.7e-07
-2018-07-08 08:28:08,692 - INFO - trade has completed successfully
-2018-07-08 08:28:08,692 - DEBUG - sleeping for 0
-2018-07-08 08:29:00,362 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 08:29:00,363 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 08:29:00,364 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 08:30:00,658 - DEBUG - [+] Final Brick Price: 6743.04
-2018-07-08 08:30:00,660 - DEBUG - [+] Final Brick Price: 6743.04
-2018-07-08 08:30:00,661 - DEBUG - [+] Final Brick Price: 6743.04
-2018-07-08 08:31:02,342 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 08:31:02,345 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 08:31:02,345 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 08:32:00,626 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 08:32:00,628 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 08:32:00,630 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 08:33:00,449 - DEBUG - [+] Final Brick Price: 6738.08
-2018-07-08 08:33:00,451 - DEBUG - [+] Final Brick Price: 6738.08
-2018-07-08 08:33:00,454 - DEBUG - [+] Final Brick Price: 6738.08
-2018-07-08 08:34:00,576 - DEBUG - [+] Final Brick Price: 6740.52
-2018-07-08 08:34:00,578 - DEBUG - [+] Final Brick Price: 6740.52
-2018-07-08 08:34:00,580 - DEBUG - [+] Final Brick Price: 6740.52
-2018-07-08 08:35:00,521 - DEBUG - [+] Final Brick Price: 6732.52
-2018-07-08 08:35:00,523 - DEBUG - [+] Final Brick Price: 6732.52
-2018-07-08 08:35:00,524 - DEBUG - [+] Final Brick Price: 6732.52
-2018-07-08 08:36:01,367 - DEBUG - [+] Final Brick Price: 6738.97
-2018-07-08 08:36:01,370 - DEBUG - [+] Final Brick Price: 6738.97
-2018-07-08 08:36:01,371 - DEBUG - [+] Final Brick Price: 6738.97
-2018-07-08 08:37:00,360 - DEBUG - [+] Final Brick Price: 6740.03
-2018-07-08 08:37:00,363 - DEBUG - [+] Final Brick Price: 6740.03
-2018-07-08 08:37:00,363 - DEBUG - [+] Final Brick Price: 6740.03
-2018-07-08 08:38:01,967 - DEBUG - [+] Final Brick Price: 6736.26
-2018-07-08 08:38:01,969 - DEBUG - [+] Final Brick Price: 6736.26
-2018-07-08 08:38:01,969 - DEBUG - [+] Final Brick Price: 6736.26
-2018-07-08 08:39:00,552 - DEBUG - [+] Final Brick Price: 6737.81
-2018-07-08 08:39:00,556 - DEBUG - [+] Final Brick Price: 6737.81
-2018-07-08 08:39:00,557 - DEBUG - [+] Final Brick Price: 6737.81
-2018-07-08 08:40:00,658 - DEBUG - [+] Final Brick Price: 6737.68
-2018-07-08 08:40:00,660 - DEBUG - [+] Final Brick Price: 6737.68
-2018-07-08 08:40:00,663 - DEBUG - [+] Final Brick Price: 6737.68
-2018-07-08 08:41:00,152 - DEBUG - [+] Final Brick Price: 6737.68
-2018-07-08 08:41:00,155 - DEBUG - [+] Final Brick Price: 6737.68
-2018-07-08 08:41:00,155 - DEBUG - [+] Final Brick Price: 6737.68
-2018-07-08 08:42:00,648 - DEBUG - [+] Final Brick Price: 6738.0
-2018-07-08 08:42:00,649 - DEBUG - [+] Final Brick Price: 6738.0
-2018-07-08 08:42:00,650 - DEBUG - [+] Final Brick Price: 6738.0
-2018-07-08 08:43:03,437 - DEBUG - [+] Final Brick Price: 6739.44
-2018-07-08 08:43:03,440 - DEBUG - [+] Final Brick Price: 6739.44
-2018-07-08 08:43:03,442 - DEBUG - [+] Final Brick Price: 6739.44
-2018-07-08 08:44:01,617 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 08:44:01,620 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 08:44:01,621 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 08:45:00,656 - DEBUG - [+] Final Brick Price: 6741.11
-2018-07-08 08:45:00,659 - DEBUG - [+] Final Brick Price: 6741.11
-2018-07-08 08:45:00,662 - DEBUG - [+] Final Brick Price: 6741.11
-2018-07-08 08:46:01,409 - DEBUG - [+] Final Brick Price: 6736.69
-2018-07-08 08:46:01,411 - DEBUG - [+] Final Brick Price: 6736.69
-2018-07-08 08:46:01,413 - DEBUG - [+] Final Brick Price: 6736.69
-2018-07-08 08:47:00,542 - DEBUG - [+] Final Brick Price: 6728.18
-2018-07-08 08:47:00,544 - DEBUG - [+] Final Brick Price: 6728.18
-2018-07-08 08:47:00,545 - DEBUG - [+] Final Brick Price: 6728.18
-2018-07-08 08:47:00,545 - INFO - [Down] Price down. new brick at: <Brick308 1531054019999: 6730.0>
-2018-07-08 08:47:00,545 - INFO - Price continuing to drop down
-2018-07-08 08:47:00,545 - INFO - [+] new brick 6730.0
-2018-07-08 08:47:00,546 - DEBUG - length of last items 24
-2018-07-08 08:47:00,546 - INFO - [+] Sell time
-2018-07-08 08:47:01,774 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:47:01,774 - DEBUG - Account balance for BTC is 9.2e-07
-2018-07-08 08:47:01,774 - INFO - trade has completed successfully
-2018-07-08 08:47:01,774 - DEBUG - sleeping for 0
-2018-07-08 08:47:01,943 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:47:01,943 - DEBUG - Account balance for BTC is 9.7e-07
-2018-07-08 08:47:01,943 - INFO - trade has completed successfully
-2018-07-08 08:47:01,943 - DEBUG - sleeping for 0
-2018-07-08 08:47:02,263 - DEBUG - [+] Minimum allowable sell quantity is 1e-06
-2018-07-08 08:47:02,263 - DEBUG - Account balance for BTC is 4e-07
-2018-07-08 08:47:02,263 - INFO - trade has completed successfully
-2018-07-08 08:47:02,264 - DEBUG - sleeping for 0
-2018-07-08 08:48:00,508 - DEBUG - [+] Final Brick Price: 6726.99
-2018-07-08 08:48:00,511 - DEBUG - [+] Final Brick Price: 6726.99
-2018-07-08 08:48:00,514 - DEBUG - [+] Final Brick Price: 6726.99
-2018-07-08 08:49:01,382 - DEBUG - [+] Final Brick Price: 6731.0
-2018-07-08 08:49:01,385 - DEBUG - [+] Final Brick Price: 6731.0
-2018-07-08 08:49:01,386 - DEBUG - [+] Final Brick Price: 6731.0
-2018-07-08 08:50:01,360 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 08:50:01,362 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 08:50:01,363 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 08:51:00,321 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 08:51:00,321 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 08:51:00,323 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 08:52:00,340 - DEBUG - [+] Final Brick Price: 6732.58
-2018-07-08 08:52:00,343 - DEBUG - [+] Final Brick Price: 6732.58
-2018-07-08 08:52:00,343 - DEBUG - [+] Final Brick Price: 6732.58
-2018-07-08 08:53:01,940 - DEBUG - [+] Final Brick Price: 6731.74
-2018-07-08 08:53:01,942 - DEBUG - [+] Final Brick Price: 6731.74
-2018-07-08 08:53:01,943 - DEBUG - [+] Final Brick Price: 6731.74
-2018-07-08 08:54:00,288 - DEBUG - [+] Final Brick Price: 6731.8
-2018-07-08 08:54:00,291 - DEBUG - [+] Final Brick Price: 6731.8
-2018-07-08 08:54:00,293 - DEBUG - [+] Final Brick Price: 6731.8
-2018-07-08 08:55:01,841 - DEBUG - [+] Final Brick Price: 6731.58
-2018-07-08 08:55:01,843 - DEBUG - [+] Final Brick Price: 6731.58
-2018-07-08 08:55:01,845 - DEBUG - [+] Final Brick Price: 6731.58
-2018-07-08 08:56:00,215 - DEBUG - [+] Final Brick Price: 6730.98
-2018-07-08 08:56:00,217 - DEBUG - [+] Final Brick Price: 6730.98
-2018-07-08 08:56:00,219 - DEBUG - [+] Final Brick Price: 6730.98
-2018-07-08 08:57:00,251 - DEBUG - [+] Final Brick Price: 6730.91
-2018-07-08 08:57:00,253 - DEBUG - [+] Final Brick Price: 6730.91
-2018-07-08 08:57:00,254 - DEBUG - [+] Final Brick Price: 6730.91
-2018-07-08 08:58:01,475 - DEBUG - [+] Final Brick Price: 6729.0
-2018-07-08 08:58:01,478 - DEBUG - [+] Final Brick Price: 6729.0
-2018-07-08 08:58:01,479 - DEBUG - [+] Final Brick Price: 6729.0
-2018-07-08 08:59:02,404 - DEBUG - [+] Final Brick Price: 6727.47
-2018-07-08 08:59:02,406 - DEBUG - [+] Final Brick Price: 6727.47
-2018-07-08 08:59:02,407 - DEBUG - [+] Final Brick Price: 6727.47
-2018-07-08 09:00:01,892 - DEBUG - [+] Final Brick Price: 6728.01
-2018-07-08 09:00:01,893 - DEBUG - [+] Final Brick Price: 6728.01
-2018-07-08 09:00:01,893 - DEBUG - [+] Final Brick Price: 6728.01
-2018-07-08 09:01:02,753 - DEBUG - [+] Final Brick Price: 6723.46
-2018-07-08 09:01:02,755 - DEBUG - [+] Final Brick Price: 6723.46
-2018-07-08 09:01:02,757 - DEBUG - [+] Final Brick Price: 6723.46
-2018-07-08 09:02:00,885 - DEBUG - [+] Final Brick Price: 6721.39
-2018-07-08 09:02:00,888 - DEBUG - [+] Final Brick Price: 6721.39
-2018-07-08 09:02:00,889 - DEBUG - [+] Final Brick Price: 6721.39
-2018-07-08 09:03:01,656 - DEBUG - [+] Final Brick Price: 6722.0
-2018-07-08 09:03:01,658 - DEBUG - [+] Final Brick Price: 6722.0
-2018-07-08 09:03:01,659 - DEBUG - [+] Final Brick Price: 6722.0
-2018-07-08 09:04:00,152 - DEBUG - [+] Final Brick Price: 6723.0
-2018-07-08 09:04:00,157 - DEBUG - [+] Final Brick Price: 6723.0
-2018-07-08 09:04:00,159 - DEBUG - [+] Final Brick Price: 6723.0
-2018-07-08 09:05:00,696 - DEBUG - [+] Final Brick Price: 6724.96
-2018-07-08 09:05:00,702 - DEBUG - [+] Final Brick Price: 6724.96
-2018-07-08 09:05:00,708 - DEBUG - [+] Final Brick Price: 6724.96
-2018-07-08 09:06:00,979 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 09:06:00,983 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 09:06:00,986 - DEBUG - [+] Final Brick Price: 6730.01
-2018-07-08 09:07:01,186 - DEBUG - [+] Final Brick Price: 6728.04
-2018-07-08 09:07:01,193 - DEBUG - [+] Final Brick Price: 6728.04
-2018-07-08 09:07:01,194 - DEBUG - [+] Final Brick Price: 6728.04
-2018-07-08 09:08:02,565 - DEBUG - [+] Final Brick Price: 6728.66
-2018-07-08 09:08:02,569 - DEBUG - [+] Final Brick Price: 6728.66
-2018-07-08 09:08:02,572 - DEBUG - [+] Final Brick Price: 6728.66
-2018-07-08 09:09:00,848 - DEBUG - [+] Final Brick Price: 6731.15
-2018-07-08 09:09:00,854 - DEBUG - [+] Final Brick Price: 6731.15
-2018-07-08 09:09:00,858 - DEBUG - [+] Final Brick Price: 6731.15
-2018-07-08 09:10:00,716 - DEBUG - [+] Final Brick Price: 6729.0
-2018-07-08 09:10:00,721 - DEBUG - [+] Final Brick Price: 6729.0
-2018-07-08 09:10:00,724 - DEBUG - [+] Final Brick Price: 6729.0
-2018-07-08 09:11:00,807 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 09:11:00,812 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 09:11:00,815 - DEBUG - [+] Final Brick Price: 6730.0
-2018-07-08 09:12:02,202 - DEBUG - [+] Final Brick Price: 6729.95
-2018-07-08 09:12:02,203 - DEBUG - [+] Final Brick Price: 6729.95
-2018-07-08 09:12:02,207 - DEBUG - [+] Final Brick Price: 6729.95
-2018-07-08 09:13:00,137 - DEBUG - [+] Final Brick Price: 6728.75
-2018-07-08 09:13:00,142 - DEBUG - [+] Final Brick Price: 6728.75
-2018-07-08 09:13:00,144 - DEBUG - [+] Final Brick Price: 6728.75
-2018-07-08 09:14:07,624 - DEBUG - [+] Final Brick Price: 6729.97
-2018-07-08 09:14:07,629 - DEBUG - [+] Final Brick Price: 6729.97
-2018-07-08 09:14:07,635 - DEBUG - [+] Final Brick Price: 6729.97
-2018-07-08 09:15:01,707 - DEBUG - [+] Final Brick Price: 6731.0
-2018-07-08 09:15:01,717 - DEBUG - [+] Final Brick Price: 6731.0
-2018-07-08 09:15:04,287 - DEBUG - [+] Final Brick Price: 6731.0
-2018-07-08 09:16:01,175 - DEBUG - [+] Final Brick Price: 6732.65
-2018-07-08 09:16:01,178 - DEBUG - [+] Final Brick Price: 6732.65
-2018-07-08 09:16:01,181 - DEBUG - [+] Final Brick Price: 6732.65
-2018-07-08 09:17:02,171 - DEBUG - [+] Final Brick Price: 6732.71
-2018-07-08 09:17:02,175 - DEBUG - [+] Final Brick Price: 6732.71
-2018-07-08 09:17:02,178 - DEBUG - [+] Final Brick Price: 6732.71
-2018-07-08 09:18:00,469 - DEBUG - [+] Final Brick Price: 6735.41
-2018-07-08 09:18:00,473 - DEBUG - [+] Final Brick Price: 6735.41
-2018-07-08 09:18:00,477 - DEBUG - [+] Final Brick Price: 6735.41
-2018-07-08 09:19:00,612 - DEBUG - [+] Final Brick Price: 6735.41
-2018-07-08 09:19:00,617 - DEBUG - [+] Final Brick Price: 6735.41
-2018-07-08 09:19:00,619 - DEBUG - [+] Final Brick Price: 6735.41
-2018-07-08 09:20:00,803 - DEBUG - [+] Final Brick Price: 6736.72
-2018-07-08 09:20:00,808 - DEBUG - [+] Final Brick Price: 6736.72
-2018-07-08 09:20:00,811 - DEBUG - [+] Final Brick Price: 6736.72
-2018-07-08 09:21:01,995 - DEBUG - [+] Final Brick Price: 6736.81
-2018-07-08 09:21:02,002 - DEBUG - [+] Final Brick Price: 6736.81
-2018-07-08 09:21:02,003 - DEBUG - [+] Final Brick Price: 6736.81
-2018-07-08 09:22:00,145 - DEBUG - [+] Final Brick Price: 6740.47
-2018-07-08 09:22:00,151 - DEBUG - [+] Final Brick Price: 6740.47
-2018-07-08 09:22:00,156 - DEBUG - [+] Final Brick Price: 6740.47
-2018-07-08 09:23:01,334 - DEBUG - [+] Final Brick Price: 6736.74
-2018-07-08 09:23:01,338 - DEBUG - [+] Final Brick Price: 6736.74
-2018-07-08 09:23:01,342 - DEBUG - [+] Final Brick Price: 6736.74
-2018-07-08 09:24:00,647 - DEBUG - [+] Final Brick Price: 6740.31
-2018-07-08 09:24:00,652 - DEBUG - [+] Final Brick Price: 6740.31
-2018-07-08 09:24:00,655 - DEBUG - [+] Final Brick Price: 6740.31
-2018-07-08 09:25:02,758 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 09:25:02,763 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 09:25:02,766 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 09:26:00,793 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 09:26:00,798 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 09:26:00,801 - DEBUG - [+] Final Brick Price: 6739.99
-2018-07-08 09:27:01,834 - DEBUG - [+] Final Brick Price: 6740.48
-2018-07-08 09:27:01,839 - DEBUG - [+] Final Brick Price: 6740.48
-2018-07-08 09:27:01,841 - DEBUG - [+] Final Brick Price: 6740.48
-2018-07-08 09:28:00,905 - DEBUG - [+] Final Brick Price: 6740.53
-2018-07-08 09:28:00,911 - DEBUG - [+] Final Brick Price: 6740.53
-2018-07-08 09:28:00,914 - DEBUG - [+] Final Brick Price: 6740.53
-2018-07-08 09:29:00,795 - DEBUG - [+] Final Brick Price: 6742.88
-2018-07-08 09:29:00,801 - DEBUG - [+] Final Brick Price: 6742.88
-2018-07-08 09:29:00,802 - DEBUG - [+] Final Brick Price: 6742.88
-2018-07-08 09:30:01,430 - DEBUG - [+] Final Brick Price: 6742.89
-2018-07-08 09:30:01,436 - DEBUG - [+] Final Brick Price: 6742.89
-2018-07-08 09:30:01,443 - DEBUG - [+] Final Brick Price: 6742.89
-2018-07-08 09:31:00,185 - DEBUG - [+] Final Brick Price: 6744.45
-2018-07-08 09:31:00,190 - DEBUG - [+] Final Brick Price: 6744.45
-2018-07-08 09:31:00,194 - DEBUG - [+] Final Brick Price: 6744.45
-2018-07-08 09:32:00,641 - DEBUG - [+] Final Brick Price: 6744.64
-2018-07-08 09:32:00,647 - DEBUG - [+] Final Brick Price: 6744.64
-2018-07-08 09:32:00,649 - DEBUG - [+] Final Brick Price: 6744.64
-2018-07-08 09:33:00,959 - DEBUG - [+] Final Brick Price: 6745.95
-2018-07-08 09:33:00,964 - DEBUG - [+] Final Brick Price: 6745.95
-2018-07-08 09:33:00,968 - DEBUG - [+] Final Brick Price: 6745.95
-2018-07-08 09:34:01,655 - DEBUG - [+] Final Brick Price: 6741.0
-2018-07-08 09:34:01,658 - DEBUG - [+] Final Brick Price: 6741.0
-2018-07-08 09:34:01,662 - DEBUG - [+] Final Brick Price: 6741.0
-2018-07-08 09:35:00,432 - DEBUG - [+] Final Brick Price: 6737.0
-2018-07-08 09:35:00,438 - DEBUG - [+] Final Brick Price: 6737.0
-2018-07-08 09:35:00,441 - DEBUG - [+] Final Brick Price: 6737.0
-2018-07-08 09:36:00,318 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 09:36:00,324 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 09:36:00,326 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 09:37:01,919 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 09:37:01,923 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 09:37:01,924 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 09:38:00,769 - DEBUG - [+] Final Brick Price: 6740.06
-2018-07-08 09:38:00,775 - DEBUG - [+] Final Brick Price: 6740.06
-2018-07-08 09:38:00,777 - DEBUG - [+] Final Brick Price: 6740.06
-2018-07-08 09:39:00,504 - DEBUG - [+] Final Brick Price: 6739.66
-2018-07-08 09:39:00,508 - DEBUG - [+] Final Brick Price: 6739.66
-2018-07-08 09:39:00,512 - DEBUG - [+] Final Brick Price: 6739.66
-2018-07-08 09:40:01,165 - DEBUG - [+] Final Brick Price: 6737.26
-2018-07-08 09:40:01,168 - DEBUG - [+] Final Brick Price: 6737.26
-2018-07-08 09:40:01,169 - DEBUG - [+] Final Brick Price: 6737.26
-2018-07-08 09:41:01,427 - DEBUG - [+] Final Brick Price: 6739.8
-2018-07-08 09:41:01,429 - DEBUG - [+] Final Brick Price: 6739.8
-2018-07-08 09:41:01,430 - DEBUG - [+] Final Brick Price: 6739.8
-2018-07-08 09:42:00,863 - DEBUG - [+] Final Brick Price: 6737.31
-2018-07-08 09:42:00,868 - DEBUG - [+] Final Brick Price: 6737.31
-2018-07-08 09:42:00,871 - DEBUG - [+] Final Brick Price: 6737.31
-2018-07-08 09:43:01,099 - DEBUG - [+] Final Brick Price: 6737.38
-2018-07-08 09:43:01,102 - DEBUG - [+] Final Brick Price: 6737.38
-2018-07-08 09:43:01,106 - DEBUG - [+] Final Brick Price: 6737.38
-2018-07-08 09:44:00,949 - DEBUG - [+] Final Brick Price: 6739.88
-2018-07-08 09:44:00,954 - DEBUG - [+] Final Brick Price: 6739.88
-2018-07-08 09:44:00,959 - DEBUG - [+] Final Brick Price: 6739.88
-2018-07-08 09:45:04,411 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 09:45:04,416 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 09:45:04,418 - DEBUG - [+] Final Brick Price: 6739.98
-2018-07-08 09:46:01,305 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 09:46:01,306 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 09:46:01,311 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 09:47:00,202 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 09:47:00,206 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 09:47:00,209 - DEBUG - [+] Final Brick Price: 6743.0
-2018-07-08 09:48:01,526 - DEBUG - [+] Final Brick Price: 6745.51
-2018-07-08 09:48:01,532 - DEBUG - [+] Final Brick Price: 6745.51
-2018-07-08 09:48:01,533 - DEBUG - [+] Final Brick Price: 6745.51
-2018-07-08 09:49:02,640 - DEBUG - [+] Final Brick Price: 6740.08
-2018-07-08 09:49:02,644 - DEBUG - [+] Final Brick Price: 6740.08
-2018-07-08 09:49:02,651 - DEBUG - [+] Final Brick Price: 6740.08
-2018-07-08 09:50:02,316 - DEBUG - [+] Final Brick Price: 6735.11
-2018-07-08 09:50:02,321 - DEBUG - [+] Final Brick Price: 6735.11
-2018-07-08 09:50:02,325 - DEBUG - [+] Final Brick Price: 6735.11
-2018-07-08 09:51:00,421 - DEBUG - [+] Final Brick Price: 6739.75
-2018-07-08 09:51:00,430 - DEBUG - [+] Final Brick Price: 6739.75
-2018-07-08 09:51:00,431 - DEBUG - [+] Final Brick Price: 6739.75
-2018-07-08 09:52:02,514 - DEBUG - [+] Final Brick Price: 6739.0
-2018-07-08 09:52:02,515 - DEBUG - [+] Final Brick Price: 6739.0
-2018-07-08 09:52:02,518 - DEBUG - [+] Final Brick Price: 6739.0
-2018-07-08 09:53:01,482 - DEBUG - [+] Final Brick Price: 6736.0
-2018-07-08 09:53:01,489 - DEBUG - [+] Final Brick Price: 6736.0
-2018-07-08 09:53:01,491 - DEBUG - [+] Final Brick Price: 6736.0
-2018-07-08 09:54:02,726 - DEBUG - [+] Final Brick Price: 6735.08
-2018-07-08 09:54:02,732 - DEBUG - [+] Final Brick Price: 6735.08
-2018-07-08 09:54:02,735 - DEBUG - [+] Final Brick Price: 6735.08
-2018-07-08 09:55:01,392 - DEBUG - [+] Final Brick Price: 6734.43
-2018-07-08 09:55:01,400 - DEBUG - [+] Final Brick Price: 6734.43
-2018-07-08 09:55:01,402 - DEBUG - [+] Final Brick Price: 6734.43
-2018-07-08 09:56:02,026 - DEBUG - [+] Final Brick Price: 6733.88
-2018-07-08 09:56:02,032 - DEBUG - [+] Final Brick Price: 6733.88
-2018-07-08 09:56:02,034 - DEBUG - [+] Final Brick Price: 6733.88
-2018-07-08 09:57:00,710 - DEBUG - [+] Final Brick Price: 6733.88
-2018-07-08 09:57:00,714 - DEBUG - [+] Final Brick Price: 6733.88
-2018-07-08 09:57:00,717 - DEBUG - [+] Final Brick Price: 6733.88
-2018-07-08 09:58:00,173 - DEBUG - [+] Final Brick Price: 6732.91
-2018-07-08 09:58:00,182 - DEBUG - [+] Final Brick Price: 6732.91
-2018-07-08 09:58:00,182 - DEBUG - [+] Final Brick Price: 6732.91
-2018-07-08 09:59:00,210 - DEBUG - [+] Final Brick Price: 6733.98
-2018-07-08 09:59:00,214 - DEBUG - [+] Final Brick Price: 6733.98
-2018-07-08 09:59:00,217 - DEBUG - [+] Final Brick Price: 6733.98
-2018-07-08 10:00:02,112 - DEBUG - [+] Final Brick Price: 6731.94
-2018-07-08 10:00:02,119 - DEBUG - [+] Final Brick Price: 6731.94
-2018-07-08 10:00:02,141 - DEBUG - [+] Final Brick Price: 6731.94
-2018-07-08 10:01:03,848 - DEBUG - [+] Final Brick Price: 6733.99
-2018-07-08 10:01:03,853 - DEBUG - [+] Final Brick Price: 6733.99
-2018-07-08 10:01:03,857 - DEBUG - [+] Final Brick Price: 6733.99
-2018-07-08 10:02:02,381 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 10:02:02,389 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 10:02:02,390 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 10:03:00,316 - DEBUG - [+] Final Brick Price: 6731.5
-2018-07-08 10:03:00,319 - DEBUG - [+] Final Brick Price: 6731.5
-2018-07-08 10:03:00,325 - DEBUG - [+] Final Brick Price: 6731.5
-2018-07-08 10:04:00,281 - DEBUG - [+] Final Brick Price: 6732.03
-2018-07-08 10:04:00,286 - DEBUG - [+] Final Brick Price: 6732.03
-2018-07-08 10:04:00,290 - DEBUG - [+] Final Brick Price: 6732.03
-2018-07-08 10:05:00,164 - DEBUG - [+] Final Brick Price: 6735.02
-2018-07-08 10:05:00,169 - DEBUG - [+] Final Brick Price: 6735.02
-2018-07-08 10:05:00,172 - DEBUG - [+] Final Brick Price: 6735.02
-2018-07-08 10:06:01,579 - DEBUG - [+] Final Brick Price: 6735.99
-2018-07-08 10:06:01,591 - DEBUG - [+] Final Brick Price: 6735.99
-2018-07-08 10:06:01,856 - DEBUG - [+] Final Brick Price: 6735.99
-2018-07-08 10:07:01,256 - DEBUG - [+] Final Brick Price: 6736.0
-2018-07-08 10:07:01,263 - DEBUG - [+] Final Brick Price: 6736.0
-2018-07-08 10:07:01,266 - DEBUG - [+] Final Brick Price: 6736.0
-2018-07-08 10:08:03,820 - DEBUG - [+] Final Brick Price: 6735.1
-2018-07-08 10:08:03,825 - DEBUG - [+] Final Brick Price: 6735.1
-2018-07-08 10:08:03,827 - DEBUG - [+] Final Brick Price: 6735.1
-2018-07-08 10:09:01,216 - DEBUG - [+] Final Brick Price: 6734.99
-2018-07-08 10:09:01,221 - DEBUG - [+] Final Brick Price: 6734.99
-2018-07-08 10:09:01,223 - DEBUG - [+] Final Brick Price: 6734.99
-2018-07-08 10:10:02,342 - DEBUG - [+] Final Brick Price: 6735.24
-2018-07-08 10:10:02,347 - DEBUG - [+] Final Brick Price: 6735.24
-2018-07-08 10:10:02,350 - DEBUG - [+] Final Brick Price: 6735.24
-2018-07-08 10:11:00,447 - DEBUG - [+] Final Brick Price: 6735.79
-2018-07-08 10:11:00,451 - DEBUG - [+] Final Brick Price: 6735.79
-2018-07-08 10:11:00,454 - DEBUG - [+] Final Brick Price: 6735.79
-2018-07-08 10:12:04,506 - DEBUG - [+] Final Brick Price: 6735.1
-2018-07-08 10:12:04,513 - DEBUG - [+] Final Brick Price: 6735.1
-2018-07-08 10:12:04,514 - DEBUG - [+] Final Brick Price: 6735.1
-2018-07-08 10:13:00,559 - DEBUG - [+] Final Brick Price: 6735.03
-2018-07-08 10:13:00,565 - DEBUG - [+] Final Brick Price: 6735.03
-2018-07-08 10:13:00,568 - DEBUG - [+] Final Brick Price: 6735.03
-2018-07-08 10:14:03,250 - DEBUG - [+] Final Brick Price: 6735.64
-2018-07-08 10:14:03,255 - DEBUG - [+] Final Brick Price: 6735.64
-2018-07-08 10:14:03,257 - DEBUG - [+] Final Brick Price: 6735.64
-2018-07-08 10:15:00,653 - DEBUG - [+] Final Brick Price: 6732.39
-2018-07-08 10:15:00,662 - DEBUG - [+] Final Brick Price: 6732.39
-2018-07-08 10:15:00,664 - DEBUG - [+] Final Brick Price: 6732.39
-2018-07-08 10:16:02,066 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 10:16:02,073 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 10:16:02,075 - DEBUG - [+] Final Brick Price: 6732.0
-2018-07-08 10:17:00,148 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 10:17:00,152 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 10:17:00,156 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 10:18:00,741 - DEBUG - [+] Final Brick Price: 6724.0
-2018-07-08 10:18:00,748 - DEBUG - [+] Final Brick Price: 6724.0
-2018-07-08 10:18:00,749 - DEBUG - [+] Final Brick Price: 6724.0
-2018-07-08 10:19:00,646 - DEBUG - [+] Final Brick Price: 6727.29
-2018-07-08 10:19:00,651 - DEBUG - [+] Final Brick Price: 6727.29
-2018-07-08 10:19:00,654 - DEBUG - [+] Final Brick Price: 6727.29
-2018-07-08 10:20:00,406 - DEBUG - [+] Final Brick Price: 6727.31
-2018-07-08 10:20:00,412 - DEBUG - [+] Final Brick Price: 6727.31
-2018-07-08 10:20:00,414 - DEBUG - [+] Final Brick Price: 6727.31
-2018-07-08 10:21:00,673 - DEBUG - [+] Final Brick Price: 6727.06
-2018-07-08 10:21:00,681 - DEBUG - [+] Final Brick Price: 6727.06
-2018-07-08 10:21:00,684 - DEBUG - [+] Final Brick Price: 6727.06
-2018-07-08 10:22:00,826 - DEBUG - [+] Final Brick Price: 6730.09
-2018-07-08 10:22:00,832 - DEBUG - [+] Final Brick Price: 6730.09
-2018-07-08 10:22:00,837 - DEBUG - [+] Final Brick Price: 6730.09
-2018-07-08 10:23:01,806 - DEBUG - [+] Final Brick Price: 6729.24
-2018-07-08 10:23:01,809 - DEBUG - [+] Final Brick Price: 6729.24
-2018-07-08 10:23:01,812 - DEBUG - [+] Final Brick Price: 6729.24
-2018-07-08 10:24:00,782 - DEBUG - [+] Final Brick Price: 6730.03
-2018-07-08 10:24:00,787 - DEBUG - [+] Final Brick Price: 6730.03
-2018-07-08 10:24:00,790 - DEBUG - [+] Final Brick Price: 6730.03
-2018-07-08 10:25:02,193 - DEBUG - [+] Final Brick Price: 6725.18
-2018-07-08 10:25:02,201 - DEBUG - [+] Final Brick Price: 6725.18
-2018-07-08 10:25:02,202 - DEBUG - [+] Final Brick Price: 6725.18
-2018-07-08 10:26:00,675 - DEBUG - [+] Final Brick Price: 6725.26
-2018-07-08 10:26:00,680 - DEBUG - [+] Final Brick Price: 6725.26
-2018-07-08 10:26:00,683 - DEBUG - [+] Final Brick Price: 6725.26
-2018-07-08 10:27:00,905 - DEBUG - [+] Final Brick Price: 6728.79
-2018-07-08 10:27:00,912 - DEBUG - [+] Final Brick Price: 6728.79
-2018-07-08 10:27:00,913 - DEBUG - [+] Final Brick Price: 6728.79
-2018-07-08 10:28:06,648 - DEBUG - [+] Final Brick Price: 6729.96
-2018-07-08 10:28:06,654 - DEBUG - [+] Final Brick Price: 6729.96
-2018-07-08 10:28:06,657 - DEBUG - [+] Final Brick Price: 6729.96
-2018-07-08 10:29:00,768 - DEBUG - [+] Final Brick Price: 6726.11
-2018-07-08 10:29:00,774 - DEBUG - [+] Final Brick Price: 6726.11
-2018-07-08 10:29:00,777 - DEBUG - [+] Final Brick Price: 6726.11
-2018-07-08 10:30:01,149 - DEBUG - [+] Final Brick Price: 6729.94
-2018-07-08 10:30:01,153 - DEBUG - [+] Final Brick Price: 6729.94
-2018-07-08 10:30:01,156 - DEBUG - [+] Final Brick Price: 6729.94
-2018-07-08 10:31:00,711 - DEBUG - [+] Final Brick Price: 6727.97
-2018-07-08 10:31:00,716 - DEBUG - [+] Final Brick Price: 6727.97
-2018-07-08 10:31:00,719 - DEBUG - [+] Final Brick Price: 6727.97
-2018-07-08 10:32:00,227 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:32:00,231 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:32:00,235 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:33:00,780 - DEBUG - [+] Final Brick Price: 6725.57
-2018-07-08 10:33:00,784 - DEBUG - [+] Final Brick Price: 6725.57
-2018-07-08 10:33:00,788 - DEBUG - [+] Final Brick Price: 6725.57
-2018-07-08 10:34:00,991 - DEBUG - [+] Final Brick Price: 6728.69
-2018-07-08 10:34:00,997 - DEBUG - [+] Final Brick Price: 6728.69
-2018-07-08 10:34:01,001 - DEBUG - [+] Final Brick Price: 6728.69
-2018-07-08 10:35:01,839 - DEBUG - [+] Final Brick Price: 6728.7
-2018-07-08 10:35:01,843 - DEBUG - [+] Final Brick Price: 6728.7
-2018-07-08 10:35:01,846 - DEBUG - [+] Final Brick Price: 6728.7
-2018-07-08 10:36:00,890 - DEBUG - [+] Final Brick Price: 6729.95
-2018-07-08 10:36:00,893 - DEBUG - [+] Final Brick Price: 6729.95
-2018-07-08 10:36:00,896 - DEBUG - [+] Final Brick Price: 6729.95
-2018-07-08 10:37:01,276 - DEBUG - [+] Final Brick Price: 6726.09
-2018-07-08 10:37:01,280 - DEBUG - [+] Final Brick Price: 6726.09
-2018-07-08 10:37:01,284 - DEBUG - [+] Final Brick Price: 6726.09
-2018-07-08 10:38:01,042 - DEBUG - [+] Final Brick Price: 6726.01
-2018-07-08 10:38:01,047 - DEBUG - [+] Final Brick Price: 6726.01
-2018-07-08 10:38:01,050 - DEBUG - [+] Final Brick Price: 6726.01
-2018-07-08 10:39:00,283 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:39:00,291 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:39:00,293 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:40:02,076 - DEBUG - [+] Final Brick Price: 6728.07
-2018-07-08 10:40:02,083 - DEBUG - [+] Final Brick Price: 6728.07
-2018-07-08 10:40:02,086 - DEBUG - [+] Final Brick Price: 6728.07
-2018-07-08 10:41:02,737 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:41:02,743 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:41:02,745 - DEBUG - [+] Final Brick Price: 6728.0
-2018-07-08 10:42:00,644 - DEBUG - [+] Final Brick Price: 6730.98
-2018-07-08 10:42:00,651 - DEBUG - [+] Final Brick Price: 6730.98
-2018-07-08 10:42:00,652 - DEBUG - [+] Final Brick Price: 6730.98
-2018-07-08 10:43:00,886 - DEBUG - [+] Final Brick Price: 6731.5
-2018-07-08 10:43:00,891 - DEBUG - [+] Final Brick Price: 6731.5
-2018-07-08 10:43:00,893 - DEBUG - [+] Final Brick Price: 6731.5
-2018-07-08 10:44:00,497 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 10:44:00,502 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 10:44:00,506 - DEBUG - [+] Final Brick Price: 6731.01
-2018-07-08 10:45:01,023 - DEBUG - [+] Final Brick Price: 6731.64
-2018-07-08 10:45:01,027 - DEBUG - [+] Final Brick Price: 6731.64
-2018-07-08 10:45:01,030 - DEBUG - [+] Final Brick Price: 6731.64
-2018-07-08 10:46:01,251 - DEBUG - [+] Final Brick Price: 6731.9
-2018-07-08 10:46:01,255 - DEBUG - [+] Final Brick Price: 6731.9
-2018-07-08 10:46:01,258 - DEBUG - [+] Final Brick Price: 6731.9
-2018-07-08 10:47:00,527 - DEBUG - [+] Final Brick Price: 6734.99
-2018-07-08 10:47:00,533 - DEBUG - [+] Final Brick Price: 6734.99
-2018-07-08 10:47:00,535 - DEBUG - [+] Final Brick Price: 6734.99
-2018-07-08 10:48:00,169 - DEBUG - [+] Final Brick Price: 6737.9
-2018-07-08 10:48:00,175 - DEBUG - [+] Final Brick Price: 6737.9
-2018-07-08 10:48:00,178 - DEBUG - [+] Final Brick Price: 6737.9
-2018-07-08 10:49:00,281 - DEBUG - [+] Final Brick Price: 6747.93
-2018-07-08 10:49:00,286 - DEBUG - [+] Final Brick Price: 6747.93
-2018-07-08 10:49:00,288 - DEBUG - [+] Final Brick Price: 6747.93
-2018-07-08 10:50:00,704 - DEBUG - [+] Final Brick Price: 6746.03
-2018-07-08 10:50:00,707 - DEBUG - [+] Final Brick Price: 6746.03
-2018-07-08 10:50:00,709 - DEBUG - [+] Final Brick Price: 6746.03
-2018-07-08 10:51:02,032 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 10:51:02,036 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 10:51:02,038 - DEBUG - [+] Final Brick Price: 6740.0
-2018-07-08 10:52:01,891 - DEBUG - [+] Final Brick Price: 6738.81
-2018-07-08 10:52:01,894 - DEBUG - [+] Final Brick Price: 6738.81
-2018-07-08 10:52:01,899 - DEBUG - [+] Final Brick Price: 6738.81
-2018-07-08 10:53:06,413 - DEBUG - [+] Final Brick Price: 6743.95
-2018-07-08 10:53:06,418 - DEBUG - [+] Final Brick Price: 6743.95
-2018-07-08 10:53:06,425 - DEBUG - [+] Final Brick Price: 6743.95
-2018-07-08 10:54:05,930 - DEBUG - [+] Final Brick Price: 6738.83
-2018-07-08 10:54:05,936 - DEBUG - [+] Final Brick Price: 6738.83
-2018-07-08 10:54:05,938 - DEBUG - [+] Final Brick Price: 6738.83
-2018-07-08 10:55:00,204 - DEBUG - [+] Final Brick Price: 6742.93
-2018-07-08 10:55:00,209 - DEBUG - [+] Final Brick Price: 6742.93
-2018-07-08 10:55:00,212 - DEBUG - [+] Final Brick Price: 6742.93
-2018-07-08 10:56:01,428 - DEBUG - [+] Final Brick Price: 6741.01
-2018-07-08 10:56:01,434 - DEBUG - [+] Final Brick Price: 6741.01
-2018-07-08 10:56:01,436 - DEBUG - [+] Final Brick Price: 6741.01
-2018-07-08 10:57:02,973 - DEBUG - [+] Final Brick Price: 6741.05
-2018-07-08 10:57:02,978 - DEBUG - [+] Final Brick Price: 6741.05
-2018-07-08 10:57:02,981 - DEBUG - [+] Final Brick Price: 6741.05
-2018-07-08 10:58:01,440 - DEBUG - [+] Final Brick Price: 6755.48
-2018-07-08 10:58:01,446 - DEBUG - [+] Final Brick Price: 6755.48
-2018-07-08 10:58:01,447 - INFO - [Up] price up. new brick at: <Brick309 1531061879999: 6750.0>
-2018-07-08 10:58:01,447 - INFO - [+] new brick 6750.0
-2018-07-08 10:58:01,447 - DEBUG - length of last items 24
-2018-07-08 10:58:01,447 - INFO - [+] Buy time
-2018-07-08 10:58:01,455 - DEBUG - [+] Final Brick Price: 6755.48
-2018-07-08 10:58:03,358 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:03,358 - DEBUG - Account balance for USDT is 64.16232621
-2018-07-08 10:58:03,358 - DEBUG - [+] Buying 0.009478823348981863
-2018-07-08 10:58:03,358 - INFO - [*] Buying 0.009478823348981863
-2018-07-08 10:58:03,389 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:03,390 - DEBUG - Account balance for USDT is 579.17422461
-2018-07-08 10:58:03,390 - DEBUG - [+] Buying 0.08556251756511456
-2018-07-08 10:58:03,390 - INFO - [*] Buying 0.08556251756511456
-2018-07-08 10:58:03,421 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:03,421 - DEBUG - Account balance for USDT is 201.9116211
-2018-07-08 10:58:03,421 - DEBUG - [+] Buying 0.02982879053121318
-2018-07-08 10:58:03,421 - INFO - [*] Buying 0.02982879053121318
-2018-07-08 10:58:03,709 - INFO - [+] Order successful, ID: 129406315
-2018-07-08 10:58:03,710 - DEBUG - sleeping for 0
-2018-07-08 10:58:03,717 - INFO - [+] Order successful, ID: 129406316
-2018-07-08 10:58:03,717 - DEBUG - sleeping for 0
-2018-07-08 10:58:03,757 - INFO - [+] Order successful, ID: 129406317
-2018-07-08 10:58:03,757 - DEBUG - sleeping for 0
-2018-07-08 10:58:04,737 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:04,737 - DEBUG - Account balance for USDT is 1.06781511
-2018-07-08 10:58:04,737 - DEBUG - [+] Buying 0.000157750371517642
-2018-07-08 10:58:04,737 - INFO - [*] Buying 0.000157750371517642
-2018-07-08 10:58:04,800 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:04,801 - DEBUG - Account balance for USDT is 0.3719826
-2018-07-08 10:58:04,801 - DEBUG - [+] Buying 5.4953702001930294e-05
-2018-07-08 10:58:04,803 - INFO - [*] Buying 5.4953702001930294e-05
-2018-07-08 10:58:05,073 - INFO - [+] Order successful, ID: 129406345
-2018-07-08 10:58:05,073 - DEBUG - sleeping for 0
-2018-07-08 10:58:05,143 - INFO - [+] Order successful, ID: 129406347
-2018-07-08 10:58:05,144 - DEBUG - sleeping for 0
-2018-07-08 10:58:05,168 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:05,168 - DEBUG - Account balance for USDT is 0.11746271
-2018-07-08 10:58:05,168 - DEBUG - [+] Buying 1.7352991139045635e-05
-2018-07-08 10:58:05,168 - INFO - [*] Buying 1.7352991139045635e-05
-2018-07-08 10:58:05,516 - INFO - [+] Order successful, ID: 129406356
-2018-07-08 10:58:05,516 - DEBUG - sleeping for 0
-2018-07-08 10:58:06,070 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:06,070 - DEBUG - Account balance for USDT is 0.00030549
-2018-07-08 10:58:06,071 - INFO - trade has completed successfully
-2018-07-08 10:58:06,071 - DEBUG - sleeping for 0
-2018-07-08 10:58:06,145 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:06,145 - DEBUG - Account balance for USDT is 0.0003817
-2018-07-08 10:58:06,145 - INFO - trade has completed successfully
-2018-07-08 10:58:06,145 - DEBUG - sleeping for 0
-2018-07-08 10:58:06,562 - DEBUG - [+] Minimum allowable buy quantity is 0.0067554799999999995
-2018-07-08 10:58:06,562 - DEBUG - Account balance for USDT is 0.00267548
-2018-07-08 10:58:06,562 - INFO - trade has completed successfully
-2018-07-08 10:58:06,562 - DEBUG - sleeping for 0
-2018-07-08 10:59:02,014 - DEBUG - [+] Final Brick Price: 6745.67
-2018-07-08 10:59:02,022 - DEBUG - [+] Final Brick Price: 6745.67
-2018-07-08 10:59:02,023 - DEBUG - [+] Final Brick Price: 6745.67
-2018-07-08 11:00:00,758 - DEBUG - [+] Final Brick Price: 6745.67
-2018-07-08 11:00:00,763 - DEBUG - [+] Final Brick Price: 6745.67
-2018-07-08 11:00:00,770 - DEBUG - [+] Final Brick Price: 6745.67
-2018-07-08 11:01:02,291 - DEBUG - [+] Final Brick Price: 6744.39
-2018-07-08 11:01:02,296 - DEBUG - [+] Final Brick Price: 6744.39
-2018-07-08 11:01:02,299 - DEBUG - [+] Final Brick Price: 6744.39
-2018-07-08 11:02:01,596 - DEBUG - [+] Final Brick Price: 6746.02
-2018-07-08 11:02:01,604 - DEBUG - [+] Final Brick Price: 6746.02
-2018-07-08 11:02:01,605 - DEBUG - [+] Final Brick Price: 6746.02
-2018-07-08 11:03:03,289 - DEBUG - [+] Final Brick Price: 6747.35
-2018-07-08 11:03:03,294 - DEBUG - [+] Final Brick Price: 6747.35
-2018-07-08 11:03:03,297 - DEBUG - [+] Final Brick Price: 6747.35
-2018-07-08 11:04:03,323 - DEBUG - [+] Final Brick Price: 6746.03
-2018-07-08 11:04:03,332 - DEBUG - [+] Final Brick Price: 6746.03
-2018-07-08 11:04:03,333 - DEBUG - [+] Final Brick Price: 6746.03
-2018-07-08 11:05:00,397 - DEBUG - [+] Final Brick Price: 6748.49
-2018-07-08 11:05:00,402 - DEBUG - [+] Final Brick Price: 6748.49
-2018-07-08 11:05:00,403 - DEBUG - [+] Final Brick Price: 6748.49
-2018-07-08 11:06:00,329 - DEBUG - [+] Final Brick Price: 6745.0
-2018-07-08 11:06:00,335 - DEBUG - [+] Final Brick Price: 6745.0
-2018-07-08 11:06:00,336 - DEBUG - [+] Final Brick Price: 6745.0
-2018-07-08 11:07:01,408 - DEBUG - [+] Final Brick Price: 6742.17
-2018-07-08 11:07:01,413 - DEBUG - [+] Final Brick Price: 6742.17
-2018-07-08 11:07:01,416 - DEBUG - [+] Final Brick Price: 6742.17
-2018-07-08 11:08:00,717 - DEBUG - [+] Final Brick Price: 6744.99
-2018-07-08 11:08:00,723 - DEBUG - [+] Final Brick Price: 6744.99
-2018-07-08 11:08:00,725 - DEBUG - [+] Final Brick Price: 6744.99
-2018-07-08 11:09:00,662 - DEBUG - [+] Final Brick Price: 6746.65
-2018-07-08 11:09:00,667 - DEBUG - [+] Final Brick Price: 6746.65
-2018-07-08 11:09:00,668 - DEBUG - [+] Final Brick Price: 6746.65
-2018-07-08 11:10:02,444 - DEBUG - [+] Final Brick Price: 6748.0
-2018-07-08 11:10:02,453 - DEBUG - [+] Final Brick Price: 6748.0
-2018-07-08 11:10:02,454 - DEBUG - [+] Final Brick Price: 6748.0
-2018-07-08 11:11:03,330 - DEBUG - [+] Final Brick Price: 6745.0
-2018-07-08 11:11:03,337 - DEBUG - [+] Final Brick Price: 6745.0
-2018-07-08 11:11:03,340 - DEBUG - [+] Final Brick Price: 6745.0
-2018-07-08 11:12:00,290 - DEBUG - [+] Final Brick Price: 6745.01
-2018-07-08 11:12:00,294 - DEBUG - [+] Final Brick Price: 6745.01
-2018-07-08 11:12:00,297 - DEBUG - [+] Final Brick Price: 6745.01
-2018-07-08 11:13:00,243 - DEBUG - [+] Final Brick Price: 6746.99
-2018-07-08 11:13:00,248 - DEBUG - [+] Final Brick Price: 6746.99
-2018-07-08 11:13:00,251 - DEBUG - [+] Final Brick Price: 6746.99
-2018-07-08 11:14:01,213 - DEBUG - [+] Final Brick Price: 6747.99
-2018-07-08 11:14:01,219 - DEBUG - [+] Final Brick Price: 6747.99
-2018-07-08 11:14:01,222 - DEBUG - [+] Final Brick Price: 6747.99
-2018-07-08 11:15:01,150 - DEBUG - [+] Final Brick Price: 6746.0
-2018-07-08 11:15:01,158 - DEBUG - [+] Final Brick Price: 6746.0
-2018-07-08 11:15:01,162 - DEBUG - [+] Final Brick Price: 6746.0
-2018-07-08 11:16:02,627 - DEBUG - [+] Final Brick Price: 6746.35
-2018-07-08 11:16:02,631 - DEBUG - [+] Final Brick Price: 6746.35
-2018-07-08 11:16:02,636 - DEBUG - [+] Final Brick Price: 6746.35
-2018-07-08 11:17:00,434 - DEBUG - [+] Final Brick Price: 6748.68
-2018-07-08 11:17:00,438 - DEBUG - [+] Final Brick Price: 6748.68
-2018-07-08 11:17:00,442 - DEBUG - [+] Final Brick Price: 6748.68
-2018-07-08 11:18:01,162 - DEBUG - [+] Final Brick Price: 6749.01
-2018-07-08 11:18:01,166 - DEBUG - [+] Final Brick Price: 6749.01
-2018-07-08 11:18:01,171 - DEBUG - [+] Final Brick Price: 6749.01
-2018-07-08 11:19:01,849 - DEBUG - [+] Final Brick Price: 6751.13
-2018-07-08 11:19:01,853 - DEBUG - [+] Final Brick Price: 6751.13
-2018-07-08 11:19:01,855 - DEBUG - [+] Final Brick Price: 6751.13
-2018-07-08 11:20:00,940 - DEBUG - [+] Final Brick Price: 6756.0
-2018-07-08 11:20:00,949 - DEBUG - [+] Final Brick Price: 6756.0
-2018-07-08 11:20:00,951 - DEBUG - [+] Final Brick Price: 6756.0
-2018-07-08 11:21:00,343 - DEBUG - [+] Final Brick Price: 6756.0
-2018-07-08 11:21:00,347 - DEBUG - [+] Final Brick Price: 6756.0
-2018-07-08 11:21:00,350 - DEBUG - [+] Final Brick Price: 6756.0
-2018-07-08 11:22:00,259 - DEBUG - [+] Final Brick Price: 6759.82
-2018-07-08 11:22:00,268 - DEBUG - [+] Final Brick Price: 6759.82
-2018-07-08 11:22:00,268 - DEBUG - [+] Final Brick Price: 6759.82
-2018-07-08 11:23:00,411 - DEBUG - [+] Final Brick Price: 6758.01
-2018-07-08 11:23:00,419 - DEBUG - [+] Final Brick Price: 6758.01
-2018-07-08 11:23:00,420 - DEBUG - [+] Final Brick Price: 6758.01
-2018-07-08 11:24:01,238 - DEBUG - [+] Final Brick Price: 6758.56
-2018-07-08 11:24:01,243 - DEBUG - [+] Final Brick Price: 6758.56
-2018-07-08 11:24:01,246 - DEBUG - [+] Final Brick Price: 6758.56
-2018-07-08 11:25:00,244 - DEBUG - [+] Final Brick Price: 6758.04
-2018-07-08 11:25:00,249 - DEBUG - [+] Final Brick Price: 6758.04
-2018-07-08 11:25:00,253 - DEBUG - [+] Final Brick Price: 6758.04
-2018-07-08 11:26:00,275 - DEBUG - [+] Final Brick Price: 6765.0
-2018-07-08 11:26:00,279 - DEBUG - [+] Final Brick Price: 6765.0
-2018-07-08 11:26:00,279 - INFO - [Up] price up. new brick at: <Brick310 1531063559999: 6760.0>
-2018-07-08 11:26:00,279 - INFO - Price continuing to rise up
-2018-07-08 11:26:00,280 - INFO - [+] new brick 6760.0
-2018-07-08 11:26:00,280 - DEBUG - length of last items 24
-2018-07-08 11:26:00,280 - INFO - [+] Buy time
-2018-07-08 11:26:00,286 - DEBUG - [+] Final Brick Price: 6765.0
-2018-07-08 11:26:01,631 - DEBUG - [+] Minimum allowable buy quantity is 0.006764999999999999
-2018-07-08 11:26:01,632 - DEBUG - Account balance for USDT is 0.0003817
-2018-07-08 11:26:01,632 - INFO - trade has completed successfully
-2018-07-08 11:26:01,632 - DEBUG - sleeping for 0
-2018-07-08 11:26:01,681 - DEBUG - [+] Minimum allowable buy quantity is 0.006764999999999999
-2018-07-08 11:26:01,681 - DEBUG - Account balance for USDT is 0.00267548
-2018-07-08 11:26:01,681 - INFO - trade has completed successfully
-2018-07-08 11:26:01,681 - DEBUG - sleeping for 0
-2018-07-08 11:26:01,728 - DEBUG - [+] Minimum allowable buy quantity is 0.006764999999999999
-2018-07-08 11:26:01,729 - DEBUG - Account balance for USDT is 0.00030549
-2018-07-08 11:26:01,729 - INFO - trade has completed successfully
-2018-07-08 11:26:01,729 - DEBUG - sleeping for 0
-2018-07-08 11:27:00,188 - DEBUG - [+] Final Brick Price: 6771.98
-2018-07-08 11:27:00,193 - DEBUG - [+] Final Brick Price: 6771.98
-2018-07-08 11:27:00,193 - INFO - [Up] price up. new brick at: <Brick311 1531063619999: 6770.0>
-2018-07-08 11:27:00,193 - INFO - Price continuing to rise up
-2018-07-08 11:27:00,193 - INFO - [+] new brick 6770.0
-2018-07-08 11:27:00,193 - DEBUG - length of last items 24
-2018-07-08 11:27:00,194 - INFO - [+] Buy time
-2018-07-08 11:27:00,200 - DEBUG - [+] Final Brick Price: 6771.98
-2018-07-08 11:27:01,327 - DEBUG - [+] Minimum allowable buy quantity is 0.0067719799999999995
-2018-07-08 11:27:01,327 - DEBUG - Account balance for USDT is 0.00267548
-2018-07-08 11:27:01,328 - INFO - trade has completed successfully
-2018-07-08 11:27:01,328 - DEBUG - sleeping for 0
-2018-07-08 11:27:01,354 - DEBUG - [+] Minimum allowable buy quantity is 0.0067719799999999995
-2018-07-08 11:27:01,354 - DEBUG - Account balance for USDT is 0.00030549
-2018-07-08 11:27:01,354 - INFO - trade has completed successfully
-2018-07-08 11:27:01,354 - DEBUG - sleeping for 0
-2018-07-08 11:27:01,360 - DEBUG - [+] Minimum allowable buy quantity is 0.0067719799999999995
-2018-07-08 11:27:01,360 - DEBUG - Account balance for USDT is 0.0003817
-2018-07-08 11:27:01,360 - INFO - trade has completed successfully
-2018-07-08 11:27:01,360 - DEBUG - sleeping for 0
-2018-07-08 11:28:00,397 - DEBUG - [+] Final Brick Price: 6770.0
-2018-07-08 11:28:00,402 - DEBUG - [+] Final Brick Price: 6770.0
-2018-07-08 11:28:00,404 - DEBUG - [+] Final Brick Price: 6770.0
-2018-07-08 11:29:00,372 - DEBUG - [+] Final Brick Price: 6771.01
-2018-07-08 11:29:00,378 - DEBUG - [+] Final Brick Price: 6771.01
-2018-07-08 11:29:00,380 - DEBUG - [+] Final Brick Price: 6771.01
-2018-07-08 11:30:00,388 - DEBUG - [+] Final Brick Price: 6762.94
-2018-07-08 11:30:00,393 - DEBUG - [+] Final Brick Price: 6762.94
-2018-07-08 11:30:00,399 - DEBUG - [+] Final Brick Price: 6762.94
-2018-07-08 11:31:00,332 - DEBUG - [+] Final Brick Price: 6760.41
-2018-07-08 11:31:00,337 - DEBUG - [+] Final Brick Price: 6760.41
-2018-07-08 11:31:00,340 - DEBUG - [+] Final Brick Price: 6760.41
-2018-07-08 11:32:00,321 - DEBUG - [+] Final Brick Price: 6767.36
-2018-07-08 11:32:00,327 - DEBUG - [+] Final Brick Price: 6767.36
-2018-07-08 11:32:00,329 - DEBUG - [+] Final Brick Price: 6767.36
-2018-07-08 11:33:00,996 - DEBUG - [+] Final Brick Price: 6768.99
-2018-07-08 11:33:01,004 - DEBUG - [+] Final Brick Price: 6768.99
-2018-07-08 11:33:01,005 - DEBUG - [+] Final Brick Price: 6768.99
-2018-07-08 11:34:00,171 - DEBUG - [+] Final Brick Price: 6769.0
-2018-07-08 11:34:00,176 - DEBUG - [+] Final Brick Price: 6769.0
-2018-07-08 11:34:00,179 - DEBUG - [+] Final Brick Price: 6769.0
-2018-07-08 11:35:00,464 - DEBUG - [+] Final Brick Price: 6771.71
-2018-07-08 11:35:00,471 - DEBUG - [+] Final Brick Price: 6771.71
-2018-07-08 11:35:00,472 - DEBUG - [+] Final Brick Price: 6771.71
-2018-07-08 11:36:00,695 - DEBUG - [+] Final Brick Price: 6770.24
-2018-07-08 11:36:00,700 - DEBUG - [+] Final Brick Price: 6770.24
-2018-07-08 11:36:00,704 - DEBUG - [+] Final Brick Price: 6770.24
-2018-07-08 11:37:00,483 - DEBUG - [+] Final Brick Price: 6772.99
-2018-07-08 11:37:00,487 - DEBUG - [+] Final Brick Price: 6772.99
-2018-07-08 11:37:00,490 - DEBUG - [+] Final Brick Price: 6772.99
-2018-07-08 11:38:00,847 - DEBUG - [+] Final Brick Price: 6776.05
-2018-07-08 11:38:00,847 - INFO - [Up] price up. new brick at: <Brick58 1531064279999: 6775.0>
-2018-07-08 11:38:00,847 - INFO - [+] new brick 6775.0
-2018-07-08 11:38:00,848 - DEBUG - length of last items 24
-2018-07-08 11:38:00,848 - INFO - [+] Buy time
-2018-07-08 11:38:00,852 - DEBUG - [+] Final Brick Price: 6776.05
-2018-07-08 11:38:00,858 - DEBUG - [+] Final Brick Price: 6776.05
-2018-07-08 11:38:00,858 - INFO - [Up] price up. new brick at: <Brick58 1531064279999: 6775.0>
-2018-07-08 11:38:00,859 - INFO - [+] new brick 6775.0
-2018-07-08 11:38:00,859 - DEBUG - length of last items 24
-2018-07-08 11:38:00,859 - INFO - [+] Buy time
-2018-07-08 11:39:00,811 - DEBUG - [+] Final Brick Price: 6778.37
-2018-07-08 11:39:00,816 - DEBUG - [+] Final Brick Price: 6778.37
-2018-07-08 11:39:00,819 - DEBUG - [+] Final Brick Price: 6778.37
-2018-07-08 11:39:22,418 - INFO - emitted ready
-2018-07-08 11:39:22,419 - INFO - emitted get bots
-2018-07-08 11:39:22,424 - INFO - [*] Changing the master configurations
-2018-07-08 11:39:22,424 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
-2018-07-08 11:39:22,429 - DEBUG - Waiting for renko calculator to be ready
-2018-07-08 11:39:22,431 - INFO - [*] creating a new bot
-2018-07-08 11:39:22,431 - DEBUG - [*] Params passed: {'name': 'rreimy24_bot', 'API_KEY': 'puv19uvs5g5jiTlrTcZMc8tegNnwWy2dCThzVG8jhh9E0xrSMGDr92rKWOb7eOq8', 'API_SECRET': 'jnOg5zGIKlJnOlJOotZC5NAgwjtGBDQIlJROH0jUemE2aQTkmAopWyJRWUK7z0G8', 'uuid': '35cfcb39-0d42-40d2-baef-dd1e51be5920'}
-2018-07-08 11:39:22,431 - INFO - [+] Creating a new bot.
-2018-07-08 11:39:22,431 - DEBUG - sleeping for 0
-2018-07-08 11:39:22,432 - INFO - [*] creating a new bot
-2018-07-08 11:39:22,432 - DEBUG - [*] Params passed: {'name': 'Kesh_bot', 'API_KEY': 'ZTejbdm0SRuV92edBa5j7xjhwZaQAzh4auO9mR1UC9wEZJmOA987vsE1q9gTFZjT', 'API_SECRET': 'hbVIfy44Etpi2PyRfUh2pXMj22cWIQKvGS9fgQ9t4iSYGleBb3xIzabqDPaoBDh0', 'uuid': '35cfcb39-0d42-40d2-baef-dd1e51be5920'}
-2018-07-08 11:39:22,433 - INFO - [+] Creating a new bot.
-2018-07-08 11:39:22,433 - DEBUG - sleeping for 0
-2018-07-08 11:39:23,451 - DEBUG - [+] fetching upto 1531004400000
-2018-07-08 11:39:23,809 - DEBUG - [+] fetching upto 1530944460000
-2018-07-08 11:39:24,171 - DEBUG - [+] fetching upto 1530884520000
-2018-07-08 11:39:24,176 - DEBUG - Establishing initial conditions
-2018-07-08 11:39:24,177 - INFO - [+] Current trend is [Up] and I've just fetched 21 bricks ;)
-2018-07-08 11:39:24,177 - DEBUG - length of last items 21
-2018-07-08 11:39:24,177 - DEBUG - SMA 6647.619047619048 Last brick 6775.0 bricks length 21
-2018-07-08 11:39:24,177 - INFO - [+] Signalling a buy
-2018-07-08 11:39:25,169 - DEBUG - [+] Minimum allowable buy quantity is 0.006775
-2018-07-08 11:39:25,172 - DEBUG - [+] Minimum allowable buy quantity is 0.006775
-2018-07-08 11:39:25,172 - DEBUG - Account balance for USDT is 0.0003817
-2018-07-08 11:39:25,172 - INFO - trade has completed successfully
-2018-07-08 11:39:25,172 - DEBUG - sleeping for 0
-2018-07-08 11:39:25,172 - DEBUG - Account balance for USDT is 0.00030549
-2018-07-08 11:39:25,172 - INFO - trade has completed successfully
-2018-07-08 11:39:25,172 - DEBUG - sleeping for 0
-2018-07-08 11:40:00,257 - DEBUG - [+] Final Brick Price: 6767.86
-2018-07-08 11:41:00,452 - DEBUG - [+] Final Brick Price: 6767.0
-2018-07-08 11:42:00,404 - DEBUG - [+] Final Brick Price: 6759.99
-2018-07-08 11:43:00,384 - DEBUG - [+] Final Brick Price: 6759.01
-2018-07-08 11:44:00,850 - DEBUG - [+] Final Brick Price: 6756.35
-2018-07-08 11:45:02,688 - DEBUG - [+] Final Brick Price: 6756.15
-2018-07-08 11:46:00,599 - DEBUG - [+] Final Brick Price: 6752.0
-2018-07-08 11:47:00,337 - DEBUG - [+] Final Brick Price: 6744.51
-2018-07-08 11:48:01,306 - DEBUG - [+] Final Brick Price: 6744.96
-2018-07-08 11:49:00,355 - DEBUG - [+] Final Brick Price: 6747.96
-2018-07-08 11:50:00,237 - DEBUG - [+] Final Brick Price: 6745.89
-2018-07-08 11:51:00,176 - DEBUG - [+] Final Brick Price: 6748.16
-2018-07-08 11:52:00,336 - DEBUG - [+] Final Brick Price: 6747.88
-2018-07-08 11:53:00,679 - DEBUG - [+] Final Brick Price: 6744.9
-2018-07-08 11:54:00,405 - DEBUG - [+] Final Brick Price: 6743.6
-2018-07-08 11:55:00,720 - DEBUG - [+] Final Brick Price: 6746.48
-2018-07-08 11:56:02,145 - DEBUG - [+] Final Brick Price: 6750.01
-2018-07-08 11:57:06,182 - DEBUG - [+] Final Brick Price: 6745.26
-2018-07-08 11:58:00,470 - DEBUG - [+] Final Brick Price: 6743.82
-2018-07-08 11:59:00,543 - DEBUG - [+] Final Brick Price: 6743.57
-2018-07-08 12:00:00,295 - DEBUG - [+] Final Brick Price: 6740.93
-2018-07-08 12:01:00,858 - DEBUG - [+] Final Brick Price: 6740.62
-2018-07-08 12:02:01,824 - DEBUG - [+] Final Brick Price: 6743.14
-2018-07-08 12:03:01,032 - DEBUG - [+] Final Brick Price: 6744.07
-2018-07-08 12:04:01,339 - DEBUG - [+] Final Brick Price: 6743.36
-2018-07-08 12:05:00,172 - DEBUG - [+] Final Brick Price: 6746.22
-2018-07-08 12:06:00,731 - DEBUG - [+] Final Brick Price: 6746.22
-2018-07-08 12:07:00,931 - DEBUG - [+] Final Brick Price: 6749.71
-2018-07-08 12:08:00,214 - DEBUG - [+] Final Brick Price: 6759.75
-2018-07-08 12:09:01,243 - DEBUG - [+] Final Brick Price: 6759.84
-2018-07-08 12:10:01,538 - DEBUG - [+] Final Brick Price: 6762.21
-2018-07-08 12:11:00,913 - DEBUG - [+] Final Brick Price: 6760.0
-2018-07-08 12:12:00,367 - DEBUG - [+] Final Brick Price: 6759.99
-2018-07-08 12:13:00,194 - DEBUG - [+] Final Brick Price: 6758.5
-2018-07-08 12:14:00,848 - DEBUG - [+] Final Brick Price: 6758.42
-2018-07-08 12:15:01,092 - DEBUG - [+] Final Brick Price: 6760.2
-2018-07-08 12:16:00,472 - DEBUG - [+] Final Brick Price: 6760.43
-2018-07-08 12:17:01,120 - DEBUG - [+] Final Brick Price: 6760.45
-2018-07-08 12:18:00,375 - DEBUG - [+] Final Brick Price: 6760.56
-2018-07-08 12:19:00,478 - DEBUG - [+] Final Brick Price: 6760.43
-2018-07-08 12:20:00,277 - DEBUG - [+] Final Brick Price: 6761.0
-2018-07-08 12:21:00,282 - DEBUG - [+] Final Brick Price: 6758.41
-2018-07-08 12:22:02,049 - DEBUG - [+] Final Brick Price: 6760.43
-2018-07-08 12:23:03,147 - DEBUG - [+] Final Brick Price: 6757.33
-2018-07-08 12:24:00,635 - DEBUG - [+] Final Brick Price: 6757.33
+2018-07-15 15:43:21,551 - INFO - emitted ready
+2018-07-15 15:43:21,551 - INFO - emitted get bots
+2018-07-15 15:43:21,894 - INFO - [*] Changing the master configurations
+2018-07-15 15:43:21,894 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-15 15:43:21,902 - DEBUG - Waiting for renko calculator to be ready
+2018-07-15 15:43:21,902 - INFO - [*] creating a new bot
+2018-07-15 15:43:21,902 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-15 15:43:21,902 - INFO - [+] Creating a new bot.
+2018-07-15 15:43:21,907 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-15 15:43:24,497 - DEBUG - [+] fetching upto 1531598640000
+2018-07-15 15:43:25,746 - DEBUG - [+] fetching upto 1531538700000
+2018-07-15 15:43:26,941 - DEBUG - [+] fetching upto 1531478760000
+2018-07-15 15:43:26,946 - DEBUG - Establishing initial conditions
+2018-07-15 15:43:26,946 - INFO - [+] Current trend is [Up] and I've just fetched 28 bricks ;)
+2018-07-15 15:43:26,946 - DEBUG - length of last items 24
+2018-07-15 15:43:26,946 - DEBUG - SMA 6253.125 Last brick 6375.0 bricks length 28
+2018-07-15 15:43:26,946 - INFO - [+] Signalling a buy
+2018-07-15 15:43:30,471 - DEBUG - [+]magnitoimore_bot Minimum allowable buy quantity is 0.00635408
+2018-07-15 15:43:30,471 - DEBUG - magnitoimore_bot Account balance for USDT is 0.00025506
+2018-07-15 15:43:30,471 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-15 15:43:30,475 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-15 15:44:04,041 - DEBUG - [+] Final Brick Price: 6356.1
+2018-07-15 15:45:03,821 - DEBUG - [+] Final Brick Price: 6354.83
+2018-07-15 15:46:01,806 - DEBUG - [+] Final Brick Price: 6348.99
+2018-07-15 15:47:05,331 - DEBUG - [+] Final Brick Price: 6352.05
+2018-07-15 15:48:08,442 - DEBUG - [+] Final Brick Price: 6348.01
+2018-07-15 15:49:02,114 - DEBUG - [+] Final Brick Price: 6351.09
+2018-07-15 15:50:01,701 - DEBUG - [+] Final Brick Price: 6347.73
+2018-07-15 15:51:01,271 - DEBUG - [+] Final Brick Price: 6343.51
+2018-07-15 15:52:03,161 - DEBUG - [+] Final Brick Price: 6343.0
+2018-07-15 15:53:03,860 - DEBUG - [+] Final Brick Price: 6342.16
+2018-07-15 15:54:01,284 - DEBUG - [+] Final Brick Price: 6341.04
+2018-07-15 15:55:03,418 - DEBUG - [+] Final Brick Price: 6341.02
+2018-07-15 15:56:01,775 - DEBUG - [+] Final Brick Price: 6341.0
+2018-07-15 15:57:01,687 - DEBUG - [+] Final Brick Price: 6342.9
+2018-07-15 15:58:03,552 - DEBUG - [+] Final Brick Price: 6340.3
+2018-07-15 15:59:01,002 - DEBUG - [+] Final Brick Price: 6340.01
+2018-07-15 16:00:01,420 - DEBUG - [+] Final Brick Price: 6333.14
+2018-07-15 16:01:01,111 - DEBUG - [+] Final Brick Price: 6334.19
+2018-07-15 16:02:01,064 - DEBUG - [+] Final Brick Price: 6330.01
+2018-07-15 16:03:01,032 - DEBUG - [+] Final Brick Price: 6329.12
+2018-07-15 16:04:07,620 - DEBUG - [+] Final Brick Price: 6337.15
+2018-07-15 16:05:01,228 - DEBUG - [+] Final Brick Price: 6337.21
+2018-07-15 16:06:02,035 - DEBUG - [+] Final Brick Price: 6336.99
+2018-07-15 16:07:01,348 - DEBUG - [+] Final Brick Price: 6336.99
+2018-07-15 16:08:05,314 - DEBUG - [+] Final Brick Price: 6335.64
+2018-07-15 16:09:02,653 - DEBUG - [+] Final Brick Price: 6336.24
+2018-07-15 16:10:01,868 - DEBUG - [+] Final Brick Price: 6338.39
+2018-07-15 16:11:02,823 - DEBUG - [+] Final Brick Price: 6338.0
+2018-07-15 16:12:02,554 - DEBUG - [+] Final Brick Price: 6338.41
+2018-07-15 16:13:03,262 - DEBUG - [+] Final Brick Price: 6338.1
+2018-07-15 16:14:04,644 - DEBUG - [+] Final Brick Price: 6338.58
+2018-07-15 16:15:03,639 - DEBUG - [+] Final Brick Price: 6344.25
+2018-07-15 16:16:03,454 - DEBUG - [+] Final Brick Price: 6343.92
+2018-07-15 16:17:01,977 - DEBUG - [+] Final Brick Price: 6342.42
+2018-07-15 16:18:02,182 - DEBUG - [+] Final Brick Price: 6345.0
+2018-07-15 16:19:03,687 - DEBUG - [+] Final Brick Price: 6341.65
+2018-07-15 16:20:03,248 - DEBUG - [+] Final Brick Price: 6341.57
+2018-07-15 16:21:04,552 - DEBUG - [+] Final Brick Price: 6341.03
+2018-07-15 16:22:01,392 - DEBUG - [+] Final Brick Price: 6338.01
+2018-07-15 16:23:04,232 - DEBUG - [+] Final Brick Price: 6338.84
+2018-07-15 16:24:01,848 - DEBUG - [+] Final Brick Price: 6336.08
+2018-07-15 16:25:08,431 - DEBUG - [+] Final Brick Price: 6334.86
+2018-07-15 16:26:01,023 - DEBUG - [+] Final Brick Price: 6337.9
+2018-07-15 16:27:02,661 - DEBUG - [+] Final Brick Price: 6339.03
+2018-07-15 16:28:08,444 - DEBUG - [+] Final Brick Price: 6335.05
+2018-07-15 16:29:01,003 - DEBUG - [+] Final Brick Price: 6335.09
+2018-07-15 16:30:00,955 - DEBUG - [+] Final Brick Price: 6338.39
+2018-07-15 16:31:02,299 - DEBUG - [+] Final Brick Price: 6335.21
+2018-07-15 16:32:00,992 - DEBUG - [+] Final Brick Price: 6339.0
+2018-07-15 16:33:01,613 - DEBUG - [+] Final Brick Price: 6339.99
+2018-07-15 16:34:01,181 - DEBUG - [+] Final Brick Price: 6343.41
+2018-07-15 16:35:02,383 - DEBUG - [+] Final Brick Price: 6342.97
+2018-07-15 16:36:02,909 - DEBUG - [+] Final Brick Price: 6342.97
+2018-07-15 16:37:01,272 - DEBUG - [+] Final Brick Price: 6344.67
+2018-07-15 16:38:03,900 - DEBUG - [+] Final Brick Price: 6343.01
+2018-07-15 16:39:03,060 - DEBUG - [+] Final Brick Price: 6345.38
+2018-07-15 16:40:01,452 - DEBUG - [+] Final Brick Price: 6346.01
+2018-07-15 16:41:02,282 - DEBUG - [+] Final Brick Price: 6348.81
+2018-07-15 16:42:01,697 - DEBUG - [+] Final Brick Price: 6348.84
+2018-07-15 16:43:03,026 - DEBUG - [+] Final Brick Price: 6348.37
+2018-07-15 16:44:01,976 - DEBUG - [+] Final Brick Price: 6351.72
+2018-07-15 16:45:02,475 - DEBUG - [+] Final Brick Price: 6352.02
+2018-07-15 16:46:01,361 - DEBUG - [+] Final Brick Price: 6355.0
+2018-07-15 16:47:01,562 - DEBUG - [+] Final Brick Price: 6353.51
+2018-07-15 16:48:01,044 - DEBUG - [+] Final Brick Price: 6354.54
+2018-07-15 16:49:02,514 - DEBUG - [+] Final Brick Price: 6356.69
+2018-07-15 16:50:01,521 - DEBUG - [+] Final Brick Price: 6360.0
+2018-07-15 16:51:01,279 - DEBUG - [+] Final Brick Price: 6363.26
+2018-07-15 16:52:02,329 - DEBUG - [+] Final Brick Price: 6360.03
+2018-07-15 16:53:02,987 - DEBUG - [+] Final Brick Price: 6361.01
+2018-07-15 16:54:01,788 - DEBUG - [+] Final Brick Price: 6362.01
+2018-07-15 16:55:01,339 - DEBUG - [+] Final Brick Price: 6359.99
+2018-07-15 16:56:01,857 - DEBUG - [+] Final Brick Price: 6355.03
+2018-07-15 16:57:01,899 - DEBUG - [+] Final Brick Price: 6358.97
+2018-07-15 16:58:02,092 - DEBUG - [+] Final Brick Price: 6357.98
+2018-07-15 16:59:01,307 - DEBUG - [+] Final Brick Price: 6361.0
+2018-07-15 17:00:01,448 - DEBUG - [+] Final Brick Price: 6359.99
+2018-07-15 17:01:01,895 - DEBUG - [+] Final Brick Price: 6359.74
+2018-07-15 17:02:02,251 - DEBUG - [+] Final Brick Price: 6358.1
+2018-07-15 17:03:01,584 - DEBUG - [+] Final Brick Price: 6358.92
+2018-07-15 17:04:05,354 - DEBUG - [+] Final Brick Price: 6361.76
+2018-07-15 17:05:01,303 - DEBUG - [+] Final Brick Price: 6363.79
+2018-07-15 17:06:01,272 - DEBUG - [+] Final Brick Price: 6365.8
+2018-07-15 17:07:03,207 - DEBUG - [+] Final Brick Price: 6362.97
+2018-07-15 17:08:02,364 - DEBUG - [+] Final Brick Price: 6364.9
+2018-07-15 17:09:01,264 - DEBUG - [+] Final Brick Price: 6360.14
+2018-07-15 17:10:03,200 - DEBUG - [+] Final Brick Price: 6358.93
+2018-07-15 17:11:01,064 - DEBUG - [+] Final Brick Price: 6355.06
+2018-07-15 17:12:00,988 - DEBUG - [+] Final Brick Price: 6355.0
+2018-07-15 17:13:01,003 - DEBUG - [+] Final Brick Price: 6355.05
+2018-07-15 17:14:01,127 - DEBUG - [+] Final Brick Price: 6355.04
+2018-07-15 17:15:10,478 - ERROR - socket was closed, reconnecting in 30 seconds
+2018-07-15 17:15:40,551 - ERROR - socket was closed, reconnecting in 60 seconds
+2018-07-15 17:16:40,559 - ERROR - socket was closed, reconnecting in 90 seconds
+2018-07-15 17:18:10,575 - ERROR - socket was closed, reconnecting in 120 seconds
+2018-07-15 17:20:10,630 - ERROR - socket was closed, reconnecting in 150 seconds
+2018-07-15 17:22:40,644 - ERROR - socket was closed, reconnecting in 180 seconds
+2018-07-15 17:25:40,661 - ERROR - socket was closed, reconnecting in 210 seconds
+2018-07-15 17:29:10,670 - ERROR - socket was closed, reconnecting in 240 seconds
+2018-07-15 17:33:10,694 - ERROR - socket was closed, reconnecting in 270 seconds
+2018-07-25 20:22:40,649 - INFO - emitted ready
+2018-07-25 20:22:40,664 - INFO - emitted get bots
+2018-07-25 20:22:40,680 - INFO - [*] Changing the master configurations
+2018-07-25 20:22:40,680 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-25 20:22:40,695 - DEBUG - Waiting for renko calculator to be ready
+2018-07-25 20:22:40,695 - INFO - [*] creating a new bot
+2018-07-25 20:22:40,695 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-25 20:22:40,695 - INFO - [+] Creating a new bot.
+2018-07-25 20:22:41,617 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:22:41,711 - DEBUG - [+] fetching upto 1532479380000
+2018-07-25 20:22:42,492 - DEBUG - [+] fetching upto 1532419440000
+2018-07-25 20:22:43,351 - DEBUG - [+] fetching upto 1532359500000
+2018-07-25 20:22:43,351 - DEBUG - Establishing initial conditions
+2018-07-25 20:22:43,351 - INFO - [+] Current trend is [Up] and I've just fetched 108 bricks ;)
+2018-07-25 20:22:43,351 - DEBUG - length of last items 24
+2018-07-25 20:22:43,351 - DEBUG - SMA 8236.458333333334 Last brick 8175.0 bricks length 108
+2018-07-25 20:22:43,351 - INFO - [+] Signalling a sell
+2018-07-25 20:22:45,444 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-25 20:22:45,444 - DEBUG - magnitoimore_bot Account balance for BTC is 8.5e-07
+2018-07-25 20:22:45,444 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-25 20:22:45,460 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:22:59,160 - DEBUG - [+] Final Brick Price: 8140.09
+2018-07-25 20:23:41,368 - INFO - emitted ready
+2018-07-25 20:23:41,368 - INFO - emitted get bots
+2018-07-25 20:23:41,384 - INFO - [*] Changing the master configurations
+2018-07-25 20:23:41,384 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-25 20:23:41,384 - DEBUG - Waiting for renko calculator to be ready
+2018-07-25 20:23:41,384 - INFO - [*] creating a new bot
+2018-07-25 20:23:41,400 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-25 20:23:41,400 - INFO - [+] Creating a new bot.
+2018-07-25 20:23:42,384 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:23:42,509 - DEBUG - [+] fetching upto 1532479440000
+2018-07-25 20:23:43,337 - DEBUG - [+] fetching upto 1532419500000
+2018-07-25 20:23:44,149 - DEBUG - [+] fetching upto 1532359560000
+2018-07-25 20:23:44,149 - DEBUG - Establishing initial conditions
+2018-07-25 20:23:44,149 - INFO - [+] Current trend is [Up] and I've just fetched 108 bricks ;)
+2018-07-25 20:23:44,149 - DEBUG - length of last items 24
+2018-07-25 20:23:44,149 - DEBUG - SMA 8236.458333333334 Last brick 8175.0 bricks length 108
+2018-07-25 20:23:44,149 - INFO - [+] Signalling a sell
+2018-07-25 20:23:46,118 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-25 20:23:46,118 - DEBUG - magnitoimore_bot Account balance for BTC is 8.5e-07
+2018-07-25 20:23:46,118 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-25 20:23:46,118 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:23:58,724 - DEBUG - [+] Final Brick Price: 8140.07
+2018-07-25 20:24:59,772 - DEBUG - [+] Final Brick Price: 8144.95
+2018-07-25 20:26:02,038 - DEBUG - [+] Final Brick Price: 8141.3
+2018-07-25 20:34:27,503 - INFO - emitted ready
+2018-07-25 20:34:27,506 - INFO - emitted get bots
+2018-07-25 20:34:27,520 - INFO - [*] Changing the master configurations
+2018-07-25 20:34:27,522 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-25 20:34:27,545 - DEBUG - Waiting for renko calculator to be ready
+2018-07-25 20:34:27,548 - INFO - [*] creating a new bot
+2018-07-25 20:34:27,548 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-25 20:34:27,549 - INFO - [+] Creating a new bot.
+2018-07-25 20:34:28,585 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:34:28,725 - DEBUG - [+] fetching upto 1532480100000
+2018-07-25 20:34:29,491 - DEBUG - [+] fetching upto 1532420160000
+2018-07-25 20:34:30,319 - DEBUG - [+] fetching upto 1532360220000
+2018-07-25 20:34:30,334 - DEBUG - Establishing initial conditions
+2018-07-25 20:34:30,334 - INFO - [+] Current trend is [Up] and I've just fetched 107 bricks ;)
+2018-07-25 20:34:30,334 - DEBUG - length of last items 24
+2018-07-25 20:34:30,334 - DEBUG - SMA 8236.458333333334 Last brick 8175.0 bricks length 107
+2018-07-25 20:34:30,334 - INFO - [+] Signalling a sell
+2018-07-25 20:34:32,287 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-25 20:34:32,287 - DEBUG - magnitoimore_bot Account balance for BTC is 8.5e-07
+2018-07-25 20:34:32,287 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-25 20:34:32,287 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:34:58,578 - DEBUG - [+] Final Brick Price: 8148.0
+2018-07-25 20:35:59,751 - DEBUG - [+] Final Brick Price: 8142.63
+2018-07-25 20:36:58,815 - DEBUG - [+] Final Brick Price: 8135.34
+2018-07-25 20:37:58,629 - DEBUG - [+] Final Brick Price: 8129.02
+2018-07-25 20:39:01,802 - DEBUG - [+] Final Brick Price: 8141.97
+2018-07-25 20:47:47,212 - INFO - emitted ready
+2018-07-25 20:47:47,212 - INFO - emitted get bots
+2018-07-25 20:47:47,243 - INFO - [*] Changing the master configurations
+2018-07-25 20:47:47,243 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-25 20:47:47,258 - DEBUG - Waiting for renko calculator to be ready
+2018-07-25 20:47:47,258 - INFO - [*] creating a new bot
+2018-07-25 20:47:47,258 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-25 20:47:47,258 - INFO - [+] Creating a new bot.
+2018-07-25 20:47:48,149 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:47:48,321 - DEBUG - [+] fetching upto 1532480880000
+2018-07-25 20:47:49,164 - DEBUG - [+] fetching upto 1532420940000
+2018-07-25 20:47:49,930 - DEBUG - [+] fetching upto 1532361000000
+2018-07-25 20:47:49,945 - DEBUG - Establishing initial conditions
+2018-07-25 20:47:49,945 - INFO - [+] Current trend is [Down] and I've just fetched 108 bricks ;)
+2018-07-25 20:47:49,945 - DEBUG - length of last items 24
+2018-07-25 20:47:49,945 - DEBUG - SMA 8227.083333333334 Last brick 8125.0 bricks length 108
+2018-07-25 20:47:49,945 - INFO - [+] Signalling a sell
+2018-07-25 20:47:51,835 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-25 20:47:51,835 - DEBUG - magnitoimore_bot Account balance for BTC is 8.5e-07
+2018-07-25 20:47:51,835 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-25 20:47:51,835 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:47:58,412 - DEBUG - [+] Final Brick Price: 8120.38
+2018-07-25 20:48:47,745 - INFO - emitted ready
+2018-07-25 20:48:47,745 - INFO - emitted get bots
+2018-07-25 20:48:47,760 - INFO - [*] Changing the master configurations
+2018-07-25 20:48:47,760 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-25 20:48:47,760 - DEBUG - Waiting for renko calculator to be ready
+2018-07-25 20:48:47,760 - INFO - [*] creating a new bot
+2018-07-25 20:48:47,760 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-25 20:48:47,775 - INFO - [+] Creating a new bot.
+2018-07-25 20:48:48,588 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:48:48,775 - DEBUG - [+] fetching upto 1532480940000
+2018-07-25 20:48:49,697 - DEBUG - [+] fetching upto 1532421000000
+2018-07-25 20:48:50,478 - DEBUG - [+] fetching upto 1532361060000
+2018-07-25 20:48:50,493 - DEBUG - Establishing initial conditions
+2018-07-25 20:48:50,493 - INFO - [+] Current trend is [Down] and I've just fetched 107 bricks ;)
+2018-07-25 20:48:50,493 - DEBUG - length of last items 24
+2018-07-25 20:48:50,493 - DEBUG - SMA 8227.083333333334 Last brick 8125.0 bricks length 107
+2018-07-25 20:48:50,493 - INFO - [+] Signalling a sell
+2018-07-25 20:48:52,399 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-25 20:48:52,399 - DEBUG - magnitoimore_bot Account balance for BTC is 8.5e-07
+2018-07-25 20:48:52,399 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-25 20:48:52,399 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:48:59,210 - DEBUG - [+] Final Brick Price: 8124.0
+2018-07-25 20:49:58,993 - DEBUG - [+] Final Brick Price: 8119.98
+2018-07-25 20:50:51,443 - INFO - emitted ready
+2018-07-25 20:50:51,443 - INFO - emitted get bots
+2018-07-25 20:50:51,443 - INFO - [*] Changing the master configurations
+2018-07-25 20:50:51,443 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-25 20:50:51,459 - DEBUG - Waiting for renko calculator to be ready
+2018-07-25 20:50:51,459 - INFO - [*] creating a new bot
+2018-07-25 20:50:51,459 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-25 20:50:51,459 - INFO - [+] Creating a new bot.
+2018-07-25 20:50:52,490 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:50:52,646 - DEBUG - [+] fetching upto 1532481060000
+2018-07-25 20:50:53,552 - DEBUG - [+] fetching upto 1532421120000
+2018-07-25 20:50:54,333 - DEBUG - [+] fetching upto 1532361180000
+2018-07-25 20:50:54,348 - DEBUG - Establishing initial conditions
+2018-07-25 20:50:54,348 - INFO - [+] Current trend is [Down] and I've just fetched 108 bricks ;)
+2018-07-25 20:50:54,348 - DEBUG - length of last items 24
+2018-07-25 20:50:54,348 - DEBUG - SMA 8227.083333333334 Last brick 8125.0 bricks length 108
+2018-07-25 20:50:54,364 - INFO - [+] Signalling a sell
+2018-07-25 20:50:56,348 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-25 20:50:56,348 - DEBUG - magnitoimore_bot Account balance for BTC is 8.5e-07
+2018-07-25 20:50:56,364 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-25 20:50:56,364 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-25 20:50:59,301 - DEBUG - [+] Final Brick Price: 8120.0
+2018-07-25 20:51:59,724 - DEBUG - [+] Final Brick Price: 8119.96
+2018-07-25 20:52:58,382 - DEBUG - [+] Final Brick Price: 8109.02
+2018-07-25 20:54:00,352 - DEBUG - [+] Final Brick Price: 8118.99
+2018-07-25 20:54:58,947 - DEBUG - [+] Final Brick Price: 8119.01
+2018-07-25 20:55:59,893 - DEBUG - [+] Final Brick Price: 8117.2
+2018-07-25 20:56:58,363 - DEBUG - [+] Final Brick Price: 8126.96
+2018-07-25 20:58:01,430 - DEBUG - [+] Final Brick Price: 8124.72
+2018-07-25 20:58:58,838 - DEBUG - [+] Final Brick Price: 8127.05
+2018-07-25 20:59:58,871 - DEBUG - [+] Final Brick Price: 8126.49
+2018-07-25 21:00:59,162 - DEBUG - [+] Final Brick Price: 8125.28
+2018-07-25 21:01:59,478 - DEBUG - [+] Final Brick Price: 8137.48
+2018-07-25 21:02:58,589 - DEBUG - [+] Final Brick Price: 8138.85
+2018-07-25 21:03:58,387 - DEBUG - [+] Final Brick Price: 8134.99
+2018-07-25 21:04:59,553 - DEBUG - [+] Final Brick Price: 8130.95
+2018-07-25 21:05:58,348 - DEBUG - [+] Final Brick Price: 8123.74
+2018-07-25 21:06:58,937 - DEBUG - [+] Final Brick Price: 8123.57
+2018-07-25 21:08:03,065 - DEBUG - [+] Final Brick Price: 8129.25
+2018-07-25 21:08:59,251 - DEBUG - [+] Final Brick Price: 8129.13
+2018-07-25 21:09:58,823 - DEBUG - [+] Final Brick Price: 8125.43
+2018-07-25 21:11:04,902 - DEBUG - [+] Final Brick Price: 8127.7
+2018-07-25 21:12:04,825 - DEBUG - [+] Final Brick Price: 8128.76
+2018-07-25 21:12:58,437 - DEBUG - [+] Final Brick Price: 8134.08
+2018-07-25 21:13:58,470 - DEBUG - [+] Final Brick Price: 8138.49
+2018-07-25 21:14:59,315 - DEBUG - [+] Final Brick Price: 8138.47
+2018-07-25 21:15:58,473 - DEBUG - [+] Final Brick Price: 8130.01
+2018-07-25 21:16:58,334 - DEBUG - [+] Final Brick Price: 8134.84
+2018-07-25 21:17:58,522 - DEBUG - [+] Final Brick Price: 8134.18
+2018-07-25 21:18:59,165 - DEBUG - [+] Final Brick Price: 8136.39
+2018-07-25 21:19:58,588 - DEBUG - [+] Final Brick Price: 8136.98
+2018-07-25 21:20:58,652 - DEBUG - [+] Final Brick Price: 8133.05
+2018-07-25 21:22:00,146 - DEBUG - [+] Final Brick Price: 8130.01
+2018-07-25 21:22:58,999 - DEBUG - [+] Final Brick Price: 8129.16
+2018-07-25 21:23:58,425 - DEBUG - [+] Final Brick Price: 8125.01
+2018-07-25 21:24:59,114 - DEBUG - [+] Final Brick Price: 8120.01
+2018-07-25 21:25:58,896 - DEBUG - [+] Final Brick Price: 8113.11
+2018-07-25 21:26:58,835 - DEBUG - [+] Final Brick Price: 8113.99
+2018-07-25 21:27:57,297 - ERROR - socket was closed, reconnecting in 30 seconds
+2018-07-25 21:28:27,321 - ERROR - socket was closed, reconnecting in 60 seconds
+2018-07-25 21:29:27,338 - ERROR - socket was closed, reconnecting in 90 seconds
+2018-07-25 21:30:31,473 - INFO - emitted ready
+2018-07-25 21:30:31,473 - INFO - emitted get bots
+2018-07-25 21:30:31,583 - INFO - [*] Changing the master configurations
+2018-07-25 21:30:31,583 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-25 21:30:31,583 - DEBUG - Waiting for renko calculator to be ready
+2018-07-25 21:30:31,583 - ERROR - socket was closed, reconnecting in 30 seconds
+2018-07-25 21:30:31,598 - INFO - [*] creating a new bot
+2018-07-25 21:30:31,598 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'fc286ccc-d5fe-4325-983d-9e8020c26cd4'}
+2018-07-25 21:30:31,598 - INFO - [+] Creating a new bot.
+2018-07-25 21:30:31,598 - DEBUG - magnitoimore_bot API KEY has permission errors, check key can trade and get account balance
+2018-07-26 06:15:59,087 - INFO - emitted ready
+2018-07-26 06:15:59,092 - INFO - emitted get bots
+2018-07-26 06:15:59,316 - INFO - [*] Changing the master configurations
+2018-07-26 06:15:59,316 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '25', 'time_frame': '1m', 'sma': '24'}
+2018-07-26 06:15:59,331 - DEBUG - Waiting for renko calculator to be ready
+2018-07-26 06:15:59,334 - INFO - [*] creating a new bot
+2018-07-26 06:15:59,336 - DEBUG - [*] Params passed: {'name': 'magnitoimore_bot', 'API_KEY': 'fNGsQe9CPvwMcSZwEtFGIX3JcdPZ70aw8Z6slDB9Wcphb1kMyD6tGTYUBo7dCL7H', 'API_SECRET': 'P6hXznOB6XuyLS4BHU18kgjYHSK0mwS2rvoaNwk9UENN07drK5JV3a84Krmlx8sx', 'uuid': 'b5d2ee2f-e4a1-4cc8-9181-c2dc94972d05'}
+2018-07-26 06:15:59,338 - INFO - [+] Creating a new bot.
+2018-07-26 06:16:00,894 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-26 06:16:01,146 - DEBUG - [+] fetching upto 1532515020000
+2018-07-26 06:16:02,143 - DEBUG - [+] fetching upto 1532455080000
+2018-07-26 06:16:03,196 - DEBUG - [+] fetching upto 1532395140000
+2018-07-26 06:16:03,211 - DEBUG - Establishing initial conditions
+2018-07-26 06:16:03,211 - INFO - [+] Current trend is [Down] and I've just fetched 123 bricks ;)
+2018-07-26 06:16:03,216 - DEBUG - length of last items 24
+2018-07-26 06:16:03,217 - DEBUG - SMA 8221.875 Last brick 8175.0 bricks length 123
+2018-07-26 06:16:03,218 - INFO - [+] Signalling a sell
+2018-07-26 06:16:05,961 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-26 06:16:05,971 - DEBUG - magnitoimore_bot Account balance for BTC is 0.09616185
+2018-07-26 06:16:05,972 - DEBUG - [+]magnitoimore_bot Selling 0.0959695263
+2018-07-26 06:16:05,974 - INFO - [*]magnitoimore_bot Selling 0.0959695263
+2018-07-26 06:16:06,660 - INFO - [+]magnitoimore_bot Order successful, ID: 137993550
+2018-07-26 06:16:06,663 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-26 06:16:08,932 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-26 06:16:08,932 - DEBUG - magnitoimore_bot Account balance for BTC is 0.00019185
+2018-07-26 06:16:08,948 - DEBUG - [+]magnitoimore_bot Selling 0.0001914663
+2018-07-26 06:16:08,950 - INFO - [*]magnitoimore_bot Selling 0.0001914663
+2018-07-26 06:16:09,827 - INFO - [+]magnitoimore_bot Order successful, ID: 137993563
+2018-07-26 06:16:09,827 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-26 06:16:12,306 - DEBUG - [+]magnitoimore_bot Minimum allowable sell quantity is 1e-06
+2018-07-26 06:16:12,314 - DEBUG - magnitoimore_bot Account balance for BTC is 8.5e-07
+2018-07-26 06:16:12,318 - INFO - magnitoimore_bot trade has completed successfully
+2018-07-26 06:16:12,322 - DEBUG - magnitoimore_bot sleeping for 0
+2018-07-26 06:16:24,997 - INFO - [+] Informing on bot b5d2ee2f-e4a1-4cc8-9181-c2dc94972d05
+2018-07-26 06:16:59,230 - DEBUG - [+] Final Brick Price: 8183.46
+2018-07-26 06:17:27,055 - INFO - [+] Informing on bot b5d2ee2f-e4a1-4cc8-9181-c2dc94972d05
+2018-07-26 06:17:58,778 - DEBUG - [+] Final Brick Price: 8181.0
+2018-07-26 06:18:58,779 - DEBUG - [+] Final Brick Price: 8181.49
+2018-07-26 06:20:00,418 - DEBUG - [+] Final Brick Price: 8180.57
+2018-07-26 06:20:58,998 - DEBUG - [+] Final Brick Price: 8180.0
+2018-07-26 06:22:00,446 - DEBUG - [+] Final Brick Price: 8179.99
+2018-07-26 06:22:58,802 - DEBUG - [+] Final Brick Price: 8176.28
+2018-07-26 06:23:58,659 - DEBUG - [+] Final Brick Price: 8177.67
+2018-07-26 06:24:58,401 - DEBUG - [+] Final Brick Price: 8184.65
+2018-07-26 06:25:58,828 - DEBUG - [+] Final Brick Price: 8196.42
+2018-07-26 06:26:58,416 - DEBUG - [+] Final Brick Price: 8206.95
+2018-07-26 06:28:00,264 - DEBUG - [+] Final Brick Price: 8202.94
+2018-07-26 06:28:58,436 - DEBUG - [+] Final Brick Price: 8217.98
+2018-07-26 06:30:00,694 - DEBUG - [+] Final Brick Price: 8207.39
+2018-07-26 06:31:00,538 - DEBUG - [+] Final Brick Price: 8206.09
+2018-07-26 06:31:59,684 - DEBUG - [+] Final Brick Price: 8210.0
+2018-07-26 06:32:58,870 - DEBUG - [+] Final Brick Price: 8210.64
+2018-07-26 06:33:58,581 - DEBUG - [+] Final Brick Price: 8211.0
+2018-07-26 06:34:58,466 - DEBUG - [+] Final Brick Price: 8212.29
+2018-07-26 06:35:58,275 - DEBUG - [+] Final Brick Price: 8215.61
+2018-07-26 06:36:58,281 - DEBUG - [+] Final Brick Price: 8217.7
+2018-07-26 06:37:58,486 - DEBUG - [+] Final Brick Price: 8217.94

@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<div class="container-fluid" id="create-bot">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.api_key.label }}<br>
+            {{ form.api_key(size=32) }}<br>
+            {% for error in form.api_key.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.api_secret.label }}<br>
+            {{ form.api_secret(size=32) }}<br>
+            {% for error in form.api_secret.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% endblock content %}
+{% block scripts %}
+{{ super()}}
+
+{% endblock scripts %}

@@ -3,6 +3,8 @@ from bot.master import Master
 import os,sys
 
 import logging
+import logging.handlers
+
 logger = logging.getLogger("renko.ws_manager")
 
 class MasterNamespace(BaseNamespace):
@@ -86,12 +88,23 @@ class MasterNamespace(BaseNamespace):
         self.emit('botstatus',{'bot' : params})
 
 
+def on_connect():
+    print("*"*100)
+    print("[+] Connected")
+def disconnected():
+    print("*" * 100)
+    print("[+] Disconnected")
+def reconnect():
+    print("*" * 100)
+    print("[+] Reconnected")
 
-
-def manage():
+def manage(socketio_handler):
     socketIO = SocketIO('localhost', 5000, MasterNamespace)
     namespace = socketIO.get_namespace()
+    socketIO.on('connect', on_connect)
+    socketIO.on('disconnect', disconnected)
     namespace.master = Master()
+    socketio_handler.ws = socketIO #trial code to hand over this instance of socketio to logging
     socketIO.emit('ready')
     logger.info("emitted ready")
     socketIO.emit('getbots')

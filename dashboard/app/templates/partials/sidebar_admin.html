@@ -5,7 +5,7 @@ Tip 1: You can change the color of the sidebar using: data-color="purple | blue 
 Tip 2: you can also add an image using data-image tag
 -->
     <div class="logo">
-        <a href="/" class="simple-text">
+        <a href="{{ url_for('home.index') }}" class="simple-text">
             <i class="material-icons">home</i>
             Auto Bot Cloud
         </a>
@@ -13,45 +13,57 @@ Tip 2: you can also add an image using data-image tag
     <div class="sidebar-wrapper">
         <ul class="nav" id="side-bar">
             <li>
-                <a href="/dashboard">
+                <a href="{{ url_for('admin.dashboard') }}">
                     <i class="material-icons">dashboard</i>
                     <p>DASHBOARD</p>
                 </a>
             </li>
             <li>
-                <a href="/users">
+                <a href="{{ url_for('users.users') }}">
                     <i class="material-icons text-gray">people</i>
                     <p>USERS</p>
                 </a>
             </li>
             <li>
-                <a href="/settings">
+                <a href="{{ url_for('settings.settings') }}">
                     <i class="material-icons text-gray">build</i>
                     <p>SETTINGS</p>
                 </a>
             </li>
             <li>
-                <a href="/bot">
+                <a href="{{ url_for('bots.get_bots') }}">
                     <i class="material-icons">B</i>
                     <p>BOTS</p>
                 </a>
             </li>
             <li>
-                <a href="/roles">
+                <a href="{{ url_for('admin.roles') }}">
                     <i class="material-icons text-gray">security</i>
                     <p>ROLES</p>
                 </a>
             </li>
             <li>
-                <a href="/account">
-                    <i class="material-icons text-gray">person</i>
-                    <p>MY ACCOUNT</p>
+                <a href="{{ url_for('payments.view_payments') }}">
+                    <i class="material-icons text-gray">payment</i>
+                    <p>PAYMENTS</p>
                 </a>
             </li>
             <li>
-                <a href="/view_payments">
-                    <i class="material-icons text-gray">payment</i>
-                    <p>PAYMENTS</p>
+                <a href="{{ url_for('logs.index') }}">
+                    <i class="material-icons text-gray">bug_report</i>
+                    <p>LOGS</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('admin.feedbacks') }}">
+                    <i class="material-icons text-gray">feedback</i>
+                    <p>FEEDBACK</p>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('bots.account') }}">
+                    <i class="material-icons text-gray">person</i>
+                    <p>MY ACCOUNT</p>
                 </a>
             </li>
         </ul>
@@ -61,7 +73,7 @@ Tip 2: you can also add an image using data-image tag
 <script type="application/javascript">
     const pathname = window.location.pathname;
     p_arr = pathname.split("/");
-    const my_location = p_arr[p_arr.length -1];
+    const my_location = p_arr.slice(1);
     console.log(my_location);
     const navbar = document.getElementById("side-bar");
     const navs = navbar.getElementsByTagName("li");
@@ -71,7 +83,8 @@ Tip 2: you can also add an image using data-image tag
         let nav = navs[i];
         a_tag = nav.children[0];
         h_arr = a_tag.href.split('/');
-        nav_path = h_arr[h_arr.length -1];
+        nav_path = h_arr.slice(h_arr.length - 2);
+        console.log(my_location, nav_path);
         if(nav_path === my_location)
         {
             nav.classList.add("active");

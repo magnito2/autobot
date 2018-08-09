@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "layouts/base.html" %}
 {% block content %}
 {% from "macros/render_pagination.html" import render_pagination%}
 <div class="container-fluid" id="users-page">
@@ -38,7 +38,7 @@
                     </table>
                 </div>
                 <div class="card-footer">
-                    {{ render_pagination(payments, "view_payments") }}
+                    {{ render_pagination(payments, "payments.view_payments") }}
                 </div>
             </div>
         </div>

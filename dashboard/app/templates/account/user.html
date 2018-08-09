@@ -1,0 +1,37 @@
+{% extends "layouts/base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+<div class="container-fluid" id="user-page">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="/user/{{ user.username }}">
+                        <img class="img" src="{{ user.avatar(128) }}" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h6 class="category text-gray">{{ user.role }}</h6>
+                    <h4 class="card-title">{{ user.username }}</h4>
+                    <p class="card-content">
+                        {{ user.about_me }}
+                    </p>
+                    {% if user == current_user %}
+                    <a href="{{ url_for('users.edit_profile') }}" class="btn btn-primary btn-round">Edit your profile</a>
+                    {% else %}
+                    <a href="/" class="btn btn-primary btn-round">Follow</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+
+{% endblock scripts %}

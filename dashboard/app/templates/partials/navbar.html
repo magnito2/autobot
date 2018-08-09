@@ -35,16 +35,28 @@
                     <ul class="dropdown-menu">
                         <li>
                             {% if current_user.is_anonymous %}
-                            <a href="{{ url_for('login') }}">Login</a>
+                            <a href="{{ url_for('account.login') }}">Login</a>
                             {% else %}
-                            <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-                            <a href="{{ url_for('logout') }}">Logout</a>
+                            <a href="{{ url_for('users.user', username=current_user.username) }}">Profile</a>
+                            <a href="{{ url_for('account.logout') }}">Logout</a>
                             {% endif %}
                         </li>
                     </ul>
                 </li>
             </ul>
-
+            {% if searchable %}
+            <form class="navbar-form navbar-right" role="search" method="post" action="{{ search_url }}">
+                {{ form.hidden_tag() }}
+                <div class="form-group  is-empty">
+                    {{ form.search_value(class_='form-control') }}
+                    <span class="material-input"></span>
+                </div>
+                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                    <i class="material-icons">search</i>
+                    <div class="ripple-container"></div>
+                </button>
+            </form>
+            {% endif %}
         </div>
     </div>
 </nav>
