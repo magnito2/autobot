@@ -99,7 +99,7 @@ def reconnect():
     print("[+] Reconnected")
 
 def manage(socketio_handler):
-    socketIO = SocketIO('localhost', 5000, MasterNamespace)
+    socketIO = SocketIO('https://autobotcloud.com', Namespace= MasterNamespace)
     namespace = socketIO.get_namespace()
     socketIO.on('connect', on_connect)
     socketIO.on('disconnect', disconnected)

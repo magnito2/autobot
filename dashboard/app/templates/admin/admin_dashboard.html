@@ -62,7 +62,7 @@
                                 </div>
                                 <div class="card-content">
                                     <p class="category">Followers</p>
-                                    <h3 class="title">+245</h3>
+                                    <h3 class="title" id="twitter-followers-count"></h3>
                                 </div>
                                 <div class="card-footer">
                                     <div class="stats">
@@ -72,6 +72,48 @@
                             </div>
                         </div>
                     </div>
+    <div class="row">
+        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header card-chart">
+                                    <!-- TradingView Widget BEGIN -->
+                                    <div class="tradingview-widget-container">
+                                        <div id="tradingview_1ae89"></div>
+                                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BINANCE-BTCUSDT/" rel="noopener" target="_blank"><span class="blue-text">BTCUSDT chart</span></a> by TradingView</div>
+                                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                                        <script type="text/javascript">
+                                            new TradingView.widget(
+                                                {
+                                                    "autosize": true,
+                                                    "symbol": "BINANCE:BTCUSDT",
+                                                    "interval": "1",
+                                                    "timezone": "Etc/UTC",
+                                                    "theme": "Dark",
+                                                    "style": "4",
+                                                    "locale": "en",
+                                                    "toolbar_bg": "#f1f3f6",
+                                                    "enable_publishing": false,
+                                                    "hide_top_toolbar": true,
+                                                    "container_id": "tradingview_1ae89"
+                                                }
+                                            );
+                                        </script>
+                                    </div>
+                                    <!-- TradingView Widget END -->
+                                </div>
+                                <div class="card-content">
+                                    <h4 class="title">Current Trend</h4>
+                                    <p class="category">
+                                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">access_time</i> updated 4 minutes ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </div>
     <div class="row">
                         <div class="col-lg-6 col-md-12">
                             <div class="card card-nav-tabs">
@@ -216,4 +258,13 @@
 {% block scripts %}
 {{ super()}}
 <!--script src="{{url_for('static', filename='dist/dashboard.js')}}"></script-->
+<script type="text/javascript">
+    console.log("goodnight");
+    $.ajax({
+    url: "/stats/tweeter-followers-count",
+    dataType : 'json'
+    }).done(function(data) {
+    $("#twitter-followers-count").text("+" +data);
+    });
+</script>
 {% endblock scripts %}

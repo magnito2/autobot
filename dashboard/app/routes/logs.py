@@ -1,10 +1,11 @@
-from flask import render_template, redirect, url_for, flash, request
+from flask import render_template, redirect, url_for, flash, request, jsonify
 from dashboard.app.models import Log, Bot, User
 from . import log_bp
 from dashboard.app.authorizer import role_required
 from sqlalchemy import desc, or_
 from dashboard.app import app
 from dashboard.app.forms import SearchForm
+import requests
 
 @log_bp.route("/")
 @role_required('Admin')

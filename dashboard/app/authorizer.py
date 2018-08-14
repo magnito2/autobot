@@ -63,6 +63,23 @@ def trial_days_remaining(bot_id):
     else:
         return 0
 
+def active_days_remaining(bot_id):
+    current_time = datetime.datetime.utcnow().timestamp()
+    if not bot_id:
+        return 0
+    bot = Bot.query.get(bot_id)
+    if not bot:
+        return 0
+    return int((bot.expires_at.timestamp() - current_time)/86400)
+
+def get_remaining_subscription_days(bot_id):
+    if activation_type(bot_id) == "trial":
+        return trial_days_remaining(bot_id)
+    elif activation_type(bot_id) == "active":
+        return active_days_remaining(bot_id)
+    elif activation_type(bot_id) == "expired":
+        return activation_type(bot_id)
+
 def check_confirmed(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):

@@ -26,6 +26,9 @@
                                 <div class="card-content">
                                     <p class="category">Status</p>
                                     <h3 class="title">{{ activation_type(bot.id).upper()}}</h3>
+                                    {% if activation_type(bot.id) == "active" %}
+                                        <p>{{ active_days_remaining(bot.id) }} days left</p>
+                                    {% endif %}
                                 </div>
                                 <div class="card-footer">
                                     {% if activation_type(bot.id) == "expired" %}

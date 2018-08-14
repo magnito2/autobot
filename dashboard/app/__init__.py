@@ -21,7 +21,7 @@ app.static_folder = app.config['STATIC_FOLDER']
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
-login.login_view = 'users.login'
+login.login_view = 'account.login'
 socketio = SocketIO(app)
 mail = Mail(app)
 CSRFProtect(app)
@@ -37,12 +37,14 @@ new_payment_made = app_signals.signal('new-payment-made')
 
 app.jinja_env.globals['momentjs'] = momentjs
 
-from dashboard.app.authorizer import authorize, activation_type, trial_days_remaining
+from dashboard.app.authorizer import authorize, activation_type, trial_days_remaining, active_days_remaining, get_remaining_subscription_days
 app.jinja_env.globals['authorize'] = authorize
 app.jinja_env.globals['activation_type'] = activation_type
 app.jinja_env.globals['trial_days_remaining'] = trial_days_remaining
+app.jinja_env.globals['active_days_remaining'] = active_days_remaining
+app.jinja_env.globals['get_remaining_subscription_days'] = get_remaining_subscription_days
 
-from dashboard.app.routes import admin_bp, bots_bp, home_bp, payment_bp, settings_bp, user_bp, account_bp, log_bp
+from dashboard.app.routes import admin_bp, bots_bp, home_bp, payment_bp, settings_bp, user_bp, account_bp, log_bp, stats_bp
 
 app.register_blueprint(admin_bp)
 app.register_blueprint(bots_bp)
@@ -52,6 +54,7 @@ app.register_blueprint(settings_bp)
 app.register_blueprint(user_bp)
 app.register_blueprint(account_bp)
 app.register_blueprint(log_bp)
+app.register_blueprint(stats_bp)
 
 
 from dashboard.app import models, errors, websocket_server, signal_recievers

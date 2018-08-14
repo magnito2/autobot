@@ -1,0 +1,34 @@
+2018-08-10 10:06:23,768 - INFO - emitted ready
+2018-08-10 10:06:23,768 - INFO - emitted get bots
+2018-08-10 10:06:24,236 - INFO - [*] Changing the master configurations
+2018-08-10 10:06:24,236 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '50', 'time_frame': '1m', 'sma': '5'}
+2018-08-10 10:06:24,252 - DEBUG - Waiting for renko calculator to be ready
+2018-08-10 10:06:25,455 - DEBUG - [+] fetching upto 1533824820000
+2018-08-10 10:06:27,798 - DEBUG - [+] fetching upto 1533764880000
+2018-08-10 10:06:28,969 - DEBUG - [+] fetching upto 1533704940000
+2018-08-10 10:06:28,985 - DEBUG - Establishing initial conditions
+2018-08-10 10:06:28,985 - INFO - [+] Current trend is [Down] and I've just fetched 24 bricks ;)
+2018-08-10 10:06:29,001 - DEBUG - length of last items 5
+2018-08-10 10:06:29,001 - DEBUG - SMA 6500.0 Last brick 6400.0 bricks length 24
+2018-08-10 10:06:29,001 - INFO - [+] Signalling a sell
+2018-08-10 10:07:01,509 - DEBUG - [+] Final Brick Price: 6468.82
+2018-08-10 10:08:02,095 - DEBUG - [+] Final Brick Price: 6475.0
+2018-08-10 10:09:02,100 - DEBUG - [+] Final Brick Price: 6472.0
+2018-08-10 10:10:01,757 - DEBUG - [+] Final Brick Price: 6468.79
+2018-08-10 10:11:00,718 - DEBUG - [+] Final Brick Price: 6469.99
+2018-08-10 10:12:01,412 - DEBUG - [+] Final Brick Price: 6473.01
+2018-08-10 10:12:44,246 - INFO - [*] Changing the master configurations
+2018-08-10 10:12:44,261 - DEBUG - [*] Params passed: {'symbol': 'BTCUSDT', 'brick_size': '50', 'time_frame': '1m', 'sma': '5'}
+2018-08-10 10:12:44,261 - DEBUG - Waiting for renko calculator to be ready
+2018-08-10 10:12:45,497 - DEBUG - [+] fetching upto 1533825180000
+2018-08-10 10:12:46,378 - DEBUG - [+] fetching upto 1533765240000
+2018-08-10 10:12:47,355 - DEBUG - [+] fetching upto 1533705300000
+2018-08-10 10:12:47,365 - DEBUG - Establishing initial conditions
+2018-08-10 10:12:47,366 - INFO - [+] Current trend is [Down] and I've just fetched 24 bricks ;)
+2018-08-10 10:12:47,367 - DEBUG - length of last items 5
+2018-08-10 10:12:47,368 - DEBUG - SMA 6500.0 Last brick 6400.0 bricks length 24
+2018-08-10 10:12:47,369 - INFO - [+] Signalling a sell
+2018-08-10 10:13:01,195 - DEBUG - [+] Final Brick Price: 6471.37
+2018-08-10 10:13:01,211 - DEBUG - [+] Final Brick Price: 6471.37
+2018-08-10 10:14:00,920 - DEBUG - [+] Final Brick Price: 6471.33
+2018-08-10 10:14:00,920 - DEBUG - [+] Final Brick Price: 6471.33

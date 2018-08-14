@@ -15,6 +15,7 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Status</th>
+                            <th>expires in</th>
                             <th>Created</th>
                             <th>ACTIONS</th>
                         </tr>
@@ -25,6 +26,7 @@
                             <td>{{ bot.id }}</td>
                             <td><a href="{{ url_for('bots.get_bot', bot_id = bot.id) }}">{{ bot.name }}</a></td>
                             <td>{{ activation_type(bot.id) }}</td>
+                            <td>{{ get_remaining_subscription_days(bot.id) }} days</td>
                             <td>{{ momentjs(bot.created_at).fromNow() }}</td>
                             <td>
                                 <div class="btn-group btn-group-xs">

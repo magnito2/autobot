@@ -2,7 +2,7 @@ from threading import Thread, Event
 from bot.custom_client import CustomClient
 import time
 import logging
-from binance.client import BinanceRESTAPI
+from binance.bind import BinanceClientError
 
 logger = logging.getLogger("renko.orders")
 logger.setLevel(logging.DEBUG)
@@ -44,6 +44,7 @@ class Orders(Thread):
             if not orders_resp['status']:
                 #report back to master the error encountered
                 logger.error(f"[!]{self.name} Error getting orders : {orders_resp['exception']}")
+                trade_count += 1 #more drastic actions in future, coz this sometimes happen when a user deletes keys, locking us out.
                 sleep_time = 10
                 continue
             for open_order in orders_resp['open_orders']:
@@ -101,6 +102,9 @@ class Orders(Thread):
                     logger.error(f"{self.name} {order_resp['exception'].error_code}, {order_resp['exception'].error_message}")
                     trade_count += 1
                     print(f"[*]{self.name} Current trade counts {trade_count}")
+                elif account_resp['exception'].error_code == -7000:
+                    logger.error(f"{self.name} free balance in account is zero: {account_resp['exception'].error_message}, exiting")
+                    break #this bot cannot make any trades, lets exit
 
                 elif order_resp['exception'].error_code == -1013:
                     #occurs when quantity is below allowed, end trade here.
@@ -143,7 +147,9 @@ class Orders(Thread):
             return {'status' : False, 'exception' : e}
         balance_list = [x for x in account_info.balances if x.asset == asset]
         if not balance_list:
-            return {'status' : False, 'exception' : ValueError('not able to fetch balance from binance')}
+            error = BinanceClientError('The Free balance is Zero')
+            error.error_code = -7000
+            return {'status': False, 'exception': error}
         balance = balance_list[0]
         return {'status' : True, 'balance' : balance.free }
 
