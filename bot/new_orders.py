@@ -28,12 +28,19 @@ class Orders(Thread):
 
         sleep_time = 0
         trade_count = 0
+        error_count = 10
 
         if not self._check_permissions()['status']: #bots that have permission issues get terminated here
             logger.debug(f"{self.name} API KEY has permission errors, check key can trade and get account balance")
             return
 
         while self.keep_running:
+
+            if error_count > 10:
+                self.trade_event.clear()
+                logger.info(f"{self.name} too many errors, check logs, goodbye!!")
+                break
+
             logger.debug(f"{self.name} sleeping for {sleep_time}")
             time.sleep(sleep_time) #sleep time is determined by the different events.
             sleep_time = 0 #to avoid unnecessary sleep next time.
@@ -63,9 +70,13 @@ class Orders(Thread):
                 if account_resp['exception'].error_code == -1021:
                     #we got ourselves a juicy little Timestamp for this request is outside of the recvWindow.
                     logger.error(f"{self.name} timestamp error getting balance {account_resp['exception'].error_code}, {account_resp['exception'].error_message}")
+                elif account_resp['exception'].error_code == -7000:
+                    logger.error(f"{self.name} free balance in account is zero: {account_resp['exception'].error_message}, exiting")
+                    break
                 else:
                     logger.error(f"{self.name} error getting balance {account_resp['exception'].error_code}: {account_resp['exception'].error_code}")
                 sleep_time = 5
+                error_count += 1 #if it fails so many times, die
                 continue
             asset_balance = float(account_resp['balance'])
             min_qnty = self.get_min_qnty()
@@ -95,7 +106,7 @@ class Orders(Thread):
             if not order_resp['status']:
                 if order_resp['exception'].error_code == -1021:
                     # we got ourselves a juicy little Timestamp for this request is outside of the recvWindow.
-                    logger.error(f"{self.name} timestamp error, {order__resp['exception'].error_code}, {order_resp['exception'].error_message}")
+                    logger.error(f"{self.name} timestamp error, {order_resp['exception'].error_code}, {order_resp['exception'].error_message}")
                     sleep_time = 60
                 elif order_resp['exception'].error_code in [-2010, -1010, -2011]:
                     # we got some processing error
