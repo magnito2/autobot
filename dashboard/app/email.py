@@ -4,6 +4,11 @@ from flask_mail import Message
 from flask import url_for, render_template
 from dashboard.app import app, mail
 from itsdangerous import URLSafeTimedSerializer
+from threading import Thread
+
+def send_async_email(app, msg):
+    with app.app_context():
+        mail.send(msg)
 
 def send_email(to, subject, template):
     msg = Message(
@@ -12,7 +17,9 @@ def send_email(to, subject, template):
         html=template,
         sender=app.config['MAIL_USERNAME']
     )
-    mail.send(msg)
+    #mail.send(msg)
+    thr = Thread(target=send_async_email, args=[app, msg])
+    thr.start()
 
 def send_password_reset_email(user_email):
     password_reset_serializer = URLSafeTimedSerializer(app.config['SECRET_KEY'])
