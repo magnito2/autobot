@@ -51,7 +51,7 @@ class Orders(Thread):
             if not orders_resp['status']:
                 #report back to master the error encountered
                 logger.error(f"[!]{self.name} Error getting orders : {orders_resp['exception']}")
-                trade_count += 1 #more drastic actions in future, coz this sometimes happen when a user deletes keys, locking us out.
+                error_count += 1 #more drastic actions in future, coz this sometimes happen when a user deletes keys, locking us out.
                 sleep_time = 10
                 continue
             for open_order in orders_resp['open_orders']:
