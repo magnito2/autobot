@@ -6,6 +6,7 @@ import requests, time, hmac
 from hashlib import sha256
 
 from .search import SearchForm
+from .new_email import NewEmailForm
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -54,7 +55,7 @@ def get_symbols():
     try:
         resp = requests.get(base_url + end_point)
         data = resp.json()
-        symbols = [sym['symbol'] for sym in data['symbols']]
+        symbols = [sym['symbol'] for sym in data['symbols'] if "BTC" in sym['symbol']]
         return symbols
     except:
         return ['BTCUSDT']

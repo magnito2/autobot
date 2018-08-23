@@ -16,6 +16,16 @@ stats_bp = Blueprint('stats', __name__, url_prefix="/stats")
 
 from . import admin, bots, home, payments, settings, users, account, logs, stats
 
+app.register_blueprint(admin_bp)
+app.register_blueprint(bots_bp)
+app.register_blueprint(home_bp)
+app.register_blueprint(payment_bp)
+app.register_blueprint(settings_bp)
+app.register_blueprint(user_bp)
+app.register_blueprint(account_bp)
+app.register_blueprint(log_bp)
+app.register_blueprint(stats_bp)
+
 @app.before_request
 def before_request():
     if current_user.is_authenticated:

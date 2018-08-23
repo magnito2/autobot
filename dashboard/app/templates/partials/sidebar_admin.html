@@ -19,10 +19,32 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
             <li>
-                <a href="{{ url_for('users.users') }}">
+                <a data-toggle="collapse" href="#usersDropdown">
                     <i class="material-icons text-gray">people</i>
-                    <p>USERS</p>
+                    <p>ACCOUNTS<b class="caret"></b></p>
                 </a>
+                <div class="collapse" id="usersDropdown">
+                    <ul class="nav">
+                        <li>
+                            <a href="{{ url_for('users.users') }}">
+                                <i class="material-icons text-gray">people</i>
+                                <p>USERS</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('admin.roles') }}">
+                                <i class="material-icons text-gray">security</i>
+                                <p>ROLES</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('bots.account') }}">
+                                <i class="material-icons text-gray">person</i>
+                                <p>MY ACCOUNT</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <a href="{{ url_for('settings.settings') }}">
@@ -31,15 +53,9 @@ Tip 2: you can also add an image using data-image tag
                 </a>
             </li>
             <li>
-                <a href="{{ url_for('bots.get_bots') }}">
-                    <i class="material-icons">B</i>
-                    <p>BOTS</p>
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for('admin.roles') }}">
-                    <i class="material-icons text-gray">security</i>
-                    <p>ROLES</p>
+                <a href="{{ url_for('admin.send_new_email') }}">
+                    <i class="material-icons">mail</i>
+                    <p>EMAIL</p>
                 </a>
             </li>
             <li>
@@ -58,12 +74,6 @@ Tip 2: you can also add an image using data-image tag
                 <a href="{{ url_for('admin.feedbacks') }}">
                     <i class="material-icons text-gray">feedback</i>
                     <p>FEEDBACK</p>
-                </a>
-            </li>
-            <li>
-                <a href="{{ url_for('bots.account') }}">
-                    <i class="material-icons text-gray">person</i>
-                    <p>MY ACCOUNT</p>
                 </a>
             </li>
         </ul>

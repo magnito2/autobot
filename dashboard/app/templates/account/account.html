@@ -37,20 +37,20 @@
         </div>
         <div class="col-md-4 col-md-offset-1">
             <div class="card card-profile">
-                                <div class="card-avatar">
-                                    <a href="/user/{{ current_user.username }}">
-                                        <img class="img" src="{{ current_user.avatar(128) }}" />
-                                    </a>
-                                </div>
-                                <div class="content">
-                                    <h6 class="category text-gray">{{ current_user.role }}</h6>
-                                    <h4 class="card-title">{{ current_user.username }}</h4>
-                                    <p class="card-content">
-                                        {{ current_user.about_me or "you've said nothing about yourself yet." }}
-                                    </p>
-                                    <a href="{{ url_for('users.edit_profile') }}" class="btn btn-primary btn-round">Edit your profile</a>
-                                </div>
-                            </div>
+                <div class="card-avatar">
+                    <a href="/user/{{ current_user.username }}">
+                        <img class="img" src="{{ current_user.avatar(128) }}" />
+                    </a>
+                </div>
+                <div class="content">
+                    <h6 class="category text-gray">{{ current_user.role }}</h6>
+                    <h4 class="card-title">{{ current_user.username }}</h4>
+                    <p class="card-content">
+                        {{ current_user.about_me or "you've said nothing about yourself yet." }}
+                    </p>
+                    <a href="{{ url_for('users.edit_profile') }}" class="btn btn-primary btn-round">Edit your profile</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

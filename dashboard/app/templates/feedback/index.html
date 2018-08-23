@@ -17,6 +17,7 @@
                             <th>subject</th>
                             <th>Message</th>
                             <th>Created at</th>
+                            <th>View</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -24,9 +25,10 @@
                         <tr>
                             <td>{{ feedback.name }}</td>
                             <td>{{ feedback.email }}</td>
-                            <td>{{ feedback.subject }}</td>
+                            <td><a href="{{ url_for("admin.show_feedback", feedback_id=feedback.id ) }}">{{ feedback.subject }}</a></td>
                             <td>{{ feedback.message | truncate(100, True) }}</td>
                             <td>{{ momentjs(feedback.created_at).fromNow() }}</td>
+                            <td><a href="{{ url_for("admin.show_feedback", feedback_id=feedback.id) }}" class="btn btn-light btn-sm">Show</a> </td>
                         </tr>
                         {% endfor %}
                         </tbody>

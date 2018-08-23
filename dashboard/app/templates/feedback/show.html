@@ -8,18 +8,19 @@
 <div class="container-fluid" id="account-page">
     <div class="row">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header" data-background-color="orange">
-                    <h4 class="title">FEEDBACK</h4>
-                    <p class="category">{{ feedback.name }}</p>
+            <div class="card card-profile">
+                <div class="card-avatar">
+                    <a href="#pablo">
+                        <img class="img" src="{{ gravitate(feedback.email, 128) }}" />
+                    </a>
                 </div>
-                <div class="card-content">
-                    <p>{{ feedback.message }}</p>
-                </div>
-                <div class="card-footer">
-                    <div class="stats">
-                        {{ momentjs(feedback.created).fromNow() }}
-                    </div>
+                <div class="content">
+                    <h6 class="category text-gray">{{ feedback.name }}</h6>
+                    <h4 class="card-title">{{ feedback.email }}</h4>
+                    <p class="card-content">
+                        {{ feedback.message }}
+                    </p>
+                    <a href="{{ url_for("admin.send_new_email", email=feedback.email, subject="reply to " + feedback.subject) }}" class="btn btn-primary btn-round">Reply</a>
                 </div>
             </div>
         </div>

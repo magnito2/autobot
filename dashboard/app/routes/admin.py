@@ -6,6 +6,9 @@ from dashboard.app.models import User, Role, Bot, Log, Feedback
 from dashboard.app import app, db
 from sqlalchemy import desc
 
+from dashboard.app.forms import NewEmailForm
+from dashboard.app.email import send_email
+
 @admin_bp.route('/')
 @login_required
 @check_confirmed
@@ -56,3 +59,29 @@ def feedbacks():
     page = request.args.get('page', 1, type=int)
     feedbacks = Feedback.query.order_by(desc(Feedback.created_at)).paginate(page, app.config['ITEMS_PER_PAGE'], False)
     return render_template('feedback/index.html', feedbacks = feedbacks)
+
+@admin_bp.route("/feedback/<feedback_id>")
+@role_required('Admin')
+def show_feedback(feedback_id):
+    feedback = Feedback.query.get_or_404(feedback_id)
+    return render_template("feedback/show.html", feedback = feedback)
+
+
+@admin_bp.route("/email", methods=['GET', 'POST'])
+@role_required("Admin")
+def send_new_email():
+    email = request.args.get("email")
+    subject = request.args.get("subject")
+    form = NewEmailForm()
+    if form.validate_on_submit():
+        email = form.email.data
+        subject = form.subject.data
+        body = render_template("email/new_email.html", body = form.body.data)
+        send_email([email], subject, body)
+        flash("your email has been sent", "success")
+        return redirect(url_for("admin.send_new_email"))
+    if email:
+        form.email.data = email
+    if subject:
+        form.subject.data = subject
+    return render_template("admin/new_email.html", form=form)

@@ -10,21 +10,62 @@
         <div class="col-md-4">
             <div class="card card-profile">
                 <div class="card-avatar">
-                    <a href="/user/{{ user.username }}">
-                        <img class="img" src="{{ user.avatar(128) }}" />
+                    <a href="/user/{{ bot.owner.username }}">
+                        <img class="img" src="{{ bot.owner.avatar(128) }}" />
                     </a>
                 </div>
                 <div class="content">
-                    <h6 class="category text-gray">{{ user.role }}</h6>
-                    <h4 class="card-title">{{ user.username }}</h4>
+                    <h6 class="category text-gray">{{ bot.owner.role }}</h6>
+                    <h4 class="card-title">{{ bot.owner.username }}</h4>
+                    <p class="category">Binance</p>
+                    {% for coin in bot.get_account_balance() %}
+                    <h3 class="title">{{coin['free']|float|round(4)}}<small>{{coin['asset']}}</small></h3>
+                    {% endfor %}
                     <p class="card-content">
-                        {{ user.about_me }}
+                        {{ bot.owner.about_me or bot.owner.username + " has said nothing yet" }}
                     </p>
-                    {% if user == current_user %}
-                    <a href="{{ url_for('users.edit_profile') }}" class="btn btn-primary btn-round">Edit your profile</a>
-                    {% else %}
-                    <a href="{{ url_for('payments.manual_activate', bot_id= bot.id ) }}" class="btn btn-primary btn-round">activate</a>
-                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-profile">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="card-title">ACCOUNT INFORMATION</h4>
+                </div>
+                <div class="content">
+                    <p class="category">Activation</p>
+                    <h3 class="title">{{activation_type(bot.id) | capitalize }} <small>{{ get_remaining_subscription_days(bot.id) }} days left </small></h3>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card card-profile">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="card-title">ACCOUNT ACTIVITY</h4>
+                </div>
+                <div class="card-content">
+                    <p class="category">Logs</p>
+                    <div class="card-content table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <th>ID</th>
+                        <th>MESSAGE</th>
+                        <th>TIME</th>
+                        </thead>
+                        <tbody>
+                        {% for log in logs %}
+                        <tr>
+                            <td>{{ log.id }}</td>
+                            <td>{{ log.msg | truncate(50)}}</td>
+                            <td>{{ momentjs(log.created).fromNow() }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    </div>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@ from dashboard.app.routes import user_bp
 from flask_login import login_required, current_user
 from flask import redirect, url_for, render_template, request, flash
 from dashboard.app.forms import EditProfileForm, SearchForm
-from dashboard.app.models import User
+from dashboard.app.models import User, Log
 from dashboard.app import app, db
 from dashboard.app.authorizer import role_required
 from sqlalchemy import desc, or_
@@ -36,7 +36,8 @@ def search():
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     bot = user.bots.first()
-    return render_template('account/user.html', user=user, bot = bot)
+    logs = Log.query.filter(Log.threadName.like(f'%{bot.name}%')).order_by(desc(Log.created)).limit(10)
+    return render_template('account/user.html', user=user, bot = bot, logs=logs)
 
 @user_bp.route('/edit_profile', methods=['GET', 'POST'])
 @login_required

@@ -18,6 +18,7 @@
                             <th>Email</th>
                             <th>Bot</th>
                             <th>Joined</th>
+                            <th>Expires in</th>
                             <th>ACTIONS</th>
                         </tr>
                         </thead>
@@ -30,6 +31,7 @@
                             <td>{{ user.email }}</td>
                             <td>{{activation_type(user.bots.first().id) }}</td>
                             <td>{{ momentjs(user.created_at).fromNow() }}</td>
+                            <td>{{ get_remaining_subscription_days(user.bots.first().id) }} days</td>
                             <td>
                                 <div class="btn-group btn-group-xs">
                                     <a href="/user/delete/{{ user.id }}" class="btn btn-danger">

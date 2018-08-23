@@ -1,0 +1,94 @@
+{% extends "layouts/base.html" %}
+
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+
+{{ pagedown.include_pagedown() }}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">Email</h4>
+                    <p class="category">Create a new Email</p>
+                </div>
+                <div class="card-content">
+                    <form action="" method="post">
+                        {{ form.hidden_tag() }}
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">{{ form.email.label }}</label>
+                                    {{ form.email(size=64, class="form-control") }}
+                                    {% for error in form.email.errors %}
+                                    <span style="color: red;">[{{ error }}]</span>
+                                    {% endfor %}
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label">{{ form.subject.label }}</label>
+                                    {{ form.subject(size=128, class="form-control") }}
+                                    {% for error in form.subject.errors %}
+                                    <span style="color: red;">[{{ error }}]</span>
+                                    {% endfor %}
+                                </div>
+                                <div class="form-group">
+                                    <label>{{ form.body.label }}</label>
+                                    <div class="form-group label-floating">
+                                    <label class="control-label">Why you not paying you bot? why?</label>
+                                    {{ form.body(only_input=True, cols=50, rows=6, class="form-control") }}
+                                    {% for error in form.body.errors %}
+                                    <span style="color: red;">[{{ error }}]</span>
+                                    {% endfor %}
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.submit(class_="btn btn-primary") }}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">Preview</h4>
+                    <p class="category">How the user will see your message</p>
+                </div>
+                <div class="card-content">
+                    <form action="" method="post">
+                        {{ form.hidden_tag() }}
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="form-group">
+                                    <p>You can use html tags to improve the look of the email</p>
+                                    <ul>
+                                        <li>Use <strong>&#60;p&#62;</strong> to begin a new paragraph and <strong>&#60;/p&#62;</strong> to end the paragraph</li>
+                                        <li>Use <strong>&#60;h6&#62;</strong> and <strong>&#60;/h6&#62;</strong> to enclose a small heading</li>
+                                        <li>Use <strong>&#60;strong&#62;</strong> and <strong>&#60;/strong&#62;</strong> to enclose text to be bold</li>
+                                    </ul>
+                                </div>
+                                <div class="form-group">
+                                    <label>Preview your message here</label>
+                                    {{ form.body(only_preview=True, class="form-control") }}
+                                    <div class="form-group label-floating">
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+
+{% endblock scripts %}

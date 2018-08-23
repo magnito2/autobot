@@ -192,6 +192,27 @@ class Orders(Thread):
         else:
             pass
 
+    def gracefully_end_trade(self):
+        '''
+        End the trade properly (convert the coins back to their oroginal format.
+        For now, coins will be converted to BTC, in future, users can choose which pair they prefer.
+        Trades can end when
+            1. Account expires
+            2. A new trading pair is selected
+            3. Use ends the trade (ask user to end trade in case he/she plans to delete keys)
+        :return:
+        '''
+        if self.SYMBOL[:3] == "BTC":
+            #happens only in BTCUSDT, btc is the base currency, USDT is the quote currency.
+            logger.info(f"{self.name} Closing the trade, buying back BTC")
+            self.new_side = "BUY"
+            self.trade_event.set()
+        elif self.SYMBOL[3:] == "BTC":
+            #all other pairs of trading
+            logger.info(f"{self.name} Closing the trading, selling all {self.SYMBOL[:3]}")
+            self.new_side = "SELL"
+            self.trade_event.set()
+
     def _check_permissions(self):
         try:
             account_info = self.rest_api.account(recv_window="10000")
