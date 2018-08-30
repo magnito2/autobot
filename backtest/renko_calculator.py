@@ -21,6 +21,7 @@ class Renko(threading.Thread):
         self.client = BinanceRESTAPI()
         self.keep_running = True
         self.sma_window = int(config['SMA'])
+        self.ztl_res = float(config['ztl_res'])
         self.ready = threading.Event() #signaller should only start trading if this is true
 
     def run(self):
@@ -104,6 +105,8 @@ class Renko(threading.Thread):
                     self.up_trend = True
                     self.down_trend = False
 
+                    self.get_last_ztl() #a quick fix, shouldn't be done here, but
+
             elif last_brick.price - current_price >= self.brick_size * down_trend_factor:
                 while last_brick.price - current_price >= self.brick_size * down_trend_factor:
                     next_brick_price = last_brick.price - self.brick_size * down_trend_factor
@@ -120,6 +123,8 @@ class Renko(threading.Thread):
                         #self.signaller.renko_event.set()
                     self.down_trend = True
                     self.up_trend = False
+
+                    self.get_last_ztl() #quick fix, remove during optimization
 
             else:
                 brick = None
@@ -157,6 +162,22 @@ class Renko(threading.Thread):
         sma = total_sum / window
         return sma
 
+    def get_last_ztl(self):
+        if not len(self.bricks):
+            return 0
+        brick = self.bricks[-1]
+        if len(self.bricks) == 1: #the very first ztl will be the price fo first brick
+            brick.ztl = brick.price
+        else:
+            ztl_brick_size = self.bricks[-2].price * self.ztl_res
+            if brick.price > self.bricks[-2].ztl + ztl_brick_size:
+                brick.ztl = self.bricks[-2].ztl + ztl_brick_size
+            elif brick.price < self.bricks[-2].ztl - ztl_brick_size:
+                brick.ztl = self.bricks[-2].ztl - ztl_brick_size
+            else:
+                brick.ztl = self.bricks[-2].ztl
+        return brick.ztl
+
     def __del__(self):
         print("[!] Main exiting")
 
@@ -169,4 +190,4 @@ class Brick:
         self.close_time = close_time
 
     def __repr__(self):
-        return f"<Brick{self.index} {self.close_time}: {self.price}>"
+        return f"<Brick{self.index} {self.close_time}: {self.price} indicator {self.ztl if hasattr(self, 'ztl') else self.sma if hasattr(self, 'sma') else 'none'}>"

@@ -63,3 +63,7 @@
 .tim-row h3 {
     margin-top: 0;
 }
+
+.swal-wide{
+    width:25% !important;
+}

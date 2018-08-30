@@ -28,7 +28,10 @@
                             <td><a href="{{ url_for("admin.show_feedback", feedback_id=feedback.id ) }}">{{ feedback.subject }}</a></td>
                             <td>{{ feedback.message | truncate(100, True) }}</td>
                             <td>{{ momentjs(feedback.created_at).fromNow() }}</td>
-                            <td><a href="{{ url_for("admin.show_feedback", feedback_id=feedback.id) }}" class="btn btn-light btn-sm">Show</a> </td>
+                            <td><a
+                                    href="#show-feedback" class="btn btn-light btn-sm" data-toggle="modal" data-email="{{ feedback.email }}"
+                                    data-name="{{ feedback.name }}" data-message="{{ feedback.message }}"
+                                >Show</a></td>
                         </tr>
                         {% endfor %}
                         </tbody>
@@ -45,8 +48,43 @@
         </div>
     </div>
 </div>
+
+    <div class="modal fade" id="show-feedback" tabindex="-1" role="dialog" aria-labelledby="show-feedback" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="feedbackModalLabel">Feedback</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer footer1">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary reply-button" data-id="">Reply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock content %}
 {% block scripts %}
 {{super()}}
-
+    <script type="text/javascript">
+        $('#show-feedback').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);// Button that triggered the modal
+            var recipient = button.data('email'); // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this);
+            modal.find('.modal-title').text('Feedback from ' + button.data('name'));
+            modal.find('.modal-body').text(button.data('message'));
+            modal.find('.footer1').text(recipient);
+        })
+    </script>
 {% endblock scripts %}

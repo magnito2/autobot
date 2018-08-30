@@ -2,7 +2,7 @@
 chief
 '''
 
-from bot.klines_feeder import BinanceKlines
+from bot.new_klines_feeder import BinanceKlines
 from bot.new_orders import Orders
 from bot.new_renko import Renko
 from bot.signaller import Signaller
@@ -36,10 +36,11 @@ class Master(Thread):
     def set_configurations(self, parameters):
         self.SYMBOL = parameters['symbol']
         self.TIME_FRAME = parameters['time_frame']
-        self.BRICK_SIZE = int(parameters['brick_size'])
-        self.SMA_WINDOW = int(parameters['sma'])
+        self.BRICK_SIZE = float(parameters['brick_size'])
+        #self.SMA_WINDOW = int(parameters['sma'])
+        self.ztl_resolution = float(parameters['ztl_resolution'])
 
-        renko_config = {'brick_size': self.BRICK_SIZE, 'SMA': self.SMA_WINDOW}
+        renko_config = {'brick_size': self.BRICK_SIZE,'ztl_res' : self.ztl_resolution}
         signal_config = {'symbol': self.SYMBOL, 'time_frame': self.TIME_FRAME}
         self.renko_calculator = Renko(renko_config)
         self.signaller = Signaller(self.renko_calculator, signal_config)
@@ -66,6 +67,19 @@ class Master(Thread):
         new_bot.start()
         self.BOTS_LIST.append(new_bot)
         print (f"All current bots are {self.BOTS_LIST}")
+
+    def gracefully_end_all_trades(self):
+        for bot in self.BOTS_LIST:
+            bot.gracefully_end_trade()
+        for bot in self.BOTS_LIST:
+            bot.join(timeout = 60)
+        timed_out_bots = []
+        for bot in self.BOTS_LIST:
+            if bot.is_alive():
+                timed_out_bots.append(bot)
+        logger.info(f"trades ended gracefully except for {[bot.name for bot in timed_out_bots]}")
+
+
 
     def run(self):
         '''

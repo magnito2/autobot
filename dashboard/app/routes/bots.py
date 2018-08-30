@@ -1,12 +1,13 @@
-from flask import request, render_template, flash, redirect, url_for
+from flask import request, render_template, flash, redirect, url_for, jsonify
 from . import bots_bp
 from dashboard.app.authorizer import role_required
 from dashboard.app.models import Bot
-from dashboard.app import app, db, get_bot_status, new_bot_created, destroy_bot
+from dashboard.app import app, db
 from sqlalchemy import desc
 from dashboard.app.forms import CreateBotForm
 from flask_login import current_user, login_required
 from dashboard.app.authorizer import check_confirmed
+from dashboard.app.signals import get_bot_status, new_bot_created, destroy_bot
 
 @bots_bp.route('/', methods=['GET', 'POST'])
 @login_required
@@ -101,3 +102,22 @@ def delete_bot(bot_id):
         db.session.commit()
         flash(f"Delete bot named {bot.name}", 'warning')
     return redirect(url_for('bots.get_bots'))
+
+@bots_bp.route("/toggle-trading", methods=['POST'])
+def toggle_bot_trading():
+    print("We got here!!!! Yeeey")
+    json_data = request.json
+    print(json_data)
+    bot_id = int(json_data['bot_id'])
+    bot = Bot.query.get(bot_id)
+    if not bot:
+        return jsonify({
+            "error" : f"Bot with id {bot_id} not found"
+        }), 404
+    bot.can_trade = not bot.can_trade
+    db.session.add(bot)
+    db.session.commit()
+    return jsonify({
+        "name" : bot.name,
+        "can_trade" : bot.can_trade
+    }), 200

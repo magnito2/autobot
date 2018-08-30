@@ -5,7 +5,6 @@ from dashboard.app.authorizer import role_required
 from sqlalchemy import desc, or_
 from dashboard.app import app
 from dashboard.app.forms import SearchForm
-import requests
 
 @log_bp.route("/")
 @role_required('Admin')
@@ -27,4 +26,6 @@ def search():
     logs = Log.query.filter(or_((Log.threadName.like(f'%{search_value}%')), (Log.msg.like(f'%{search_value}%')),(Log.levelname.like(f'%{search_value}%'))))\
         .order_by(desc(Log.created)).paginate(page, app.config['ITEMS_PER_PAGE'], False)
     search_url = url_for('logs.search')
+    if request.is_json:
+        pass
     return render_template('logs/index.html', logs = logs, searchable = True, form = form, search_url = search_url, search_value = search_value)

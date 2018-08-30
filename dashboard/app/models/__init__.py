@@ -47,6 +47,7 @@ class Bot(db.Model):
     created_at = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     expires_at = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    can_trade = db.Column(db.Boolean, default=True)
 
     def get_account_balance(self):
         full_url = 'https://api.binance.com/api/v3/account'

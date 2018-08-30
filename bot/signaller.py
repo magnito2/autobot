@@ -4,7 +4,9 @@ simple job, just know when conditions are right and shout "buy" or "sell"
 
 import threading
 import logging
-from binance.client import BinanceRESTAPI
+from binance.client import Client
+from datetime import datetime
+from bot.models import Candlestick
 
 logger = logging.getLogger("renko.Signaller")
 
@@ -17,9 +19,11 @@ class Signaller(threading.Thread):
         self.renko_event = threading.Event()
         self.trade_event_subscribers = []
 
-        self.rest_api = BinanceRESTAPI()
+        self.rest_api = Client(None, None)
         self.symbol = config['symbol']
         self.time_frame = config['time_frame']
+        self.name = "Signaller"
+        self.indicator = 'ZTL'
 
     def run(self):
         '''
@@ -29,9 +33,44 @@ class Signaller(threading.Thread):
 
         logger.debug("Waiting for renko calculator to be ready")
         self.renko_calculator.ready.wait()
-        last_brick = self.renko_calculator.bricks[-1]
 
         self.latest_price = self.renko_calculator.latest_price
+        if self.indicator == "SMA":
+            self.trade_with_sma()
+        elif self.indicator == "ZTL":
+            self.trade_with_ztl()
+        else:
+            logger.error("The indicator type has not been specified.")
+
+    def signal(self, side):
+        '''
+        Subscribers are instances of new_order class. the subscribers should have
+        1. trade_event, event to wait for.
+        2. new_side = either buy or sell
+        :param side:
+        :return:
+        '''
+        for subscriber in self.trade_event_subscribers:
+            subscriber.new_side = side
+            subscriber.trade_event.set()
+
+    def get_historical_klines(self, startTime=None, endTime=None, limit=None):
+        hist_klines = []
+        while len(hist_klines) < limit:
+            raw_last_klines = self.rest_api.get_klines(symbol = self.symbol, interval=self.time_frame, startTime=startTime, endTime=endTime, limit=limit)
+            last_klines = [Candlestick.object_from_dictionary(entry) for entry in raw_last_klines]
+            hist_klines = last_klines + hist_klines
+            endTime = hist_klines[0].open_time
+            logger.debug(f"[+] fetching upto {endTime}")
+            print(f"[+] fetching upto {endTime}")
+        return hist_klines
+
+    def __del__(self):
+        logger.error(f"[!] {self.name} is exiting")
+
+    def trade_with_sma(self):
+
+        last_brick = self.renko_calculator.bricks[-1]
         if len(self.renko_calculator.bricks) < self.renko_calculator.sma_window:
             window = len(self.renko_calculator.bricks)
         else:
@@ -63,24 +102,33 @@ class Signaller(threading.Thread):
                     self.signal('SELL')
             self.renko_event.clear()
 
-    def signal(self, side):
-        '''
-        Subscribers are instances of new_order class. the subscribers should have
-        1. trade_event, event to wait for.
-        2. new_side = either buy or sell
-        :param side:
-        :return:
-        '''
-        for subscriber in self.trade_event_subscribers:
-            subscriber.new_side = side
-            subscriber.trade_event.set()
+    def trade_with_ztl(self):
 
-    def get_historical_klines(self, startTime=None, endTime=None, limit=None):
-        hist_klines = []
-        while len(hist_klines) < limit:
-            last_klines = self.rest_api.klines(symbol=self.symbol, interval=self.time_frame, startTime=startTime, endTime=endTime, limit=limit)
-            hist_klines = last_klines + hist_klines
-            endTime = hist_klines[0].open_time
-            logger.debug(f"[+] fetching upto {endTime}")
-        return hist_klines
+        last_brick = self.renko_calculator.bricks[-1]
+
+        ztl = self.renko_calculator.get_last_ztl()
+        if last_brick.price < ztl:
+            logger.info("[+] Signalling a sell")
+            self.signal("SELL")
+        elif last_brick.price > ztl:
+            logger.info("[+] Signalling a buy")
+            self.signal("BUY")
+
+        while self.keep_running:
+            self.renko_event.wait()
+            logger.info(f"[+] new brick {self.renko_calculator.bricks[-1].price}")
+
+            trend = self.renko_calculator.trend
+            latest_brick = self.renko_calculator.bricks[-1]
+            self.latest_price = self.renko_calculator.latest_price
+            latest_ztl = self.renko_calculator.get_last_ztl()
+            if trend == "UP":
+                if latest_ztl < latest_brick.price:
+                    logger.info("[+] Buy time")
+                    self.signal('BUY')
+            elif trend == "DOWN":
+                if latest_ztl > latest_brick.price:
+                    logger.info("[+] Sell time")
+                    self.signal('SELL')
+            self.renko_event.clear()
 

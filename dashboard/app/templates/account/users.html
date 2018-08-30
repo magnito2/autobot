@@ -19,10 +19,12 @@
                             <th>Bot</th>
                             <th>Joined</th>
                             <th>Expires in</th>
+                            <th>Can Trade</th>
                             <th>ACTIONS</th>
                         </tr>
                         </thead>
                         <tbody>
+                        <input type="hidden" name="csrf-field" value="{{ csrf_token() }}" id="csrf-field"/>
                         {% for user in users.items %}
                         <tr>
                             <td>{{ user.id }}</td>
@@ -32,6 +34,14 @@
                             <td>{{activation_type(user.bots.first().id) }}</td>
                             <td>{{ momentjs(user.created_at).fromNow() }}</td>
                             <td>{{ get_remaining_subscription_days(user.bots.first().id) }} days</td>
+                            <td>
+                                <div class="togglebutton">
+                                    <label>
+                                        <input type="checkbox" {% if user.bots.first().can_trade %}checked=""{% endif %} onchange="change_bot_can_trade(this.dataset.id, this.checked)" data-id="{{ user.bots.first().id }}">
+                                        {%  if user.bots.first().can_trade %}Enabled{% else %}Disabled{%  endif %}
+                                    </label>
+                                </div>
+                            </td>
                             <td>
                                 <div class="btn-group btn-group-xs">
                                     <a href="/user/delete/{{ user.id }}" class="btn btn-danger">
@@ -59,5 +69,44 @@
 {% endblock content %}
 {% block scripts %}
 {{super()}}
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        function change_bot_can_trade(bot_id, checked) {
+            fetch("/bots/toggle-trading", {
+                method : "post",
+                //cache: "no-cache",
+                //mode: 'no-cors',
+                //dataType: 'json',
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8",
+                    //"Content-Type": "application/x-www-form-urlencoded",
+                    'X-CSRFToken': document.getElementById("csrf-field").value
+                },
+                body: JSON.stringify({
+                    "bot_id" : bot_id
+                }),
+            }).then(response =>
+                {
+                    if (response.ok){
+                        response.json().then(data => {
+                            swal({
+                                title : data.can_trade ? "Activated" : "Deactivated",
+                                text: data.can_trade ? "Account has been activated" : "Account has been deactivated",
+                                dangerMode: !data.can_trade
+                            })
+                        })
+                    }
+                    else
+                    {
+                        response.json().then(data => {
+                            console.log(data)
+                            //swal(response.ok);
+                        })
+                    }
+                }
+            ).catch(
+                error => swal(error)
+            )
+        }
+    </script>
 {% endblock scripts %}

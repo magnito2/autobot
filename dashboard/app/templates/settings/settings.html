@@ -14,7 +14,7 @@
                                     <p class="category">Change your settings</p>
                                 </div>
                                 <div class="card-content">
-                                    <form action="" method="post">
+                                    <form action="" method="post" id="settings-form">
                                         {{ form.hidden_tag() }}
                                         <div class="row">
                                             <div class="col-md-4">
@@ -46,11 +46,20 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <!--div class="col-md-3">
+                                                <div class="form-group label-floating">
+                                                    <label class="control-label">{ form.sma.label }}</label>
+                                                    { form.sma(class_="form-control") }}
+                                                    { for error in form.sma.errors %}
+                                                    <span style="color: red;">[{ error }}]</span>
+                                                    { endfor %}
+                                                </div>
+                                            </div-->
                                             <div class="col-md-3">
                                                 <div class="form-group label-floating">
-                                                    <label class="control-label">{{ form.sma.label }}</label>
-                                                    {{ form.sma(class_="form-control") }}
-                                                    {% for error in form.sma.errors %}
+                                                    <label class="control-label">{{ form.ztl_resolution.label }}</label>
+                                                    {{ form.ztl_resolution(class_="form-control") }}
+                                                    {% for error in form.ztl_resolution.errors %}
                                                     <span style="color: red;">[{{ error }}]</span>
                                                     {% endfor %}
                                                 </div>
@@ -67,5 +76,99 @@
 {% endblock content %}
 {% block scripts %}
     {{super()}}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+        socket.on('connect', function() {
+            console.log("connected");
+        });
+        socket.on("say hallo", function (msg) {
+            console.log("haloooooo");
+        });
+        socket.on("confirmpairchange", function (params) {
+            console.log("asking for pair change");
+            swal({
+                title: "change trading pair",
+                text: "You are changing the trading symbol from "+ params['old_symbol'] +" to "+ params['symbol'],
+                icon : "warning",
+                buttons : ["do not", "continue"],
+                className: "swal-wide",
+            }).then(value => {
+                if(value == true)
+                {
+                    socket.emit("dochangepair", params)
+                }
+            })
+        });
+        socket.on("done_changing_configs", function () {
+            swal({
+                title : "configs changed",
+                text: "Successfully changed configurations",
+                icon : "success",
+                className: "swal-wide"
+            })
+        });
+        socket.on("bot-error", function (data) {
+            console.log(data);
+            swal({
+                title : "bot raised an error",
+                text: data['msg'],
+                icon : "error",
+                className: "swal-wide",
+                dangerMode: true
+            })
+        });
+        $(document).ready(function () {
+            $("#settings-form").submit(function (e) {
+                    e.preventDefault();
+                    var formData = new FormData();
+                    var formEl = $("#settings-form")[0];
+                    var req_data = {};
+                    for (var i = 0; i < formEl.length; ++i) {
+                        formData.append(formEl[i].name, formEl[i].value);
+                        req_data[formEl[i].name] = formEl[i].value;
+                    }
+                    var responsePromise = fetch("/settings/", {
+                        method: "post",
+                        //cache: "no-cache",
+                        //mode: 'no-cors',
+                        //dataType: 'json',
+                        headers: {
+                            //"Content-Type": "application/x-www-form-urlencoded",
+                            "Content-Type" : "application/json",
+                            'X-CSRFToken': document.getElementById("csrf_token").value
+                        },
+                        //body: formData,
+                        body : JSON.stringify(req_data)
+                        });
+                    responsePromise.then(
+                        response => {
+                            if(response.ok){
+                                console.log("change setting ongoing");
+                                response.text().then(data =>
+                                    {
+                                        var settings_page = document.getElementById("settings-page");
+                                        //settings_page.innerHTML = data;
+                                        console.log(`response received is ${data}`)
+
+                                    })
+                            }
+                            else{
+                                response.text().then(data => {
+                                    console.log(data);
+                                    swal({
+                                        title: "Error changing settings",
+                                        dangerMode: True
+                                    })
+                                });
+                            }
+                        }
+                    )
+                    })
+                }
+            );
+
+    </script>
 
 {% endblock scripts %}

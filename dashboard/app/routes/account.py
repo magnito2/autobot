@@ -4,11 +4,12 @@ from flask import redirect, url_for, render_template, request, flash
 from dashboard.app.forms import LoginForm, RegistrationForm, EmailForm, PasswordForm
 from dashboard.app.models import User
 from werkzeug.urls import url_parse
-from dashboard.app import app, db, new_user_registered
+from dashboard.app import app, db
 from dashboard.app.token import generate_confirmation_token, confirm_token
 from dashboard.app.email import send_email, send_password_reset_email
 from datetime import datetime
 from itsdangerous import URLSafeTimedSerializer
+from dashboard.app.signals import new_user_registered
 
 
 @account_bp.route('/login', methods=['POST', 'GET'])

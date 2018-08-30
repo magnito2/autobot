@@ -84,7 +84,7 @@ Tip 2: you can also add an image using data-image tag
     const pathname = window.location.pathname;
     p_arr = pathname.split("/");
     const my_location = p_arr.slice(1);
-    console.log(my_location);
+    //console.log(my_location);
     const navbar = document.getElementById("side-bar");
     const navs = navbar.getElementsByTagName("li");
     //console.log(navs);
@@ -94,7 +94,7 @@ Tip 2: you can also add an image using data-image tag
         a_tag = nav.children[0];
         h_arr = a_tag.href.split('/');
         nav_path = h_arr.slice(h_arr.length - 2);
-        console.log(my_location, nav_path);
+        //console.log(my_location, nav_path);
         if(nav_path === my_location)
         {
             nav.classList.add("active");

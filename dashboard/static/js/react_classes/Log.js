@@ -6,8 +6,11 @@ class LogItem extends React.Component{
     render(){
         return (
             <tr>
-                <td>{formatTime(this.props.time)}</td>
-                <td>{this.props.activity}</td>
+                <td>{this.props.id}</td>
+                <td>{this.props.thread_name}</td>
+                <td>{this.props.level_name}</td>
+                <td>{this.props.message}</td>
+                <td>{formatTime(this.props.created_at)}</td>
             </tr>
         );
     }
@@ -20,9 +23,11 @@ class LogsTable extends React.Component{
         this.state = {
             data : null
         };
-        const client = new WebSocket("ws://localhost:5678");
-		client.onmessage = (event)=> this.process_message(event);
-		client.onopen = (event)=> client.send(JSON.stringify({'action' : 'send_logs'}));
+        const client = io.connect('http://' + document.domain + ':' + location.port);
+		client.on('bot-log', (event)=> this.process_message(event));
+        client.on('connect', function() {
+            console.log("connected");
+        });
 		window.onbeforeunload = () => {
 		    ws.onclose = () => {};
 		    ws.close();
@@ -48,8 +53,11 @@ class LogsTable extends React.Component{
                     <table className="table">
                         <thead className="text-primary">
                             <tr>
-                                <th>Time</th>
-                                <th>Activity</th>
+                                <th>ID</th>
+                                <th>ThreadName</th>
+                                <th>Level Name</th>
+                                <th>Message</th>
+                                <th>Created At</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -63,16 +71,19 @@ class LogsTable extends React.Component{
 
     process_message(event)
     {
-        //console.log("processing data");
+        console.log("processing data");
 		let raw_data = JSON.parse(event.data);
-		//console.log(raw_data['data']);
+		console.log(raw_data['data']);
 
 		if(raw_data['type'] === "logs"){
             var new_data = this.state.data ? this.state.data.slice(0, 20): [];
             raw_data['data'].map(data => {
                 let d = {
-                    'time' : parseDate(data.time),
-                    'log' : data.log
+                    'created_at' : parseDate(data.time),
+                    'message' : data.msg,
+                    'id' : data.id,
+                    'thread_name' : data.thread_name,
+                    'level_name' : data.level_name
                 };
                 //console.log("Date ", data.close_time, parseDate(data.close_time))
                 //return d;

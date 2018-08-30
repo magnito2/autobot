@@ -1,15 +1,13 @@
 import threading
-from binance.client import BinanceRESTAPI
+from binance.client import Client
 
 import logging
 logger = logging.getLogger("renko.renko")
-from colorama import init, Fore
 
 class Renko(threading.Thread):
 
     def __init__(self, config):
         threading.Thread.__init__(self)
-        init(autoreset=True)
         self.up_trend = None
         self.down_trend = None
         self.signaller = None #signaller class needs to define method get_historical_klines
@@ -18,10 +16,12 @@ class Renko(threading.Thread):
         self.klines = []
         self.kline_event = threading.Event()
         self.trade_event_subscribers = []
-        self.client = BinanceRESTAPI()
+        self.client = Client(None, None)
         self.keep_running = True
-        self.sma_window = int(config['SMA'])
+        #self.sma_window = int(config['SMA'])
         self.ready = threading.Event() #signaller should only start trading if this is true
+        self.name = "RenkoCalc"
+        self.ztl_res = float(config['ztl_res'])
 
     def run(self):
         '''
@@ -49,6 +49,8 @@ class Renko(threading.Thread):
                 self.latest_price = float(self.klines[-1].close)
             else:
                 self.latest_price = self.bricks[-1].price
+        else:
+            logger.error("Unable to establish trend!, is your brick size too big?")
 
         logger.info("[+] Current trend is {} and I've just fetched {} bricks ;)".format(self.trend, len(self.bricks)))
         self.ready.set()
@@ -111,6 +113,8 @@ class Renko(threading.Thread):
                     self.up_trend = True
                     self.down_trend = False
 
+                    self.get_last_ztl()  # a quick fix, shouldn't be done here, but
+
             elif last_brick.price - current_price >= self.brick_size * down_trend_factor:
                 while last_brick.price - current_price >= self.brick_size * down_trend_factor:
                     next_brick_price = last_brick.price - self.brick_size * down_trend_factor
@@ -128,8 +132,10 @@ class Renko(threading.Thread):
                     self.down_trend = True
                     self.up_trend = False
 
+                    self.get_last_ztl()  # quick fix, remove during optimization
+
             if len(self.bricks) > 500:
-                self.bricks = self.bricks[-500:] #to avoid very long array, lets keep the last 250 values only
+                self.bricks = self.bricks[-500:] #to avoid very long array, lets keep the last 500 values only
 
     def get_sma(self, brick, window=None):
         if not window:
@@ -144,6 +150,25 @@ class Renko(threading.Thread):
         sma = total_sum / window
         return sma
 
+    def get_last_ztl(self):
+        if not len(self.bricks):
+            return 0
+        brick = self.bricks[-1]
+        if len(self.bricks) == 1: #the very first ztl will be the price fo first brick
+            brick.ztl = brick.price
+        else:
+            if not hasattr(self.bricks[-2], "ztl"):
+                self.bricks[-2].ztl = self.bricks[-2].price
+
+            ztl_brick_size = self.bricks[-2].price * self.ztl_res
+            if brick.price > self.bricks[-2].ztl + ztl_brick_size:
+                brick.ztl = self.bricks[-2].ztl + ztl_brick_size
+            elif brick.price < self.bricks[-2].ztl - ztl_brick_size:
+                brick.ztl = self.bricks[-2].ztl - ztl_brick_size
+            else:
+                brick.ztl = self.bricks[-2].ztl
+        return brick.ztl
+
     def __del__(self):
         print("[!] Main exiting")
 
@@ -156,4 +181,4 @@ class Brick:
         self.close_time = close_time
 
     def __repr__(self):
-        return f"<Brick{self.index} {self.close_time}: {self.price}>"
+        return f"<Brick{self.index} {self.close_time}: {self.price} indicator {self.ztl if hasattr(self, 'ztl') else self.sma if hasattr(self, 'sma') else 'none'}>"

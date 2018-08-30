@@ -1,8 +1,8 @@
 from threading import Thread, Event
-from bot.custom_client import CustomClient
+from binance.client import Client
 import time
 import logging
-from binance.bind import BinanceClientError
+from binance.exceptions import BinanceAPIException
 
 logger = logging.getLogger("renko.orders")
 logger.setLevel(logging.DEBUG)
@@ -14,10 +14,11 @@ class Orders(Thread):
         self.trade_event = Event()
         self.pending_orders = []
         self.trade_signal = Trade_Signaller
-        self.rest_api = CustomClient(params['API_KEY'], params['API_SECRET'])
+        self.rest_api = Client(params['API_KEY'], params['API_SECRET'])
         self.SYMBOL = params['symbol']
         self.keep_running = True
         self.new_side = None
+        self.should_end_trade = False #check if trade should be ended
 
         self.uuid = params['uuid']
         print(f"[+] Bot UUID is {self.uuid}")
@@ -129,10 +130,16 @@ class Orders(Thread):
                 trade_count = 0
                 logger.info(f"{self.name} trade failed to complete, aborting")
 
+            if not self.trade_event.is_set():
+                #trade has completed, check if you now need to stop bot.
+                if self.should_end_trade:
+                    logger.info(f"{self.name} Bot was asked to end trade.")
+                    self.keep_running = False
+
     def do_buy(self, amount):
         try:
             logger.info(f"[*]{self.name} Buying {amount}")
-            order = self.rest_api.new_order(symbol=self.SYMBOL, side="BUY", type="MARKET",
+            order = self.rest_api.create_order(symbol=self.SYMBOL, side="BUY", type="MARKET",
                                             quantity="{0:8f}".format(amount), recv_window="10000")
             logger.info("[+]{} Order successful, ID: {}".format(self.name, order.id))
             return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order.id}
@@ -143,7 +150,7 @@ class Orders(Thread):
     def do_sell(self, amount):
         try:
             logger.info(f"[*]{self.name} Selling {amount}")
-            order = self.rest_api.new_order(symbol=self.SYMBOL, side="SELL", type="MARKET",
+            order = self.rest_api.create_order(symbol=self.SYMBOL, side="SELL", type="MARKET",
                                             quantity="{0:8f}".format(amount), recv_window="10000")
             logger.info("[+]{} Order successful, ID: {}".format(self.name, order.id))
             return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order.id}
@@ -153,27 +160,27 @@ class Orders(Thread):
 
     def _get_account_balance(self, asset):
         try:
-            account_info = self.rest_api.account(recv_window="10000")
+            account_info = self.rest_api.get_account(recv_window="10000")
         except Exception as e:
             return {'status' : False, 'exception' : e}
         balance_list = [x for x in account_info.balances if x.asset == asset]
         if not balance_list:
-            error = BinanceClientError('The Free balance is Zero')
-            error.error_code = -7000
+            error = BinanceAPIException('The Free balance is Zero')
+            error.code = -7000
             return {'status': False, 'exception': error}
         balance = balance_list[0]
         return {'status' : True, 'balance' : balance.free }
 
     def _get_open_orders(self):
         try:
-            open_orders = self.rest_api.current_open_orders(self.SYMBOL)
+            open_orders = self.rest_api.get_open_orders(symbol = self.SYMBOL)
         except Exception as e:
             return {'status' : False, 'exception' : e}
         return {'status' : True, 'open_orders' : open_orders}
 
     def get_min_qnty(self):
-        exch_inf_api = CustomClient()
-        ex_inf = exch_inf_api.exchange_info()
+        exch_inf_api = self.rest_api
+        ex_inf = exch_inf_api.get_exchange_info()
 
         if not ex_inf.symbols:
             #raise ValueError("incorrent data back")
@@ -206,16 +213,18 @@ class Orders(Thread):
             #happens only in BTCUSDT, btc is the base currency, USDT is the quote currency.
             logger.info(f"{self.name} Closing the trade, buying back BTC")
             self.new_side = "BUY"
+            self.should_end_trade = True
             self.trade_event.set()
         elif self.SYMBOL[3:] == "BTC":
             #all other pairs of trading
             logger.info(f"{self.name} Closing the trading, selling all {self.SYMBOL[:3]}")
             self.new_side = "SELL"
+            self.should_end_trade = True
             self.trade_event.set()
 
     def _check_permissions(self):
         try:
-            account_info = self.rest_api.account(recv_window="10000")
+            account_info = self.rest_api.get_account(recv_window="10000")
         except Exception as e:
             return {'status' : False, 'exception' : e}
         if not account_info.can_trade:

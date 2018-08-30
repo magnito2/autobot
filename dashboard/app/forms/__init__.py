@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm, Form, RecaptchaField
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, IntegerField, SelectField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, FloatField, IntegerField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from dashboard.app.models import User, Bot
 import requests, time, hmac
@@ -96,7 +96,7 @@ class CreateBotForm(FlaskForm):
 
 class SettingsForm(FlaskForm):
     symbol = SelectField('Symbol', validators=[DataRequired()], choices=[(sym, sym) for sym in get_symbols()])
-    brick_size = IntegerField(
+    brick_size = FloatField(
         'Brick Size', validators=[DataRequired()])
 
     time_frames = [
@@ -106,13 +106,14 @@ class SettingsForm(FlaskForm):
         ('3d', '3 day'),
         ('1w', '1 week'), ('1M', '1 month')]
     time_frame = SelectField('Time Frame', validators=[DataRequired()], choices=time_frames)
-    sma = IntegerField('SMA', validators=[DataRequired()])
+    #sma = IntegerField('SMA', validators=[DataRequired()])
+    ztl_resolution = FloatField("ZTL Resolution", validators=[DataRequired()])
     submit = SubmitField('Change Settings')
 
     def validate_symbol(self, symbol):
         symbols = get_symbols()
         if symbol.data not in symbols:
-            raise ValidationError(f'The provided symbol is not in binance {symbol.data} {symbols}')
+            raise ValidationError(f'{symbol.data} is not a symbol in binance')
 
 class PaymentForm(FlaskForm):
     currency = SelectField('Currency', validators=[DataRequired()], choices=[('BTC','BTC')])

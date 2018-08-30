@@ -22,9 +22,16 @@ def feedback():
         db.session.add(feedback_info)
         db.session.commit()
         #flash("your message has been sent to us, we'll reply", 'success')
-        return jsonify("your message has been sent to us, we'll reply", 'success')
+        return jsonify({
+            "msg": "your message has been sent to us, we'll reply to your email",
+            "type": 'success'
+        })
     else:
-        return jsonify("sorry, we didn't quite capture that")
+        return jsonify({
+            "msg": "sorry, we didn't quite capture that",
+            "type":"danger",
+            "errors" : form.errors
+        })
 
 
 

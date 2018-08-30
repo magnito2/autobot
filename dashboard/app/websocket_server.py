@@ -4,12 +4,12 @@ flask-socketio socket server
 
 from dashboard.app import app, db, activation_type
 from dashboard.app import socketio
-from flask_socketio import emit
+from flask_socketio import emit, send
 import configparser
 from dashboard.app.models import Bot, Log
 from dashboard.app.authorizer import activation_type
 
-from dashboard.app import config_changed, new_bot_created, get_bot_status,  destroy_bot
+from dashboard.app.signals import config_changed, new_bot_created, get_bot_status,  destroy_bot, confirm_change_config, confirmed_do_change_settings, bot_error_log
 
 import json, datetime
 
@@ -17,10 +17,6 @@ import json, datetime
 def test_connect():
     print("new connection")
     emit('message', {'data' : 'connected'})
-
-def get_config():
-    print('sending configurations')
-
 
 @socketio.on('ready')
 def make_res():
@@ -37,7 +33,7 @@ def get_bots():
     print("recieved request for new bots")
     bots = Bot.query.all()
     for bot in bots:
-        if not activation_type(bot.id) == "expired":
+        if not activation_type(bot.id) == "expired" and bot.can_trade:
             params = {
                 'name': bot.name,
                 'API_KEY': bot.api_key,
@@ -57,7 +53,9 @@ def send_config():
                  "symbol": config['default']['symbol'],
                  "brick_size": config['default']['brick_size'],
                  "time_frame": config['default']['time_frame'],
-                 "sma": config['default']['sma']
+                 #"sma": config['default']['sma'],
+                 "ztl_resolution" : config['default']['ztl_resolution'],
+                 #"indicator" : config['default']['indicator']
              }
          })
 
@@ -73,9 +71,13 @@ def log_this(log):
     )
     db.session.add(log)
     db.session.commit()
+    if log.levelname == "ERROR":
+        print("bot has raised an error")
+        bot_error_log.send(log_dict)
 
 @config_changed.connect
 def resend_config(app2, **kwargs):
+    print("We are heree!!")
     config = configparser.ConfigParser()
     config.read(app.config['CONFIG_INI_FILE'])
     socketio.emit("global_config",
@@ -84,7 +86,8 @@ def resend_config(app2, **kwargs):
                  "symbol": config['default']['symbol'],
                  "brick_size": config['default']['brick_size'],
                  "time_frame": config['default']['time_frame'],
-                 "sma": config['default']['sma']
+                 #"sma": config['default']['sma'],
+                 'ztl_resolution' : config['default']['ztl_resolution']
              }
          })
 
@@ -136,3 +139,14 @@ def ask_bot_status(app, **kwargs):
             socketio.emit('get_bot_status', params)
             return
     emit('get_bots_statuses')
+
+@confirm_change_config.connect
+def confirm_pair_change(*args, **kwargs):
+    print("emiting confirm pair change")
+    params = kwargs["params"]
+    socketio.emit("confirmpairchange", params)
+
+@socketio.on('dochangepair')
+def do_change_pair(params, **kwargs):
+    socketio.emit("bot_do_change_pair", params)
+    confirmed_do_change_settings.send(params)

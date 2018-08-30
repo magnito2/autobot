@@ -324,13 +324,14 @@
           </div>
 
           <div class="col-lg-5 col-md-8">
+              <input id="csrf_token" type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
               <form action="/feedback" method="post" role="form" class="contactForm" id="feedback-form">
-                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                <input id="csrf_token" type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
                 <div class="form-row">
-                  <div class="form-group col-lg-6">
+                  <div class="form-group col-lg-6 has-error has-feedback">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div class="validation"></div>
                   </div>
@@ -344,8 +345,8 @@
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
+                  <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation">subarus are cool</div>
                 </div>
                 <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
               </form>
@@ -362,15 +363,76 @@
 
 {% block scripts %}
 {{ super()}}
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/feedback-form.js') }}"></script>
 <script src="landing/lib/bootstrap/js/bootstrap-notify.min.js"></script>
     <script>
     $("#feedback-form").on('submit', function (e) {
         e.preventDefault();
-        $("#feedback-form").submit(function(d){
-            $.notify(d);
-            console.log(d);
-            $("#feedback-form").trigger("reset");
+        var formData = new FormData();
+        var formEl = $("#feedback-form")[0];
+        var req_data = {};
+        for (var i = 0; i < formEl.length; ++i) {
+            //formData.append(formEl[i].name, formEl[i].value);
+            req_data[formEl[i].name] = formEl[i].value;
+        }
+        var responsePromise = fetch("{{ url_for("home.feedback") }}", {
+            method: "post",
+            //cache: "no-cache",
+            //mode: 'no-cors',
+            //dataType: 'json',
+            headers: {
+                //"Content-Type": "application/x-www-form-urlencoded",
+                "Content-Type": "application/json",
+                'X-CSRFToken': document.getElementById("csrf_token").value
+            },
+            //body: formData,
+            body: JSON.stringify(req_data)
         });
-    })
+        responsePromise.then(
+            response => {
+                if (response.ok) {
+                    console.log("feedback form has been submitted");
+                    response.text().then(data => {
+                        jdata = JSON.parse(data);
+                        console.log("data recieved",jdata);
+                        $.notify({
+                            message: jdata["msg"]
+                        },
+                            {
+                                type: jdata["type"]
+                            });
+                        console.log(`response received is ${jdata['errors']}`);
+                        //formEl.reset();
+                        for(element in document.getElementsByClassName("validation")){
+                                console.log("element is", element);
+                                if(element.style.display != "none"){
+                                    console.log("changing display to none");
+                                    element.style.display = "none";
+                                }
+                            }
+                        if (jdata['errors']){
+                            for(error in jdata['errors']){
+                                var field = document.getElementById(error);
+
+                                field.parentElement.getElementsByClassName("validation")[0].innerHTML = jdata['errors'][error][0];
+                                console.log(field.parentElement.getElementsByClassName("validation")[0].innerHTML);
+                                field.parentElement.getElementsByClassName("validation")[0].style.display = "block";
+                            }
+                        }else{
+                            console.log("didnt see the error comming");
+                            document.getElementById("sendmessage").style.display = "block";
+                        }
+                    })
+                }
+                else {
+                    response.text().then(data => {
+                        console.log(data);
+                    });
+                }
+            }
+        );
+    });
     </script>
 {%  endblock scripts %}

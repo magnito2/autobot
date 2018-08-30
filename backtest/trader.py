@@ -24,6 +24,7 @@ class Trader:
         self.limit = config['limit']
         self.time_frame = config['time_frame']
         self.trade_event_subscribers = []
+        self.indicator = config['indicator']
 
     def run(self):
         logger.info("lets start off with a prayer.;)")
@@ -32,17 +33,32 @@ class Trader:
             new_brick = self.renko_calculator.create_renko_bricks(kline)
             if not new_brick:
                 continue
-            if not len(self.renko_calculator.bricks) > self.sma_window:
-                continue
-            sma = self.renko_calculator.get_sma(new_brick)
+            if self.indicator == "SMA":
+                if not len(self.renko_calculator.bricks) > self.sma_window:
+                    continue
+                sma = self.renko_calculator.get_sma(new_brick)
 
-            if new_brick.price < sma:
-                logger.info("[+] Signalling a sell")
-                self.orders.sell(kline)
+                if new_brick.price < sma:
+                    logger.info("[+] Signalling a sell")
+                    self.orders.sell(kline)
 
-            elif new_brick.price > sma:
-                logger.info("[+] Signalling a buy")
-                self.orders.buy(kline)
+                elif new_brick.price > sma:
+                    logger.info("[+] Signalling a buy")
+                    self.orders.buy(kline)
+            elif self.indicator == "ZTL":
+                ztl = self.renko_calculator.get_last_ztl()
+                if new_brick.price < ztl:
+                    logger.info("[+] Signalling a sell")
+                    self.orders.sell(kline)
+
+                elif new_brick.price > ztl:
+                    logger.info("[+] Signalling a buy")
+                    self.orders.buy(kline)
+
+            else:
+                logger.error("[+] You didn't specify an indicator, either ZTL or SMA")
+            logger.info(f"brick status {new_brick}")
+
         logger.info("finalizing the trade")
         last_kline = historical_klines[-1]
         self.orders.buy(last_kline)

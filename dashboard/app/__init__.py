@@ -11,6 +11,7 @@ from flask_wtf.csrf import CSRFProtect
 from flaskext.markdown import Markdown
 from flask_pagedown import PageDown
 from blinker import Namespace
+from flask_cors import CORS, cross_origin
 
 from dashboard.app.momentjs import momentjs
 
@@ -27,15 +28,9 @@ mail = Mail(app)
 CSRFProtect(app)
 Markdown(app)
 PageDown(app)
+CORS(app)
 
 app_signals = Namespace()
-config_changed = app_signals.signal('config-changed')
-new_bot_created = app_signals.signal('new-bot-created')
-get_bot_status = app_signals.signal('get-bot-status')
-destroy_bot = app_signals.signal('stop-bot')
-
-new_user_registered = app_signals.signal('new-user-created')
-new_payment_made = app_signals.signal('new-payment-made')
 
 app.jinja_env.globals['momentjs'] = momentjs
 
@@ -48,7 +43,8 @@ app.jinja_env.globals['active_days_remaining'] = active_days_remaining
 app.jinja_env.globals['get_remaining_subscription_days'] = get_remaining_subscription_days
 app.jinja_env.globals['gravitate'] = gravitate
 
-from dashboard.app import models, errors, websocket_server, signal_recievers, routes
+#flask style import everything
+from dashboard.app import models, errors, websocket_server, signal_recievers, routes, app_socketio, signals
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

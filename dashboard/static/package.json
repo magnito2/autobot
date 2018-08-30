@@ -18,6 +18,7 @@
   "author": "magnus otwani",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
@@ -25,11 +26,12 @@
     "babel-preset-react": "^6.24.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-scripts": "^1.0.17",
     "webpack": "^4.10.2",
-    "webpack-cli": "^3.0.1",
-    "react-scripts": "^1.0.17"
+    "webpack-cli": "^3.0.1"
   },
   "dependencies": {
+    "babel-preset-react-app": "^3.1.2",
     "d3-dsv": "^1.0.8",
     "d3-format": "^1.2.1",
     "d3-scale": "^1.0.7",
