@@ -10,19 +10,21 @@
         <div class="col-md-4">
             <div class="card card-profile">
                 <div class="card-avatar">
-                    <a href="/user/{{ bot.owner.username }}">
-                        <img class="img" src="{{ bot.owner.avatar(128) }}" />
+                    <a href="/user/{{ user.username }}">
+                        <img class="img" src="{{ user.avatar(128) }}" />
                     </a>
                 </div>
                 <div class="content">
-                    <h6 class="category text-gray">{{ bot.owner.role }}</h6>
-                    <h4 class="card-title">{{ bot.owner.username }}</h4>
+                    <h6 class="category text-gray">{{ user.role }}</h6>
+                    <h4 class="card-title">{{ user.username }}</h4>
                     <p class="category">Binance</p>
+                    {% if bot %}
                     {% for coin in bot.get_account_balance() %}
                     <h3 class="title">{{coin['free']|float|round(4)}}<small>{{coin['asset']}}</small></h3>
                     {% endfor %}
+                    {% endif %}
                     <p class="card-content">
-                        {{ bot.owner.about_me or bot.owner.username + " has said nothing yet" }}
+                        {{ user.about_me or user.username + " has said nothing yet" }}
                     </p>
                 </div>
             </div>
@@ -34,8 +36,11 @@
                 </div>
                 <div class="content">
                     <p class="category">Activation</p>
+                    {% if bot %}
                     <h3 class="title">{{activation_type(bot.id) | capitalize }} <small>{{ get_remaining_subscription_days(bot.id) }} days left </small></h3>
-
+                    {% else %}
+                    <h3 class="title">{{ user.username }} has not created an account</h3>
+                    {% endif %}
                 </div>
             </div>
         </div>
