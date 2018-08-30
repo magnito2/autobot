@@ -36,7 +36,9 @@ def search():
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     bot = user.bots.first()
-    logs = Log.query.filter(Log.threadName.like(f'%{bot.name}%')).order_by(desc(Log.created)).limit(10)
+    logs = []
+    if bot:
+        logs = Log.query.filter(Log.threadName.like(f'%{bot.name}%')).order_by(desc(Log.created)).limit(10)
     return render_template('account/user.html', user=user, bot = bot, logs=logs)
 
 @user_bp.route('/edit_profile', methods=['GET', 'POST'])
