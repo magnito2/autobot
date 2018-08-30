@@ -114,7 +114,8 @@ def reconnect():
     print("[+] Reconnected")
 
 def manage(socketio_handler):
-    socketIO = SocketIO('http://localhost:5000', Namespace= MasterNamespace)
+    #socketIO = SocketIO('http://localhost:5000', Namespace= MasterNamespace)
+    socketIO = SocketIO('https://autobotcloud.com', Namespace=MasterNamespace)
     namespace = socketIO.get_namespace()
     socketIO.on('connect', connected)
     socketIO.on('disconnect', disconnected)
@@ -122,6 +123,6 @@ def manage(socketio_handler):
     socketio_handler.ws = socketIO #trial code to hand over this instance of socketio to logging
     socketIO.emit('ready')
     logger.info("emitted ready")
-    #socketIO.emit('getbots')
+    socketIO.emit('getbots')
     logger.info("emitted get bots")
     socketIO.wait()

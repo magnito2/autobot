@@ -37,7 +37,7 @@ class LogsTable extends React.Component{
             search_value: null
         };
 
-        window.client = io.connect('http://' + document.domain + ':' + location.port);
+        window.client = io.connect('//' + document.domain + ':' + location.port);
         const client =window.client;
         client.on('bot-log', (event)=> this.process_message(event));
         client.on('connect', function() {

@@ -66,7 +66,6 @@ class Master(Thread):
         self.signaller.trade_event_subscribers.append(new_bot)
         new_bot.start()
         self.BOTS_LIST.append(new_bot)
-        print (f"All current bots are {self.BOTS_LIST}")
 
     def gracefully_end_all_trades(self):
         for bot in self.BOTS_LIST:

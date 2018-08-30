@@ -31,8 +31,10 @@ class Orders(Thread):
         trade_count = 0
         error_count = 10
 
-        if not self._check_permissions()['status']: #bots that have permission issues get terminated here
+        rv = self._check_permissions()
+        if not rv['status']: #bots that have permission issues get terminated here
             logger.debug(f"{self.name} API KEY has permission errors, check key can trade and get account balance")
+            logger.error(f"{self.name} {rv['exception']}")
             return
 
         while self.keep_running:
@@ -139,10 +141,12 @@ class Orders(Thread):
     def do_buy(self, amount):
         try:
             logger.info(f"[*]{self.name} Buying {amount}")
-            order = self.rest_api.create_order(symbol=self.SYMBOL, side="BUY", type="MARKET",
-                                            quantity="{0:8f}".format(amount), recv_window="10000")
-            logger.info("[+]{} Order successful, ID: {}".format(self.name, order.id))
-            return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order.id}
+            #order = self.rest_api.create_order(symbol=self.SYMBOL, side="BUY", type="MARKET",
+            #                               quantity="{0:8f}".format(amount), recv_window="10000")
+            order = self.rest_api.order_market_buy(symbol=self.SYMBOL,quantity="{0:8f}".format(amount))
+
+            logger.info("[+]{} Order successful, ID: {}".format(self.name, order['orderId']))
+            return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order['orderId']}
         except Exception as e:
             logger.error("[!] " + str(e))
             return {'status': False, 'exception': e}
@@ -150,26 +154,27 @@ class Orders(Thread):
     def do_sell(self, amount):
         try:
             logger.info(f"[*]{self.name} Selling {amount}")
-            order = self.rest_api.create_order(symbol=self.SYMBOL, side="SELL", type="MARKET",
-                                            quantity="{0:8f}".format(amount), recv_window="10000")
-            logger.info("[+]{} Order successful, ID: {}".format(self.name, order.id))
-            return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order.id}
+            #order = self.rest_api.create_order(symbol=self.SYMBOL, side="SELL", type="MARKET",
+            #                                quantity="{0:8f}".format(amount), recv_window="10000")
+            order = self.rest_api.order_market_sell(symbol=self.SYMBOL, quantity="{0:8f}".format(amount))
+            logger.info("[+]{} Order successful, ID: {}".format(self.name, order['orderId']))
+            return {'status': True, 'exception': None, 'message': 'Order successful', 'orderID': order['orderId']}
         except Exception as e:
             logger.error("[!] " + str(e))
             return {'status': False, 'exception': e}
 
     def _get_account_balance(self, asset):
         try:
-            account_info = self.rest_api.get_account(recv_window="10000")
+            account_info = self.rest_api.get_account()
         except Exception as e:
             return {'status' : False, 'exception' : e}
-        balance_list = [x for x in account_info.balances if x.asset == asset]
+        balance_list = [x for x in account_info['balances'] if x['asset'] == asset]
         if not balance_list:
             error = BinanceAPIException('The Free balance is Zero')
             error.code = -7000
             return {'status': False, 'exception': error}
         balance = balance_list[0]
-        return {'status' : True, 'balance' : balance.free }
+        return {'status' : True, 'balance' : balance['free'] }
 
     def _get_open_orders(self):
         try:
@@ -182,10 +187,10 @@ class Orders(Thread):
         exch_inf_api = self.rest_api
         ex_inf = exch_inf_api.get_exchange_info()
 
-        if not ex_inf.symbols:
+        if not ex_inf['symbols']:
             #raise ValueError("incorrent data back")
             return 0
-        current_symbol = [x for x in ex_inf.symbols if x['symbol'] == self.SYMBOL]
+        current_symbol = [x for x in ex_inf['symbols'] if x['symbol'] == self.SYMBOL]
         if current_symbol:
             current_symbol = current_symbol[0]
             lot_size = [x for x in current_symbol['filters'] if x['filterType'] == 'LOT_SIZE']
@@ -224,9 +229,10 @@ class Orders(Thread):
 
     def _check_permissions(self):
         try:
-            account_info = self.rest_api.get_account(recv_window="10000")
+            #account_info = self.rest_api.get_account(recv_window="10000")
+            account_info = self.rest_api.get_account()
         except Exception as e:
             return {'status' : False, 'exception' : e}
-        if not account_info.can_trade:
+        if not account_info['canTrade']:
             return {'status' : False, 'exception' : ValueError('Permission needed to trade')}
         return {'status' : True}
