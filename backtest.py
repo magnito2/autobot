@@ -23,7 +23,9 @@ config = {
     'time_frame' : parser['default']['TIME_FRAME'],
     'brick_size' : parser['default']['BRICK_SIZE'],
     'SMA' : int(parser['default']['SMA']),
-    'limit' : parser['default']['LIMIT']
+    'limit' : parser['default']['LIMIT'],
+    'indicator' : parser['default']['indicator'],
+    'ztl_res' : parser['default']['ztl_res']
 }
 trader = Trader(config)
 trader.run()

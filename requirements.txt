@@ -36,7 +36,7 @@ pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pycparser==2.18
 pyOpenSSL==17.5.0
-python-binance-api==1.1.0
+python-binance==0.7.0
 python-dateutil==2.7.2
 python-editor==1.0.3
 python-engineio==2.1.1
