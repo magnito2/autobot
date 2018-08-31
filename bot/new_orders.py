@@ -37,6 +37,16 @@ class Orders(Thread):
             logger.error(f"{self.name} {rv['exception']}")
             return
 
+        #check if bot has joined the trade late
+        if self.trade_signal.last_signal:
+            if self.trade_signal.last_signal == "BUY":
+                self.new_side = "BUY"
+                self.trade_event.set()
+
+            elif self.trade_signal.last_signal == "SELL":
+                self.new_side = "SELL"
+                self.trade_event.set()
+
         while self.keep_running:
 
             if error_count > 10:
@@ -107,20 +117,20 @@ class Orders(Thread):
                 continue
 
             if not order_resp['status']:
-                if order_resp['exception'].error_code == -1021:
+                if order_resp['exception'].code == -1021:
                     # we got ourselves a juicy little Timestamp for this request is outside of the recvWindow.
-                    logger.error(f"{self.name} timestamp error, {order_resp['exception'].error_code}, {order_resp['exception'].error_message}")
+                    logger.error(f"{self.name} timestamp error, {order_resp['exception'].code}, {order_resp['exception'].message}")
                     sleep_time = 60
-                elif order_resp['exception'].error_code in [-2010, -1010, -2011]:
+                elif order_resp['exception'].code in [-2010, -1010, -2011]:
                     # we got some processing error
-                    logger.error(f"{self.name} {order_resp['exception'].error_code}, {order_resp['exception'].error_message}")
+                    logger.error(f"{self.name} {order_resp['exception'].code}, {order_resp['exception'].message}")
                     trade_count += 1
                     print(f"[*]{self.name} Current trade counts {trade_count}")
-                elif account_resp['exception'].error_code == -7000:
-                    logger.error(f"{self.name} free balance in account is zero: {account_resp['exception'].error_message}, exiting")
+                elif account_resp['exception'].code == -7000:
+                    logger.error(f"{self.name} free balance in account is zero: {account_resp['exception'].message}, exiting")
                     break #this bot cannot make any trades, lets exit
 
-                elif order_resp['exception'].error_code == -1013:
+                elif order_resp['exception'].code == -1013:
                     #occurs when quantity is below allowed, end trade here.
                     logger.debug(f"[*]{self.name} Ending trade with {amount} , {self.latest_price}")
                     self.trade_event.clear()
@@ -170,7 +180,8 @@ class Orders(Thread):
             return {'status' : False, 'exception' : e}
         balance_list = [x for x in account_info['balances'] if x['asset'] == asset]
         if not balance_list:
-            error = BinanceAPIException('The Free balance is Zero')
+            error = BinanceAPIException()
+            error.message = 'The Free balance is Zero'
             error.code = -7000
             return {'status': False, 'exception': error}
         balance = balance_list[0]

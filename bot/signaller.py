@@ -24,6 +24,7 @@ class Signaller(threading.Thread):
         self.time_frame = config['time_frame']
         self.name = "Signaller"
         self.indicator = 'ZTL'
+        self.last_signal = None
 
     def run(self):
         '''
@@ -50,9 +51,11 @@ class Signaller(threading.Thread):
         :param side:
         :return:
         '''
+        print(f"telling everyone to {side}")
         for subscriber in self.trade_event_subscribers:
             subscriber.new_side = side
             subscriber.trade_event.set()
+        self.last_signal = side
 
     def get_historical_klines(self, startTime=None, endTime=None, limit=None):
         hist_klines = []
@@ -131,4 +134,7 @@ class Signaller(threading.Thread):
                     logger.info("[+] Sell time")
                     self.signal('SELL')
             self.renko_event.clear()
+            self.last_trend = trend
+
+
 
