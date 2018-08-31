@@ -180,8 +180,8 @@ class Orders(Thread):
             return {'status' : False, 'exception' : e}
         balance_list = [x for x in account_info['balances'] if x['asset'] == asset]
         if not balance_list:
-            error = BinanceAPIException()
-            error.message = 'The Free balance is Zero'
+            error = ValueError('The Free balance is Zero')
+
             error.code = -7000
             return {'status': False, 'exception': error}
         balance = balance_list[0]
