@@ -92,7 +92,7 @@ var LogsTable = function (_React$Component2) {
             search_value: null
         };
 
-        window.client = io.connect('http://' + document.domain + ':' + location.port);
+        window.client = io.connect('//' + document.domain + ':' + location.port);
         var client = window.client;
         client.on('bot-log', function (event) {
             return _this3.process_message(event);
