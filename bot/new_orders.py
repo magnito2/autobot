@@ -82,12 +82,12 @@ class Orders(Thread):
                 #report back to master the error encountered
                 if account_resp['exception'].code == -1021:
                     #we got ourselves a juicy little Timestamp for this request is outside of the recvWindow.
-                    logger.error(f"{self.name} timestamp error getting balance {account_resp['exception'].code}, {account_resp['exception'].message}")
+                    logger.error(f"{self.name} timestamp error getting balance {account_resp['exception'].code}, {account_resp['exception']}")
                 elif account_resp['exception'].code == -7000:
-                    logger.error(f"{self.name} free balance in account is zero: {account_resp['exception'].message}, exiting")
+                    logger.error(f"{self.name} free balance in account is zero: {account_resp['exception']}, exiting")
                     break
                 else:
-                    logger.error(f"{self.name} error getting balance {account_resp['exception'].code}: {account_resp['exception'].code}")
+                    logger.error(f"{self.name} error getting balance {account_resp['exception'].code}: {account_resp['exception']}")
                 sleep_time = 5
                 error_count += 1 #if it fails so many times, die
                 continue
