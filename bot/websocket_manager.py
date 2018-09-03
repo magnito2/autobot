@@ -27,6 +27,7 @@ class MasterNamespace(BaseNamespace):
         if not self.master.SYMBOL == params['symbol'] or not self.master.TIME_FRAME == params['time_frame'] \
                 or not self.master.ztl_resolution == params['ztl_resolution'] or not self.master.BRICK_SIZE == params['brick_size']:
             logger.info("[*] Changing the master configurations")
+            params['socketio_client'] = self
             self.master.set_configurations(params)
             self.emit('configschanged')
 
@@ -101,6 +102,37 @@ class MasterNamespace(BaseNamespace):
         self.master.gracefully_end_all_trades()
         self.emit("ready")
 
+    def on_request_renko_bricks(self, *args):
+        '''
+        when a client opens a chart, server sends this guy a request to send all current bricks
+        :param args:
+        :return:
+        '''
+        bricks = self.master.renko_calculator.bricks
+        brick_list = []
+        for index, brick in enumerate(bricks):
+            prev_brick = bricks[index-1] if index > 0 else None
+            if prev_brick:
+                if brick.price > prev_brick.price:
+                    high = brick.price
+                    bull = True
+                else:
+                    high = brick.price + self.master.renko_calculator.brick_size
+                    bull = False
+            else:
+                high = None
+                bull = None
+
+            brick_list.append({
+                'price' : brick.price,
+                'time' : brick.close_time,
+                'index' : brick.index,
+                'high' : high,
+                'bull' : bull,
+                'ztl' : brick.ztl
+            })
+        logger.info("responding to request for renko bricks")
+        self.emit("renkobricks", brick_list)
 
 
 def connected():

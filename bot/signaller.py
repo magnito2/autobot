@@ -36,12 +36,8 @@ class Signaller(threading.Thread):
         self.renko_calculator.ready.wait()
 
         self.latest_price = self.renko_calculator.latest_price
-        if self.indicator == "SMA":
-            self.trade_with_sma()
-        elif self.indicator == "ZTL":
-            self.trade_with_ztl()
-        else:
-            logger.error("The indicator type has not been specified.")
+
+        self.auto_trade()
 
     def signal(self, side):
         '''
@@ -71,41 +67,7 @@ class Signaller(threading.Thread):
     def __del__(self):
         logger.error(f"[!] {self.name} is exiting")
 
-    def trade_with_sma(self):
-
-        last_brick = self.renko_calculator.bricks[-1]
-        if len(self.renko_calculator.bricks) < self.renko_calculator.sma_window:
-            window = len(self.renko_calculator.bricks)
-        else:
-            window = None
-        last_sma = self.renko_calculator.get_sma(last_brick, window=window)
-        logger.debug(f"SMA {last_sma} Last brick {last_brick.price} bricks length {len(self.renko_calculator.bricks)}")
-        if last_brick.price < last_sma:
-            logger.info("[+] Signalling a sell")
-            self.signal("SELL")
-        elif last_brick.price > last_sma:
-            logger.info("[+] Signalling a buy")
-            self.signal("BUY")
-
-        while self.keep_running:
-            self.renko_event.wait()
-            logger.info(f"[+] new brick {self.renko_calculator.bricks[-1].price}")
-
-            trend = self.renko_calculator.trend
-            latest_brick = self.renko_calculator.bricks[-1]
-            self.latest_price = self.renko_calculator.latest_price
-            latest_sma = self.renko_calculator.get_sma(latest_brick)
-            if trend == "UP":
-                if latest_sma < latest_brick.price:
-                    logger.info("[+] Buy time")
-                    self.signal('BUY')
-            elif trend == "DOWN":
-                if latest_sma > latest_brick.price:
-                    logger.info("[+] Sell time")
-                    self.signal('SELL')
-            self.renko_event.clear()
-
-    def trade_with_ztl(self):
+    def auto_trade(self):
 
         last_brick = self.renko_calculator.bricks[-1]
 
@@ -135,6 +97,13 @@ class Signaller(threading.Thread):
                     self.signal('SELL')
             self.renko_event.clear()
             self.last_trend = trend
+
+
+    def manual_trade(self):
+
+        while self.keep_running:
+            self.manual_trade_event.wait()
+
 
 
 

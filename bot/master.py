@@ -51,6 +51,9 @@ class Master(Thread):
         self.renko_calculator.start()
         self.signaller.start()
 
+        if "socketio_client" in parameters:
+            self.renko_calculator.socketio_client = parameters['socketio_client']
+
     def create_new_bot(self, parameters):
         '''
         it will be a very good idea to check the bot's configs, you dont want a disaster
