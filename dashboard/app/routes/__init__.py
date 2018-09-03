@@ -13,8 +13,9 @@ user_bp = Blueprint('users', __name__, url_prefix="/users")
 home_bp = Blueprint('home', __name__)
 log_bp = Blueprint('logs', __name__, url_prefix="/logs")
 stats_bp = Blueprint('stats', __name__, url_prefix="/stats")
+annoucements_bp = Blueprint('announcements', __name__, url_prefix="/announcements")
 
-from . import admin, bots, home, payments, settings, users, account, logs, stats
+from . import admin, bots, home, payments, settings, users, account, logs, stats, annoucements
 
 app.register_blueprint(admin_bp)
 app.register_blueprint(bots_bp)
@@ -25,6 +26,7 @@ app.register_blueprint(user_bp)
 app.register_blueprint(account_bp)
 app.register_blueprint(log_bp)
 app.register_blueprint(stats_bp)
+app.register_blueprint(annoucements_bp)
 
 @app.before_request
 def before_request():

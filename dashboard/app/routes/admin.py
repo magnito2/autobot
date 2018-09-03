@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for, request
+from flask import render_template, flash, redirect, url_for, request, jsonify
 from flask_login import current_user, login_required
 from dashboard.app.authorizer import check_confirmed, role_required, authorize
 from . import admin_bp
@@ -8,6 +8,8 @@ from sqlalchemy import desc
 
 from dashboard.app.forms import NewEmailForm
 from dashboard.app.email import send_email
+
+from dashboard.app.signals import request_renko_bricks
 
 @admin_bp.route('/')
 @login_required
@@ -85,3 +87,14 @@ def send_new_email():
     if subject:
         form.subject.data = subject
     return render_template("admin/new_email.html", form=form)
+
+@admin_bp.route("get_renko_bricks", methods=['GET'])
+@role_required('Admin')
+def request_bot_for_renko_bricks():
+    request_renko_bricks.send("admin")
+    return jsonify("success", "Bricks are on the way")
+
+@admin_bp.route("chart", methods=['GET'])
+@role_required('Admin')
+def get_chart():
+    return render_template("chart/index.html")

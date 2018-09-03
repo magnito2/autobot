@@ -1,0 +1,90 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+{% from "macros/render_pagination.html" import render_pagination%}
+<div class="container-fluid" id="users-page">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card">
+                <div class="card-header" data-background-color="orange">
+                    <h4 class="title">Announcements</h4>
+                </div>
+                <div class="card-content">
+                    <ul class="nav nav-pills card-header-pills">
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="{{ url_for('announcements.create') }}">CREATE NEW ANNOUCEMENT</a>
+                        </li>
+                    </ul>
+                    <table class="table">
+                        <thead class="text-primary">
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Message</th>
+                            <th>Created</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for announcement in announcements.items %}
+                        <tr>
+                            <td>{{ announcement.id }}</td>
+                            <td><a href="{{ url_for('announcements.show', announcement_id = announcement.id) }}">{{ announcement.title }}</a></td>
+                            <td>{{ announcement.message }}</td>
+                            <td>{{ announcement.created_at }}</td>
+                            <td>
+                                <a
+                                    href="#show-announcement" class="btn btn-light btn-sm" data-toggle="modal" data-title="{{ announcement.title }}"
+                                    data-created_at="{{ announcement.created_at }}" data-message="{{ announcement.message }}"
+                                >Show</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    {{ render_pagination(announcements, "announcements.index") }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal fade" id="show-announcement" tabindex="-1" role="dialog" aria-labelledby="show-announcement" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="announcementModalLabel">Feedback</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer footer1">
+                    <p></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary reply-button" data-id="">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block scripts %}
+{{super()}}
+<script type="text/javascript">
+        $('#show-announcement').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);// Button that triggered the modal
+            var title = button.data('title'); // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this);
+            modal.find('.modal-title').text(title);
+            modal.find('.modal-body').text(button.data('message'));
+            modal.find('.footer1').text(button.data('created_at'));
+        })
+    </script>
+{% endblock scripts %}

@@ -2,7 +2,7 @@
   "name": "RenkoBot",
   "version": "1.0.0",
   "description": "a binance renko bot, makes trade whenever a renko reverse happens",
-  "main": "index.js",
+  "private" : true,
   "scripts": {
     "build": "webpack -p --progress --config webpack.config.js",
     "dev-build": "webpack --progress -d --config webpack.config.js",
