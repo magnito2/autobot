@@ -27,11 +27,11 @@ def last_announcement():
         if str(current_user.id) not in session['announcements']:
             print("user id not in annoucements")
             session['announcements'][str(current_user.id)] = []
-        if str(announcement.id) not in session['announcements'][str(current_user.id)]:
-            session['announcements'][str(current_user.id)].append(str(announcement.id))
-            print(session['announcements'])
-            return jsonify(announcement.serialize)
-        abort(404)
+        #if str(announcement.id) not in session['announcements'][str(current_user.id)]:
+         #   session['announcements'][str(current_user.id)].append(str(announcement.id))
+          #  print(session['announcements'])
+        return jsonify(announcement.serialize)
+        #abort(404)
     else:
         abort(404)
 

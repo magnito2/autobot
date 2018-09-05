@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
+{% extends "layouts/base.html" %}
 
-    <style>
+{% block styles %}
+    {{ super() }}
+     <style>
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
@@ -26,119 +25,85 @@
             stroke: black;
         }
 
+        .domain {
+            fill: none;
+            stroke: black;
+        }
+
         .graph .group {
             fill: none;
             stroke: black;
             stroke-width: 1.5;
         }
     </style>
-</head>
-<body>
-<div class="graph"></div>
+{% endblock styles %}
+{% block navbar %}
+    {% include "partials/navbar.html" %}
+{% endblock navbar %}
 
-<script src="/js/d3.v3.min.js"></script>
-<script src="/js/jquery-3.2.1.min.js"></script>
+{% block content %}
+<div class="container-fluid" id="account-page">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-plain">
+                                <div class="card-header" data-background-color="orange">
+                                    <h4 class="title">Chart</h4>
+                                    <p class="category">
+                                        As interpreted by the bot
+                                    </p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="graph"></div>
+                                </div>
+                            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block scripts %}
+    {{super()}}
+    <script src="/js/d3.v4.min.js"></script>
 <script src="/js/socket.io.js"></script>
 <script>
-    var limit = 60 * 1,
-        duration = 750,
-        now = new Date(Date.now() - duration)
-
     var width = 960,
         height = 400;
 
-
-    var live_data =  {
-        value: 0,
-        color: 'orange',
-        data: d3.range(limit).map(function() {
-            return 0
-        })
-    }
-
-    var x = d3.time.scale()
-        .domain([now - (limit - 2), now - duration])
+    var r_x = d3.scaleLinear()
         .range([0, width - 50]);
 
-    var y = d3.scale.linear()
-        .domain([0, 100])
+    var r_y = d3.scaleLinear()
         .range([height, 0]);
-
-    var r_x = d3.time.scale()
-        .range([0, width - 50]);
-
-    var r_y = d3.scale.linear()
-        .range([height, 0]);
-
-    var line = d3.svg.line()
-        .interpolate('basis')
-        .x(function(d, i) {
-            return x(now - (limit - 1 - i) * duration)
-        })
-        .y(function(d) {
-            return y(d)
-        });
 
     var svg = d3.select('.graph').append('svg')
         .attr('class', 'chart')
         .attr('width', width)
-        .attr('height', height + 50)
+        .attr('height', height + 50);
 
-    var axis = svg.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', 'translate(0,' + height + ')')
-        .call(x.axis = d3.svg.axis().scale(x).orient('bottom'));
+    var yAxis = d3.axisRight()
+        .ticks(10)
+        .tickSize(-width)
+        .tickPadding(8);
 
-    var paths = svg.append('g')
+    var xAxis = d3.axisBottom()
+        .ticks(20)
+        .tickSize(-height)
+        .tickPadding(8);
 
-    live_data.path = paths.append('path')
-        .data([live_data.data])
-        .attr('class', name + ' group')
-        .style('stroke', live_data.color);
+    var gY = svg.append('g')
+        .attr('class', 'y axis');
+
+    var gX = svg.append('g')
+        .attr('class', 'x axis');
+
+    var renkos = svg.append('g')
+        .attr("class", "renko-container")
+        .attr("width", width - 50)
+        .attr("height", height-50);
+
+    var ztl_line = svg.append('g');
 
     var cirle = svg.append("circle").attr("cx", width-30).attr("cy",height/2).attr("r",3);
     cirle.style("fill","none").style("stroke","green");
-
-    function tick() {
-        now = new Date();
-
-        // Add new values
-        //group.data.push(group.value) // Real values arrive at irregular intervals
-        var yValue = 20 + Math.random() * 100;
-        live_data.data.push(yValue);
-        live_data.path.attr('d', line)
-
-        // Shift domain
-        x.domain([now - (limit - 2) * duration, now - duration])
-
-        // Slide x-axis left
-        axis.transition()
-            .duration(duration)
-            .ease('linear')
-            .call(x.axis)
-
-        var maxy = d3.max(live_data.data);
-        y.domain([0, maxy]);
-        /*yAxis.transition()
-            .duration(duration)
-            .ease('linear')
-            .call(y.axis);*/
-
-        cirle.transition().duration(duration*0.75).ease('linear').attr("cy", y(yValue));
-        // Slide paths left
-        paths.attr('transform', null)
-            .transition()
-            .duration(duration)
-            .ease('linear')
-            .attr('transform', 'translate(' + x(now - (limit - 1) * duration) + ')')
-            .each('end', tick)
-
-        // Remove oldest data point from each group
-        live_data.data.shift()
-
-    }
-
-    tick();
 
     $(document).ready(function () {
 
@@ -165,25 +130,15 @@
         r_y.domain([min, max]);
         r_x.domain([0,last_25_bricks.length]);
 
-        var ztl_line = svg.append('g').append('path')
+        ztl_line.append('path')
             .attr('d', ztl_line_func(bricks))
             .attr("stroke", "blue")
             .attr("stroke-width", 2)
             .attr("fill", "none");
-        /*var ztl_line = svg.selectAll('circle').data(bricks)
-            .enter().append('circle')
-            .attr('cx', function (d, i) {
-                return r_x(i);
-            })
-            .attr('cy', function (d) {
-                return r_y(d.ztl);
-            })
-            .attr('r', 3);*/
 
         var brick_size = +configs['brick_size'];
-        var renkos = svg.append('g')
-        .attr("class", "renko-container")
-        .selectAll("rect")
+
+        renkos.selectAll("rect")
         .data(last_25_bricks).enter()
         .append("rect")
         .attr("width", function (d) {
@@ -203,13 +158,16 @@
                 return d.bull ? "green" : "red";
             });
 
-        var yAxis = svg.append('g')
-        .attr('class', 'y axis')
-        .attr('transform', 'translate('+ (width - 50)  +',' + 0 + ')')
-        .call(y.axis = d3.svg.axis().scale(r_y).orient('right'));
+        yAxis.scale(r_y);
+        gY.attr('transform', 'translate('+ (width - 50)  +',' + 0 + ')')
+        .call(yAxis);
+
+        xAxis.scale(r_x);
+        gX.attr("transform", "translate(0, "+ (height - 50) + ")")
+            .call(xAxis);
     }
 
-    var ztl_line_func = d3.svg.line()
+    var ztl_line_func = d3.line()
             .x(function (d, i) {
                 console.log("i is " +i);
                 return r_x(i);
@@ -219,10 +177,27 @@
                 return r_y(+d.ztl);
                 //return 270;
 
-            })
-            .interpolate('linear');
+            });
+            //.interpolate('linear');
+
+    var zoom_rect = svg.append('rect')
+        .attr('width', width)
+        .attr('height', height)
+        //.style('fill', "none")
+        .style("pointer-events", "all")
+        .attr('class','domain')
+        .call(d3.zoom()
+            .scaleExtent([1/2, 4])
+            .on('zoom', zoomed));
+
+    function zoomed() {
+        console.log("zooming now");
+        renkos.attr("transform", d3.event.transform);
+        ztl_line.attr("transform", d3.event.transform);
+        gY.call(yAxis.scale(d3.event.transform.rescaleY(r_y)));
+        gX.call(xAxis.scale(d3.event.transform.rescaleY(r_x)));
+    }
 
 
 </script>
-</body>
-</html>
+{% endblock scripts %}
