@@ -9,6 +9,8 @@ logger.setLevel(logging.DEBUG)
 
 class Orders(Thread):
 
+    min_qnty = 0
+
     def __init__(self, Trade_Signaller, params):
         Thread.__init__(self)
         self.trade_event = Event()
@@ -126,8 +128,8 @@ class Orders(Thread):
                     logger.error(f"{self.name} {order_resp['exception'].code}, {order_resp['exception'].message}")
                     trade_count += 1
                     print(f"[*]{self.name} Current trade counts {trade_count}")
-                elif account_resp['exception'].code == -7000:
-                    logger.error(f"{self.name} free balance in account is zero: {account_resp['exception'].message}, exiting")
+                elif order_resp['exception'].code == -7000:
+                    logger.error(f"{self.name} free balance in account is zero: {order_resp['exception'].message}, exiting")
                     break #this bot cannot make any trades, lets exit
 
                 elif order_resp['exception'].code == -1013:
@@ -195,6 +197,9 @@ class Orders(Thread):
         return {'status' : True, 'open_orders' : open_orders}
 
     def get_min_qnty(self):
+
+        if self.min_qnty:
+            return self.min_qnty
         exch_inf_api = self.rest_api
         ex_inf = exch_inf_api.get_exchange_info()
 
@@ -208,7 +213,8 @@ class Orders(Thread):
             if lot_size:
                 lot_size = lot_size[0]
                 min_qnty = lot_size['minQty']
-                return float(min_qnty)
+                self.min_qnty = float(min_qnty)
+                return self.min_qnty
             else:
                 #raise ValueError("property LOT_SIZE is missing")
                 return 0
