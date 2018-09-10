@@ -4,7 +4,7 @@ from dashboard.app import app
 from dashboard.app.authorizer import role_required
 from flask import render_template, request, jsonify
 from . import settings_bp
-from dashboard.app.signals import config_changed, confirm_change_config, confirmed_do_change_settings
+from dashboard.app.signals import config_changed, confirm_change_config, confirmed_do_change_settings, trade_manually
 
 @settings_bp.route('/',  methods=['GET', 'POST'])
 @role_required('Admin')
@@ -51,3 +51,15 @@ def settings():
             "errors" : form.errors
         })
     return render_template('settings/settings.html', form=form)
+
+
+@settings_bp.route("/manual-trade", methods = ['POST'])
+#@role_required('Admin')
+def do_manual_trade():
+    content = request.json
+    if 'action' in content:
+        action = content['action']
+        if action in ['BUY','SELL']:
+            trade_manually.send(action)
+            return jsonify({'action' : action, 'success' : True})
+    return jsonify({'success' : False}), 404

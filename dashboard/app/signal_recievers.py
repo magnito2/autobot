@@ -1,6 +1,6 @@
-from dashboard.app.signals import new_user_registered, confirmed_do_change_settings,  bot_error_log
+from dashboard.app.signals import new_user_registered, confirmed_do_change_settings,  bot_error_log, trade_manually
 from .email import send_email
-from dashboard.app.models import User, Role
+from dashboard.app.models import User, Role, Bot
 from flask import url_for, render_template
 import configparser
 from dashboard.app import app,socketio
@@ -42,3 +42,26 @@ def handle_bot_error(*args):
     log_dict = args[0]
     print(f"We have recieved an error!!!! {log_dict}")
     socketio.emit("bot-error", log_dict)
+
+@trade_manually.connect
+def manual_trade(side):
+    print(f"recieved a signal to {side} manually")
+    config = configparser.ConfigParser()
+    config.read(app.config['CONFIG_INI_FILE'])
+
+    if not side in ['BUY', 'SELL']:
+        print(f"Side not understood, use BUY or SELL, side : {side}")
+        return
+    bots = Bot.query.all()
+    bot_list = []
+    for bot in bots:
+        bot_params = {
+            'API_KEY' : bot.api_key,
+            'API_SECRET' : bot.api_secret,
+            'name' : bot.name,
+            'uuid' : bot.uuid
+        }
+        bot_list.append(bot_params)
+    symbol = config['default']['symbol']
+    params = {'clients' : bot_list, 'side' : side,  'symbol' : symbol}
+    socketio.emit('manual_trade', params)

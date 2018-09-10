@@ -1,6 +1,7 @@
 from socketIO_client import SocketIO, BaseNamespace
 from bot.master import Master
 import os,sys
+from new_bot.bot_manager import Manager
 
 import logging
 import logging.handlers
@@ -13,7 +14,6 @@ class MasterNamespace(BaseNamespace):
         logger.info('[Connected]')
 
     def on_create_new_bot(self, *args):
-        logger.info("[*] creating a new bot")
         data = args[0]
         params = data['params']
         logger.debug(f'[*] Params passed: {params}')
@@ -41,7 +41,7 @@ class MasterNamespace(BaseNamespace):
     def on_get_bots_statuses(self, *args):
         logger.info("[*] Getting status of the bots")
         bots = []
-        for bot in self.master.BOTS_LIST:
+        for bot in self.master.signaller.trade_event_subscribers:
             params = {
                 'uuid' : bot.uuid,
                 'is_alive' : bot.is_alive()
@@ -134,6 +134,24 @@ class MasterNamespace(BaseNamespace):
         logger.info("responding to request for renko bricks")
         self.emit("renkobricks", brick_list)
 
+    def on_manual_trade(self, kwargs):
+        side = kwargs['side'] if 'side' in kwargs and kwargs['side'] in ['BUY', 'SELL'] else None
+        clientelle = kwargs['clients'] if 'clients' in kwargs else []
+        client_list = []
+        for client in clientelle:
+            params = {
+                'API_KEY' : client['API_KEY'],
+                'API_SECRET' : client['API_SECRET'],
+                'name' : client['name'],
+                'uuid' : client['uuid'],
+                'symbol' : kwargs['symbol'],
+                'side' : side
+            }
+            client_list.append(params)
+        manager_params = {'clients' : client_list, 'symbol' : kwargs['symbol'], 'side' : side}
+        print(f"[+] Sending the following to the manager {manager_params}")
+        manual_manager = Manager(manager_params)
+        manual_manager.start()
 
 def connected():
     print("*"*100)

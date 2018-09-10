@@ -13,3 +13,5 @@ new_payment_made = app_signals.signal('new-payment-made')
 bot_error_log = app_signals.signal('bot-raised-error')
 
 request_renko_bricks = app_signals.signal('request-renko-bricks')
+
+trade_manually = app_signals.signal('trade-manually')

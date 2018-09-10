@@ -71,6 +71,20 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header" data-background-color="orange">
+                                    <h4 class="title">Manual Trading</h4>
+                                    <p class="category">Overide automated bot trading</p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="btn-group btn-group-lg" role="group" aria-label="market overide buttons">
+                                        <button class="btn btn-success" id="buy-button" name="buy" data-action="BUY" onclick="trade_manually(event)">Buy</button>
+                                        <button class="btn btn-danger" id="sell-button" name="sell" data-action="SELL" onclick="trade_manually(event)">Sell</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 </div>
 {% endblock content %}
@@ -167,6 +181,41 @@
                     })
                 }
             );
+
+        function trade_manually(event) {
+            var target = event.target;
+            var action = target.dataset.action;
+            fetch("/settings/manual-trade", {
+                        method: "post",
+                        //cache: "no-cache",
+                        //mode: 'no-cors',
+                        //dataType: 'json',
+                        headers: {
+                            "Content-Type" : "application/json",
+                            'X-CSRFToken': document.getElementById("csrf_token").value
+                        },
+                        //body: formData,
+                        body : JSON.stringify({
+                            'action' : action
+                        })
+                        })
+                .then(response => {
+                    response.text().then( data => {
+                        resp = JSON.parse(data);
+                        console.log(resp);
+                        if (resp['success'] == true){
+
+                        swal({
+                            title: 'Manual overide',
+                            text: `Signal to ${resp['action']} sent successfully`,
+                            icon : "success",
+                            className: "swal-wide"
+                        })
+                    }
+                    })
+                })
+
+        }
 
     </script>
 

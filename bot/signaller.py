@@ -47,7 +47,7 @@ class Signaller(threading.Thread):
         :param side:
         :return:
         '''
-        print(f"telling everyone to {side}")
+        logger.info(f"telling everyone to {side}")
         for subscriber in self.trade_event_subscribers:
             subscriber.new_side = side
             subscriber.trade_event.set()
@@ -103,6 +103,16 @@ class Signaller(threading.Thread):
 
         while self.keep_running:
             self.manual_trade_event.wait()
+
+    def get_bot_statuses(self):
+        res = []
+        for bot in self.trade_event_subscribers:
+            res.append({
+                'name' : bot.name,
+                'is_alive' : bot.is_alive()
+            })
+
+        return res
 
 
 
