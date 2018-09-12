@@ -115,7 +115,7 @@ class ClientNode(Thread):
                     logger.debug(f"[*]{self.name} Ending trade with {amount} , {self.latest_price}")
                     break
 
-            if trade_count > 20:
+            if trade_count > 5:
                 logger.info(f"{self.name} trade failed to complete, aborting")
                 break
 

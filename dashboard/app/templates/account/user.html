@@ -41,7 +41,7 @@
                     {% else %}
                     <h3 class="title">{{ user.username }} has not created an account</h3>
                     {% endif %}
-                    {% if  activation_type(bot.id) == "expired"%}
+                    {% if  not activation_type(bot.id) == "active" %}
                         <a class="btn btn-primary" href="{{ url_for('payments.manual_activate', bot_id=bot.id) }}">RE ACTIVATE</a>
                     {% endif %}
                 </div>
