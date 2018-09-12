@@ -10,7 +10,7 @@ from binance.client import Client
 import logging
 import time
 
-logger = logging.getLogger("renko.client_node")
+logger = logging.getLogger("abc.client_node")
 logger.setLevel(logging.DEBUG)
 
 class ClientNode(Thread):

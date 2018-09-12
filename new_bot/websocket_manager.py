@@ -1,12 +1,12 @@
 from socketIO_client import SocketIO, BaseNamespace
-from bot.master import Master
+from new_bot.master import Master
 import os,sys
 from new_bot.bot_manager import Manager
 
 import logging
 import logging.handlers
 
-logger = logging.getLogger("renko.ws_manager")
+logger = logging.getLogger("abc.ws_manager")
 
 class MasterNamespace(BaseNamespace):
 
@@ -34,9 +34,6 @@ class MasterNamespace(BaseNamespace):
     def on_config_change(self, *args):
         logger.info("[*] Server changed the config, restarting bots")
         os.execv(sys.executable, ['python'] + sys.argv)
-
-    def on_message(self, data):
-        pass
 
     def on_get_bots_statuses(self, *args):
         logger.info("[*] Getting status of the bots")
@@ -165,12 +162,14 @@ def reconnect():
     print("[+] Reconnected")
 
 def manage(socketio_handler):
-    #socketIO = SocketIO('http://localhost:5000', Namespace= MasterNamespace)
-    socketIO = SocketIO('https://autobotcloud.com', Namespace=MasterNamespace)
+    socketIO = SocketIO('http://localhost:5000', Namespace= MasterNamespace)
+    #socketIO = SocketIO('https://autobotcloud.com', Namespace=MasterNamespace)
     namespace = socketIO.get_namespace()
     socketIO.on('connect', connected)
     socketIO.on('disconnect', disconnected)
     namespace.master = Master()
+    namespace.master.start()
+
     socketio_handler.ws = socketIO #trial code to hand over this instance of socketio to logging
     socketIO.emit('ready')
     logger.info("emitted ready")
