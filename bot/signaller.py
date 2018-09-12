@@ -48,6 +48,7 @@ class Signaller(threading.Thread):
         :return:
         '''
         logger.info(f"telling everyone to {side}")
+        logger.info(f"people are {self.trade_event_subscribers}")
         for subscriber in self.trade_event_subscribers:
             subscriber.new_side = side
             subscriber.trade_event.set()
@@ -97,12 +98,6 @@ class Signaller(threading.Thread):
                     self.signal('SELL')
             self.renko_event.clear()
             self.last_trend = trend
-
-
-    def manual_trade(self):
-
-        while self.keep_running:
-            self.manual_trade_event.wait()
 
     def get_bot_statuses(self):
         res = []

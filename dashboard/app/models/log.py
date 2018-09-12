@@ -1,4 +1,5 @@
 from dashboard.app import db
+from datetime import datetime
 
 class Log(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -6,7 +7,7 @@ class Log(db.Model):
     msg = db.Column(db.Text())
     levelname = db.Column(db.String(64))
     threadName = db.Column(db.String(64))
-    created = db.Column(db.DateTime)
+    created = db.Column(db.DateTime, default=datetime.utcnow)
 
     @property
     def serialize(self):

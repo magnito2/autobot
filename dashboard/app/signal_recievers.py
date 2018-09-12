@@ -4,6 +4,7 @@ from dashboard.app.models import User, Role, Bot
 from flask import url_for, render_template
 import configparser
 from dashboard.app import app,socketio
+from dashboard.app.authorizer import activation_type
 
 @new_user_registered.connect
 def send_admin_notification(*args, **kwargs):
@@ -55,13 +56,14 @@ def manual_trade(side):
     bots = Bot.query.all()
     bot_list = []
     for bot in bots:
-        bot_params = {
-            'API_KEY' : bot.api_key,
-            'API_SECRET' : bot.api_secret,
-            'name' : bot.name,
-            'uuid' : bot.uuid
-        }
-        bot_list.append(bot_params)
+        if not activation_type(bot.id) == "expired" and bot.can_trade:
+            bot_params = {
+                'API_KEY' : bot.api_key,
+                'API_SECRET' : bot.api_secret,
+                'name' : bot.name,
+                'uuid' : bot.uuid
+            }
+            bot_list.append(bot_params)
     symbol = config['default']['symbol']
     params = {'clients' : bot_list, 'side' : side,  'symbol' : symbol}
     socketio.emit('manual_trade', params)

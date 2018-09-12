@@ -67,7 +67,7 @@ def log_this(log):
         msg = log_dict['msg'],
         levelname= log_dict['levelname'],
         threadName= log_dict['threadName'],
-        created= datetime.datetime.fromtimestamp(log_dict['created'])
+        #created= datetime.datetime.fromtimestamp(log_dict['created'])
     )
     db.session.add(log)
     db.session.commit()
@@ -117,6 +117,7 @@ def stop_bot(app, **kwargs):
 @socketio.on('bots')
 def bots_statuses(bots):
     print(bots)
+    socketio.emit('bots_status', bots)
 
 @socketio.on('botstatus')
 def bot_status(bot):
