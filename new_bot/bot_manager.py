@@ -5,6 +5,7 @@ simple job, just know when conditions are right and shout "buy" or "sell"
 import threading
 import logging
 from .client_node import ClientNode
+from .bot_rewrite import OrderClient
 
 logger = logging.getLogger("abc.Manager")
 
@@ -51,7 +52,7 @@ class Manager(threading.Thread):
                 'uuid' : client['uuid']
             }
 
-            client_node = ClientNode(params)
+            client_node = OrderClient(params)
             client_node.start()
             clients.append(client_node)
 

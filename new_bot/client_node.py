@@ -14,7 +14,7 @@ logger = logging.getLogger("abc.client_node")
 logger.setLevel(logging.DEBUG)
 
 class ClientNode(Thread):
-    min_qnty = 0
+    min_qnty = 0.000001
 
     def __init__(self, params):
         Thread.__init__(self)
@@ -42,7 +42,7 @@ class ClientNode(Thread):
 
         while self.keep_running:
 
-            if error_count > 10:
+            if error_count > 5:
                 logger.info(f"{self.name} too many errors, check logs, goodbye!!")
                 break
 
@@ -188,7 +188,6 @@ class ClientNode(Thread):
 
     def _check_permissions(self):
         try:
-            #account_info = self.rest_api.get_account(recv_window="10000")
             account_info = self.rest_api.get_account()
         except Exception as e:
             return {'status' : False, 'exception' : e}
