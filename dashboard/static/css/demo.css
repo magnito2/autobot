@@ -89,4 +89,9 @@
 .alert-minimalist > [data-notify="message"] {
 	font-size: 80%;
 }
+
+.alert-minimalist button.close {
+    color: #000;
+    font-size: 120%;
+}
 /*end bootstrap nofity styles */
