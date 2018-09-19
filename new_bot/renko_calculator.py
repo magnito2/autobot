@@ -25,7 +25,7 @@ class Renko(threading.Thread):
         :return: None
         '''
 
-        historical_klines = self.signaller.get_historical_klines(limit=10000)
+        historical_klines = self.signaller.get_historical_klines(limit=5000)
         if historical_klines:
             for kline in historical_klines:
                 self.create_renko_bricks(kline, historical=True)
