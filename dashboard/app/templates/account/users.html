@@ -44,8 +44,9 @@
                             </td>
                             <td>
                                 <div class="btn-group btn-group-xs">
-                                    <a href="/user/delete/{{ user.id }}" class="btn btn-danger">
-                                        <i class="material-icons text-primary">delete</i>
+                                    <a class="btn btn-default" href="{{ url_for('payments.manual_activate', bot_id=user.bots.first().id) }}"
+                                    data-toggle="tooltip" data-placement="right" title="reactivate the account">
+                                        <i class="material-icons text-primary">lock_open</i>
                                     </a>
                                 </div>
                             </td>
@@ -69,7 +70,6 @@
 {% endblock content %}
 {% block scripts %}
 {{super()}}
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript">
         function change_bot_can_trade(bot_id, checked) {
             fetch("/bots/toggle-trading", {
@@ -108,5 +108,9 @@
                 error => swal(error)
             )
         }
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip({boundary: 'viewport', container: 'body' })
+        })
     </script>
 {% endblock scripts %}

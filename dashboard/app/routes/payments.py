@@ -118,7 +118,8 @@ def view_payments():
 @role_required('Admin')
 def manual_activate(bot_id):
     bot = Bot.query.get_or_404(bot_id)
-    bot.expires_at = datetime.utcnow() + timedelta(days=30)
+    time_remaining = bot.expires_at - datetime.utcnow() if bot.expires_at > datetime.utcnow() else timedelta(days=0)
+    bot.expires_at = datetime.utcnow() + timedelta(days=30) + time_remaining
     db.session.add(bot)
     db.session.commit()
     flash(f"{bot.name} has been activated")
