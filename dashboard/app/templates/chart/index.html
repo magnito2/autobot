@@ -116,6 +116,9 @@
 
             add_bricks_to_chart(bricks, configs);
         });
+        socket.on("connect", function () {
+            console.log("socket has been connected");
+        });
         socket.emit("getrenkobricks");
     });
 

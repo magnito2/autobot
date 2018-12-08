@@ -44,7 +44,8 @@ class MasterNamespace(BaseNamespace):
         for bot in self.master.signaller.trade_event_subscribers:
             params = {
                 'uuid' : bot.uuid,
-                'is_alive' : bot.is_alive()
+                'is_alive' : bot.is_alive(),
+                'name' : bot.name
             }
             bots.append(bot)
         logger.debug(f"bots statuses {bots}")

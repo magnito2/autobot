@@ -25,7 +25,7 @@ class Renko(threading.Thread):
         :return: None
         '''
 
-        historical_klines = self.signaller.get_historical_klines(limit=5000)
+        historical_klines = self.signaller.get_historical_klines(limit=5000) #Initializing the bricks.
         if historical_klines:
             for kline in historical_klines:
                 self.create_renko_bricks(kline, historical=True)
@@ -150,7 +150,6 @@ class Renko(threading.Thread):
 
     def __del__(self):
         print("[!] Main exiting")
-
 
 class Brick:
 

@@ -54,14 +54,13 @@ class MasterNamespace(BaseNamespace):
         name = args[0]['name']
         bot_list = []
         for bot in self.master.BOTS_LIST:
-            if bot.uuid == uuid:
+            if bot['uuid'] == uuid:
                 bot_list.append(bot)
                 break
         if bot_list:
             bot = bot_list[0]
             params = {
-                'uuid': bot.uuid,
-                'is_alive': bot.is_alive()
+                'uuid': bot['uuid']
             }
         else:
             params = {

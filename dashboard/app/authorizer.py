@@ -8,7 +8,6 @@ from hashlib import sha512
 from dashboard.app import app
 from flask import abort
 
-
 def role_required(role):
     def decorator(f):
         @wraps(f)
@@ -101,3 +100,11 @@ def check_hmac(func):
         return func(*args, **kwargs)
 
     return decorated_function
+
+def ws_check_hmac(func):
+    data = request.get_data(as_text=True)
+    sig = hmac.new(app.config['HMAC_KEY'].encode(), data.encode(), sha512).hexdigest()
+    server_hmac = request.headers['HMAC']
+    if not sig == server_hmac:
+        abort(401)
+    return True
