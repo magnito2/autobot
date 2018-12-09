@@ -10,8 +10,8 @@ class Config(object):
     MAIL_PORT = 465
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
-    MAIL_USERNAME = "autobotcloudabc@gmail.com"
-    MAIL_PASSWORD = "kesh2828"
+    MAIL_USERNAME = "magnusotwani@gmail.com"
+    MAIL_PASSWORD = "izyudvoyitvjgqsn"
 
 
     SECURITY_PASSWORD_SALT = "$2b$12$UoI9MPk8Z5C54aliCZxTyu"

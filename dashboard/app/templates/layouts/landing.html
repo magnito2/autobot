@@ -45,25 +45,25 @@
       <div id="logo" class="pull-left">
         <!-- h1><a href="#intro" class="scrollto">AutoBot</a></h1>
         <Uncomment below if you prefer to use an image logo -->
-        <a href="/#intro"><img src="landing/img/cloud.png" alt="" style="margin-top: -15px; width: 3cm; height: 1.5cm;" title=""></a>
+        <a href="#intro"><img src="landing/img/cloud.png" alt="" style="margin-top: -15px; width: 3cm; height: 1.5cm;" title=""></a>
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           {% if current_user.is_authenticated %}
-          <li><a href="/dashboard" class="btn btn-sm btn-login btn-round">Dashboard</a></li>
+          <li><a href="{{ url_for('admin.dashboard') }}" class="btn btn-sm btn-login btn-round">Dashboard</a></li>
           {% else %}
           <li class="menu-active"><a href="/#intro">Home</a></li>
           {% endif %}
-          <li><a href="/#about">About Us</a></li>
-          <li><a href="/#pricing">Subscription</a></li>
-          <li><a href="/#contact">Contact Us</a></li>
-          <li><a href="/faq">Faq</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#pricing">Subscription</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="faq">Faq</a></li>
           {% if current_user.is_authenticated %}
-          <li><a href="/account/logout" class="btn-login">Logout</a></li>
+          <li><a href="{{ url_for('account.logout') }}" class="btn-login">Logout</a></li>
           {% else %}
-          <li><a href="/account/login" class="btn-login">login</a></li>
-          <li><a href="/account/register" class="btn-login">register</a></li>
+          <li><a href="{{ url_for('account.login') }}" class="btn-login">login</a></li>
+          <li><a href="{{ url_for('account.register') }}" class="btn-login">register</a></li>
           {% endif %}
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -90,12 +90,12 @@
         </div>
         <div class="col-lg-6">
           <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="/#intro" class="scrollto">Home</a>
-            <a href="/#about" class="scrollto">About</a>
-            <a href="/#works">How it works</a>
-            <a href="/#benefits">Benefits</a>
-            <a href="/#returns">Returns</a>
-            <a href="/#pricing">Subscription</a>
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#works">How it works</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#returns">Returns</a>
+            <a href="#pricing">Subscription</a>
           </nav>
         </div>
       </div>
@@ -122,57 +122,6 @@
   <script src="landing/js/main.js"></script>
 
    <!--Start of Tawk.to Script-->
-
-  <script type="text/javascript">
-
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-
-      (function(){
-
-          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-
-          s1.async=true;
-
-          s1.src='https://embed.tawk.to/5b3ef2756d961556373d766a/default';
-
-          s1.charset='UTF-8';
-
-          s1.setAttribute('crossorigin','*');
-
-          s0.parentNode.insertBefore(s1,s0);
-
-      })();
-
-      fetch('/announcements/update')
-          .then(function (response) {
-
-              return response.json();
-          })
-          .then(function (myres) {
-              $.notify({
-                  icon: '/img/favicon.png',
-                  title: myres.title,
-                  message: myres.message
-              },{
-                  type: 'minimalist',
-                  delay: 0,
-                  icon_type: 'image',
-                  template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
-                      '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
-                  '<img data-notify="icon" class="img-circle pull-left">' +
-                  '<span data-notify="title">{1}</span>' +
-                  '<span data-notify="message">{2}</span>' +
-                  '</div>',
-                  placement: {
-                      from: "top",
-                      align: "center"
-                  },
-                  offset: 60,
-                  allow_dismiss: true,
-              },);
-          });
-
-  </script>
 
   <!--End of Tawk.to Script-->
 {% endblock scripts %}

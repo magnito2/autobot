@@ -13,10 +13,10 @@
     </div>
     <div class="btn-login-group">
       {% if current_user.is_authenticated %}
-          <a href="/dashboard" class="btn-get-started btn-login">Dashboard</a>
+          <a href="{{ url_for('admin.dashboard') }}" class="btn-get-started btn-login">Dashboard</a>
       {% else %}
-          <a href="login" class="btn-get-started btn-login">Login</a>
-          <a href="register" class="btn-get-started btn-login">Register</a>
+          <a href="{{ url_for('account.login') }}" class="btn-get-started btn-login">Login</a>
+          <a href="{{ url_for('account.register') }}" class="btn-get-started btn-login">Register</a>
       {% endif %}
 
       </div>

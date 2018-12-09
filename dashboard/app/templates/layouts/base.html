@@ -81,53 +81,6 @@
 <!-- Material Dashboard javascript methods -->
 <script src="{{ url_for('static', filename='js/material-dashboard.js') }}"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script type="text/javascript">
-
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-
-      (function(){
-
-          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-
-          s1.async=true;
-
-          s1.src='https://embed.tawk.to/5b3ef2756d961556373d766a/default';
-
-          s1.charset='UTF-8';
-
-          s1.setAttribute('crossorigin','*');
-
-          s0.parentNode.insertBefore(s1,s0);
-
-      })();
-
-      fetch('/announcements/update')
-          .then(function (response) {
-
-              return response.json();
-          })
-          .then(function (myres) {
-              $.notify({
-                  icon: '/img/favicon.png',
-                  title: myres.title,
-                  message: myres.message
-              },{
-                  type: 'minimalist',
-                  delay: 5000,
-                  icon_type: 'image',
-                  template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
-                      '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
-                  '<img data-notify="icon" class="img-circle pull-left">' +
-                  '<span data-notify="title">{1}</span>' +
-                  '<span data-notify="message">{2}</span>' +
-                  '</div>',
-                  allow_dismiss: true,
-              });
-          });
-
-  </script>
-
-  <!--End of Tawk.to Script-->
 {% endblock scripts %}
 </body>
 </html>
