@@ -19,7 +19,7 @@ class Config(object):
     RECAPTCHA_PUBLIC_KEY = "6LdQemAUAAAAAMHl64OR_uzU8Cde9l_iIO8mzjFi"
     RECAPTCHA_PRIVATE_KEY = "6LdQemAUAAAAAPhsgYHuqYC5mvR0CzqfN502RuFF"
 
-    ADMINS = ['autobotcloudabc@gmail.com']
+    ADMINS = ['magnusotwani@gmail.com']
     #DEBUG = True
 
     HMAC_KEY = "Gmc8gWKlZGaxipc4lww12g"
@@ -32,3 +32,4 @@ class Config(object):
     CONFIG_INI_FILE = basedir + "/configs/config.ini"
 
     ITEMS_PER_PAGE = 10 #used by pagination
+    WTF_CSRF_ENABLED = False
